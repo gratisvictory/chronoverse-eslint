@@ -1,0 +1,73 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+jobs:
+#   lint:
+#     name: Lint
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v4
+#       - uses: ./.github/actions/ci-setup
+#       - name: Build Tools
+#         run: yarn run build
+#       - name: Lint
+#         run: yarn run lint
+
+  format:
+    name: Format
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/ci-setup
+      - name: Build Tools
+        run: bun run build
+      - name: Format Check
+        run: bun run format:check
+
+#   test:
+#     name: Tets
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v4
+#       - uses: ./.github/actions/ci-setup
+#       - name: Build Tools
+#         run: yarn build
+#       - name: Test Check
+#         run: yarn test
+
+  lintWS:
+    name: lintWS
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/ci-setup
+      - name: Build Tools
+        run: bun run build
+      - name: Lint WS
+        run: bun run lint:ws
+
+  ci-ok:
+    name: CI OK
+    runs-on: ubuntu-latest
+    if: always()
+    # needs: [format, lintWS, typecheck, test]
+    needs: [format, lintWS]
+    env:
+      FAILURE: ${{ contains(join(needs.*.result, ','), 'failure') }}
+    steps:
+      - name: Check for failure
+        run: |
+          echo $FAILURE
+          if [ "$FAILURE" = "false" ]; then
+            exit 0
+          else
+            exit 1
+          fi
