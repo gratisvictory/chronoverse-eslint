@@ -12,11 +12,13 @@
     "format:fix": "prettier --write . --cache --cache-location=node_modules/.cache/.prettiercache --log-level=warn",
     "lint:check": "eslint --cache --cache-location=node_modules/.cache/.eslintcache",
     "lint:fix": "eslint --fix --cache --cache-location=node_modules/.cache/.eslintcache",
-    "lint:ws": "bunx sherif@latest"
+    "lint:ws": "bunx sherif@latest",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@chronoverse/eslint": "workspace:^",
     "eslint": "^9.25.1",
+    "husky": "^9.1.7",
     "lerna": "^8.2.2",
     "nx": "^20.8.0",
     "prettier": "^3.5.3",

@@ -1,4 +1,10 @@
 {
+  "computedAt": 1745334476888,
+  "dependencies": {
+    "@chronoverse/eslint": []
+  },
+  "errors": [],
+  "externalNodes": {},
   "nodes": {
     "@chronoverse/eslint": {
       "name": "@chronoverse/eslint",
@@ -138,11 +144,5 @@
       }
     }
   },
-  "externalNodes": {},
-  "dependencies": {
-    "@chronoverse/eslint": []
-  },
-  "version": "6.0",
-  "errors": [],
-  "computedAt": 1745325149983
+  "version": "6.0"
 }

@@ -1,25 +1,29 @@
 {
-  "version": "6.0",
-  "nxVersion": "20.8.0",
-  "pathMappings": {},
-  "nxJsonPlugins": [],
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "LICENSE",
-        "hash": "4936610931631412533"
+        "file": "nx.json",
+        "hash": "12156533336379710286"
       },
       {
-        "file": ".prettierignore",
-        "hash": "422850380624387010"
+        "file": ".vscode/settings.json",
+        "hash": "10072911465295098162"
+      },
+      {
+        "file": "package.json",
+        "hash": "16542705301304961162"
       },
       {
         "file": "README.md",
         "hash": "9419660661632134200"
       },
       {
-        "file": ".vscode/settings.json",
-        "hash": "10072911465295098162"
+        "file": "bun.lock",
+        "hash": "15183333005264983450"
+      },
+      {
+        "file": "LICENSE",
+        "hash": "4936610931631412533"
       },
       {
         "file": "prettier.config.js",
@@ -30,20 +34,12 @@
         "hash": "18187106868341118437"
       },
       {
-        "file": "nx.json",
-        "hash": "12156533336379710286"
+        "file": ".prettierignore",
+        "hash": "422850380624387010"
       },
       {
         "file": ".gitignore",
         "hash": "15497709833167080832"
-      },
-      {
-        "file": "bun.lock",
-        "hash": "15183333005264983450"
-      },
-      {
-        "file": "package.json",
-        "hash": "16542705301304961162"
       }
     ],
     "projectFileMap": {
@@ -66,7 +62,7 @@
         },
         {
           "file": "@chronoverse/eslint/build.js",
-          "hash": "8414464800498682277"
+          "hash": "2586320207312354008"
         },
         {
           "file": "@chronoverse/eslint/jsconfig.json",
@@ -86,5 +82,9 @@
         }
       ]
     }
-  }
+  },
+  "nxJsonPlugins": [],
+  "nxVersion": "20.8.0",
+  "pathMappings": {},
+  "version": "6.0"
 }
