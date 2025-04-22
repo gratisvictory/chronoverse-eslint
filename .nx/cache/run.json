@@ -1,0 +1,21 @@
+{
+  "run": {
+    "command": "cli run build",
+    "startTime": "2025-04-22T12:22:41.752Z",
+    "endTime": "2025-04-22T12:22:44.431Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "@chronoverse/eslint:build",
+      "target": "build",
+      "projectName": "@chronoverse/eslint",
+      "hash": "1616502408234065125",
+      "startTime": "2025-04-22T12:22:41.802Z",
+      "endTime": "2025-04-22T12:22:44.407Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 0
+    }
+  ]
+}

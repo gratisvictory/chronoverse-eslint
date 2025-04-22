@@ -1,0 +1,90 @@
+{
+  "version": "6.0",
+  "nxVersion": "20.8.0",
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": "LICENSE",
+        "hash": "4936610931631412533"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "422850380624387010"
+      },
+      {
+        "file": "README.md",
+        "hash": "9419660661632134200"
+      },
+      {
+        "file": ".vscode/settings.json",
+        "hash": "10072911465295098162"
+      },
+      {
+        "file": "prettier.config.js",
+        "hash": "3764577063444927582"
+      },
+      {
+        "file": "lerna.json",
+        "hash": "18187106868341118437"
+      },
+      {
+        "file": "nx.json",
+        "hash": "12156533336379710286"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "15497709833167080832"
+      },
+      {
+        "file": "bun.lock",
+        "hash": "15183333005264983450"
+      },
+      {
+        "file": "package.json",
+        "hash": "16542705301304961162"
+      }
+    ],
+    "projectFileMap": {
+      "@chronoverse/eslint": [
+        {
+          "file": "@chronoverse/eslint/.gitignore",
+          "hash": "15497709833167080832"
+        },
+        {
+          "file": "@chronoverse/eslint/.prettierignore",
+          "hash": "422850380624387010"
+        },
+        {
+          "file": "@chronoverse/eslint/LICENSE",
+          "hash": "4936610931631412533"
+        },
+        {
+          "file": "@chronoverse/eslint/README.md",
+          "hash": "17582526379388688428"
+        },
+        {
+          "file": "@chronoverse/eslint/build.js",
+          "hash": "8414464800498682277"
+        },
+        {
+          "file": "@chronoverse/eslint/jsconfig.json",
+          "hash": "7851557669554577423"
+        },
+        {
+          "file": "@chronoverse/eslint/package.json",
+          "hash": "4973618767684131785"
+        },
+        {
+          "file": "@chronoverse/eslint/src/index.js",
+          "hash": "1584988716858158637"
+        },
+        {
+          "file": "@chronoverse/eslint/tsconfig.build.json",
+          "hash": "16409033583565657626"
+        }
+      ]
+    }
+  }
+}

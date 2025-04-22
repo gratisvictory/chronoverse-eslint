@@ -1,0 +1,320 @@
+{
+  "@chronoverse/eslint": {
+    "root": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "name": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "tags": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:private": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.0": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.1": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.2": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.3": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.4": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.5": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.6": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.description": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageName": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageExports": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageMain": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.isInPackageManagerWorkspaces": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.executor": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.options": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.metadata": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.options.script": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.metadata.scriptContent": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.metadata.runCommand": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:clean": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:clean.executor": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:clean.options": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:clean.metadata": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:clean.options.script": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:clean.metadata.scriptContent": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:clean.metadata.runCommand": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.clean": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.clean.executor": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.clean.options": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.clean.metadata": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.clean.options.script": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.clean.metadata.scriptContent": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.clean.metadata.runCommand": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format:check": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format:check.executor": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format:check.options": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format:check.metadata": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format:check.options.script": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format:check.metadata.scriptContent": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format:check.metadata.runCommand": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format:fix": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format:fix.executor": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format:fix.options": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format:fix.metadata": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format:fix.options.script": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format:fix.metadata.scriptContent": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.format:fix.metadata.runCommand": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.lint:check": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.lint:check.executor": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.lint:check.options": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.lint:check.metadata": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.lint:check.options.script": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.lint:check.metadata.scriptContent": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.lint:check.metadata.runCommand": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.lint:fix": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.lint:fix.executor": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.lint:fix.options": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.lint:fix.metadata": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.lint:fix.options.script": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.lint:fix.metadata.scriptContent": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.lint:fix.metadata.runCommand": [
+      "@chronoverse/eslint/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.dependsOn": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.format:check.dependsOn": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.format:check.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.format:fix.dependsOn": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.format:fix.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.lint:check.dependsOn": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.lint:check.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.lint:fix.dependsOn": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.lint:fix.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ]
+  }
+}

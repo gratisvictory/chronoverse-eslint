@@ -1,1 +1,1 @@
-# chronoverse-eslint
+# @chronoverse/eslint

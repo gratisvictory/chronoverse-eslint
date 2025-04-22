@@ -1,0 +1,44 @@
+{
+  "name": "@chronoverse/eslint",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bun run build:clean && bun run build.js",
+    "build:clean": "rimraf dist",
+    "clean": "rimraf node_modules",
+    "format:check": "prettier --check . --cache --cache-location=node_modules/.cache/.prettiercache",
+    "format:fix": "prettier --write . --cache --cache-location=node_modules/.cache/.prettiercache --log-level=warn",
+    "lint:check": "eslint --cache --cache-location=node_modules/.cache/.eslintcache",
+    "lint:fix": "eslint --fix --cache --cache-location=node_modules/.cache/.eslintcache"
+  },
+  "dependencies": {
+    "eslint": "^9.25.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.2",
+    "rimraf": "^6.0.1"
+  },
+  "peerDependencies": {
+    "eslint": "^9.25.1"
+  },
+  "packageManager": "bun@1.2.10",
+  "engines": {
+    "bun": ">=1.2.10"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

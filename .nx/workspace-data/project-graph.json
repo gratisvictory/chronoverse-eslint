@@ -1,0 +1,148 @@
+{
+  "nodes": {
+    "@chronoverse/eslint": {
+      "name": "@chronoverse/eslint",
+      "type": "lib",
+      "data": {
+        "root": "@chronoverse/eslint",
+        "name": "@chronoverse/eslint",
+        "tags": [
+          "npm:private"
+        ],
+        "metadata": {
+          "targetGroups": {
+            "NPM Scripts": [
+              "build",
+              "build:clean",
+              "clean",
+              "format:check",
+              "format:fix",
+              "lint:check",
+              "lint:fix"
+            ]
+          },
+          "js": {
+            "packageName": "@chronoverse/eslint",
+            "packageExports": {
+              ".": {
+                "import": "./dist/index.js",
+                "types": "./dist/index.d.ts"
+              }
+            },
+            "packageMain": "./dist/index.js",
+            "isInPackageManagerWorkspaces": true
+          }
+        },
+        "targets": {
+          "build": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "build"
+            },
+            "metadata": {
+              "scriptContent": "bun run build:clean && bun run build.js",
+              "runCommand": "bun run build -- undefined"
+            },
+            "configurations": {},
+            "parallelism": true,
+            "dependsOn": [
+              "^build"
+            ]
+          },
+          "build:clean": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "build:clean"
+            },
+            "metadata": {
+              "scriptContent": "rimraf dist",
+              "runCommand": "bun run build:clean -- undefined"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "clean": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "clean"
+            },
+            "metadata": {
+              "scriptContent": "rimraf node_modules",
+              "runCommand": "bun run clean -- undefined"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "format:check": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "format:check"
+            },
+            "metadata": {
+              "scriptContent": "prettier --check . --cache --cache-location=node_modules/.cache/.prettiercache",
+              "runCommand": "bun run format:check -- undefined"
+            },
+            "configurations": {},
+            "parallelism": true,
+            "dependsOn": [
+              "build"
+            ]
+          },
+          "format:fix": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "format:fix"
+            },
+            "metadata": {
+              "scriptContent": "prettier --write . --cache --cache-location=node_modules/.cache/.prettiercache --log-level=warn",
+              "runCommand": "bun run format:fix -- undefined"
+            },
+            "configurations": {},
+            "parallelism": true,
+            "dependsOn": [
+              "build"
+            ]
+          },
+          "lint:check": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "lint:check"
+            },
+            "metadata": {
+              "scriptContent": "eslint --cache --cache-location=node_modules/.cache/.eslintcache",
+              "runCommand": "bun run lint:check -- undefined"
+            },
+            "configurations": {},
+            "parallelism": true,
+            "dependsOn": [
+              "build"
+            ]
+          },
+          "lint:fix": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "lint:fix"
+            },
+            "metadata": {
+              "scriptContent": "eslint --fix --cache --cache-location=node_modules/.cache/.eslintcache",
+              "runCommand": "bun run lint:fix -- undefined"
+            },
+            "configurations": {},
+            "parallelism": true,
+            "dependsOn": [
+              "build"
+            ]
+          }
+        },
+        "implicitDependencies": []
+      }
+    }
+  },
+  "externalNodes": {},
+  "dependencies": {
+    "@chronoverse/eslint": []
+  },
+  "version": "6.0",
+  "errors": [],
+  "computedAt": 1745325149983
+}
