@@ -1,0 +1,95 @@
+name: Release
+
+on:
+  pull_request:
+    branches: [ main ]
+    types: [ closed ]
+
+
+permissions:
+  id-token: write
+  contents: write
+  pull-requests: write
+  packages: write
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+  release:
+    name: Release
+    if: github.repository == 'demonicattack/shared-configs' && github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup CI
+        uses: ./.github/actions/ci-setup
+
+      - name: Configure Git Identity
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build package
+        run: bun run build
+
+      - name: Get version from package.json
+        id: version
+        run: |
+          VERSION=$(jq -r '.version' @chronoverse/eslint/package.json)
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Check if tag already exists
+        id: tag-check
+        run: |
+          if git ls-remote --tags origin refs/tags/v${{ env.VERSION }} | grep .; then
+            echo "exists_tag=true" >> $GITHUB_ENV
+            echo "exists_tag=true" >> $GITHUB_OUTPUT
+          else
+            echo "exists_tag=false" >> $GITHUB_ENV
+            echo "exists_tag=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create GitHub Release
+        if: steps.tag-check.outputs.exists_tag == 'false'
+        uses: comnoco/create-release-action@v2.0.5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v${{ steps.version.outputs.version }}
+          release_name: ${{ github.event.pull_request.title }}
+          body: ${{ github.event.pull_request.body }}
+          draft: false
+          prerelease: false
+
+      - name: Wait for OTP
+        uses: step-security/wait-for-secrets@v1
+        id: wait-for-secrets
+        with:
+          secrets: |
+            OTP:
+              name: 'OTP to publish package'
+              description: 'OTP from authenticator app'
+
+      - name: Publish to npm
+        run: bun run ci:release --otp ${{ steps.wait-for-secrets.outputs.OTP }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.PUBLISH_NPM_TOKEN }}
+
+      - name: Comment on PR
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `### Released Package\n\n- **@chronoverse/eslint**: \`${process.env.VERSION}\`\n\n🎉`,
+            });
