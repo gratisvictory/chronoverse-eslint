@@ -1,5 +1,5 @@
 {
-  "name": "@chronoverse/eslint-config",
+  "name": "chronoverse-eslint",
   "private": true,
   "license": "MIT",
   "type": "module",

@@ -17,7 +17,7 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 jobs:
   release:
     name: Release
-    if: github.repository == 'demonicattack/shared-configs' && github.event.pull_request.merged == true
+    if: github.repository == 'gratisvictory/chronoverse-eslint' && github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     steps:
