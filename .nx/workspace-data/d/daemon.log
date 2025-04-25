@@ -5511,3 +5511,11 @@
 [NX v20.8.0 Daemon Server] - 2025-04-25T18:24:05.847Z - Done responding to the client handleRunPostTasksExecution
 [NX v20.8.0 Daemon Server] - 2025-04-25T18:24:05.847Z - Handled POST_TASKS_EXECUTION. Handling time: 1. Response time: 1.
 [NX v20.8.0 Daemon Server] - 2025-04-25T18:24:05.854Z - Closed a connection. Number of open connections: 0
+[NX v20.8.0 Daemon Server] - 2025-04-25T18:30:43.067Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.0 Daemon Server] - 2025-04-25T18:30:43.070Z - [WATCHER]: @chronoverse/javascript/package.json was modified
+[NX v20.8.0 Daemon Server] - 2025-04-25T18:30:43.277Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.0 Daemon Server] - 2025-04-25T18:30:43.277Z - [REQUEST]: @chronoverse/javascript/package.json
+[NX v20.8.0 Daemon Server] - 2025-04-25T18:30:43.277Z - [REQUEST]: 
+[NX v20.8.0 Daemon Server] - 2025-04-25T18:30:43.305Z - [SYNC]: collect registered sync generators
+[NX v20.8.0 Daemon Server] - 2025-04-25T18:30:43.307Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.0 Daemon Server] - 2025-04-25T18:30:43.307Z - Time taken for 'hash changed files from watcher' 0.28209999995306134ms

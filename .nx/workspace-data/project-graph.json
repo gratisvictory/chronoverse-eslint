@@ -174,7 +174,7 @@
               "script": "lint:inspector:deploy"
             },
             "metadata": {
-              "scriptContent": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.js --base /chronoverse-eslint/configs/ --outDir .eslint",
+              "scriptContent": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.js --base /chronoverse-eslint/ --outDir .eslint",
               "runCommand": "bun run lint:inspector:deploy -- undefined"
             },
             "configurations": {},
@@ -200,5 +200,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1745605843293
+  "computedAt": 1745606429182
 }
