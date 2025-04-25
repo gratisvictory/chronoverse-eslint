@@ -76,6 +76,11 @@ jobs:
               name: 'OTP to publish package'
               description: 'OTP from authenticator app'
 
+      - name: Configure npm for publishing
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.PUBLISH_NPM_TOKEN }}" > ~/.npmrc
+          echo "registry=https://registry.npmjs.org" >> ~/.npmrc
+
       - name: Publish to npm
         run: bun run ci:release --otp ${{ steps.wait-for-secrets.outputs.OTP }}
         env:
