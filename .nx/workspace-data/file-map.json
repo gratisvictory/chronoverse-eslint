@@ -6,72 +6,12 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "lint-staged.config.js",
-        "hash": "13787552784894010288"
-      },
-      {
-        "file": ".husky/prepare-commit-msg",
-        "hash": "6792734385712810983"
-      },
-      {
-        "file": ".husky/pre-commit",
-        "hash": "1834494291927796995"
-      },
-      {
-        "file": ".husky/commit-msg",
-        "hash": "18402092420771189682"
-      },
-      {
-        "file": ".github/actions/ci-setup/action.yml",
-        "hash": "1911206026521275839"
-      },
-      {
-        "file": "nx.json",
-        "hash": "12156533336379710286"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "11841354445744922241"
-      },
-      {
-        "file": ".husky/post-merge",
-        "hash": "3597027292805135296"
-      },
-      {
-        "file": "eslint.config.js",
-        "hash": "10744041905326618891"
-      },
-      {
-        "file": "bun.lock",
-        "hash": "6833922148036796998"
-      },
-      {
         "file": "prettier.config.js",
         "hash": "3764577063444927582"
       },
       {
-        "file": "README.md",
-        "hash": "599165025779069926"
-      },
-      {
-        "file": ".changeset/README.md",
-        "hash": "4888845876018830777"
-      },
-      {
-        "file": ".gitignore",
-        "hash": "2137046528086244949"
-      },
-      {
-        "file": "lerna.json",
-        "hash": "18187106868341118437"
-      },
-      {
-        "file": ".github/workflows/deploy.yml",
-        "hash": "7124799523183990129"
-      },
-      {
-        "file": ".changeset/config.json",
-        "hash": "12883728871029592984"
+        "file": ".husky/post-merge",
+        "hash": "3597027292805135296"
       },
       {
         "file": "LICENSE",
@@ -82,20 +22,80 @@
         "hash": "1518469718726665555"
       },
       {
-        "file": "commitlint.config.js",
-        "hash": "18309056819447975427"
-      },
-      {
         "file": ".vscode/settings.json",
         "hash": "1711239872013326920"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "11841354445744922241"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "2137046528086244949"
+      },
+      {
+        "file": "eslint.config.js",
+        "hash": "10744041905326618891"
+      },
+      {
+        "file": ".github/workflows/ci.yml",
+        "hash": "17841385583128301609"
+      },
+      {
+        "file": "lerna.json",
+        "hash": "18187106868341118437"
+      },
+      {
+        "file": "nx.json",
+        "hash": "12156533336379710286"
+      },
+      {
+        "file": ".husky/prepare-commit-msg",
+        "hash": "6792734385712810983"
+      },
+      {
+        "file": "lint-staged.config.js",
+        "hash": "13787552784894010288"
+      },
+      {
+        "file": ".husky/pre-commit",
+        "hash": "1834494291927796995"
+      },
+      {
+        "file": ".github/actions/ci-setup/action.yml",
+        "hash": "1911206026521275839"
       },
       {
         "file": ".github/workflows/release.yml",
         "hash": "16874627325570444442"
       },
       {
-        "file": ".github/workflows/ci.yml",
-        "hash": "17841385583128301609"
+        "file": ".husky/commit-msg",
+        "hash": "18402092420771189682"
+      },
+      {
+        "file": "bun.lock",
+        "hash": "6833922148036796998"
+      },
+      {
+        "file": ".github/workflows/deploy.yml",
+        "hash": "7124799523183990129"
+      },
+      {
+        "file": "README.md",
+        "hash": "599165025779069926"
+      },
+      {
+        "file": "commitlint.config.js",
+        "hash": "18309056819447975427"
+      },
+      {
+        "file": ".changeset/README.md",
+        "hash": "4888845876018830777"
+      },
+      {
+        "file": ".changeset/config.json",
+        "hash": "12883728871029592984"
       }
     ],
     "projectFileMap": {
