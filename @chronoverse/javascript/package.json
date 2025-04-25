@@ -21,7 +21,7 @@
     "lint:dev:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest --config ./eslint.config.js",
     "lint:fix": "eslint --fix --cache --cache-location=node_modules/.cache/.eslintcache",
     "lint:inspector:clean": "rimraf .eslint",
-    "lint:inspector:deploy": "bunx @eslint/config-inspector@latest build --config ./eslint.config.js --base /chronoverse-eslint/ --outDir .eslint"
+    "lint:inspector:deploy": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.js --base /chronoverse-eslint/ --outDir .eslint"
   },
   "dependencies": {
     "eslint": "^9.25.1"
