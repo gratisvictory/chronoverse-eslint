@@ -2165,7 +2165,18 @@
           },
           "TSEnumDeclaration[const=true]",
           "TSExportAssignment"
-        ]
+        ],
+        "callback-return": "off",
+        "global-require": "off",
+        "handle-callback-err": "off",
+        "no-buffer-constructor": "off",
+        "no-mixed-requires": "off",
+        "no-new-require": "off",
+        "no-path-concat": "off",
+        "no-process-env": "off",
+        "no-process-exit": "off",
+        "no-restricted-modules": "off",
+        "no-sync": "off"
       },
       "index": 7
     }
@@ -7642,7 +7653,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1745612974957,
+    "lastUpdate": 1745613418268,
     "basePath": "",
     "configPath": ""
   }
