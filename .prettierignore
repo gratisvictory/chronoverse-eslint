@@ -1,6 +1,7 @@
 node_modules
 dist
 public
+LICENSE
 build
 logs
 coverage

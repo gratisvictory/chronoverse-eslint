@@ -10,16 +10,16 @@ permissions:
   contents: read
 
 jobs:
-#   lint:
-#     name: Lint
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v4
-#       - uses: ./.github/actions/ci-setup
-#       - name: Build Tools
-#         run: yarn run build
-#       - name: Lint
-#         run: yarn run lint
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/ci-setup
+      - name: Build Tools
+        run: bun run build
+      - name: Lint
+        run: bun run lint:check
 
   format:
     name: Format
@@ -31,17 +31,6 @@ jobs:
         run: bun run build
       - name: Format Check
         run: bun run format:check
-
-#   test:
-#     name: Tets
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v4
-#       - uses: ./.github/actions/ci-setup
-#       - name: Build Tools
-#         run: yarn build
-#       - name: Test Check
-#         run: yarn test
 
   lintWS:
     name: lintWS
@@ -58,8 +47,7 @@ jobs:
     name: CI OK
     runs-on: ubuntu-latest
     if: always()
-    # needs: [format, lintWS, typecheck, test]
-    needs: [format, lintWS]
+    needs: [format, lint, lintWS]
     env:
       FAILURE: ${{ contains(join(needs.*.result, ','), 'failure') }}
     steps:

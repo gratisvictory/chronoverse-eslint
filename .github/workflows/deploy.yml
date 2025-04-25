@@ -1,0 +1,28 @@
+name: Deploy Main to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/ci-setup
+      - name: Build Tools
+        run: bun run build
+
+      - name: Build the Inspector
+        run: bun run build:inspector:deploy
+
+      - name: Deploy to GitHub Pages (for main branch)
+        if: ${{ github.ref == 'refs/heads/main' }}
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: '@chronoverse/javascript/.eslint'

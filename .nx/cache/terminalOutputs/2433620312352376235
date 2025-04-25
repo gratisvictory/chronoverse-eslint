@@ -1,0 +1,29 @@
+[0m[2m[35m$[0m [2m[1mbun run build:clean && bun run build.js[0m
+[0m[2m[35m$[0m [2m[1mrimraf dist[0m
+📦 Generating .d.ts from .js + JSDoc...
+✅ Types generated
+X [ERROR] Could not resolve "src/index.js"
+
+[0m[31mBuild failed: {
+  [0mcause[2m:[0m [0m[1m1472 |[0m     [0m[35mlet[0m { file, line, column } = e.location[0m[2m;[0m
+[0m[1m1473 |[0m     [0m[35mlet[0m pluginText = e.pluginName ? [0m[32m`[plugin: [0m${e.pluginName}[0m[32m] `[0m : [0m[32m""[0m[0m[2m;[0m
+[0m[1m1474 |[0m     [0m[35mreturn[0m [0m[32m`[0m
+[0m[1m1475 |[0m ${file}:${line}:${column}: ERROR: ${pluginText}${e.text}[0m[32m`;[0m
+[0m[1m1476 |[0m   })[0m[3m[1m.join[0m([0m[32m""[0m)[0m[2m;[0m
+[0m[1m1477 |[0m   [0m[35mlet[0m error = [0m[35mnew[0m [0m[1mError[0m(text)[0m[2m;[0m
+                     [31m[1m^[0m
+[0m[31merror[0m[2m:[0m [1mBuild failed with 1 error:
+error: Could not resolve "src/index.js"[0m
+[0m      [2mat [0m[0m[1m[3mfailureErrorWithLog[0m[2m ([0m[0m[36mC:\Users\alexb\eslint-configs\chronoverse-eslint\node_modules\esbuild\lib\main.js[0m[2m:[0m[33m1477[0m[2m:[33m15[0m[2m)[0m
+[0m      [2mat [0m[0m[2m<anonymous>[0m[2m ([0m[0m[36mC:\Users\alexb\eslint-configs\chronoverse-eslint\node_modules\esbuild\lib\main.js[0m[2m:[0m[33m946[0m[2m:[33m25[0m[2m)[0m
+[0m      [2mat [0m[0m[1m[3mbuildResponseToResult[0m[2m ([0m[0m[36mC:\Users\alexb\eslint-configs\chronoverse-eslint\node_modules\esbuild\lib\main.js[0m[2m:[0m[33m944[0m[2m:[33m7[0m[2m)[0m
+[0m      [2mat [0m[0m[2m<anonymous>[0m[2m ([0m[0m[36mC:\Users\alexb\eslint-configs\chronoverse-eslint\node_modules\esbuild\lib\main.js[0m[2m:[0m[33m623[0m[2m:[33m9[0m[2m)[0m
+[0m      [2mat [0m[0m[1m[3mhandleIncomingPacket[0m[2m ([0m[0m[36mC:\Users\alexb\eslint-configs\chronoverse-eslint\node_modules\esbuild\lib\main.js[0m[2m:[0m[33m678[0m[2m:[33m12[0m[2m)[0m
+[0m      [2mat [0m[0m[1m[3mreadFromStdout[0m[2m ([0m[0m[36mC:\Users\alexb\eslint-configs\chronoverse-eslint\node_modules\esbuild\lib\main.js[0m[2m:[0m[33m601[0m[2m:[33m7[0m[2m)[0m
+[0m      [2mat [0m[0m[1m[3memit[0m[2m ([0m[0m[36mnode:events[0m[2m:[0m[33m327[0m[2m:[33m22[0m[2m)[0m
+[0m      [2mat [0m[0m[1m[3maddChunk[0m[2m ([0m[0m[36minternal:streams/readable[0m[2m:[0m[33m134[0m[2m:[33m47[0m[2m)[0m
+[0m      [2mat [0m[0m[1m[3mreadableAddChunkPushByteMode[0m[2m ([0m[0m[36minternal:streams/readable[0m[2m:[0m[33m112[0m[2m:[33m18[0m[2m)[0m
+[0m      [2mat [0m[0m[1m[3mhandleNumberResult[0m[2m ([0m[0m[36minternal:streams/native-readable[0m[2m:[0m[33m77[0m[2m:[33m18[0m[2m)[0m
+[0m[2m,[0m
+}[0m
+🎉 Build complete!

@@ -1,19 +1,13 @@
 {
-  "computedAt": 1745334476888,
-  "dependencies": {
-    "@chronoverse/eslint": []
-  },
-  "errors": [],
-  "externalNodes": {},
   "nodes": {
-    "@chronoverse/eslint": {
-      "name": "@chronoverse/eslint",
+    "@chronoverse-eslint/javascript": {
+      "name": "@chronoverse-eslint/javascript",
       "type": "lib",
       "data": {
-        "root": "@chronoverse/eslint",
-        "name": "@chronoverse/eslint",
+        "root": "@chronoverse/javascript",
+        "name": "@chronoverse-eslint/javascript",
         "tags": [
-          "npm:private"
+          "npm:public"
         ],
         "metadata": {
           "targetGroups": {
@@ -23,18 +17,17 @@
               "clean",
               "format:check",
               "format:fix",
+              "lint:build:inspector",
               "lint:check",
-              "lint:fix"
+              "lint:dev:inspector",
+              "lint:fix",
+              "lint:inspector:clean",
+              "lint:inspector:deploy"
             ]
           },
           "js": {
-            "packageName": "@chronoverse/eslint",
-            "packageExports": {
-              ".": {
-                "import": "./dist/index.js",
-                "types": "./dist/index.d.ts"
-              }
-            },
+            "packageName": "@chronoverse-eslint/javascript",
+            "packageExports": "./dist/index.js",
             "packageMain": "./dist/index.js",
             "isInPackageManagerWorkspaces": true
           }
@@ -109,6 +102,18 @@
               "build"
             ]
           },
+          "lint:build:inspector": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "lint:build:inspector"
+            },
+            "metadata": {
+              "scriptContent": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.js --outDir .eslint && bunx serve .eslint",
+              "runCommand": "bun run lint:build:inspector -- undefined"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
           "lint:check": {
             "executor": "nx:run-script",
             "options": {
@@ -124,6 +129,18 @@
               "build"
             ]
           },
+          "lint:dev:inspector": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "lint:dev:inspector"
+            },
+            "metadata": {
+              "scriptContent": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest --config ./eslint.config.js",
+              "runCommand": "bun run lint:dev:inspector -- undefined"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
           "lint:fix": {
             "executor": "nx:run-script",
             "options": {
@@ -138,11 +155,50 @@
             "dependsOn": [
               "build"
             ]
+          },
+          "lint:inspector:clean": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "lint:inspector:clean"
+            },
+            "metadata": {
+              "scriptContent": "rimraf .eslint",
+              "runCommand": "bun run lint:inspector:clean -- undefined"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "lint:inspector:deploy": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "lint:inspector:deploy"
+            },
+            "metadata": {
+              "scriptContent": "bunx @eslint/config-inspector@latest build --config ./eslint.config.js --base /chronoverse-eslint/ --outDir .eslint",
+              "runCommand": "bun run lint:inspector:deploy -- undefined"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "nx-release-publish": {
+            "executor": "@nx/js:release-publish",
+            "dependsOn": [
+              "^nx-release-publish"
+            ],
+            "options": {},
+            "configurations": {},
+            "parallelism": true
           }
         },
         "implicitDependencies": []
       }
     }
   },
-  "version": "6.0"
+  "externalNodes": {},
+  "dependencies": {
+    "@chronoverse-eslint/javascript": []
+  },
+  "version": "6.0",
+  "errors": [],
+  "computedAt": 1745603373550
 }

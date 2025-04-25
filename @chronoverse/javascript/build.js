@@ -1,8 +1,10 @@
 import { exec } from 'node:child_process';
 import { promisify } from 'node:util';
 import { readFile } from 'node:fs/promises';
+import { URL } from 'node:url';
 import * as esbuild from 'esbuild';
 import * as path from 'node:path';
+import * as console from 'node:console';
 
 const execAsync = promisify(exec);
 

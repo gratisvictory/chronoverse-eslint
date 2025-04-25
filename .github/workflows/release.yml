@@ -40,7 +40,7 @@ jobs:
       - name: Get version from package.json
         id: version
         run: |
-          VERSION=$(jq -r '.version' @chronoverse/eslint/package.json)
+          VERSION=$(jq -r '.version' @chronoverse/javascript/package.json)
           echo "VERSION=$VERSION" >> $GITHUB_ENV
           echo "version=$VERSION" >> $GITHUB_OUTPUT
 
@@ -91,5 +91,5 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: `### Released Package\n\n- **@chronoverse/eslint**: \`${process.env.VERSION}\`\n\n🎉`,
+              body: `### Released Package\n\n- **@chronoverse-eslint/javascript**: \`${process.env.VERSION}\`\n\n🎉`,
             });
