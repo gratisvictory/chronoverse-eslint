@@ -204,6 +204,6 @@
     "@chronoverse-eslint/javascript": []
   },
   "version": "6.0",
-  "errors": [],
-  "computedAt": 1745621582497
+  "errors": 
+  "computedAt": 1745616769851
 }
