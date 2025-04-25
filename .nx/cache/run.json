@@ -1,8 +1,8 @@
 {
   "run": {
     "command": "cli run build",
-    "startTime": "2025-04-25T20:48:27.667Z",
-    "endTime": "2025-04-25T20:48:31.169Z",
+    "startTime": "2025-04-25T20:57:08.892Z",
+    "endTime": "2025-04-25T20:57:12.615Z",
     "inner": false
   },
   "tasks": [
@@ -10,9 +10,9 @@
       "taskId": "@chronoverse-eslint/javascript:build",
       "target": "build",
       "projectName": "@chronoverse-eslint/javascript",
-      "hash": "13913724032458725580",
-      "startTime": "2025-04-25T20:48:27.693Z",
-      "endTime": "2025-04-25T20:48:31.132Z",
+      "hash": "11763866637685747755",
+      "startTime": "2025-04-25T20:57:08.920Z",
+      "endTime": "2025-04-25T20:57:12.587Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 0

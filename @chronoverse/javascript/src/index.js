@@ -11,6 +11,7 @@ import globals from 'globals';
 import gitignore from 'eslint-config-flat-gitignore';
 
 const JAVASCRIPT_FILES = ['**/*.?([cm])js?(x)'];
+
 const EXCLUDE_PATTERNS = [
 	'**/node_modules/**',
 	'**/dist',
@@ -109,6 +110,7 @@ const javascript = defineConfig([
 			js,
 		},
 		rules: {
+			...js.configs.recommended.rules,
 			...bestPractice,
 			...errors,
 			...es6,
