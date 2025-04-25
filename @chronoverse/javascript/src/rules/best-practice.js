@@ -126,7 +126,10 @@ const bestPractice = {
 	/*
 	 * Require triple equals (`===` and `!==`).
 	 */
-	eqeqeq: 'error',
+	eqeqeq: [
+		'error',
+		'always',
+	],
 	/**
 	 * Require return statements to either always or never specify values.
 	 */

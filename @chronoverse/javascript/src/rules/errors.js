@@ -35,7 +35,15 @@ const errors = {
 	/**
 	 * Disallow `console`.
 	 */
-	'no-console': 'error',
+	'no-console': [
+		'warn',
+		{
+			allow: [
+				'warn',
+				'error',
+			],
+		},
+	],
 	/**
 	 * Disallow expressions where the operation doesn't affect the value.
 	 */
