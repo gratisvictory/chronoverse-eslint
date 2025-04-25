@@ -30,7 +30,7 @@ const errors = {
 	 */
 	'no-cond-assign': [
 		'error',
-		'always',
+		'except-parens',
 	],
 	/**
 	 * Disallow `console`.
@@ -173,7 +173,10 @@ const errors = {
 	/**
 	 * Disallow negation of the left operand of the `in` operator.
 	 */
-	'no-unsafe-negation': 'error',
+	'no-unsafe-negation': [
+		'error',
+		{ enforceForOrderingRelations: true },
+	],
 	/**
 	 * Disallow use of optional chaining in contexts where the undefined value is not allowed.
 	 */
@@ -184,7 +187,7 @@ const errors = {
 	/**
 	 * Disallow unused private class members.
 	 */
-	'no-unused-private-class-members': 'off',
+	'no-unused-private-class-members': 'error',
 	/**
 	 * Disallow backreferences in regular expressions.
 	 */

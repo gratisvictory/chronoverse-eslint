@@ -2,6 +2,7 @@ import { defineConfig, globalIgnores } from 'eslint/config';
 import js from '@eslint/js';
 import { bestPractice } from './rules/best-practice.js';
 import { errors } from './rules/errors.js';
+import { es6 } from './rules/es6.js';
 import globals from 'globals';
 import gitignore from 'eslint-config-flat-gitignore';
 
@@ -121,6 +122,7 @@ const javascript = defineConfig([
 		rules: {
 			...bestPractice,
 			...errors,
+			...es6,
 		},
 	},
 ]);
