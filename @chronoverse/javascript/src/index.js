@@ -5,6 +5,7 @@ import { errors } from './rules/errors.js';
 import { es6 } from './rules/es6.js';
 import { strict } from './rules/strict.js';
 import { variables } from './rules/variables.js';
+import { stylistic } from './rules/stylistic.js';
 import globals from 'globals';
 import gitignore from 'eslint-config-flat-gitignore';
 
@@ -127,6 +128,7 @@ const javascript = defineConfig([
 			...es6,
 			...strict,
 			...variables,
+			...stylistic,
 		},
 	},
 ]);
