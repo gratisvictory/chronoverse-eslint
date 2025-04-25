@@ -1,3 +1,3 @@
 # @chronoverse/eslint
 
-## 🔹 Eslint inspector: [@chronoverse-eslint](https://demonicattack.github.io/chronoverse-eslint/configs)
+## 🔹 Eslint inspector: [@chronoverse-eslint](https://gratisvictory.github.io/chronoverse-eslint/configs)
