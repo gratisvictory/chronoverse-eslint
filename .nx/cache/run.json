@@ -1,18 +1,18 @@
 {
   "run": {
-    "command": "cli run lint:inspector:deploy --scope @chronoverse-eslint/javascript",
-    "startTime": "2025-04-25T18:23:55.350Z",
-    "endTime": "2025-04-25T18:24:05.826Z",
+    "command": "cli run build",
+    "startTime": "2025-04-25T19:26:24.818Z",
+    "endTime": "2025-04-25T19:26:27.569Z",
     "inner": false
   },
   "tasks": [
     {
-      "taskId": "@chronoverse-eslint/javascript:lint:inspector:deploy",
-      "target": "lint:inspector:deploy",
+      "taskId": "@chronoverse-eslint/javascript:build",
+      "target": "build",
       "projectName": "@chronoverse-eslint/javascript",
-      "hash": "9778644980119131335",
-      "startTime": "2025-04-25T18:23:55.382Z",
-      "endTime": "2025-04-25T18:24:05.822Z",
+      "hash": "4416773675570461101",
+      "startTime": "2025-04-25T19:26:24.838Z",
+      "endTime": "2025-04-25T19:26:27.538Z",
       "params": "",
       "cacheStatus": "cache-miss",
       "status": 0

@@ -27,7 +27,12 @@
           },
           "js": {
             "packageName": "@chronoverse-eslint/javascript",
-            "packageExports": "./dist/index.js",
+            "packageExports": {
+              ".": {
+                "import": "./dist/index.js",
+                "types": "./dist/index.d.ts"
+              }
+            },
             "packageMain": "./dist/index.js",
             "isInPackageManagerWorkspaces": true
           }
@@ -200,5 +205,5 @@
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1745606429182
+  "computedAt": 1745609316915
 }

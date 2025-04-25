@@ -1,8 +1,22 @@
 import { defineConfig, globalIgnores } from 'eslint/config';
 import js from '@eslint/js';
 import { bestPractice } from './rules/best-practice.js';
+import { errors } from './rules/errors.js';
 import globals from 'globals';
 import gitignore from 'eslint-config-flat-gitignore';
+
+// const bestPracticeKeys = Object.keys(bestPractice);
+// const errorsKeys = Object.keys(errors);
+
+// const commonKeys = bestPracticeKeys.filter(key => errorsKeys.includes(key));
+
+// if (commonKeys.length > 0) {
+// 	// eslint-disable-next-line no-undef
+// 	console.log('Совпадающие ключи:', commonKeys);
+// } else {
+// 	// eslint-disable-next-line no-undef
+// 	console.log('Совпадений не найдено.');
+// }
 
 const JAVASCRIPT_FILES = ['**/*.?([cm])js?(x)'];
 const EXCLUDE_PATTERNS = [
@@ -63,6 +77,9 @@ const EXCLUDE_PATTERNS = [
 	'.storybook/*',
 ];
 
+/**
+ * @type {import('eslint').Linter.Config[]}
+ */
 const javascript = defineConfig([
 	globalIgnores(EXCLUDE_PATTERNS, '@chronoverse/ignores'),
 	gitignore({
@@ -103,6 +120,7 @@ const javascript = defineConfig([
 		},
 		rules: {
 			...bestPractice,
+			...errors,
 		},
 	},
 ]);
