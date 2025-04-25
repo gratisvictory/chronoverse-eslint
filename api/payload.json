@@ -1363,7 +1363,10 @@
         "complexity": "off",
         "default-case-last": "error",
         "class-methods-use-this": "error",
-        "eqeqeq": "error",
+        "eqeqeq": [
+          "error",
+          "always"
+        ],
         "consistent-return": "error",
         "default-case": [
           "error",
@@ -1643,7 +1646,15 @@
           "error",
           "except-parens"
         ],
-        "no-console": "error",
+        "no-console": [
+          "warn",
+          {
+            "allow": [
+              "warn",
+              "error"
+            ]
+          }
+        ],
         "no-constant-binary-expression": "error",
         "no-constant-condition": "error",
         "no-control-regex": "error",
@@ -7653,7 +7664,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1745613418268,
+    "lastUpdate": 1745614041620,
     "basePath": "",
     "configPath": ""
   }
