@@ -6,96 +6,96 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "prettier.config.js",
-        "hash": "3764577063444927582"
-      },
-      {
-        "file": ".vscode/settings.json",
-        "hash": "1711239872013326920"
-      },
-      {
-        "file": "lerna.json",
-        "hash": "18187106868341118437"
-      },
-      {
-        "file": ".github/actions/ci-setup/action.yml",
-        "hash": "1911206026521275839"
-      },
-      {
-        "file": "LICENSE",
-        "hash": "4936610931631412533"
-      },
-      {
-        "file": ".husky/pre-commit",
-        "hash": "1834494291927796995"
-      },
-      {
-        "file": ".github/workflows/deploy.yml",
-        "hash": "7124799523183990129"
-      },
-      {
-        "file": "package.json",
-        "hash": "1518469718726665555"
-      },
-      {
-        "file": ".husky/prepare-commit-msg",
-        "hash": "6792734385712810983"
-      },
-      {
-        "file": ".changeset/README.md",
-        "hash": "4888845876018830777"
-      },
-      {
-        "file": ".husky/post-merge",
-        "hash": "3597027292805135296"
-      },
-      {
-        "file": ".husky/commit-msg",
-        "hash": "18402092420771189682"
-      },
-      {
-        "file": ".prettierignore",
-        "hash": "11841354445744922241"
-      },
-      {
         "file": "lint-staged.config.js",
         "hash": "13787552784894010288"
-      },
-      {
-        "file": "eslint.config.js",
-        "hash": "10744041905326618891"
-      },
-      {
-        "file": "nx.json",
-        "hash": "12156533336379710286"
-      },
-      {
-        "file": ".changeset/config.json",
-        "hash": "12883728871029592984"
-      },
-      {
-        "file": ".github/workflows/release.yml",
-        "hash": "5570552574996801331"
-      },
-      {
-        "file": "bun.lock",
-        "hash": "6833922148036796998"
-      },
-      {
-        "file": "README.md",
-        "hash": "599165025779069926"
       },
       {
         "file": ".gitignore",
         "hash": "2137046528086244949"
       },
       {
+        "file": ".husky/prepare-commit-msg",
+        "hash": "6792734385712810983"
+      },
+      {
+        "file": ".husky/post-merge",
+        "hash": "3597027292805135296"
+      },
+      {
+        "file": "prettier.config.js",
+        "hash": "3764577063444927582"
+      },
+      {
         "file": "commitlint.config.js",
         "hash": "18309056819447975427"
       },
       {
+        "file": ".husky/pre-commit",
+        "hash": "1834494291927796995"
+      },
+      {
+        "file": ".prettierignore",
+        "hash": "11841354445744922241"
+      },
+      {
+        "file": "LICENSE",
+        "hash": "4936610931631412533"
+      },
+      {
+        "file": "nx.json",
+        "hash": "12156533336379710286"
+      },
+      {
+        "file": ".github/workflows/deploy.yml",
+        "hash": "7124799523183990129"
+      },
+      {
+        "file": "eslint.config.js",
+        "hash": "10744041905326618891"
+      },
+      {
+        "file": ".vscode/settings.json",
+        "hash": "1711239872013326920"
+      },
+      {
+        "file": ".husky/commit-msg",
+        "hash": "18402092420771189682"
+      },
+      {
+        "file": "README.md",
+        "hash": "599165025779069926"
+      },
+      {
+        "file": "lerna.json",
+        "hash": "18187106868341118437"
+      },
+      {
         "file": ".github/workflows/ci.yml",
         "hash": "17841385583128301609"
+      },
+      {
+        "file": ".changeset/config.json",
+        "hash": "12883728871029592984"
+      },
+      {
+        "file": "package.json",
+        "hash": "1518469718726665555"
+      },
+      {
+        "file": ".changeset/README.md",
+        "hash": "4888845876018830777"
+      },
+      {
+        "file": ".github/workflows/release.yml",
+        "hash": "5570552574996801331"
+      },
+      {
+        "file": ".github/actions/ci-setup/action.yml",
+        "hash": "1911206026521275839"
+      },
+      {
+        "file": "bun.lock",
+        "hash": "6833922148036796998"
       }
     ],
     "projectFileMap": {
@@ -126,7 +126,7 @@
         },
         {
           "file": "@chronoverse/javascript/src/index.js",
-          "hash": "274868727767528884"
+          "hash": "2030018506582059980"
         },
         {
           "file": "@chronoverse/javascript/src/rules/best-practice.js",
@@ -138,7 +138,15 @@
         },
         {
           "file": "@chronoverse/javascript/src/rules/es6.js",
-          "hash": "7788441048894056618"
+          "hash": "9871303127213477521"
+        },
+        {
+          "file": "@chronoverse/javascript/src/rules/strict.js",
+          "hash": "10788877648633071289"
+        },
+        {
+          "file": "@chronoverse/javascript/src/rules/variables.js",
+          "hash": "4674307007045724353"
         },
         {
           "file": "@chronoverse/javascript/tsconfig.build.json",
