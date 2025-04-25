@@ -2095,6 +2095,76 @@
             "classes": false,
             "variables": true
           }
+        ],
+        "camelcase": [
+          "error",
+          {
+            "allow": [
+              "^UNSAFE_"
+            ],
+            "ignoreDestructuring": false,
+            "properties": "never"
+          }
+        ],
+        "func-names": [
+          "error",
+          "as-needed"
+        ],
+        "new-cap": [
+          "error",
+          {
+            "capIsNew": false
+          }
+        ],
+        "new-parens": "off",
+        "no-array-constructor": "error",
+        "no-bitwise": "error",
+        "no-lonely-if": "error",
+        "no-multi-assign": "error",
+        "no-nested-ternary": "error",
+        "no-unneeded-ternary": "error",
+        "prefer-object-spread": "error",
+        "max-params": [
+          "error",
+          5
+        ],
+        "no-plusplus": "error",
+        "no-restricted-syntax": [
+          "error",
+          {
+            "selector": "ForInStatement",
+            "message": "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array."
+          },
+          {
+            "selector": "ForOfStatement",
+            "message": "iterators/generators require regenerator-runtime, which is too heavyweight for this guide to allow them. Separately, loops should be avoided in favor of array iterations."
+          },
+          {
+            "selector": "LabeledStatement",
+            "message": "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand."
+          },
+          {
+            "selector": "WithStatement",
+            "message": "`with` is disallowed in strict mode because it makes code impossible to predict and optimize."
+          },
+          {
+            "selector": "CallExpression[callee.name='setInterval'][arguments.length<2]",
+            "message": "`setInterval()` must be invoked with at least two arguments."
+          },
+          {
+            "selector": "ThrowStatement > CallExpression[callee.name=/Error$/]",
+            "message": "Use `new` keyword when throwing an `Error`."
+          },
+          {
+            "selector": "CallExpression[callee.property.name='substr']",
+            "message": "Use String.prototype.slice() or String.prototype.substring() instead of String.prototype.substr()"
+          },
+          {
+            "selector": "CallExpression[callee.name='setTimeout'][arguments.length<2]",
+            "message": "`setTimeout()` must be invoked with at least two arguments."
+          },
+          "TSEnumDeclaration[const=true]",
+          "TSExportAssignment"
         ]
       },
       "index": 7
@@ -7527,7 +7597,29 @@
       ]
     },
     {
+      "filepath": "src/rules/node.js",
+      "globs": [
+        "**/*.js",
+        "**/*.?([cm])js?(x)"
+      ],
+      "configs": [
+        2,
+        7
+      ]
+    },
+    {
       "filepath": "src/rules/strict.js",
+      "globs": [
+        "**/*.js",
+        "**/*.?([cm])js?(x)"
+      ],
+      "configs": [
+        2,
+        7
+      ]
+    },
+    {
+      "filepath": "src/rules/stylistic.js",
       "globs": [
         "**/*.js",
         "**/*.?([cm])js?(x)"
@@ -7550,7 +7642,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1745612012190,
+    "lastUpdate": 1745612974957,
     "basePath": "",
     "configPath": ""
   }
