@@ -1641,7 +1641,7 @@
         "no-compare-neg-zero": "error",
         "no-cond-assign": [
           "error",
-          "always"
+          "except-parens"
         ],
         "no-console": "error",
         "no-constant-binary-expression": "error",
@@ -1677,14 +1677,19 @@
         "no-unreachable": "error",
         "no-unreachable-loop": "error",
         "no-unsafe-finally": "error",
-        "no-unsafe-negation": "error",
+        "no-unsafe-negation": [
+          "error",
+          {
+            "enforceForOrderingRelations": true
+          }
+        ],
         "no-unsafe-optional-chaining": [
           "error",
           {
             "disallowArithmeticOperators": true
           }
         ],
-        "no-unused-private-class-members": "off",
+        "no-unused-private-class-members": "error",
         "no-useless-backreference": "error",
         "no-negated-in-lhs": "off",
         "require-atomic-updates": "off",
@@ -1694,7 +1699,93 @@
           {
             "requireStringLiterals": true
           }
-        ]
+        ],
+        "no-useless-computed-key": "error",
+        "no-useless-rename": "error",
+        "no-var": "error",
+        "object-shorthand": [
+          "error",
+          "always",
+          {
+            "avoidExplicitReturnArrows": true,
+            "avoidQuotes": true,
+            "ignoreConstructors": false
+          }
+        ],
+        "prefer-const": [
+          "error",
+          {
+            "destructuring": "all",
+            "ignoreReadBeforeAssign": true
+          }
+        ],
+        "prefer-numeric-literals": "error",
+        "prefer-rest-params": "error",
+        "prefer-spread": "error",
+        "prefer-template": "error",
+        "symbol-description": "error",
+        "arrow-body-style": [
+          "error",
+          "as-needed",
+          {
+            "requireReturnForObjectLiteral": false
+          }
+        ],
+        "arrow-parens": "off",
+        "arrow-spacing": "off",
+        "constructor-super": "error",
+        "generator-star-spacing": "off",
+        "no-class-assign": "error",
+        "no-confusing-arrow": "off",
+        "no-const-assign": "error",
+        "no-dupe-class-members": "error",
+        "no-duplicate-imports": "off",
+        "no-new-symbol": "off",
+        "no-restricted-exports": [
+          "error",
+          {
+            "restrictedNamedExports": [
+              "default",
+              "then",
+              "prototype",
+              "__esModule",
+              "arguments",
+              "eval"
+            ]
+          }
+        ],
+        "no-restricted-imports": "off",
+        "no-this-before-super": "error",
+        "no-useless-constructor": "error",
+        "prefer-arrow-callback": [
+          "error",
+          {
+            "allowNamedFunctions": false,
+            "allowUnboundThis": true
+          }
+        ],
+        "prefer-destructuring": [
+          "error",
+          {
+            "VariableDeclarator": {
+              "array": false,
+              "object": true
+            },
+            "AssignmentExpression": {
+              "array": true,
+              "object": false
+            }
+          },
+          {
+            "enforceForRenamedProperties": false
+          }
+        ],
+        "prefer-reflect": "off",
+        "require-yield": "error",
+        "rest-spread-spacing": "off",
+        "sort-imports": "off",
+        "template-curly-spacing": "off",
+        "yield-star-spacing": "off"
       },
       "index": 7
     }
@@ -7113,10 +7204,21 @@
         2,
         7
       ]
+    },
+    {
+      "filepath": "src/rules/es6.js",
+      "globs": [
+        "**/*.js",
+        "**/*.?([cm])js?(x)"
+      ],
+      "configs": [
+        2,
+        7
+      ]
     }
   ],
   "meta": {
-    "lastUpdate": 1745609570964,
+    "lastUpdate": 1745611019249,
     "basePath": "",
     "configPath": ""
   }
