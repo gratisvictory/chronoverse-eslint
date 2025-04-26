@@ -171,7 +171,7 @@ const variables = {
 	 */
 	'no-use-before-define': [
 		'error',
-		{ functions: false, classes: false, variables: true },
+		{ classes: false, functions: false, variables: true },
 	],
 };
 

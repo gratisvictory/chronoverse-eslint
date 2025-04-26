@@ -19,6 +19,7 @@
     "build": "bun run build:clean && bun run build.js",
     "build:clean": "rimraf dist",
     "clean": "rimraf node_modules",
+    "clean:all": "rimraf dist node_modules",
     "lint:build:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.viewer.js --outDir .eslint && bunx serve .eslint",
     "lint:dev:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest --config ./eslint.config.viewer.js",
     "lint:inspector:clean": "rimraf .eslint",
@@ -30,6 +31,7 @@
   "devDependencies": {
     "@chronoverse-eslint/builder": "workspace:^",
     "@chronoverse-eslint/javascript": "workspace:^",
+    "@chronoverse-eslint/perfectionist": "workspace:^",
     "@chronoverse-eslint/shared": "workspace:^",
     "eslint-config-flat-gitignore": "^2.1.0",
     "rimraf": "^6.0.1"

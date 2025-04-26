@@ -13,10 +13,10 @@
  */
 export const variablesNoUnusedVars = [
 	{
-		vars: 'all',
-		varsIgnorePattern: '^_',
 		args: 'after-used',
 		argsIgnorePattern: '^_',
 		ignoreRestSiblings: false,
+		vars: 'all',
+		varsIgnorePattern: '^_',
 	},
 ];

@@ -1,10 +1,10 @@
 /* eslint-disable no-console */
 import { exec } from 'node:child_process';
-import { promisify } from 'node:util';
 import { readFile } from 'node:fs/promises';
-import * as esbuild from 'esbuild';
 import * as path from 'node:path';
 import * as process from 'node:process';
+import { promisify } from 'node:util';
+import * as esbuild from 'esbuild';
 
 /**
  * Promisified version of `exec`.
@@ -58,26 +58,26 @@ const buildTypes = async (tsconfigPath = './tsconfig.build.json') => {
 const buildBundle = async (options = {}) => {
 	const {
 		entryPoints = ['src/index.js'],
+		minify = true,
 		outdir = 'dist',
 		tsconfig = './tsconfig.build.json',
-		minify = true,
 	} = options;
 
 	try {
 		await esbuild.build({
-			entryPoints,
-			outdir,
 			bundle: true,
-			format: 'esm',
-			platform: 'node',
-			target: 'esnext',
-			minify,
-			sourcemap: false,
+			entryPoints,
 			external: [
 				...Object.keys(pkg.dependencies || {}),
 				...Object.keys(pkg.peerDependencies || {}),
 				...Object.keys(pkg.devDependencies || {}),
 			],
+			format: 'esm',
+			minify,
+			outdir,
+			platform: 'node',
+			sourcemap: false,
+			target: 'esnext',
 			tsconfig: path.resolve(tsconfig),
 		});
 

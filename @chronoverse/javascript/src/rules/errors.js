@@ -130,13 +130,17 @@ const errors = {
 	 */
 	'no-misleading-character-class': 'error',
 	/**
-	 * Disallow calls to `Object` as a constructor.
+	 * Disallow negation of the left operand of the `in` operator.
 	 */
-	'no-obj-calls': 'error',
+	'no-negated-in-lhs': 'off',
 	/**
 	 * Disallow `new` operators with the `Array` object.
 	 */
 	'no-new-native-nonconstructor': 'off',
+	/**
+	 * Disallow calls to `Object` as a constructor.
+	 */
+	'no-obj-calls': 'error',
 	/**
 	 * Disallow returning values from Promise executor functions.
 	 */
@@ -200,10 +204,6 @@ const errors = {
 	 * Disallow backreferences in regular expressions.
 	 */
 	'no-useless-backreference': 'error',
-	/**
-	 * Disallow negation of the left operand of the `in` operator.
-	 */
-	'no-negated-in-lhs': 'off',
 	/**
 	 * Disallow assignments that can lead to race conditions due to usage of await or yield.
 	 */

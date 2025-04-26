@@ -19,7 +19,8 @@
   "scripts": {
     "build": "bun run build:clean && bun run build.js",
     "build:clean": "rimraf dist",
-    "clean": "rimraf node_modules"
+    "clean": "rimraf node_modules",
+    "clean:all": "rimraf dist node_modules"
   },
   "devDependencies": {
     "@chronoverse-eslint/builder": "workspace:^",

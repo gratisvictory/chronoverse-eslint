@@ -8,56 +8,6 @@ const es6 = {
 	'no-useless-computed-key': 'error',
 
 	/**
-	 * Disallow renaming import, export, and variable declarations to the same name.
-	 */
-	'no-useless-rename': 'error',
-	/**
-	 * Require `let` or `const` instead of `var`.
-	 */
-	'no-var': 'error',
-	/**
-	 * Require object literal shorthand syntax.
-	 */
-	'object-shorthand': [
-		'error',
-		'always',
-		{
-			avoidExplicitReturnArrows: true,
-			avoidQuotes: true,
-			ignoreConstructors: false,
-		},
-	],
-	/**
-	 * Require `const` or `let` instead of `var`.
-	 */
-	'prefer-const': [
-		'error',
-		{
-			destructuring: 'all',
-			ignoreReadBeforeAssign: true,
-		},
-	],
-	/**
-	 * Require numeric literals to always be written as decimals.
-	 */
-	'prefer-numeric-literals': 'error',
-	/**
-	 * Require rest parameters instead of `arguments`.
-	 */
-	'prefer-rest-params': 'error',
-	/**
-	 * Require using spread syntax instead of `.apply()`.
-	 */
-	'prefer-spread': 'error',
-	/**
-	 * Require using template literals instead of string concatenation.
-	 */
-	'prefer-template': 'error',
-	/**
-	 * Require symbol descriptions.
-	 */
-	'symbol-description': 'error',
-	/**
 	 * Enforce the use of `as-needed` arrow function body style.
 	 */
 	'arrow-body-style': [
@@ -141,6 +91,26 @@ const es6 = {
 	 */
 	'no-useless-constructor': 'error',
 	/**
+	 * Disallow renaming import, export, and variable declarations to the same name.
+	 */
+	'no-useless-rename': 'error',
+	/**
+	 * Require `let` or `const` instead of `var`.
+	 */
+	'no-var': 'error',
+	/**
+	 * Require object literal shorthand syntax.
+	 */
+	'object-shorthand': [
+		'error',
+		'always',
+		{
+			avoidExplicitReturnArrows: true,
+			avoidQuotes: true,
+			ignoreConstructors: false,
+		},
+	],
+	/**
 	 * Suggest using arrow functions as callbacks.
 	 */
 	'prefer-arrow-callback': [
@@ -151,18 +121,28 @@ const es6 = {
 		},
 	],
 	/**
+	 * Require `const` or `let` instead of `var`.
+	 */
+	'prefer-const': [
+		'error',
+		{
+			destructuring: 'all',
+			ignoreReadBeforeAssign: true,
+		},
+	],
+	/**
 	 * Prefer destructuring from arrays and objects
 	 */
 	'prefer-destructuring': [
 		'error',
 		{
-			VariableDeclarator: {
-				array: false,
-				object: true,
-			},
 			AssignmentExpression: {
 				array: true,
 				object: false,
+			},
+			VariableDeclarator: {
+				array: false,
+				object: true,
 			},
 		},
 		{
@@ -170,9 +150,25 @@ const es6 = {
 		},
 	],
 	/**
+	 * Require numeric literals to always be written as decimals.
+	 */
+	'prefer-numeric-literals': 'error',
+	/**
 	 * Suggest using Reflect methods where applicable.
 	 */
 	'prefer-reflect': 'off',
+	/**
+	 * Require rest parameters instead of `arguments`.
+	 */
+	'prefer-rest-params': 'error',
+	/**
+	 * Require using spread syntax instead of `.apply()`.
+	 */
+	'prefer-spread': 'error',
+	/**
+	 * Require using template literals instead of string concatenation.
+	 */
+	'prefer-template': 'error',
 	/**
 	 * Disallow generator functions that do not have yield.
 	 */
@@ -186,6 +182,10 @@ const es6 = {
 	 *  import sorting
 	 */
 	'sort-imports': 'off',
+	/**
+	 * Require symbol descriptions.
+	 */
+	'symbol-description': 'error',
 	/**
 	 * Enforce usage of spacing in template strings.
 	 * @deprecated

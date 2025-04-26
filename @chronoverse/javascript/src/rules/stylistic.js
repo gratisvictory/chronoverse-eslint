@@ -1,37 +1,37 @@
 const stylisticNoRestrictedSyntax = [
 	{
-		selector: 'ForInStatement',
 		message:
 			'for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.',
+		selector: 'ForInStatement',
 	},
 	{
-		selector: 'ForOfStatement',
 		message:
 			'iterators/generators require regenerator-runtime, which is too heavyweight for this guide to allow them. Separately, loops should be avoided in favor of array iterations.',
+		selector: 'ForOfStatement',
 	},
 	{
-		selector: 'LabeledStatement',
 		message: 'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.',
+		selector: 'LabeledStatement',
 	},
 	{
-		selector: 'WithStatement',
 		message: '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.',
+		selector: 'WithStatement',
 	},
 	{
-		selector: "CallExpression[callee.name='setInterval'][arguments.length<2]",
 		message: '`setInterval()` must be invoked with at least two arguments.',
+		selector: "CallExpression[callee.name='setInterval'][arguments.length<2]",
 	},
 	{
-		selector: 'ThrowStatement > CallExpression[callee.name=/Error$/]',
 		message: 'Use `new` keyword when throwing an `Error`.',
+		selector: 'ThrowStatement > CallExpression[callee.name=/Error$/]',
 	},
 	{
-		selector: "CallExpression[callee.property.name='substr']",
 		message: 'Use String.prototype.slice() or String.prototype.substring() instead of String.prototype.substr()',
+		selector: "CallExpression[callee.property.name='substr']",
 	},
 	{
-		selector: "CallExpression[callee.name='setTimeout'][arguments.length<2]",
 		message: '`setTimeout()` must be invoked with at least two arguments.',
+		selector: "CallExpression[callee.name='setTimeout'][arguments.length<2]",
 	},
 	'TSEnumDeclaration[const=true]',
 	'TSExportAssignment',
@@ -55,6 +55,13 @@ const stylistic = {
 	'func-names': [
 		'error',
 		'as-needed',
+	],
+	/**
+	 * Disallow functions with too many parameters.
+	 */
+	'max-params': [
+		'error',
+		MAX_PARAMS,
 	],
 	/**
 	 * Require a capital letter for constructors.
@@ -90,21 +97,6 @@ const stylistic = {
 	 */
 	'no-nested-ternary': 'error',
 	/**
-	 * Disallow ternary operators when simpler alternatives exist.
-	 */
-	'no-unneeded-ternary': 'error',
-	/**
-	 * Require use of an object spread over Object.assign.
-	 */
-	'prefer-object-spread': 'error',
-	/**
-	 * Disallow functions with too many parameters.
-	 */
-	'max-params': [
-		'error',
-		MAX_PARAMS,
-	],
-	/**
 	 * Disallow use of `++` and `--`.
 	 */
 	'no-plusplus': 'error',
@@ -115,6 +107,14 @@ const stylistic = {
 		'error',
 		...stylisticNoRestrictedSyntax,
 	],
+	/**
+	 * Disallow ternary operators when simpler alternatives exist.
+	 */
+	'no-unneeded-ternary': 'error',
+	/**
+	 * Require use of an object spread over Object.assign.
+	 */
+	'prefer-object-spread': 'error',
 };
 
 export { stylistic };

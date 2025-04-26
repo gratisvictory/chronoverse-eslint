@@ -1,6 +1,6 @@
 {
-  "name": "@chronoverse-eslint/javascript",
-  "version": "1.0.3",
+  "name": "@chronoverse-eslint/perfectionist",
+  "version": "1.0.0",
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -27,8 +27,7 @@
   "devDependencies": {
     "@chronoverse-eslint/builder": "workspace:^",
     "@chronoverse-eslint/shared": "workspace:^",
-    "@eslint/js": "^9.25.1",
-    "globals": "^16.0.0",
+    "eslint-plugin-perfectionist": "^4.12.3",
     "rimraf": "^6.0.1"
   },
   "peerDependencies": {
