@@ -40,6 +40,32 @@
       "index": 3
     },
     {
+      "name": "@chronoverse/gitignore",
+      "ignores": [
+        "**/node_modules",
+        "**/out",
+        "**/dist",
+        "**/*.tgz",
+        "**/coverage",
+        "**/*.lcov",
+        "**/logs",
+        "**/_.log",
+        "**/report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json",
+        "**/.env",
+        "**/.env.development.local",
+        "**/.env.test.local",
+        "**/.env.production.local",
+        "**/.env.local",
+        "**/.eslintcache",
+        "**/.cache",
+        "**/*.tsbuildinfo",
+        "**/.idea",
+        "**/.DS_Store",
+        "**/.eslint"
+      ],
+      "index": 4
+    },
+    {
       "name": "@chronoverse/ignores",
       "ignores": [
         "**/node_modules/**",
@@ -92,32 +118,6 @@
         "**/.node_repl_history",
         ".nx/",
         ".storybook/*"
-      ],
-      "index": 4
-    },
-    {
-      "name": "@chronoverse/gitignore",
-      "ignores": [
-        "**/node_modules",
-        "**/out",
-        "**/dist",
-        "**/*.tgz",
-        "**/coverage",
-        "**/*.lcov",
-        "**/logs",
-        "**/_.log",
-        "**/report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json",
-        "**/.env",
-        "**/.env.development.local",
-        "**/.env.test.local",
-        "**/.env.production.local",
-        "**/.env.local",
-        "**/.eslintcache",
-        "**/.cache",
-        "**/*.tsbuildinfo",
-        "**/.idea",
-        "**/.DS_Store",
-        "**/.eslint"
       ],
       "index": 5
     },
@@ -8201,7 +8201,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1745694453707,
+    "lastUpdate": 1745694728139,
     "basePath": "",
     "configPath": ""
   }
