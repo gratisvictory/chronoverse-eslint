@@ -1433,11 +1433,11 @@
         "no-unused-vars": [
           "error",
           {
+            "vars": "all",
+            "varsIgnorePattern": "^_",
             "args": "after-used",
             "argsIgnorePattern": "^_",
-            "ignoreRestSiblings": false,
-            "vars": "all",
-            "varsIgnorePattern": "^_"
+            "ignoreRestSiblings": false
           }
         ],
         "no-useless-backreference": "error",
@@ -7575,6 +7575,17 @@
       ]
     },
     {
+      "filepath": "eslint.config.viewer.js",
+      "globs": [
+        "**/*.js",
+        "**/*.?([cm])js?(x)"
+      ],
+      "configs": [
+        2,
+        7
+      ]
+    },
+    {
       "filepath": "src/index.js",
       "globs": [
         "**/*.js",
@@ -7664,7 +7675,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1745621896070,
+    "lastUpdate": 1745681763007,
     "basePath": "",
     "configPath": ""
   }
