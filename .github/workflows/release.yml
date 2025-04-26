@@ -39,10 +39,10 @@ jobs:
         id: versions
         run: >
           JAVASCRIPT_VERSION=$(jq -r '.version'
-          packages/javascript/package.json)
+          @chronoverse/javascript/package.json)
 
           ESLINT_CONFIG_VERSION=$(jq -r '.version'
-          packages/eslint-config/package.json)
+          @chronoverse/eslint-config/package.json)
 
 
           echo "JAVASCRIPT_VERSION=$JAVASCRIPT_VERSION" >> $GITHUB_ENV
