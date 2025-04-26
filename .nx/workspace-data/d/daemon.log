@@ -1782,3 +1782,122 @@
 [NX v20.8.1 Daemon Server] - 2025-04-26T15:26:20.590Z - Handled POST_TASKS_EXECUTION. Handling time: 1. Response time: 1.
 [NX v20.8.1 Daemon Server] - 2025-04-26T15:26:20.597Z - Closed a connection. Number of open connections: 0
 [NX v20.8.1 Daemon Server] - 2025-04-26T15:26:40.485Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:28:44.393Z - [WATCHER]: @chronoverse/javascript/src/index.js was modified
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:28:44.394Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:28:44.504Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:28:44.504Z - [REQUEST]: @chronoverse/javascript/src/index.js
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:28:44.504Z - [REQUEST]: 
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:28:44.536Z - [SYNC]: collect registered sync generators
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:28:44.537Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:28:44.537Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:28:44.543Z - Time taken for 'hash changed files from watcher' 0.32499999995343387ms
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:28:59.924Z - [WATCHER]: @chronoverse/builder/build.js was modified
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:28:59.924Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:00.012Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:00.013Z - [WATCHER]: @chronoverse/builder/src/index.js was modified
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:00.130Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:00.131Z - [REQUEST]: @chronoverse/builder/build.js,@chronoverse/builder/src/index.js
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:00.131Z - [REQUEST]: 
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:00.169Z - [SYNC]: collect registered sync generators
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:00.170Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:00.170Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:00.171Z - Time taken for 'hash changed files from watcher' 0.45600000000558794ms
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:00.188Z - [WATCHER]: @chronoverse/javascript/package.json was modified
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:00.189Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:00.255Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:00.258Z - [WATCHER]: 0 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:00.314Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:00.316Z - [WATCHER]: @chronoverse/javascript/src/rules/variables.js was modified
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:00.373Z - [WATCHER]: 0 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:00.374Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:00.432Z - [WATCHER]: 0 file(s) created or restored, 2 file(s) modified, 0 file(s) deleted
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:00.432Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:00.606Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:00.606Z - [REQUEST]: @chronoverse/javascript/package.json,@chronoverse/javascript/src/rules/variables.js,@chronoverse/javascript/src/rules/strict.js,@chronoverse/shared/src/constants.js,@chronoverse/shared/src/files.js,@chronoverse/shared/src/index.js,@chronoverse/shared/src/options.js
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:00.606Z - [REQUEST]: 
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:00.637Z - [SYNC]: collect registered sync generators
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:00.638Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:00.639Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:00.640Z - Time taken for 'hash changed files from watcher' 2.5657999999821186ms
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:40.191Z - [WATCHER]: @chronoverse/builder/src/index.js was modified
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:40.191Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:40.996Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:40.996Z - [REQUEST]: @chronoverse/builder/src/index.js
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:40.997Z - [REQUEST]: 
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:41.042Z - [SYNC]: collect registered sync generators
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:41.044Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:41.044Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:41.044Z - Time taken for 'hash changed files from watcher' 0.5112000000663102ms
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:46.024Z - [WATCHER]: @chronoverse/builder/src/index.js was modified
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:46.026Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:47.098Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:47.100Z - [WATCHER]: @chronoverse/builder/src/index.js was modified
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:47.637Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:47.638Z - [REQUEST]: @chronoverse/builder/src/index.js
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:47.638Z - [REQUEST]: 
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:47.674Z - [SYNC]: collect registered sync generators
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:47.676Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:47.676Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:47.677Z - Time taken for 'hash changed files from watcher' 0.3664000000571832ms
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:48.386Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:48.388Z - [WATCHER]: @chronoverse/builder/src/index.js was modified
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:51.599Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:51.599Z - [REQUEST]: @chronoverse/builder/src/index.js
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:51.599Z - [REQUEST]: 
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:51.634Z - [SYNC]: collect registered sync generators
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:51.635Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:51.636Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:51.636Z - Time taken for 'hash changed files from watcher' 0.5097000000532717ms
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:58.353Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:29:58.357Z - [WATCHER]: @chronoverse/builder/src/index.js was modified
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:04.047Z - [WATCHER]: @chronoverse/builder/src/index.js was modified
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:04.047Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:04.779Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:04.780Z - [REQUEST]: @chronoverse/builder/src/index.js
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:04.781Z - [REQUEST]: 
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:04.883Z - [SYNC]: collect registered sync generators
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:04.886Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:04.887Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:04.888Z - Time taken for 'hash changed files from watcher' 1.0276999999769032ms
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:05.818Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:05.819Z - [WATCHER]: @chronoverse/builder/src/index.js was modified
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:12.226Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:12.226Z - [REQUEST]: @chronoverse/builder/src/index.js
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:12.226Z - [REQUEST]: 
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:12.250Z - [SYNC]: collect registered sync generators
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:12.251Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:12.252Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:12.252Z - Time taken for 'hash changed files from watcher' 0.3070000000298023ms
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:15.021Z - [WATCHER]: @chronoverse/builder/src/index.js was modified
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:15.021Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:17.637Z - [WATCHER]: @chronoverse/builder/src/index.js was modified
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:17.638Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:19.345Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:19.351Z - [WATCHER]: @chronoverse/builder/src/index.js was modified
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:21.424Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:21.424Z - [REQUEST]: @chronoverse/builder/src/index.js
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:21.424Z - [REQUEST]: 
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:21.455Z - [SYNC]: collect registered sync generators
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:21.456Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:21.457Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:21.457Z - Time taken for 'hash changed files from watcher' 0.2929999999469146ms
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:21.665Z - [WATCHER]: @chronoverse/builder/src/index.js was modified
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:21.666Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:28.071Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:28.072Z - [REQUEST]: @chronoverse/builder/src/index.js
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:28.072Z - [REQUEST]: 
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:28.094Z - [SYNC]: collect registered sync generators
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:28.095Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:28.095Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:28.096Z - Time taken for 'hash changed files from watcher' 0.3003000000026077ms
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:30.759Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:30.762Z - [WATCHER]: @chronoverse/builder/src/index.js was modified
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:32.520Z - [WATCHER]: @chronoverse/builder/src/index.js was modified
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:32.521Z - [WATCHER]: Processing file changes in outputs
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:37.172Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:37.172Z - [REQUEST]: @chronoverse/builder/src/index.js
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:37.172Z - [REQUEST]: 
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:37.195Z - [SYNC]: collect registered sync generators
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:37.196Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:37.197Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v20.8.1 Daemon Server] - 2025-04-26T15:30:37.197Z - Time taken for 'hash changed files from watcher' 0.5910000000149012ms
