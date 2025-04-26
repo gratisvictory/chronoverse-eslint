@@ -124,6 +124,7 @@
     {
       "name": "@chronoverse/javascript/setup",
       "languageOptions": {
+        "ecmaVersion": "latest",
         "globals": {
           "AbortController": false,
           "AbortSignal": false,
@@ -1324,7 +1325,6 @@
           "WeakRef": false,
           "WeakSet": false
         },
-        "ecmaVersion": "latest",
         "parserOptions": {
           "ecmaFeatures": {
             "jsx": true
@@ -1382,7 +1382,12 @@
         "no-empty-static-block": "off",
         "no-ex-assign": "error",
         "no-extra-boolean-cast": "error",
-        "no-fallthrough": "error",
+        "no-fallthrough": [
+          "error",
+          {
+            "commentPattern": ".*intentional fallthrough.*"
+          }
+        ],
         "no-func-assign": "error",
         "no-global-assign": [
           "error",
@@ -1433,11 +1438,11 @@
         "no-unused-vars": [
           "error",
           {
-            "vars": "all",
-            "varsIgnorePattern": "^_",
             "args": "after-used",
             "argsIgnorePattern": "^_",
-            "ignoreRestSiblings": false
+            "ignoreRestSiblings": false,
+            "vars": "all",
+            "varsIgnorePattern": "^_"
           }
         ],
         "no-useless-backreference": "error",
@@ -1459,38 +1464,38 @@
           }
         ],
         "block-scoped-var": "error",
+        "class-methods-use-this": "error",
+        "complexity": "off",
+        "consistent-return": "error",
         "curly": [
           "error",
           "multi-line"
         ],
-        "complexity": "off",
-        "default-case-last": "error",
-        "class-methods-use-this": "error",
-        "eqeqeq": [
-          "error",
-          "always"
-        ],
-        "consistent-return": "error",
         "default-case": [
           "error",
           {
             "commentPattern": "^no default$"
           }
         ],
+        "default-case-last": "error",
         "default-param-last": "error",
-        "grouped-accessor-pairs": "error",
-        "guard-for-in": "error",
-        "max-classes-per-file": [
-          "error",
-          1
-        ],
+        "dot-location": "off",
         "dot-notation": [
           "error",
           {
             "allowKeywords": true
           }
         ],
-        "dot-location": "off",
+        "eqeqeq": [
+          "error",
+          "always"
+        ],
+        "grouped-accessor-pairs": "error",
+        "guard-for-in": "error",
+        "max-classes-per-file": [
+          "error",
+          1
+        ],
         "no-alert": "error",
         "no-caller": "error",
         "no-constructor-return": "error",
@@ -1501,7 +1506,6 @@
             "allowElseIf": false
           }
         ],
-        "no-eval": "error",
         "no-empty-function": [
           "error",
           {
@@ -1512,16 +1516,24 @@
             ]
           }
         ],
+        "no-eq-null": "off",
+        "no-eval": "error",
         "no-extend-native": "error",
         "no-extra-bind": "error",
         "no-extra-label": "error",
-        "no-native-reassign": "off",
         "no-floating-decimal": "off",
-        "no-implicit-coercion": "error",
-        "no-implied-eval": "error",
+        "no-implicit-coercion": [
+          "error",
+          {
+            "allow": [
+              "!!"
+            ]
+          }
+        ],
         "no-implicit-globals": "off",
-        "no-iterator": "error",
+        "no-implied-eval": "error",
         "no-invalid-this": "off",
+        "no-iterator": "error",
         "no-labels": [
           "error",
           {
@@ -1530,27 +1542,27 @@
           }
         ],
         "no-lone-blocks": "error",
-        "no-new": "error",
         "no-loop-func": "error",
-        "no-new-func": "error",
         "no-magic-numbers": [
           "off",
           {
-            "ignore": [],
-            "ignoreArrayIndexes": true,
+            "detectObjects": false,
             "enforceConst": true,
-            "detectObjects": false
+            "ignore": [],
+            "ignoreArrayIndexes": true
           }
         ],
-        "no-eq-null": "off",
         "no-multi-spaces": "off",
         "no-multi-str": "error",
+        "no-native-reassign": "off",
+        "no-new": "error",
+        "no-new-func": "error",
         "no-new-wrappers": "error",
+        "no-object-constructor": "off",
         "no-octal-escape": "error",
         "no-param-reassign": [
           "error",
           {
-            "props": true,
             "ignorePropertyModificationsFor": [
               "acc",
               "accumulator",
@@ -1563,83 +1575,84 @@
               "response",
               "$scope",
               "staticContext"
-            ]
+            ],
+            "props": true
           }
         ],
-        "no-object-constructor": "off",
+        "no-proto": "error",
         "no-restricted-properties": [
           "error",
           {
+            "message": "Use `assert.deepStrictEqual()`.",
             "object": "assert",
-            "property": "deepEqual",
-            "message": "Use `assert.deepStrictEqual()`."
+            "property": "deepEqual"
           },
           {
+            "message": "Use `assert.notDeepStrictEqual()`.",
             "object": "assert",
-            "property": "notDeepEqual",
-            "message": "Use `assert.notDeepStrictEqual()`."
+            "property": "notDeepEqual"
           },
           {
+            "message": "Use `assert.strictEqual()` rather than `assert.equal()`.",
             "object": "assert",
-            "property": "equal",
-            "message": "Use `assert.strictEqual()` rather than `assert.equal()`."
+            "property": "equal"
           },
           {
+            "message": "Use `assert.notStrictEqual()` rather than `assert.notEqual()`.",
             "object": "assert",
-            "property": "notEqual",
-            "message": "Use `assert.notStrictEqual()` rather than `assert.notEqual()`."
+            "property": "notEqual"
           },
           {
+            "message": "arguments.callee is deprecated",
             "object": "arguments",
-            "property": "callee",
-            "message": "arguments.callee is deprecated"
+            "property": "callee"
           },
           {
+            "message": "Please use Number.isFinite instead",
             "object": "global",
-            "property": "isFinite",
-            "message": "Please use Number.isFinite instead"
+            "property": "isFinite"
           },
           {
+            "message": "Please use Number.isFinite instead",
             "object": "self",
-            "property": "isFinite",
-            "message": "Please use Number.isFinite instead"
+            "property": "isFinite"
           },
           {
+            "message": "Please use Number.isFinite instead",
             "object": "window",
-            "property": "isFinite",
-            "message": "Please use Number.isFinite instead"
+            "property": "isFinite"
           },
           {
+            "message": "Please use Number.isNaN instead",
             "object": "global",
-            "property": "isNaN",
-            "message": "Please use Number.isNaN instead"
+            "property": "isNaN"
           },
           {
+            "message": "Please use Number.isNaN instead",
             "object": "self",
-            "property": "isNaN",
-            "message": "Please use Number.isNaN instead"
+            "property": "isNaN"
           },
           {
+            "message": "Please use Number.isNaN instead",
             "object": "window",
-            "property": "isNaN",
-            "message": "Please use Number.isNaN instead"
+            "property": "isNaN"
           },
           {
-            "property": "__defineGetter__",
-            "message": "Please use Object.defineProperty instead."
+            "message": "Please use Object.defineProperty instead.",
+            "property": "__defineGetter__"
           },
           {
-            "property": "__defineSetter__",
-            "message": "Please use Object.defineProperty instead."
+            "message": "Please use Object.defineProperty instead.",
+            "property": "__defineSetter__"
           },
           {
-            "property": "webcrypto",
-            "message": "Use `globalThis.crypto`."
+            "message": "Use `globalThis.crypto`.",
+            "property": "webcrypto"
           },
           {
+            "message": "Use the exponentiation operator (**) instead.",
             "object": "Math",
-            "property": "pow",
-            "message": "Use the exponentiation operator (**) instead."
+            "property": "pow"
           },
           {
             "message": "Use `Object.defineProperty` instead.",
@@ -1658,7 +1671,6 @@
             "property": "__lookupSetter__"
           }
         ],
-        "no-proto": "error",
         "no-return-assign": [
           "error",
           "always"
@@ -1667,39 +1679,39 @@
         "no-script-url": "error",
         "no-self-compare": "error",
         "no-sequences": "error",
-        "no-useless-call": "error",
-        "no-useless-concat": "error",
         "no-throw-literal": "error",
-        "no-useless-return": "error",
         "no-unmodified-loop-condition": "off",
-        "no-void": "error",
-        "prefer-named-capture-group": "off",
-        "no-warning-comments": [
-          "off",
-          {
-            "terms": [
-              "todo",
-              "fixme",
-              "xxx"
-            ],
-            "location": "start"
-          }
-        ],
         "no-unused-expressions": [
           "error",
           {
             "allowShortCircuit": false,
-            "allowTernary": false,
-            "allowTaggedTemplates": false
+            "allowTaggedTemplates": false,
+            "allowTernary": false
           }
         ],
+        "no-useless-call": "error",
+        "no-useless-concat": "error",
+        "no-useless-return": "error",
+        "no-void": "error",
+        "no-warning-comments": [
+          "off",
+          {
+            "location": "start",
+            "terms": [
+              "todo",
+              "fixme",
+              "xxx"
+            ]
+          }
+        ],
+        "prefer-named-capture-group": "off",
+        "prefer-object-has-own": "error",
         "prefer-promise-reject-errors": [
           "error",
           {
             "allowEmptyReject": true
           }
         ],
-        "prefer-object-has-own": "off",
         "prefer-regex-literals": [
           "error",
           {
@@ -1707,11 +1719,11 @@
           }
         ],
         "radix": "error",
-        "yoda": "error",
         "require-await": "off",
         "require-unicode-regexp": "off",
         "vars-on-top": "error",
         "wrap-iife": "off",
+        "yoda": "error",
         "no-await-in-loop": "error",
         "no-console": [
           "warn",
@@ -1725,35 +1737,12 @@
         "no-extra-parens": "off",
         "no-extra-semi": "off",
         "no-inner-declarations": "error",
+        "no-negated-in-lhs": "off",
         "no-promise-executor-return": "error",
         "no-template-curly-in-string": "error",
         "no-unreachable-loop": "error",
-        "no-negated-in-lhs": "off",
         "require-atomic-updates": "off",
         "no-useless-computed-key": "error",
-        "no-useless-rename": "error",
-        "no-var": "error",
-        "object-shorthand": [
-          "error",
-          "always",
-          {
-            "avoidExplicitReturnArrows": true,
-            "avoidQuotes": true,
-            "ignoreConstructors": false
-          }
-        ],
-        "prefer-const": [
-          "error",
-          {
-            "destructuring": "all",
-            "ignoreReadBeforeAssign": true
-          }
-        ],
-        "prefer-numeric-literals": "error",
-        "prefer-rest-params": "error",
-        "prefer-spread": "error",
-        "prefer-template": "error",
-        "symbol-description": "error",
         "arrow-body-style": [
           "error",
           "as-needed",
@@ -1782,6 +1771,17 @@
         ],
         "no-restricted-imports": "off",
         "no-useless-constructor": "error",
+        "no-useless-rename": "error",
+        "no-var": "error",
+        "object-shorthand": [
+          "error",
+          "always",
+          {
+            "avoidExplicitReturnArrows": true,
+            "avoidQuotes": true,
+            "ignoreConstructors": false
+          }
+        ],
         "prefer-arrow-callback": [
           "error",
           {
@@ -1789,25 +1789,37 @@
             "allowUnboundThis": true
           }
         ],
+        "prefer-const": [
+          "error",
+          {
+            "destructuring": "all",
+            "ignoreReadBeforeAssign": true
+          }
+        ],
         "prefer-destructuring": [
           "error",
           {
-            "VariableDeclarator": {
-              "array": false,
-              "object": true
-            },
             "AssignmentExpression": {
               "array": true,
               "object": false
+            },
+            "VariableDeclarator": {
+              "array": false,
+              "object": true
             }
           },
           {
             "enforceForRenamedProperties": false
           }
         ],
+        "prefer-numeric-literals": "error",
         "prefer-reflect": "off",
+        "prefer-rest-params": "error",
+        "prefer-spread": "error",
+        "prefer-template": "error",
         "rest-spread-spacing": "off",
         "sort-imports": "off",
+        "symbol-description": "error",
         "template-curly-spacing": "off",
         "yield-star-spacing": "off",
         "strict": [
@@ -2102,8 +2114,8 @@
         "no-use-before-define": [
           "error",
           {
-            "functions": false,
             "classes": false,
+            "functions": false,
             "variables": true
           }
         ],
@@ -2121,6 +2133,10 @@
           "error",
           "as-needed"
         ],
+        "max-params": [
+          "error",
+          5
+        ],
         "new-cap": [
           "error",
           {
@@ -2133,50 +2149,46 @@
         "no-lonely-if": "error",
         "no-multi-assign": "error",
         "no-nested-ternary": "error",
-        "no-unneeded-ternary": "error",
-        "prefer-object-spread": "error",
-        "max-params": [
-          "error",
-          5
-        ],
         "no-plusplus": "error",
         "no-restricted-syntax": [
           "error",
           {
-            "selector": "ForInStatement",
-            "message": "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array."
+            "message": "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array.",
+            "selector": "ForInStatement"
           },
           {
-            "selector": "ForOfStatement",
-            "message": "iterators/generators require regenerator-runtime, which is too heavyweight for this guide to allow them. Separately, loops should be avoided in favor of array iterations."
+            "message": "iterators/generators require regenerator-runtime, which is too heavyweight for this guide to allow them. Separately, loops should be avoided in favor of array iterations.",
+            "selector": "ForOfStatement"
           },
           {
-            "selector": "LabeledStatement",
-            "message": "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand."
+            "message": "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.",
+            "selector": "LabeledStatement"
           },
           {
-            "selector": "WithStatement",
-            "message": "`with` is disallowed in strict mode because it makes code impossible to predict and optimize."
+            "message": "`with` is disallowed in strict mode because it makes code impossible to predict and optimize.",
+            "selector": "WithStatement"
           },
           {
-            "selector": "CallExpression[callee.name='setInterval'][arguments.length<2]",
-            "message": "`setInterval()` must be invoked with at least two arguments."
+            "message": "`setInterval()` must be invoked with at least two arguments.",
+            "selector": "CallExpression[callee.name='setInterval'][arguments.length<2]"
           },
           {
-            "selector": "ThrowStatement > CallExpression[callee.name=/Error$/]",
-            "message": "Use `new` keyword when throwing an `Error`."
+            "message": "Use `new` keyword when throwing an `Error`.",
+            "selector": "ThrowStatement > CallExpression[callee.name=/Error$/]"
           },
           {
-            "selector": "CallExpression[callee.property.name='substr']",
-            "message": "Use String.prototype.slice() or String.prototype.substring() instead of String.prototype.substr()"
+            "message": "Use String.prototype.slice() or String.prototype.substring() instead of String.prototype.substr()",
+            "selector": "CallExpression[callee.property.name='substr']"
           },
           {
-            "selector": "CallExpression[callee.name='setTimeout'][arguments.length<2]",
-            "message": "`setTimeout()` must be invoked with at least two arguments."
+            "message": "`setTimeout()` must be invoked with at least two arguments.",
+            "selector": "CallExpression[callee.name='setTimeout'][arguments.length<2]"
           },
           "TSEnumDeclaration[const=true]",
           "TSExportAssignment"
         ],
+        "no-unneeded-ternary": "error",
+        "prefer-object-spread": "error",
         "callback-return": "off",
         "global-require": "off",
         "handle-callback-err": "off",
@@ -2190,6 +2202,377 @@
         "no-sync": "off"
       },
       "index": 7
+    },
+    {
+      "name": "@chronoverse/perfectionist/rules",
+      "plugins": {
+        "perfectionist": {}
+      },
+      "rules": {
+        "perfectionist/sort-variable-declarations": "error",
+        "perfectionist/sort-intersection-types": [
+          "error",
+          {
+            "type": "natural",
+            "order": "asc"
+          }
+        ],
+        "perfectionist/sort-heritage-clauses": [
+          "error",
+          {
+            "type": "natural",
+            "order": "asc"
+          }
+        ],
+        "perfectionist/sort-array-includes": "error",
+        "perfectionist/sort-named-imports": [
+          "error",
+          {
+            "type": "natural",
+            "order": "asc"
+          }
+        ],
+        "perfectionist/sort-named-exports": [
+          "error",
+          {
+            "type": "natural",
+            "order": "asc"
+          }
+        ],
+        "perfectionist/sort-object-types": [
+          "error",
+          {
+            "type": "natural",
+            "ignoreCase": false,
+            "partitionByComment": "^Part:.*",
+            "partitionByNewLine": true,
+            "customGroups": {
+              "id": [
+                "^id$",
+                "^_?id$",
+                "^key$",
+                "^self$",
+                "^userId$",
+                "^sessionId$",
+                "^accountId$",
+                "^organizationId$",
+                "^projectId$",
+                "^teamId$",
+                "^roleId$"
+              ],
+              "type": [
+                "^type$",
+                "^kind$",
+                "^category$"
+              ],
+              "meta": [
+                "^name$",
+                "^title$",
+                "^description$",
+                "^meta$",
+                "^summary$",
+                "^label$",
+                "^caption$",
+                "^slug$"
+              ],
+              "alias": [
+                "^alias$",
+                "^as$"
+              ],
+              "status": [
+                "^status$",
+                "^state$",
+                "^phase$",
+                "^is[A-Z]",
+                "^has[A-Z]"
+              ],
+              "counts": [
+                "^count$",
+                ".*Count$",
+                "^size$",
+                ".*Size$",
+                "^total$",
+                ".*Total$"
+              ],
+              "flags": [
+                "^is[A-Z]",
+                "^has[A-Z]",
+                "^can[A-Z]",
+                "^should[A-Z]",
+                "^needs[A-Z]"
+              ],
+              "rules": [
+                "^node$",
+                "^messageId$",
+                "^ruleId$"
+              ],
+              "timestamps": [
+                "^createdAt$",
+                "^updatedAt$",
+                "^deletedAt$",
+                "^startedAt$",
+                "^endedAt$",
+                "^publishedAt$"
+              ]
+            },
+            "groups": [
+              "id",
+              "type",
+              "meta",
+              "alias",
+              "status",
+              "timestamps",
+              "counts",
+              "flags",
+              "rules",
+              "unknown"
+            ]
+          }
+        ],
+        "perfectionist/sort-union-types": "error",
+        "perfectionist/sort-switch-case": "error",
+        "perfectionist/sort-decorators": [
+          "error",
+          {
+            "type": "natural",
+            "order": "asc"
+          }
+        ],
+        "perfectionist/sort-interfaces": [
+          "error",
+          {
+            "type": "natural",
+            "ignoreCase": false,
+            "partitionByComment": "^Part:.*",
+            "partitionByNewLine": true,
+            "customGroups": {
+              "id": [
+                "^id$",
+                "^_?id$",
+                "^key$",
+                "^self$",
+                "^userId$",
+                "^sessionId$",
+                "^accountId$",
+                "^organizationId$",
+                "^projectId$",
+                "^teamId$",
+                "^roleId$"
+              ],
+              "type": [
+                "^type$",
+                "^kind$",
+                "^category$"
+              ],
+              "meta": [
+                "^name$",
+                "^title$",
+                "^description$",
+                "^meta$",
+                "^summary$",
+                "^label$",
+                "^caption$",
+                "^slug$"
+              ],
+              "alias": [
+                "^alias$",
+                "^as$"
+              ],
+              "status": [
+                "^status$",
+                "^state$",
+                "^phase$",
+                "^is[A-Z]",
+                "^has[A-Z]"
+              ],
+              "counts": [
+                "^count$",
+                ".*Count$",
+                "^size$",
+                ".*Size$",
+                "^total$",
+                ".*Total$"
+              ],
+              "flags": [
+                "^is[A-Z]",
+                "^has[A-Z]",
+                "^can[A-Z]",
+                "^should[A-Z]",
+                "^needs[A-Z]"
+              ],
+              "rules": [
+                "^node$",
+                "^messageId$",
+                "^ruleId$"
+              ],
+              "timestamps": [
+                "^createdAt$",
+                "^updatedAt$",
+                "^deletedAt$",
+                "^startedAt$",
+                "^endedAt$",
+                "^publishedAt$"
+              ]
+            },
+            "groups": [
+              "id",
+              "type",
+              "meta",
+              "alias",
+              "status",
+              "timestamps",
+              "counts",
+              "flags",
+              "rules",
+              "unknown"
+            ]
+          }
+        ],
+        "perfectionist/sort-jsx-props": "error",
+        "perfectionist/sort-modules": [
+          "error",
+          {
+            "type": "natural",
+            "order": "asc"
+          }
+        ],
+        "perfectionist/sort-classes": [
+          "error",
+          {
+            "type": "natural",
+            "order": "asc"
+          }
+        ],
+        "perfectionist/sort-imports": [
+          "error",
+          {
+            "type": "natural",
+            "groups": [
+              "type",
+              [
+                "parent-type",
+                "sibling-type",
+                "index-type",
+                "internal-type"
+              ],
+              "builtin",
+              "external",
+              "internal",
+              [
+                "parent",
+                "sibling",
+                "index"
+              ],
+              "side-effect",
+              "object",
+              "unknown"
+            ],
+            "newlinesBetween": "ignore",
+            "order": "asc"
+          }
+        ],
+        "perfectionist/sort-exports": [
+          "error",
+          {
+            "type": "natural",
+            "order": "asc"
+          }
+        ],
+        "perfectionist/sort-objects": [
+          "error",
+          {
+            "type": "natural",
+            "ignoreCase": false,
+            "partitionByComment": "^Part:.*",
+            "partitionByNewLine": true,
+            "customGroups": {
+              "id": [
+                "^id$",
+                "^_?id$",
+                "^key$",
+                "^self$",
+                "^userId$",
+                "^sessionId$",
+                "^accountId$",
+                "^organizationId$",
+                "^projectId$",
+                "^teamId$",
+                "^roleId$"
+              ],
+              "type": [
+                "^type$",
+                "^kind$",
+                "^category$"
+              ],
+              "meta": [
+                "^name$",
+                "^title$",
+                "^description$",
+                "^meta$",
+                "^summary$",
+                "^label$",
+                "^caption$",
+                "^slug$"
+              ],
+              "alias": [
+                "^alias$",
+                "^as$"
+              ],
+              "status": [
+                "^status$",
+                "^state$",
+                "^phase$",
+                "^is[A-Z]",
+                "^has[A-Z]"
+              ],
+              "counts": [
+                "^count$",
+                ".*Count$",
+                "^size$",
+                ".*Size$",
+                "^total$",
+                ".*Total$"
+              ],
+              "flags": [
+                "^is[A-Z]",
+                "^has[A-Z]",
+                "^can[A-Z]",
+                "^should[A-Z]",
+                "^needs[A-Z]"
+              ],
+              "rules": [
+                "^node$",
+                "^messageId$",
+                "^ruleId$"
+              ],
+              "timestamps": [
+                "^createdAt$",
+                "^updatedAt$",
+                "^deletedAt$",
+                "^startedAt$",
+                "^endedAt$",
+                "^publishedAt$"
+              ]
+            },
+            "groups": [
+              "id",
+              "type",
+              "meta",
+              "alias",
+              "status",
+              "timestamps",
+              "counts",
+              "flags",
+              "rules",
+              "unknown"
+            ]
+          }
+        ],
+        "perfectionist/sort-enums": "error",
+        "perfectionist/sort-sets": "error",
+        "perfectionist/sort-maps": "error"
+      },
+      "index": 8
     }
   ],
   "rules": {
@@ -7560,6 +7943,226 @@
       "fixable": "code",
       "name": "yoda",
       "plugin": "eslint"
+    },
+    "perfectionist/sort-variable-declarations": {
+      "docs": {
+        "url": "https://perfectionist.dev/rules/sort-variable-declarations",
+        "description": "Enforce sorted variable declarations.",
+        "recommended": true
+      },
+      "type": "suggestion",
+      "fixable": "code",
+      "name": "perfectionist/sort-variable-declarations",
+      "plugin": "perfectionist"
+    },
+    "perfectionist/sort-intersection-types": {
+      "docs": {
+        "url": "https://perfectionist.dev/rules/sort-intersection-types",
+        "description": "Enforce sorted intersection types.",
+        "recommended": true
+      },
+      "type": "suggestion",
+      "fixable": "code",
+      "name": "perfectionist/sort-intersection-types",
+      "plugin": "perfectionist"
+    },
+    "perfectionist/sort-heritage-clauses": {
+      "docs": {
+        "url": "https://perfectionist.dev/rules/sort-heritage-clauses",
+        "description": "Enforce sorted heritage clauses.",
+        "recommended": true
+      },
+      "type": "suggestion",
+      "fixable": "code",
+      "name": "perfectionist/sort-heritage-clauses",
+      "plugin": "perfectionist"
+    },
+    "perfectionist/sort-array-includes": {
+      "docs": {
+        "description": "Enforce sorted arrays before include method.",
+        "url": "https://perfectionist.dev/rules/sort-array-includes",
+        "recommended": true
+      },
+      "type": "suggestion",
+      "fixable": "code",
+      "name": "perfectionist/sort-array-includes",
+      "plugin": "perfectionist"
+    },
+    "perfectionist/sort-named-imports": {
+      "docs": {
+        "url": "https://perfectionist.dev/rules/sort-named-imports",
+        "description": "Enforce sorted named imports.",
+        "recommended": true
+      },
+      "type": "suggestion",
+      "fixable": "code",
+      "name": "perfectionist/sort-named-imports",
+      "plugin": "perfectionist"
+    },
+    "perfectionist/sort-named-exports": {
+      "docs": {
+        "url": "https://perfectionist.dev/rules/sort-named-exports",
+        "description": "Enforce sorted named exports.",
+        "recommended": true
+      },
+      "type": "suggestion",
+      "fixable": "code",
+      "name": "perfectionist/sort-named-exports",
+      "plugin": "perfectionist"
+    },
+    "perfectionist/sort-object-types": {
+      "docs": {
+        "url": "https://perfectionist.dev/rules/sort-object-types",
+        "description": "Enforce sorted object types.",
+        "recommended": true
+      },
+      "type": "suggestion",
+      "fixable": "code",
+      "name": "perfectionist/sort-object-types",
+      "plugin": "perfectionist"
+    },
+    "perfectionist/sort-union-types": {
+      "docs": {
+        "url": "https://perfectionist.dev/rules/sort-union-types",
+        "description": "Enforce sorted union types.",
+        "recommended": true
+      },
+      "type": "suggestion",
+      "fixable": "code",
+      "name": "perfectionist/sort-union-types",
+      "plugin": "perfectionist"
+    },
+    "perfectionist/sort-switch-case": {
+      "docs": {
+        "url": "https://perfectionist.dev/rules/sort-switch-case",
+        "description": "Enforce sorted switch cases.",
+        "recommended": true
+      },
+      "type": "suggestion",
+      "fixable": "code",
+      "name": "perfectionist/sort-switch-case",
+      "plugin": "perfectionist"
+    },
+    "perfectionist/sort-decorators": {
+      "docs": {
+        "url": "https://perfectionist.dev/rules/sort-decorators",
+        "description": "Enforce sorted decorators.",
+        "recommended": true
+      },
+      "type": "suggestion",
+      "fixable": "code",
+      "name": "perfectionist/sort-decorators",
+      "plugin": "perfectionist"
+    },
+    "perfectionist/sort-interfaces": {
+      "docs": {
+        "url": "https://perfectionist.dev/rules/sort-interfaces",
+        "description": "Enforce sorted interface properties.",
+        "recommended": true
+      },
+      "type": "suggestion",
+      "fixable": "code",
+      "name": "perfectionist/sort-interfaces",
+      "plugin": "perfectionist"
+    },
+    "perfectionist/sort-jsx-props": {
+      "docs": {
+        "url": "https://perfectionist.dev/rules/sort-jsx-props",
+        "description": "Enforce sorted JSX props.",
+        "recommended": true
+      },
+      "type": "suggestion",
+      "fixable": "code",
+      "name": "perfectionist/sort-jsx-props",
+      "plugin": "perfectionist"
+    },
+    "perfectionist/sort-modules": {
+      "docs": {
+        "url": "https://perfectionist.dev/rules/sort-modules",
+        "description": "Enforce sorted modules.",
+        "recommended": true
+      },
+      "type": "suggestion",
+      "fixable": "code",
+      "name": "perfectionist/sort-modules",
+      "plugin": "perfectionist"
+    },
+    "perfectionist/sort-classes": {
+      "docs": {
+        "url": "https://perfectionist.dev/rules/sort-classes",
+        "description": "Enforce sorted classes.",
+        "recommended": true
+      },
+      "type": "suggestion",
+      "fixable": "code",
+      "name": "perfectionist/sort-classes",
+      "plugin": "perfectionist"
+    },
+    "perfectionist/sort-imports": {
+      "docs": {
+        "url": "https://perfectionist.dev/rules/sort-imports",
+        "description": "Enforce sorted imports.",
+        "recommended": true
+      },
+      "type": "suggestion",
+      "fixable": "code",
+      "name": "perfectionist/sort-imports",
+      "plugin": "perfectionist"
+    },
+    "perfectionist/sort-exports": {
+      "docs": {
+        "url": "https://perfectionist.dev/rules/sort-exports",
+        "description": "Enforce sorted exports.",
+        "recommended": true
+      },
+      "type": "suggestion",
+      "fixable": "code",
+      "name": "perfectionist/sort-exports",
+      "plugin": "perfectionist"
+    },
+    "perfectionist/sort-objects": {
+      "docs": {
+        "url": "https://perfectionist.dev/rules/sort-objects",
+        "description": "Enforce sorted objects.",
+        "recommended": true
+      },
+      "type": "suggestion",
+      "fixable": "code",
+      "name": "perfectionist/sort-objects",
+      "plugin": "perfectionist"
+    },
+    "perfectionist/sort-enums": {
+      "docs": {
+        "url": "https://perfectionist.dev/rules/sort-enums",
+        "description": "Enforce sorted TypeScript enums.",
+        "recommended": true
+      },
+      "type": "suggestion",
+      "fixable": "code",
+      "name": "perfectionist/sort-enums",
+      "plugin": "perfectionist"
+    },
+    "perfectionist/sort-sets": {
+      "docs": {
+        "url": "https://perfectionist.dev/rules/sort-sets",
+        "description": "Enforce sorted sets.",
+        "recommended": true
+      },
+      "type": "suggestion",
+      "fixable": "code",
+      "name": "perfectionist/sort-sets",
+      "plugin": "perfectionist"
+    },
+    "perfectionist/sort-maps": {
+      "docs": {
+        "url": "https://perfectionist.dev/rules/sort-maps",
+        "description": "Enforce sorted Map elements.",
+        "recommended": true
+      },
+      "type": "suggestion",
+      "fixable": "code",
+      "name": "perfectionist/sort-maps",
+      "plugin": "perfectionist"
     }
   },
   "files": [
@@ -7598,7 +8201,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1745690537960,
+    "lastUpdate": 1745694453707,
     "basePath": "",
     "configPath": ""
   }
