@@ -113,7 +113,7 @@
               "script": "lint:build:inspector"
             },
             "metadata": {
-              "scriptContent": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.js --outDir .eslint && bunx serve .eslint",
+              "scriptContent": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.viewer.js --outDir .eslint && bunx serve .eslint",
               "runCommand": "bun run lint:build:inspector -- undefined"
             },
             "configurations": {},
@@ -140,7 +140,7 @@
               "script": "lint:dev:inspector"
             },
             "metadata": {
-              "scriptContent": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest --config ./eslint.config.js",
+              "scriptContent": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest --config ./eslint.config.viewer.js",
               "runCommand": "bun run lint:dev:inspector -- undefined"
             },
             "configurations": {},
@@ -179,7 +179,7 @@
               "script": "lint:inspector:deploy"
             },
             "metadata": {
-              "scriptContent": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.js --base /chronoverse-eslint/ --outDir .eslint",
+              "scriptContent": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.viewer.js --base /chronoverse-eslint/ --outDir .eslint",
               "runCommand": "bun run lint:inspector:deploy -- undefined"
             },
             "configurations": {},
@@ -197,13 +197,180 @@
         },
         "implicitDependencies": []
       }
+    },
+    "@chronoverse-eslint/builder": {
+      "name": "@chronoverse-eslint/builder",
+      "type": "lib",
+      "data": {
+        "root": "@chronoverse/builder",
+        "name": "@chronoverse-eslint/builder",
+        "tags": [
+          "npm:private"
+        ],
+        "metadata": {
+          "targetGroups": {
+            "NPM Scripts": [
+              "build",
+              "build:clean",
+              "clean"
+            ]
+          },
+          "description": "Reusable build script for Bun",
+          "js": {
+            "packageName": "@chronoverse-eslint/builder",
+            "packageExports": {
+              ".": {
+                "import": "./dist/index.js",
+                "types": "./dist/index.d.ts"
+              }
+            },
+            "packageMain": "./dist/index.js",
+            "isInPackageManagerWorkspaces": true
+          }
+        },
+        "targets": {
+          "build": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "build"
+            },
+            "metadata": {
+              "scriptContent": "bun run build:clean && bun run build.js",
+              "runCommand": "bun run build -- undefined"
+            },
+            "configurations": {},
+            "parallelism": true,
+            "dependsOn": [
+              "^build"
+            ]
+          },
+          "build:clean": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "build:clean"
+            },
+            "metadata": {
+              "scriptContent": "rimraf dist",
+              "runCommand": "bun run build:clean -- undefined"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "clean": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "clean"
+            },
+            "metadata": {
+              "scriptContent": "rimraf node_modules",
+              "runCommand": "bun run clean -- undefined"
+            },
+            "configurations": {},
+            "parallelism": true
+          }
+        },
+        "implicitDependencies": []
+      }
+    },
+    "@chronoverse-eslint/shared": {
+      "name": "@chronoverse-eslint/shared",
+      "type": "lib",
+      "data": {
+        "root": "@chronoverse/shared",
+        "name": "@chronoverse-eslint/shared",
+        "tags": [
+          "npm:private"
+        ],
+        "metadata": {
+          "targetGroups": {
+            "NPM Scripts": [
+              "build",
+              "build:clean",
+              "clean"
+            ]
+          },
+          "description": "Shared code for @chronoverse-eslint packages",
+          "js": {
+            "packageName": "@chronoverse-eslint/shared",
+            "packageExports": {
+              ".": {
+                "import": "./dist/index.js",
+                "types": "./dist/index.d.ts"
+              }
+            },
+            "packageMain": "./dist/index.js",
+            "isInPackageManagerWorkspaces": true
+          }
+        },
+        "targets": {
+          "build": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "build"
+            },
+            "metadata": {
+              "scriptContent": "bun run build:clean && bun run build.js",
+              "runCommand": "bun run build -- undefined"
+            },
+            "configurations": {},
+            "parallelism": true,
+            "dependsOn": [
+              "^build"
+            ]
+          },
+          "build:clean": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "build:clean"
+            },
+            "metadata": {
+              "scriptContent": "rimraf dist",
+              "runCommand": "bun run build:clean -- undefined"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "clean": {
+            "executor": "nx:run-script",
+            "options": {
+              "script": "clean"
+            },
+            "metadata": {
+              "scriptContent": "rimraf node_modules",
+              "runCommand": "bun run clean -- undefined"
+            },
+            "configurations": {},
+            "parallelism": true
+          }
+        },
+        "implicitDependencies": []
+      }
     }
   },
   "externalNodes": {},
   "dependencies": {
-    "@chronoverse-eslint/javascript": []
+    "@chronoverse-eslint/javascript": [
+      {
+        "source": "@chronoverse-eslint/javascript",
+        "target": "@chronoverse-eslint/builder",
+        "type": "static"
+      },
+      {
+        "source": "@chronoverse-eslint/javascript",
+        "target": "@chronoverse-eslint/shared",
+        "type": "static"
+      }
+    ],
+    "@chronoverse-eslint/builder": [],
+    "@chronoverse-eslint/shared": [
+      {
+        "source": "@chronoverse-eslint/shared",
+        "target": "@chronoverse-eslint/builder",
+        "type": "static"
+      }
+    ]
   },
   "version": "6.0",
   "errors": [],
-  "computedAt": 1745616383348
+  "computedAt": 1745681437184
 }

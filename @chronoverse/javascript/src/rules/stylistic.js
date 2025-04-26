@@ -108,7 +108,9 @@ const stylistic = {
 	 * Disallow use of `++` and `--`.
 	 */
 	'no-plusplus': 'error',
-
+	/**
+	 * Disallow use of restricted syntax.
+	 */
 	'no-restricted-syntax': [
 		'error',
 		...stylisticNoRestrictedSyntax,

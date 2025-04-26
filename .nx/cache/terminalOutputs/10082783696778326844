@@ -13,7 +13,7 @@
  killed[0m[2m:[0m [0m[33mfalse[0m[0m[2m,[0m
  signal[0m[2m:[0m [0m[33mnull[0m[0m[2m,[0m
     cmd[0m[2m:[0m [0m[32m"tsc -p tsconfig.build.json"[0m[0m[2m,[0m
- stdout[0m[2m:[0m [0m[32m"src/eslint.js(5,7): error TS2559: Type 'Config<RulesRecord>[]' has no properties in common with type 'Config<RulesRecord>'.\r\n"[0m[0m[2m,[0m
+ stdout[0m[2m:[0m [0m[32m"../../node_modules/@eslint/config-helpers/dist/cjs/types.cts(5,29): error TS2306: File 'C:/Users/alexb/eslint-configs/chronoverse-eslint/@chronoverse/eslint/index.ts' is not a module.\r\n"[0m[0m[2m,[0m
  stderr[0m[2m:[0m ""[0m[2m,[0m
 
 [0m      [2mat [0m[0m[1m[3mgenericNodeError[0m[2m ([0m[0m[36mnode:child_process[0m[2m:[0m[33m592[0m[2m:[33m15[0m[2m)[0m
@@ -34,7 +34,7 @@
  killed[0m[2m:[0m [0m[33mfalse[0m[0m[2m,[0m
  signal[0m[2m:[0m [0m[33mnull[0m[0m[2m,[0m
     cmd[0m[2m:[0m [0m[32m"tsc -p tsconfig.build.json"[0m[0m[2m,[0m
- stdout[0m[2m:[0m [0m[32m"src/eslint.js(5,7): error TS2559: Type 'Config<RulesRecord>[]' has no properties in common with type 'Config<RulesRecord>'.\r\n"[0m[0m[2m,[0m
+ stdout[0m[2m:[0m [0m[32m"../../node_modules/@eslint/config-helpers/dist/cjs/types.cts(5,29): error TS2306: File 'C:/Users/alexb/eslint-configs/chronoverse-eslint/@chronoverse/eslint/index.ts' is not a module.\r\n"[0m[0m[2m,[0m
  stderr[0m[2m:[0m ""[0m[2m,[0m
 
 [0m      [2mat [0m[0m[1m[3mgenericNodeError[0m[2m ([0m[0m[36mnode:child_process[0m[2m:[0m[33m592[0m[2m:[33m15[0m[2m)[0m

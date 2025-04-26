@@ -1,4 +1,162 @@
 {
+  "@chronoverse/builder": {
+    "root": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "name": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "tags": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:private": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.0": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.1": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.2": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.description": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageName": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageExports": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageMain": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.isInPackageManagerWorkspaces": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "targets": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.executor": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.options": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.metadata": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.options.script": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.metadata.scriptContent": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.metadata.runCommand": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:clean": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:clean.executor": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:clean.options": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:clean.metadata": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:clean.options.script": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:clean.metadata.scriptContent": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:clean.metadata.runCommand": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.clean": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.clean.executor": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.clean.options": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.clean.metadata": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.clean.options.script": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.clean.metadata.scriptContent": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.clean.metadata.runCommand": [
+      "@chronoverse/builder/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.dependsOn": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ]
+  },
   "@chronoverse/javascript": {
     "root": [
       "@chronoverse/javascript/package.json",
@@ -457,6 +615,164 @@
       "nx/target-defaults"
     ],
     "targets.lint:fix.parallelism": [
+      "nx.json",
+      "nx/target-defaults"
+    ]
+  },
+  "@chronoverse/shared": {
+    "root": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "name": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "tags": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:private": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.0": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.1": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups.NPM Scripts.2": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.description": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageName": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageExports": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageMain": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.isInPackageManagerWorkspaces": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "targets": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.executor": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.options": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.metadata": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.options.script": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.metadata.scriptContent": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.metadata.runCommand": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:clean": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:clean.executor": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:clean.options": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:clean.metadata": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:clean.options.script": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:clean.metadata.scriptContent": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build:clean.metadata.runCommand": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.clean": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.clean.executor": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.clean.options": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.clean.metadata": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.clean.options.script": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.clean.metadata.scriptContent": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.clean.metadata.runCommand": [
+      "@chronoverse/shared/package.json",
+      "nx/core/package-json"
+    ],
+    "targets.build.dependsOn": [
+      "nx.json",
+      "nx/target-defaults"
+    ],
+    "targets.build.parallelism": [
       "nx.json",
       "nx/target-defaults"
     ]

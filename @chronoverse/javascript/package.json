@@ -21,19 +21,21 @@
     "clean": "rimraf node_modules",
     "format:check": "prettier --check . --cache --cache-location=node_modules/.cache/.prettiercache",
     "format:fix": "prettier --write . --cache --cache-location=node_modules/.cache/.prettiercache --log-level=warn",
-    "lint:build:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.js --outDir .eslint && bunx serve .eslint",
+    "lint:build:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.viewer.js --outDir .eslint && bunx serve .eslint",
     "lint:check": "eslint --cache --cache-location=node_modules/.cache/.eslintcache",
-    "lint:dev:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest --config ./eslint.config.js",
+    "lint:dev:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest --config ./eslint.config.viewer.js",
     "lint:fix": "eslint --fix --cache --cache-location=node_modules/.cache/.eslintcache",
     "lint:inspector:clean": "rimraf .eslint",
-    "lint:inspector:deploy": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.js --base /chronoverse-eslint/ --outDir .eslint"
+    "lint:inspector:deploy": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.viewer.js --base /chronoverse-eslint/ --outDir .eslint"
   },
   "dependencies": {
     "eslint": "^9.25.1"
   },
   "devDependencies": {
+    "@chronoverse-eslint/builder": "workspace:^",
+    "@chronoverse-eslint/shared": "workspace:^",
     "@eslint/js": "^9.25.1",
-    "esbuild": "^0.25.2",
+    "@types/node": "^22.15.2",
     "eslint-config-flat-gitignore": "^2.1.0",
     "globals": "^16.0.0",
     "rimraf": "^6.0.1"

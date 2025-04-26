@@ -1,12 +1,4 @@
-const variablesNoUnusedVars = [
-	{
-		args: 'after-used',
-		argsIgnorePattern: '^_',
-		ignoreRestSiblings: false,
-		vars: 'all',
-		varsIgnorePattern: '^_',
-	},
-];
+import { variablesNoUnusedVars } from '@chronoverse-eslint/shared';
 
 const confusingBrowserGlobals = [
 	'addEventListener',

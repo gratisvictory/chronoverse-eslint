@@ -1,0 +1,38 @@
+{
+  "name": "@chronoverse-eslint/builder",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Reusable build script for Bun",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bun run build:clean && bun run build.js",
+    "build:clean": "rimraf dist",
+    "clean": "rimraf node_modules"
+  },
+  "dependencies": {
+    "esbuild": "^0.25.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.2",
+    "rimraf": "^6.0.1"
+  },
+  "peerDependencies": {
+    "esbuild": "^0.25.2"
+  },
+  "packageManager": "bun@1.2.10",
+  "engines": {
+    "bun": ">=1.2.10"
+  }
+}

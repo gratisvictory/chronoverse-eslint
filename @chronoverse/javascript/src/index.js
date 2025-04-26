@@ -9,66 +9,7 @@ import { variables } from './rules/variables.js';
 import { stylistic } from './rules/stylistic.js';
 import globals from 'globals';
 import gitignore from 'eslint-config-flat-gitignore';
-
-const JAVASCRIPT_FILES = ['**/*.?([cm])js?(x)'];
-
-const EXCLUDE_PATTERNS = [
-	'**/node_modules/**',
-	'**/dist',
-	'**/build/**',
-	'**/.next',
-	'**/.nuxt',
-	'**/.vercel',
-	'**/.output',
-	'**/.cache',
-	'**/.temp',
-	'**/.tmp',
-	'**/temp',
-	'**/tmp',
-	'**/.turbo',
-	'**/.docusaurus/**',
-	'**/storybook-static',
-	'**/.vite',
-	'**/.vite-inspect',
-	'**/.vitepress/cache',
-
-	'**/__tests__/**',
-	'**/__snapshots__',
-	'**/__mocks__/**',
-	'**/fixtures/**',
-	'**/coverage',
-	'**/test-results/**',
-	'**/.nyc_output',
-	'**/cypress/screenshots/**',
-	'**/cypress/videos/**',
-	'benchmark/fixtures/**',
-	'benchmark/tmp/**',
-	'test/.tmp.*/**',
-
-	'**/package-lock.json',
-	'**/yarn.lock',
-	'**/pnpm-lock.yaml',
-	'**/bun.lockb',
-	'**/*.config.{js,cjs,mjs}',
-	'**/jest.config.js',
-
-	'**/auto-import?(s).d.ts',
-	'**/components.d.ts',
-	'**/exports-unused.ts',
-	'**/*.min.*',
-	'**/LICENSE*',
-	'**/CHANGELOG*.md',
-
-	'**/.DS_Store',
-	'**/Thumbs.db',
-	'**/.idea',
-	'**/.vscode',
-	'**/.log',
-	'**/.node_repl_history',
-
-	'.nx/',
-	'.storybook/*',
-];
+import { EXCLUDE_PATTERNS, JAVASCRIPT_FILES } from '@chronoverse-eslint/shared';
 
 /** @type {import('eslint').Linter.Config[]} */
 const javascript = defineConfig([

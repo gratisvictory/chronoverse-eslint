@@ -1,0 +1,32 @@
+{
+  "name": "@chronoverse-eslint/shared",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Shared code for @chronoverse-eslint packages",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bun run build:clean && bun run build.js",
+    "build:clean": "rimraf dist",
+    "clean": "rimraf node_modules"
+  },
+  "devDependencies": {
+    "@chronoverse-eslint/builder": "workspace:^",
+    "rimraf": "^6.0.1"
+  },
+  "packageManager": "bun@1.2.10",
+  "engines": {
+    "bun": ">=1.2.10"
+  }
+}
