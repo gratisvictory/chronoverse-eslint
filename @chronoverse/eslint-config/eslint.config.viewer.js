@@ -1,6 +1,6 @@
 import { defineConfig } from 'eslint/config';
-import { javascript } from '@chronoverse-eslint/javascript';
+import { eslint } from './src/index.js';
 
 export default defineConfig([
-	javascript,
+	eslint,
 ]);

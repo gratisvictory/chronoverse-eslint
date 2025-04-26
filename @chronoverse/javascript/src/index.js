@@ -1,4 +1,4 @@
-import { defineConfig, globalIgnores } from 'eslint/config';
+import { defineConfig } from 'eslint/config';
 import js from '@eslint/js';
 import { bestPractice } from './rules/best-practice.js';
 import { errors } from './rules/errors.js';
@@ -7,16 +7,11 @@ import { node } from './rules/node.js';
 import { strict } from './rules/strict.js';
 import { variables } from './rules/variables.js';
 import { stylistic } from './rules/stylistic.js';
+import { JAVASCRIPT_FILES } from '@chronoverse-eslint/shared';
 import globals from 'globals';
-import gitignore from 'eslint-config-flat-gitignore';
-import { EXCLUDE_PATTERNS, JAVASCRIPT_FILES } from '@chronoverse-eslint/shared';
 
 /** @type {import('eslint').Linter.Config[]} */
 const javascript = defineConfig([
-	globalIgnores(EXCLUDE_PATTERNS, '@chronoverse/ignores'),
-	gitignore({
-		name: '@chronoverse/gitignore',
-	}),
 	{
 		name: '@chronoverse/javascript/setup',
 		languageOptions: {

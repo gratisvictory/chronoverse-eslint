@@ -5,6 +5,7 @@
       "name": "chronoverse-eslint",
       "devDependencies": {
         "@changesets/cli": "^2.29.2",
+        "@chronoverse-eslint/eslint-config": "workspace:^",
         "@commitlint/cli": "^19.8.0",
         "@commitlint/config-conventional": "^19.8.0",
         "@commitlint/config-lerna-scopes": "^19.7.0",
@@ -36,9 +37,26 @@
         "esbuild": "^0.25.2",
       },
     },
+    "@chronoverse/eslint-config": {
+      "name": "@chronoverse-eslint/eslint-config",
+      "version": "1.0.0",
+      "dependencies": {
+        "eslint": "^9.25.1",
+      },
+      "devDependencies": {
+        "@chronoverse-eslint/builder": "workspace:^",
+        "@chronoverse-eslint/javascript": "workspace:^",
+        "@chronoverse-eslint/shared": "workspace:^",
+        "eslint-config-flat-gitignore": "^2.1.0",
+        "rimraf": "^6.0.1",
+      },
+      "peerDependencies": {
+        "eslint": "^9.25.1",
+      },
+    },
     "@chronoverse/javascript": {
       "name": "@chronoverse-eslint/javascript",
-      "version": "1.0.0",
+      "version": "1.0.3",
       "dependencies": {
         "eslint": "^9.25.1",
       },
@@ -47,7 +65,6 @@
         "@chronoverse-eslint/shared": "workspace:^",
         "@eslint/js": "^9.25.1",
         "@types/node": "^22.15.2",
-        "eslint-config-flat-gitignore": "^2.1.0",
         "globals": "^16.0.0",
         "rimraf": "^6.0.1",
       },
@@ -112,6 +129,8 @@
     "@changesets/write": ["@changesets/write@0.4.0", "", { "dependencies": { "@changesets/types": "^6.1.0", "fs-extra": "^7.0.1", "human-id": "^4.1.1", "prettier": "^2.7.1" } }, "sha512-CdTLvIOPiCNuH71pyDu3rA+Q0n65cmAbXnwWH84rKGiFumFzkmHNT8KHTMEchcxN+Kl8I54xGUhJ7l3E7X396Q=="],
 
     "@chronoverse-eslint/builder": ["@chronoverse-eslint/builder@workspace:@chronoverse/builder"],
+
+    "@chronoverse-eslint/eslint-config": ["@chronoverse-eslint/eslint-config@workspace:@chronoverse/eslint-config"],
 
     "@chronoverse-eslint/javascript": ["@chronoverse-eslint/javascript@workspace:@chronoverse/javascript"],
 

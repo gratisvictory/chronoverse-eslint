@@ -1,6 +1,6 @@
 {
-  "name": "@chronoverse-eslint/javascript",
-  "version": "1.0.3",
+  "name": "@chronoverse-eslint/eslint-config",
+  "version": "1.0.0",
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -19,12 +19,8 @@
     "build": "bun run build:clean && bun run build.js",
     "build:clean": "rimraf dist",
     "clean": "rimraf node_modules",
-    "format:check": "prettier --check . --cache --cache-location=node_modules/.cache/.prettiercache",
-    "format:fix": "prettier --write . --cache --cache-location=node_modules/.cache/.prettiercache --log-level=warn",
     "lint:build:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.viewer.js --outDir .eslint && bunx serve .eslint",
-    "lint:check": "eslint --cache --cache-location=node_modules/.cache/.eslintcache",
     "lint:dev:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest --config ./eslint.config.viewer.js",
-    "lint:fix": "eslint --fix --cache --cache-location=node_modules/.cache/.eslintcache",
     "lint:inspector:clean": "rimraf .eslint",
     "lint:inspector:deploy": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.viewer.js --base /chronoverse-eslint/ --outDir .eslint"
   },
@@ -33,10 +29,9 @@
   },
   "devDependencies": {
     "@chronoverse-eslint/builder": "workspace:^",
+    "@chronoverse-eslint/javascript": "workspace:^",
     "@chronoverse-eslint/shared": "workspace:^",
-    "@eslint/js": "^9.25.1",
-    "@types/node": "^22.15.2",
-    "globals": "^16.0.0",
+    "eslint-config-flat-gitignore": "^2.1.0",
     "rimraf": "^6.0.1"
   },
   "peerDependencies": {

@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "build": "lerna run build",
-    "build:inspector:deploy": "lerna run lint:inspector:deploy --scope @chronoverse-eslint/javascript",
+    "build:inspector:deploy": "lerna run lint:inspector:deploy --scope @chronoverse-eslint/eslint-config",
     "ci:release": "changeset publish",
     "ci:version": "changeset version",
     "commit": "git-cz",
@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "@changesets/cli": "^2.29.2",
+    "@chronoverse-eslint/eslint-config": "workspace:^",
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
     "@commitlint/config-lerna-scopes": "^19.7.0",

@@ -1,73 +1,82 @@
 name: Release
-
 on:
   pull_request:
-    branches: [ main ]
-    types: [ closed ]
-
-
+    branches:
+      - main
+    types:
+      - closed
 permissions:
   id-token: write
   contents: write
   pull-requests: write
   packages: write
-
 concurrency: ${{ github.workflow }}-${{ github.ref }}
-
 jobs:
   release:
     name: Release
-    if: github.repository == 'gratisvictory/chronoverse-eslint' && github.event.pull_request.merged == true
+    if: >-
+      github.repository == 'gratisvictory/chronoverse-eslint' &&
+      github.event.pull_request.merged == true
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
-
+        with:
+          fetch-depth: 0
       - name: Setup CI
         uses: ./.github/actions/ci-setup
-
       - name: Configure Git Identity
-        run: |
+        run: >
           git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+
+          git config --global user.email
+          'github-actions[bot]@users.noreply.github.com'
+
+          git remote set-url origin https://x-access-token:${{
+          secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Detect changed packages
+        id: changed
+        run: |
+          FILES=$(git diff --name-only origin/main...HEAD)
+          echo "Changed files:"
+          echo "$FILES"
 
-      - name: Build package
+          PACKAGES_CHANGED=()
+
+          for package in javascript eslint-config; do
+            if echo "$FILES" | grep "^@chronoverse/$package/" > /dev/null; then
+              PACKAGES_CHANGED+=($package)
+            fi
+          done
+
+          echo "Detected changed packages: ${PACKAGES_CHANGED[@]}"
+          echo "PACKAGES_CHANGED=${PACKAGES_CHANGED[*]}" >> $GITHUB_ENV
+          echo "packages_changed=${PACKAGES_CHANGED[*]}" >> $GITHUB_OUTPUT
+      - name: Build changed packages
+        if: env.PACKAGES_CHANGED != ''
         run: bun run build
-
-      - name: Get version from package.json
-        id: version
+      - name: Create releases
+        if: env.PACKAGES_CHANGED != ''
         run: |
-          VERSION=$(jq -r '.version' @chronoverse/javascript/package.json)
-          echo "VERSION=$VERSION" >> $GITHUB_ENV
-          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          for package in $PACKAGES_CHANGED; do
+            VERSION=$(jq -r '.version' @chronoverse/$package/package.json)
+            TAG="$package-v$VERSION"
 
-      - name: Check if tag already exists
-        id: tag-check
-        run: |
-          if git ls-remote --tags origin refs/tags/v${{ env.VERSION }} | grep .; then
-            echo "exists_tag=true" >> $GITHUB_ENV
-            echo "exists_tag=true" >> $GITHUB_OUTPUT
-          else
-            echo "exists_tag=false" >> $GITHUB_ENV
-            echo "exists_tag=false" >> $GITHUB_OUTPUT
-          fi
+            echo "Processing $package: version $VERSION"
 
-      - name: Create GitHub Release
-        if: steps.tag-check.outputs.exists_tag == 'false'
-        uses: comnoco/create-release-action@v2.0.5
+            if git ls-remote --tags origin refs/tags/$TAG | grep .; then
+              echo "Tag $TAG already exists, skipping release."
+            else
+              echo "Creating GitHub release for $package"
+              gh release create "$TAG" --title "$package v$VERSION" --notes "${{ github.event.pull_request.body }}"
+            fi
+          done
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: v${{ steps.version.outputs.version }}
-          release_name: ${{ github.event.pull_request.title }}
-          body: ${{ github.event.pull_request.body }}
-          draft: false
-          prerelease: false
-
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Wait for OTP
+        if: env.PACKAGES_CHANGED != ''
         uses: step-security/wait-for-secrets@v1
         id: wait-for-secrets
         with:
@@ -75,26 +84,38 @@ jobs:
             OTP:
               name: 'OTP to publish package'
               description: 'OTP from authenticator app'
-
       - name: Configure npm for publishing
-        run: |
-          echo "//registry.npmjs.org/:_authToken=${{ secrets.PUBLISH_NPM_TOKEN }}" > ~/.npmrc
-          echo "registry=https://registry.npmjs.org" >> ~/.npmrc
+        if: env.PACKAGES_CHANGED != ''
+        run: >
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.PUBLISH_NPM_TOKEN
+          }}" > ~/.npmrc
 
-      - name: Publish to npm
-        run: bun run ci:release --otp ${{ steps.wait-for-secrets.outputs.OTP }}
+          echo "registry=https://registry.npmjs.org" >> ~/.npmrc
+      - name: Publish changed packages
+        if: env.PACKAGES_CHANGED != ''
+        run: |
+          bun run ci:release --otp ${{ steps.wait-for-secrets.outputs.OTP }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.PUBLISH_NPM_TOKEN }}
-
       - name: Comment on PR
+        if: env.PACKAGES_CHANGED != ''
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
+            const packages = process.env.PACKAGES_CHANGED.split(' ');
+            const body = [
+              '### Released Packages',
+              '',
+              ...packages.map(p => `- **@chronoverse-eslint/${p}**`),
+              '',
+              '\U0001F389'
+            ].join('\n');
+
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: `### Released Package\n\n- **@chronoverse-eslint/javascript**: \`${process.env.VERSION}\`\n\n🎉`,
+              body,
             });
