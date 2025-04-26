@@ -7595,87 +7595,10 @@
         2,
         7
       ]
-    },
-    {
-      "filepath": "src/rules/best-practice.js",
-      "globs": [
-        "**/*.js",
-        "**/*.?([cm])js?(x)"
-      ],
-      "configs": [
-        2,
-        7
-      ]
-    },
-    {
-      "filepath": "src/rules/errors.js",
-      "globs": [
-        "**/*.js",
-        "**/*.?([cm])js?(x)"
-      ],
-      "configs": [
-        2,
-        7
-      ]
-    },
-    {
-      "filepath": "src/rules/es6.js",
-      "globs": [
-        "**/*.js",
-        "**/*.?([cm])js?(x)"
-      ],
-      "configs": [
-        2,
-        7
-      ]
-    },
-    {
-      "filepath": "src/rules/node.js",
-      "globs": [
-        "**/*.js",
-        "**/*.?([cm])js?(x)"
-      ],
-      "configs": [
-        2,
-        7
-      ]
-    },
-    {
-      "filepath": "src/rules/strict.js",
-      "globs": [
-        "**/*.js",
-        "**/*.?([cm])js?(x)"
-      ],
-      "configs": [
-        2,
-        7
-      ]
-    },
-    {
-      "filepath": "src/rules/stylistic.js",
-      "globs": [
-        "**/*.js",
-        "**/*.?([cm])js?(x)"
-      ],
-      "configs": [
-        2,
-        7
-      ]
-    },
-    {
-      "filepath": "src/rules/variables.js",
-      "globs": [
-        "**/*.js",
-        "**/*.?([cm])js?(x)"
-      ],
-      "configs": [
-        2,
-        7
-      ]
     }
   ],
   "meta": {
-    "lastUpdate": 1745682275849,
+    "lastUpdate": 1745689296459,
     "basePath": "",
     "configPath": ""
   }
