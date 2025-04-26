@@ -6,10 +6,10 @@ import { defineConfig, globalIgnores } from 'eslint/config';
 
 /** @type {import('eslint').Linter.Config[]} */
 const eslint = defineConfig([
-	globalIgnores(EXCLUDE_PATTERNS, '@chronoverse/ignores'),
 	gitignore({
 		name: '@chronoverse/gitignore',
 	}),
+	globalIgnores(EXCLUDE_PATTERNS, '@chronoverse/ignores'),
 	javascript,
 	perfectionist,
 ]);
