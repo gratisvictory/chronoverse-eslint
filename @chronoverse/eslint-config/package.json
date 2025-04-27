@@ -1,6 +1,6 @@
 {
   "name": "@chronoverse-eslint/eslint-config",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@chronoverse-eslint/javascript": "^1.0.4",
-    "@chronoverse-eslint/perfectionist": "^1.0.3",
+    "@chronoverse-eslint/perfectionist": "^1.0.4",
     "eslint": "^9.25.1",
     "eslint-config-flat-gitignore": "^2.1.0"
   },
