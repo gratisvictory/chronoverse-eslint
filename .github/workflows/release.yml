@@ -11,6 +11,7 @@ permissions:
   pull-requests: write
   packages: write
 concurrency: '${{ github.workflow }}-${{ github.ref }}'
+
 jobs:
   release:
     name: Release
@@ -20,78 +21,56 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - name: Setup CI
         uses: ./.github/actions/ci-setup
+
       - name: Configure Git Identity
-        run: >
+        run: |
           git config --global user.name 'github-actions[bot]'
-
-          git config --global user.email
-          'github-actions[bot]@users.noreply.github.com'
-
-          git remote set-url origin https://x-access-token:${{
-          secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+
       - name: Build packages
         run: bun run build
-      - name: Get versions from package.json
+
+      - name: Get package versions
         id: versions
-        run: >
-          JAVASCRIPT_VERSION=$(jq -r '.version'
-          @chronoverse/javascript/package.json)
+        run: |
+          bun scripts/release.js
 
-          ESLINT_CONFIG_VERSION=$(jq -r '.version'
-          @chronoverse/eslint-config/package.json)
-
-
-          echo "JAVASCRIPT_VERSION=$JAVASCRIPT_VERSION" >> $GITHUB_ENV
-
-          echo "ESLINT_CONFIG_VERSION=$ESLINT_CONFIG_VERSION" >> $GITHUB_ENV
-
-
-          echo "javascript_version=$JAVASCRIPT_VERSION" >> $GITHUB_OUTPUT
-
-          echo "eslint_config_version=$ESLINT_CONFIG_VERSION" >> $GITHUB_OUTPUT
       - name: Check if tags already exist
         id: tag-check
-        run: >
-          if git ls-remote --tags origin refs/tags/javascript-v${{
-          env.JAVASCRIPT_VERSION }} | grep .; then
-            echo "JAVASCRIPT_EXISTS=true" >> $GITHUB_ENV
-          else
-            echo "JAVASCRIPT_EXISTS=false" >> $GITHUB_ENV
-          fi
+        run: |
+          for var in $(compgen -v | grep _VERSION$); do
+            pkg=${var%_VERSION}
+            version=${!var}
+            tag="${pkg,,}-v${version}" # lowercase
+            if git ls-remote --tags origin refs/tags/$tag | grep .; then
+              echo "${pkg}_EXISTS=true" >> $GITHUB_ENV
+            else
+              echo "${pkg}_EXISTS=false" >> $GITHUB_ENV
+            fi
+          done
 
-
-          if git ls-remote --tags origin refs/tags/eslint-config-v${{
-          env.ESLINT_CONFIG_VERSION }} | grep .; then
-            echo "ESLINT_CONFIG_EXISTS=true" >> $GITHUB_ENV
-          else
-            echo "ESLINT_CONFIG_EXISTS=false" >> $GITHUB_ENV
-          fi
-      - name: Create GitHub Release for JavaScript
-        if: env.JAVASCRIPT_EXISTS == 'false'
-        uses: comnoco/create-release-action@v2.0.5
+      - name: Create GitHub Releases
+        run: |
+          for var in $(compgen -v | grep _VERSION$); do
+            pkg=${var%_VERSION}
+            version=${!var}
+            exists_var="${pkg}_EXISTS"
+            if [ "${!exists_var}" = "false" ]; then
+              tag="${pkg,,}-v${version}" # lowercase
+              name="${pkg,,}" # lowercase
+              echo "Creating release for $tag"
+              gh release create "$tag" --title "$name - ${{ github.event.pull_request.title }}" --notes "${{ github.event.pull_request.body }}" --target ${{ github.sha }}
+            fi
+          done
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
-        with:
-          tag_name: 'javascript-v${{ env.JAVASCRIPT_VERSION }}'
-          release_name: 'JavaScript - ${{ github.event.pull_request.title }}'
-          body: '${{ github.event.pull_request.body }}'
-          draft: false
-          prerelease: false
-      - name: Create GitHub Release for ESLint Config
-        if: env.ESLINT_CONFIG_EXISTS == 'false'
-        uses: comnoco/create-release-action@v2.0.5
-        env:
-          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
-        with:
-          tag_name: 'eslint-config-v${{ env.ESLINT_CONFIG_VERSION }}'
-          release_name: 'ESLint Config - ${{ github.event.pull_request.title }}'
-          body: '${{ github.event.pull_request.body }}'
-          draft: false
-          prerelease: false
+
       - name: Wait for OTP
         uses: step-security/wait-for-secrets@v1
         id: wait-for-secrets
@@ -100,19 +79,33 @@ jobs:
             OTP:
               name: 'OTP to publish package'
               description: 'OTP from authenticator app'
-      - name: Configure npm for publishing
-        run: >
-          echo "//registry.npmjs.org/:_authToken=${{ secrets.PUBLISH_NPM_TOKEN
-          }}" > ~/.npmrc
 
+      - name: Configure npm for publishing
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.PUBLISH_NPM_TOKEN }}" > ~/.npmrc
           echo "registry=https://registry.npmjs.org" >> ~/.npmrc
+
       - name: Publish to npm
         run: 'bun run ci:release --otp ${{ steps.wait-for-secrets.outputs.OTP }}'
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
           NODE_AUTH_TOKEN: '${{ secrets.PUBLISH_NPM_TOKEN }}'
+
       - name: Comment on PR
         uses: actions/github-script@v7
         with:
           github-token: '${{ secrets.GITHUB_TOKEN }}'
-          script: "github.rest.issues.createComment({\n  issue_number: context.issue.number,\n  owner: context.repo.owner,\n  repo: context.repo.repo,\nbody: `### Released Packages\\n\n    - **@chronoverse-eslint/javascript**: \\`${process.env.JAVASCRIPT_VERSION}\\`\\n\n- **@chronoverse-eslint/eslint-config**: \\`${process.env.ESLINT_CONFIG_VERSION}\\`\\n\n            \U0001F389`\n});\n"
+          script: |
+            const pkgs = Object.entries(process.env)
+              .filter(([key]) => key.endsWith('_VERSION'))
+              .map(([key, version]) => {
+                const name = key.replace('_VERSION', '').toLowerCase();
+                return `- **@chronoverse-eslint/${name}**: \`${version}\``;
+              })
+              .join('\n');
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `### Released Packages\n${pkgs}\n🎉`
+            });
