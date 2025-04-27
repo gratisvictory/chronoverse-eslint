@@ -1,6 +1,6 @@
 {
   "name": "@chronoverse-eslint/eslint-config",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -26,6 +26,8 @@
     "lint:inspector:deploy": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.viewer.js --base /chronoverse-eslint/ --outDir .eslint"
   },
   "dependencies": {
+    "@chronoverse-eslint/javascript": "^1.0.3",
+    "@chronoverse-eslint/perfectionist": "^1.0.1",
     "eslint": "^9.25.1"
   },
   "devDependencies": {
@@ -33,8 +35,6 @@
     "rimraf": "^6.0.1"
   },
   "peerDependencies": {
-    "@chronoverse-eslint/javascript": "workspace:^",
-    "@chronoverse-eslint/perfectionist": "workspace:^",
     "eslint": "^9.25.1"
   },
   "packageManager": "bun@1.2.10",
