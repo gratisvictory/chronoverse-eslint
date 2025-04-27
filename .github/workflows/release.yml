@@ -13,20 +13,49 @@ permissions:
   pull-requests: write
   packages: write
 
-concurrency: '${{ github.workflow }}-${{ github.ref }}'
+concurrency:
+  group: '${{ github.workflow }}-${{ github.ref }}'
+  cancel-in-progress: true
 
 jobs:
   release:
     name: Release
-    if: >-
-      github.event.pull_request.merged == true
+    if: ${{ github.event.pull_request.merged == true }}
     runs-on: ubuntu-latest
+    timeout-minutes: 30
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Cache Bun dependencies
+        uses: actions/cache@v3
+        id: bun-cache
+        with:
+          path: |
+            ~/.bun
+            node_modules
+            **/.bun
+          key: ${{ runner.os }}-bun-${{ hashFiles('**/bun.lockb') }}
+          restore-keys: |
+            ${{ runner.os }}-bun-
+
+      - name: Cache Lerna
+        uses: actions/cache@v3
+        id: lerna-cache
+        with:
+          path: |
+            **/node_modules
+            **/.cache
+          key: ${{ runner.os }}-lerna-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-lerna-
 
       - name: Setup CI
         uses: ./.github/actions/ci-setup
+        if: steps.bun-cache.outputs.cache-hit != 'true'
 
       - name: Configure Git Identity
         run: |
@@ -36,13 +65,23 @@ jobs:
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
 
+      - name: Install dependencies
+        run: bun install
+        if: steps.bun-cache.outputs.cache-hit != 'true'
+
       - name: Build packages
         run: bun run build
+        env:
+          NODE_ENV: production
 
       - name: Get package versions
         id: versions
         run: |
-          bun scripts/release.js
+          set -e
+          if ! bun scripts/release.js; then
+            echo "::error::Failed to get package versions"
+            exit 1
+          fi
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
 
@@ -50,6 +89,7 @@ jobs:
         run: |
           echo "//registry.npmjs.org/:_authToken=${{ secrets.PUBLISH_NPM_TOKEN }}" > ~/.npmrc
           echo "registry=https://registry.npmjs.org" >> ~/.npmrc
+          echo "always-auth=true" >> ~/.npmrc
 
       - name: Wait for OTP
         uses: step-security/wait-for-secrets@v1
@@ -59,31 +99,49 @@ jobs:
             OTP:
               name: 'OTP to publish package'
               description: 'OTP from authenticator app'
+        timeout-minutes: 5
 
       - name: Publish to npm
-        run: bun run ci:release --otp ${{ steps.wait-for-secrets.outputs.OTP }}
+        run: |
+          set -e
+          if ! bun run ci:release --otp ${{ steps.wait-for-secrets.outputs.OTP }}; then
+            echo "::error::Failed to publish packages"
+            exit 1
+          fi
         env:
           NODE_AUTH_TOKEN: '${{ secrets.PUBLISH_NPM_TOKEN }}'
 
       - name: Create GitHub Release
-        uses: comnoco/create-release-action@v2.0.5
+        uses: softprops/action-gh-release@v1
+        if: ${{ always() && steps.versions.outputs.RELEASE_VERSION }}
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
         with:
-          tag_name: 'release@${{ steps.versions.outputs.CHRONOVERSE-ESLINT_ESLINT-CONFIG_VERSION }}'
-          release_name: '${{ github.event.pull_request.title }}'
-          body: '${{ github.event.pull_request.body }}'
+          tag_name: 'v${{ steps.versions.outputs.RELEASE_VERSION }}'
+          name: '${{ github.event.pull_request.title }}'
+          body: |
+            ${{ github.event.pull_request.body }}
+
+            ### Released Packages
+            ${{ steps.versions.outputs.RELEASE_PACKAGES_MARKDOWN }}
           draft: false
           prerelease: false
+          generate_release_notes: true
 
       - name: Comment on PR
+        if: ${{ always() }}
         uses: actions/github-script@v7
         with:
           github-token: '${{ secrets.GITHUB_TOKEN }}'
           script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: `### Released Packages 🚀\n\n- **Package**: \`${process.env.CHRONOVERSE-ESLINT_ESLINT-CONFIG_VERSION}\`\n`
-            });
+            try {
+              const markdown = process.env.RELEASE_PACKAGES_MARKDOWN || '_No packages were released_';
+              await github.rest.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: `### Released Packages 🚀\n\n${markdown}\n\nView release: https://github.com/${context.repo.owner}/${context.repo.repo}/releases/tag/v${process.env.RELEASE_VERSION}`
+              });
+            } catch (error) {
+              console.log(`::warning::Failed to create comment: ${error.message}`);
+            }

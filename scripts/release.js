@@ -2,37 +2,109 @@
 import { execSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
+import process from 'node:process';
 
-const getWorkspaces = () => JSON.parse(execSync('bunx lerna list --all --json', { encoding: 'utf-8' }));
+const PackageUtils = {
+	getAllPackages() {
+		try {
+			const output = execSync('bunx lerna list --all --json', { encoding: 'utf8' });
+			return JSON.parse(output);
+		} catch (error) {
+			throw new Error('Failed to get package list', { cause: error });
+		}
+	},
 
-const getPackageVersion = pkgLocation => {
-	const packageJsonPath = path.join(pkgLocation, 'package.json');
-	const packageJson = JSON.parse(readFileSync(packageJsonPath, 'utf-8'));
-	return packageJson.version;
+	getChangedPackages() {
+		try {
+			const output = execSync('bunx lerna changed --json', { encoding: 'utf8' });
+			return JSON.parse(output);
+		} catch {
+			console.warn('No changed packages found (perhaps already published)');
+			return [];
+		}
+	},
+
+	getPackageVersion(pkgPath) {
+		try {
+			const pkgJson = JSON.parse(readFileSync(path.join(pkgPath, 'package.json'), 'utf8'));
+			return pkgJson.version;
+		} catch (error) {
+			throw new Error(`Failed to read package.json at ${pkgPath}`, { cause: error });
+		}
+	},
+
+	normalizePackageName: name => name.replace(/^@/, '').replace(/[-/]/g, '_').toUpperCase(),
 };
 
-const generateEnvOutput = packages => {
-	const lines = [];
-	const outputs = [];
+const OutputGenerators = {
+	markdownLine: (name, version) => `- \`${name}\` → \`${version}\``,
 
-	packages.forEach(pkg => {
-		const nameSafe = pkg.name.replace('@', '').replace('/', '_').toUpperCase();
-		const version = getPackageVersion(pkg.location);
+	generateEnvScript(packages, mainPackage) {
+		const lines = packages.map(pkg => `echo "${pkg.safeName}_VERSION=${pkg.version}" >> $GITHUB_ENV`);
 
-		if (pkg.private) return;
+		if (mainPackage) {
+			lines.push(
+				`echo "RELEASE_VERSION=${mainPackage.version}" >> $GITHUB_ENV`,
+				`echo "RELEASE_NAME_SAFE=${mainPackage.safeName}" >> $GITHUB_ENV`,
+			);
+		}
 
-		lines.push(`echo "${nameSafe}_VERSION=${version}" >> $GITHUB_ENV`);
-		outputs.push(`echo "${nameSafe}_VERSION=${version}" >> $GITHUB_OUTPUT`);
-	});
+		lines.push(
+			'echo "RELEASE_PACKAGES_MARKDOWN<<EOF" >> $GITHUB_ENV',
+			packages.map(pkg => OutputGenerators.markdownLine(pkg.name, pkg.version)).join('\n')
+				|| '_No public packages changed_',
+			'EOF',
+		);
 
-	return { envScript: lines.join('\n'), outputScript: outputs.join('\n') };
+		return lines.join('\n');
+	},
+
+	generateOutputScript(packages, mainPackage) {
+		const lines = packages.map(pkg => `echo "${pkg.safeName}_VERSION=${pkg.version}" >> $GITHUB_OUTPUT`);
+
+		if (mainPackage) {
+			lines.push(
+				`echo "RELEASE_VERSION=${mainPackage.version}" >> $GITHUB_OUTPUT`,
+				`echo "RELEASE_NAME_SAFE=${mainPackage.safeName}" >> $GITHUB_OUTPUT`,
+			);
+		}
+
+		lines.push(
+			'echo "RELEASE_PACKAGES_MARKDOWN<<EOF" >> $GITHUB_OUTPUT',
+			packages.map(pkg => OutputGenerators.markdownLine(pkg.name, pkg.version)).join('\n')
+				|| '_No public packages changed_',
+			'EOF',
+		);
+
+		return lines.join('\n');
+	},
 };
 
-const main = async () => {
-	const packages = getWorkspaces();
-	return generateEnvOutput(packages);
+const main = () => {
+	try {
+		const changedPackages = PackageUtils.getChangedPackages()
+			.filter(pkg => !pkg.private)
+			.map(pkg => ({
+				...pkg,
+				safeName: PackageUtils.normalizePackageName(pkg.name),
+				version: PackageUtils.getPackageVersion(pkg.location),
+			}));
+
+		const mainPackage = changedPackages[0];
+		const envScript = OutputGenerators.generateEnvScript(changedPackages, mainPackage);
+		const outScript = OutputGenerators.generateOutputScript(changedPackages, mainPackage);
+
+		console.log('--- ENV VARIABLES ---');
+		console.log(envScript);
+		console.log('\n--- OUTPUT VARIABLES ---');
+		console.log(outScript);
+
+		return 0;
+	} catch (error) {
+		console.error('Release script failed:', error.message);
+		if (error.cause) console.error('Caused by:', error.cause);
+		return 1;
+	}
 };
 
-const { envScript, outputScript } = await main();
-console.log(envScript);
-console.log(outputScript);
+process.exit(main());
