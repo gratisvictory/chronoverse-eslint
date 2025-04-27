@@ -1,6 +1,5 @@
 {
   "name": "@chronoverse-eslint/builder",
-  "version": "1.0.0",
   "private": true,
   "description": "Reusable build script for Bun",
   "type": "module",
