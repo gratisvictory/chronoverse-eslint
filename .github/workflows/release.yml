@@ -70,7 +70,7 @@ jobs:
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
         with:
-          tag_name: 'release@${{ steps.versions.outputs.version }}'
+          tag_name: 'release@${{ steps.versions.outputs.CHRONOVERSE-ESLINT_ESLINT-CONFIG_VERSION }}'
           release_name: '${{ github.event.pull_request.title }}'
           body: '${{ github.event.pull_request.body }}'
           draft: false
@@ -85,5 +85,5 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: `### Released Packages 🚀\n\n- **Package**: \`${process.env.PACKAGE_VERSION}\`\n`
+              body: `### Released Packages 🚀\n\n- **Package**: \`${process.env.CHRONOVERSE-ESLINT_ESLINT-CONFIG_VERSION}\`\n`
             });
