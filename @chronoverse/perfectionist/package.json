@@ -26,7 +26,6 @@
   },
   "devDependencies": {
     "@chronoverse-eslint/builder": "workspace:^",
-    "@chronoverse-eslint/shared": "workspace:^",
     "eslint-plugin-perfectionist": "^4.12.3",
     "rimraf": "^6.0.1"
   },

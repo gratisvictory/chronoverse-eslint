@@ -39,7 +39,7 @@
     },
     "@chronoverse/eslint-config": {
       "name": "@chronoverse-eslint/eslint-config",
-      "version": "1.0.4",
+      "version": "1.0.8",
       "dependencies": {
         "@chronoverse-eslint/javascript": "workspace:^",
         "@chronoverse-eslint/perfectionist": "workspace:^",
@@ -57,7 +57,7 @@
     },
     "@chronoverse/javascript": {
       "name": "@chronoverse-eslint/javascript",
-      "version": "1.0.3",
+      "version": "1.0.4",
       "dependencies": {
         "eslint": "^9.25.1",
       },
@@ -80,7 +80,6 @@
       },
       "devDependencies": {
         "@chronoverse-eslint/builder": "workspace:^",
-        "@chronoverse-eslint/shared": "workspace:^",
         "eslint-plugin-perfectionist": "^4.12.3",
         "rimraf": "^6.0.1",
       },
@@ -90,7 +89,7 @@
     },
     "@chronoverse/shared": {
       "name": "@chronoverse-eslint/shared",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "devDependencies": {
         "@chronoverse-eslint/builder": "workspace:^",
         "rimraf": "^6.0.1",
