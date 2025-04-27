@@ -39,7 +39,7 @@
     },
     "@chronoverse/eslint-config": {
       "name": "@chronoverse-eslint/eslint-config",
-      "version": "1.0.8",
+      "version": "1.0.10",
       "dependencies": {
         "@chronoverse-eslint/javascript": "workspace:^",
         "@chronoverse-eslint/perfectionist": "workspace:^",
@@ -74,7 +74,7 @@
     },
     "@chronoverse/perfectionist": {
       "name": "@chronoverse-eslint/perfectionist",
-      "version": "1.0.1",
+      "version": "1.0.4",
       "dependencies": {
         "eslint": "^9.25.1",
       },
