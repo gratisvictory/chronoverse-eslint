@@ -1,6 +1,6 @@
 {
   "name": "@chronoverse-eslint/perfectionist",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -22,11 +22,11 @@
     "clean:all": "rimraf dist node_modules"
   },
   "dependencies": {
-    "eslint": "^9.25.1"
+    "eslint": "^9.25.1",
+    "eslint-plugin-perfectionist": "^4.12.3"
   },
   "devDependencies": {
     "@chronoverse-eslint/builder": "workspace:^",
-    "eslint-plugin-perfectionist": "^4.12.3",
     "rimraf": "^6.0.1"
   },
   "peerDependencies": {
