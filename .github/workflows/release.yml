@@ -1,24 +1,27 @@
 name: Release
+
 on:
   pull_request:
     branches:
       - main
     types:
       - closed
+
 permissions:
   id-token: write
   contents: write
   pull-requests: write
   packages: write
+
 concurrency: '${{ github.workflow }}-${{ github.ref }}'
 
 jobs:
   release:
     name: Release
     if: >-
-      github.repository == 'gratisvictory/chronoverse-eslint' &&
       github.event.pull_request.merged == true
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
 
@@ -40,36 +43,13 @@ jobs:
         id: versions
         run: |
           bun scripts/release.js
-
-      - name: Check if tags already exist
-        id: tag-check
-        run: |
-          for var in $(compgen -v | grep _VERSION$); do
-            pkg=${var%_VERSION}
-            version=${!var}
-            tag="${pkg,,}-v${version}" # lowercase
-            if git ls-remote --tags origin refs/tags/$tag | grep .; then
-              echo "${pkg}_EXISTS=true" >> $GITHUB_ENV
-            else
-              echo "${pkg}_EXISTS=false" >> $GITHUB_ENV
-            fi
-          done
-
-      - name: Create GitHub Releases
-        run: |
-          for var in $(compgen -v | grep _VERSION$); do
-            pkg=${var%_VERSION}
-            version=${!var}
-            exists_var="${pkg}_EXISTS"
-            if [ "${!exists_var}" = "false" ]; then
-              tag="${pkg,,}-v${version}" # lowercase
-              name="${pkg,,}" # lowercase
-              echo "Creating release for $tag"
-              gh release create "$tag" --title "$name - ${{ github.event.pull_request.title }}" --notes "${{ github.event.pull_request.body }}" --target ${{ github.sha }}
-            fi
-          done
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+
+      - name: Configure npm for publishing
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.PUBLISH_NPM_TOKEN }}" > ~/.npmrc
+          echo "registry=https://registry.npmjs.org" >> ~/.npmrc
 
       - name: Wait for OTP
         uses: step-security/wait-for-secrets@v1
@@ -80,32 +60,30 @@ jobs:
               name: 'OTP to publish package'
               description: 'OTP from authenticator app'
 
-      - name: Configure npm for publishing
-        run: |
-          echo "//registry.npmjs.org/:_authToken=${{ secrets.PUBLISH_NPM_TOKEN }}" > ~/.npmrc
-          echo "registry=https://registry.npmjs.org" >> ~/.npmrc
-
       - name: Publish to npm
-        run: 'bun run ci:release --otp ${{ steps.wait-for-secrets.outputs.OTP }}'
+        run: bun run ci:release --otp ${{ steps.wait-for-secrets.outputs.OTP }}
+        env:
+          NODE_AUTH_TOKEN: '${{ secrets.PUBLISH_NPM_TOKEN }}'
+
+      - name: Create GitHub Release
+        uses: comnoco/create-release-action@v2.0.5
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
-          NODE_AUTH_TOKEN: '${{ secrets.PUBLISH_NPM_TOKEN }}'
+        with:
+          tag_name: 'release@${{ steps.versions.outputs.version }}'
+          release_name: '${{ github.event.pull_request.title }}'
+          body: '${{ github.event.pull_request.body }}'
+          draft: false
+          prerelease: false
 
       - name: Comment on PR
         uses: actions/github-script@v7
         with:
           github-token: '${{ secrets.GITHUB_TOKEN }}'
           script: |
-            const pkgs = Object.entries(process.env)
-              .filter(([key]) => key.endsWith('_VERSION'))
-              .map(([key, version]) => {
-                const name = key.replace('_VERSION', '').toLowerCase();
-                return `- **@chronoverse-eslint/${name}**: \`${version}\``;
-              })
-              .join('\n');
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: `### Released Packages\n${pkgs}\n🎉`
+              body: `### Released Packages 🚀\n\n- **Package**: \`${process.env.PACKAGE_VERSION}\`\n`
             });
