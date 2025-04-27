@@ -30,32 +30,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Cache Bun dependencies
-        uses: actions/cache@v3
-        id: bun-cache
-        with:
-          path: |
-            ~/.bun
-            node_modules
-            **/.bun
-          key: ${{ runner.os }}-bun-${{ hashFiles('**/bun.lockb') }}
-          restore-keys: |
-            ${{ runner.os }}-bun-
-
-      - name: Cache Lerna
-        uses: actions/cache@v3
-        id: lerna-cache
-        with:
-          path: |
-            **/node_modules
-            **/.cache
-          key: ${{ runner.os }}-lerna-${{ hashFiles('**/package.json') }}
-          restore-keys: |
-            ${{ runner.os }}-lerna-
-
       - name: Setup CI
         uses: ./.github/actions/ci-setup
-        if: steps.bun-cache.outputs.cache-hit != 'true'
 
       - name: Configure Git Identity
         run: |
@@ -67,7 +43,6 @@ jobs:
 
       - name: Install dependencies
         run: bun install
-        if: steps.bun-cache.outputs.cache-hit != 'true'
 
       - name: Build packages
         run: bun run build
