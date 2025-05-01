@@ -1,4 +1,4 @@
-import { variablesNoUnusedVars } from '@chronoverse-eslint/shared';
+import { variablesNoUnusedVariables } from '@chronoverse-eslint/shared';
 
 const confusingBrowserGlobals = [
 	'addEventListener',
@@ -164,7 +164,7 @@ const variables = {
 	 */
 	'no-unused-vars': [
 		'error',
-		...variablesNoUnusedVars,
+		...variablesNoUnusedVariables,
 	],
 	/**
 	 * Disallow use of variables before they are defined.

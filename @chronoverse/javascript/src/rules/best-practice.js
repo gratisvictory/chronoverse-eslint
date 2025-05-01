@@ -1,5 +1,25 @@
 const bestPracticesNoRestrictedProperties = [
 	{
+		message: 'Use assert.strictEqual instead of assert.equal.',
+		object: 'assert',
+		property: 'equal',
+	},
+	{
+		message: 'Use assert.notStrictEqual instead of assert.notEqual.',
+		object: 'assert',
+		property: 'notEqual',
+	},
+	{
+		message: 'Use assert.deepStrictEqual instead of assert.deepEqual.',
+		object: 'assert',
+		property: 'deepEqual',
+	},
+	{
+		message: 'Use assert.notDeepStrictEqual instead of assert.notDeepEqual.',
+		object: 'assert',
+		property: 'notDeepEqual',
+	},
+	{
 		message: 'Use `assert.deepStrictEqual()`.',
 		object: 'assert',
 		property: 'deepEqual',

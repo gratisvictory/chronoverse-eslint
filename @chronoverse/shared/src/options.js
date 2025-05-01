@@ -1,5 +1,5 @@
 /**
- * @typedef {Object} NoUnusedVarsOption
+ * @typedef {object} NoUnusedVarsOption
  * @property {'all'} vars - Check all variables.
  * @property {string} varsIgnorePattern - Regex pattern to ignore certain variables.
  * @property {'after-used'} args - Check arguments after they are used.
@@ -11,7 +11,7 @@
  * Options for the `no-unused-vars` ESLint rule.
  * @type {NoUnusedVarsOption[]}
  */
-export const variablesNoUnusedVars = [
+export const variablesNoUnusedVariables = [
 	{
 		args: 'after-used',
 		argsIgnorePattern: '^_',

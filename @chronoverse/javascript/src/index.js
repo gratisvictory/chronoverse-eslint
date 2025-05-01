@@ -1,5 +1,7 @@
-import { JAVASCRIPT_FILES } from '@chronoverse-eslint/shared';
+import { getRulesByConfigName, JAVASCRIPT_FILES } from '@chronoverse-eslint/shared';
 import js from '@eslint/js';
+/** @ts-expect-error eslint-config-eslint is not typed */
+import eslintConfigBase from 'eslint-config-eslint';
 import { defineConfig } from 'eslint/config';
 import globals from 'globals';
 import { bestPractice } from './rules/best-practice.js';
@@ -46,7 +48,7 @@ const javascript = defineConfig([
 			js,
 		},
 		rules: {
-			...js.configs.recommended.rules,
+			...getRulesByConfigName('eslint-config-eslint/js', eslintConfigBase),
 			...bestPractice,
 			...errors,
 			...es6,

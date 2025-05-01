@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import process from 'node:process';
 
-const PackageUtils = {
+const PackageUtilities = {
 	getAllPackages() {
 		try {
 			const output = execSync('bunx lerna list --all --json', { encoding: 'utf8' });
@@ -24,23 +24,25 @@ const PackageUtils = {
 		}
 	},
 
-	getPackageVersion(pkgPath) {
+	getPackageVersion(packagePath) {
 		try {
-			const pkgJson = JSON.parse(readFileSync(path.join(pkgPath, 'package.json'), 'utf8'));
-			return pkgJson.version;
+			const packageJson = JSON.parse(readFileSync(path.join(packagePath, 'package.json'), 'utf8'));
+			return packageJson.version;
 		} catch (error) {
-			throw new Error(`Failed to read package.json at ${pkgPath}`, { cause: error });
+			throw new Error(`Failed to read package.json at ${packagePath}`, { cause: error });
 		}
 	},
 
-	normalizePackageName: name => name.replace(/^@/, '').replace(/[-/]/g, '_').toUpperCase(),
+	normalizePackageName: name => name.replace(/^@/, '').replaceAll(/[-/]/g, '_').toUpperCase(),
 };
 
 const OutputGenerators = {
 	markdownLine: (name, version) => `- \`${name}\` → \`${version}\``,
 
 	generateEnvScript(packages, mainPackage) {
-		const lines = packages.map(pkg => `echo "${pkg.safeName}_VERSION=${pkg.version}" >> $GITHUB_ENV`);
+		const lines = packages.map(
+			package_ => `echo "${package_.safeName}_VERSION=${package_.version}" >> $GITHUB_ENV`,
+		);
 
 		if (mainPackage) {
 			lines.push(
@@ -51,7 +53,7 @@ const OutputGenerators = {
 
 		lines.push(
 			'echo "RELEASE_PACKAGES_MARKDOWN<<EOF" >> $GITHUB_ENV',
-			packages.map(pkg => OutputGenerators.markdownLine(pkg.name, pkg.version)).join('\n')
+			packages.map(package_ => OutputGenerators.markdownLine(package_.name, package_.version)).join('\n')
 				|| '_No public packages changed_',
 			'EOF',
 		);
@@ -60,7 +62,9 @@ const OutputGenerators = {
 	},
 
 	generateOutputScript(packages, mainPackage) {
-		const lines = packages.map(pkg => `echo "${pkg.safeName}_VERSION=${pkg.version}" >> $GITHUB_OUTPUT`);
+		const lines = packages.map(
+			package_ => `echo "${package_.safeName}_VERSION=${package_.version}" >> $GITHUB_OUTPUT`,
+		);
 
 		if (mainPackage) {
 			lines.push(
@@ -71,7 +75,7 @@ const OutputGenerators = {
 
 		lines.push(
 			'echo "RELEASE_PACKAGES_MARKDOWN<<EOF" >> $GITHUB_OUTPUT',
-			packages.map(pkg => OutputGenerators.markdownLine(pkg.name, pkg.version)).join('\n')
+			packages.map(package_ => OutputGenerators.markdownLine(package_.name, package_.version)).join('\n')
 				|| '_No public packages changed_',
 			'EOF',
 		);
@@ -82,20 +86,20 @@ const OutputGenerators = {
 
 const main = () => {
 	try {
-		const changedPackages = PackageUtils.getChangedPackages()
-			.filter(pkg => !pkg.private)
-			.map(pkg => ({
-				...pkg,
-				safeName: PackageUtils.normalizePackageName(pkg.name),
-				version: PackageUtils.getPackageVersion(pkg.location),
+		const changedPackages = PackageUtilities.getChangedPackages()
+			.filter(package_ => !package_.private)
+			.map(package_ => ({
+				...package_,
+				safeName: PackageUtilities.normalizePackageName(package_.name),
+				version: PackageUtilities.getPackageVersion(package_.location),
 			}));
 
 		const mainPackage = changedPackages[0];
-		const envScript = OutputGenerators.generateEnvScript(changedPackages, mainPackage);
+		const environmentScript = OutputGenerators.generateEnvScript(changedPackages, mainPackage);
 		const outScript = OutputGenerators.generateOutputScript(changedPackages, mainPackage);
 
 		console.log('--- ENV VARIABLES ---');
-		console.log(envScript);
+		console.log(environmentScript);
 		console.log('\n--- OUTPUT VARIABLES ---');
 		console.log(outScript);
 

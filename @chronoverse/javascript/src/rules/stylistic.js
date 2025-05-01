@@ -57,6 +57,13 @@ const stylistic = {
 		'as-needed',
 	],
 	/**
+	 * Require function declarations to be written as function expressions.
+	 */
+	'func-style': [
+		'error',
+		'expression',
+	],
+	/**
 	 * Disallow functions with too many parameters.
 	 */
 	'max-params': [

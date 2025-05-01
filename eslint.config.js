@@ -1,6 +1,12 @@
 import { defineConfig } from 'eslint/config';
-import { eslint } from '@chronoverse-eslint/eslint-config';
+import { js } from '@chronoverse-eslint/eslint-config';
 
 export default defineConfig([
-	eslint,
+	js,
+	{
+		rules: {
+			'@eslint-community/eslint-comments/disable-enable-pair': 'off',
+			'no-restricted-syntax': 'off',
+		},
+	},
 ]);

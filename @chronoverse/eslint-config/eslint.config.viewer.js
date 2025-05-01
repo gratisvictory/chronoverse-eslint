@@ -1,6 +1,8 @@
 import { defineConfig } from 'eslint/config';
-import { eslint } from './src/index.js';
+import { css, jsdocTs, tsx } from './src/index.js';
 
 export default defineConfig([
-	eslint,
+	tsx,
+	jsdocTs,
+	css,
 ]);

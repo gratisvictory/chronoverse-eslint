@@ -30,10 +30,10 @@ const pkg = JSON.parse(await readFile(userPkgJsonPath, 'utf8'));
 
 /**
  * Generates .d.ts files using TypeScript compiler.
- * @param {string} [tsconfigPath='./tsconfig.build.json'] - Path to TypeScript config.
+ * @param {string} [tsconfigPath='./tsconfig.json'] - Path to TypeScript config.
  * @returns {Promise<void>}
  */
-const buildTypes = async (tsconfigPath = './tsconfig.build.json') => {
+const buildTypes = async (tsconfigPath = './tsconfig.json') => {
 	console.log('📦 Generating .d.ts from .js + JSDoc...');
 	try {
 		await execAsync(`tsc -p ${tsconfigPath}`);
@@ -51,17 +51,12 @@ const buildTypes = async (tsconfigPath = './tsconfig.build.json') => {
  * @param {Object} [options={}] - Build options.
  * @param {string[]} [options.entryPoints=['src/index.js']] - Entry points for the build.
  * @param {string} [options.outdir='dist'] - Output directory.
- * @param {string} [options.tsconfig='./tsconfig.build.json'] - Path to the tsconfig file.
+ * @param {string} [options.tsconfig='./tsconfig.json'] - Path to the tsconfig file.
  * @param {boolean} [options.minify=true] - Whether to minify the build.
  * @returns {Promise<void>}
  */
 const buildBundle = async (options = {}) => {
-	const {
-		entryPoints = ['src/index.js'],
-		minify = true,
-		outdir = 'dist',
-		tsconfig = './tsconfig.build.json',
-	} = options;
+	const { entryPoints = ['src/index.js'], minify = true, outdir = 'dist', tsconfig = './tsconfig.json' } = options;
 
 	try {
 		await esbuild.build({
@@ -70,7 +65,6 @@ const buildBundle = async (options = {}) => {
 			external: [
 				...Object.keys(pkg.dependencies || {}),
 				...Object.keys(pkg.peerDependencies || {}),
-				...Object.keys(pkg.devDependencies || {}),
 			],
 			format: 'esm',
 			minify,
@@ -91,7 +85,7 @@ const buildBundle = async (options = {}) => {
 /**
  * Main build function to generate types and build the bundle.
  * @param {Object} [options={}] - Build options.
- * @param {string} [options.tsconfig='./tsconfig.build.json'] - Path to the tsconfig file.
+ * @param {string} [options.tsconfig='./tsconfig.json'] - Path to the tsconfig file.
  * @returns {Promise<void>}
  */
 const build = async (options = {}) => {
