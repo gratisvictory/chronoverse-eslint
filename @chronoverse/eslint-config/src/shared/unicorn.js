@@ -61,7 +61,6 @@ const unicorn = defineConfig([
 			'unicorn-x/no-array-callback-reference': 'warn',
 			'unicorn-x/no-array-reduce': 'off',
 			'unicorn-x/no-for-loop': 'warn',
-			'unicorn-x/no-instanceof-array': 'error',
 			'unicorn-x/no-new-array': 'error',
 			'unicorn-x/no-new-buffer': 'error',
 			'unicorn-x/no-null': 'off',

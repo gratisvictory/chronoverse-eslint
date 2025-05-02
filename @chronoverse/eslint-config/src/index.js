@@ -11,6 +11,7 @@ import { dependency } from './shared/depend.js';
 import { jsdocForJs, jsdocForTs } from './shared/jsdoc.js';
 // import { json } from './shared/json.js';
 import { node } from './shared/node.js';
+import { prettier as prettierConfig } from './shared/prettier.js';
 import { promise } from './shared/promise.js';
 import { regexp } from './shared/regexp.js';
 import { unicorn } from './shared/unicorn.js';
@@ -34,6 +35,11 @@ const js = defineConfig([
 const ts = defineConfig([
 	...js,
 	typescript,
+]);
+
+/** @type {import('eslint').Linter.Config[]} */
+const prettier = defineConfig([
+	prettierConfig,
 ]);
 
 /** @type {import('eslint').Linter.Config[]} */
@@ -63,4 +69,4 @@ const css = defineConfig([
 	cssConfig,
 ]);
 
-export { css, js, jsdocJs, jsdocTs, jsx, ts, tsx };
+export { css, js, jsdocJs, jsdocTs, jsx, prettier, ts, tsx };
