@@ -12,9 +12,9 @@ import * as esbuild from 'esbuild';
  */
 const execAsync = promisify(exec);
 
-const rootDir = process.cwd();
+const rootDirection = process.cwd();
 
-const userPkgJsonPath = path.join(rootDir, 'package.json');
+const userPackageJsonPath = path.join(rootDirection, 'package.json');
 
 /**
  * @typedef {Object} PackageJson
@@ -26,7 +26,7 @@ const userPkgJsonPath = path.join(rootDir, 'package.json');
 /**
  * @type {PackageJson}
  */
-const pkg = JSON.parse(await readFile(userPkgJsonPath, 'utf8'));
+const packageJson = JSON.parse(await readFile(userPackageJsonPath, 'utf8'));
 
 /**
  * Generates .d.ts files using TypeScript compiler.
@@ -38,11 +38,13 @@ const buildTypes = async (tsconfigPath = './tsconfig.json') => {
 	try {
 		await execAsync(`tsc -p ${tsconfigPath}`);
 		console.log('✅ Types generated');
-	} catch (err) {
-		/** @type {any} */
-		const error = err;
-		console.error('❌ Failed to generate types:', error.stderr || error);
-		throw err;
+	} catch (error) {
+		if (error instanceof Error) {
+			console.error('❌ Failed to generate types:', error.message || error);
+		} else {
+			console.error('❌ Failed to generate types:', error);
+		}
+		throw error;
 	}
 };
 
@@ -63,8 +65,8 @@ const buildBundle = async (options = {}) => {
 			bundle: true,
 			entryPoints,
 			external: [
-				...Object.keys(pkg.dependencies || {}),
-				...Object.keys(pkg.peerDependencies || {}),
+				...Object.keys(packageJson.dependencies || {}),
+				...Object.keys(packageJson.peerDependencies || {}),
 			],
 			format: 'esm',
 			minify,

@@ -13,7 +13,7 @@ import { jsdocForJs, jsdocForTs } from './shared/jsdoc.js';
 import { node } from './shared/node.js';
 import { promise } from './shared/promise.js';
 import { regexp } from './shared/regexp.js';
-// import { unicorn } from './shared/unicorn.js';
+import { unicorn } from './shared/unicorn.js';
 
 /** @type {import('eslint').Linter.Config[]} */
 const js = defineConfig([
@@ -21,7 +21,7 @@ const js = defineConfig([
 	globalIgnores(EXCLUDE_PATTERNS, '@chronoverse/ignores'),
 	javascript,
 	perfectionist,
-	// unicorn,
+	unicorn,
 	comments,
 	node,
 	promise,
