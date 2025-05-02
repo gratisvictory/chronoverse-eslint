@@ -2609,6 +2609,255 @@
       "index": 8
     },
     {
+      "name": "@chronoverse/unicorn-x/setup",
+      "languageOptions": {
+        "globals": {
+          "AggregateError": false,
+          "Array": false,
+          "ArrayBuffer": false,
+          "Atomics": false,
+          "BigInt": false,
+          "BigInt64Array": false,
+          "BigUint64Array": false,
+          "Boolean": false,
+          "DataView": false,
+          "Date": false,
+          "decodeURI": false,
+          "decodeURIComponent": false,
+          "encodeURI": false,
+          "encodeURIComponent": false,
+          "Error": false,
+          "escape": false,
+          "eval": false,
+          "EvalError": false,
+          "FinalizationRegistry": false,
+          "Float32Array": false,
+          "Float64Array": false,
+          "Function": false,
+          "globalThis": false,
+          "Infinity": false,
+          "Int16Array": false,
+          "Int32Array": false,
+          "Int8Array": false,
+          "Intl": false,
+          "isFinite": false,
+          "isNaN": false,
+          "Iterator": false,
+          "JSON": false,
+          "Map": false,
+          "Math": false,
+          "NaN": false,
+          "Number": false,
+          "Object": false,
+          "parseFloat": false,
+          "parseInt": false,
+          "Promise": false,
+          "Proxy": false,
+          "RangeError": false,
+          "ReferenceError": false,
+          "Reflect": false,
+          "RegExp": false,
+          "Set": false,
+          "SharedArrayBuffer": false,
+          "String": false,
+          "Symbol": false,
+          "SyntaxError": false,
+          "TypeError": false,
+          "Uint16Array": false,
+          "Uint32Array": false,
+          "Uint8Array": false,
+          "Uint8ClampedArray": false,
+          "undefined": false,
+          "unescape": false,
+          "URIError": false,
+          "WeakMap": false,
+          "WeakRef": false,
+          "WeakSet": false
+        }
+      },
+      "index": 9
+    },
+    {
+      "name": "@chronoverse/unicorn-x/rules",
+      "plugins": {
+        "unicorn-x": {}
+      },
+      "rules": {
+        "no-negated-condition": "off",
+        "no-nested-ternary": "off",
+        "unicorn-x/better-regex": "off",
+        "unicorn-x/catch-error-name": "error",
+        "unicorn-x/consistent-assert": "error",
+        "unicorn-x/consistent-date-clone": "error",
+        "unicorn-x/consistent-destructuring": "off",
+        "unicorn-x/consistent-empty-array-spread": "error",
+        "unicorn-x/consistent-existence-index-check": "error",
+        "unicorn-x/consistent-function-scoping": "warn",
+        "unicorn-x/custom-error-definition": "off",
+        "unicorn-x/empty-brace-spaces": "error",
+        "unicorn-x/error-message": "error",
+        "unicorn-x/escape-case": "error",
+        "unicorn-x/expiring-todo-comments": "warn",
+        "unicorn-x/explicit-length-check": [
+          "error",
+          {
+            "non-zero": "not-equal"
+          }
+        ],
+        "unicorn-x/filename-case": "error",
+        "unicorn-x/import-style": [
+          "error",
+          {
+            "styles": {
+              "node:path": {
+                "named": true,
+                "namespace": true
+              },
+              "path": {
+                "named": true,
+                "namespace": true
+              }
+            }
+          }
+        ],
+        "unicorn-x/new-for-builtins": "error",
+        "unicorn-x/no-abusive-eslint-disable": "error",
+        "unicorn-x/no-accessor-recursion": "error",
+        "unicorn-x/no-anonymous-default-export": "error",
+        "unicorn-x/no-array-callback-reference": "warn",
+        "unicorn-x/no-array-for-each": "error",
+        "unicorn-x/no-array-method-this-argument": "error",
+        "unicorn-x/no-array-reduce": "off",
+        "unicorn-x/no-await-expression-member": "error",
+        "unicorn-x/no-await-in-promise-methods": "error",
+        "unicorn-x/no-console-spaces": "error",
+        "unicorn-x/no-document-cookie": "error",
+        "unicorn-x/no-empty-file": "error",
+        "unicorn-x/no-for-loop": "warn",
+        "unicorn-x/no-hex-escape": "error",
+        "unicorn-x/no-instanceof-builtins": "error",
+        "unicorn-x/no-invalid-fetch-options": "error",
+        "unicorn-x/no-invalid-remove-event-listener": "error",
+        "unicorn-x/no-keyword-prefix": "off",
+        "unicorn-x/no-lonely-if": "error",
+        "unicorn-x/no-magic-array-flat-depth": "error",
+        "unicorn-x/no-named-default": "error",
+        "unicorn-x/no-negated-condition": "error",
+        "unicorn-x/no-negation-in-equality-check": "error",
+        "unicorn-x/no-nested-ternary": "error",
+        "unicorn-x/no-new-array": "error",
+        "unicorn-x/no-new-buffer": "error",
+        "unicorn-x/no-null": "off",
+        "unicorn-x/no-object-as-default-parameter": "off",
+        "unicorn-x/no-process-exit": "warn",
+        "unicorn-x/no-single-promise-in-promise-methods": "error",
+        "unicorn-x/no-static-only-class": "error",
+        "unicorn-x/no-thenable": "error",
+        "unicorn-x/no-this-assignment": "error",
+        "unicorn-x/no-typeof-undefined": "error",
+        "unicorn-x/no-unnecessary-array-flat-depth": "error",
+        "unicorn-x/no-unnecessary-array-splice-count": "error",
+        "unicorn-x/no-unnecessary-await": "error",
+        "unicorn-x/no-unnecessary-polyfills": "off",
+        "unicorn-x/no-unnecessary-slice-end": "error",
+        "unicorn-x/no-unreadable-array-destructuring": "error",
+        "unicorn-x/no-unreadable-iife": "error",
+        "unicorn-x/no-unused-properties": "off",
+        "unicorn-x/no-useless-fallback-in-spread": "error",
+        "unicorn-x/no-useless-length-check": "error",
+        "unicorn-x/no-useless-promise-resolve-reject": "error",
+        "unicorn-x/no-useless-spread": "error",
+        "unicorn-x/no-useless-switch-case": "error",
+        "unicorn-x/no-useless-undefined": "error",
+        "unicorn-x/no-zero-fractions": "error",
+        "unicorn-x/number-literal-case": "error",
+        "unicorn-x/numeric-separators-style": "error",
+        "unicorn-x/prefer-add-event-listener": "off",
+        "unicorn-x/prefer-array-find": "error",
+        "unicorn-x/prefer-array-flat-map": "error",
+        "unicorn-x/prefer-array-flat": "error",
+        "unicorn-x/prefer-array-index-of": "error",
+        "unicorn-x/prefer-array-some": "error",
+        "unicorn-x/prefer-at": "error",
+        "unicorn-x/prefer-blob-reading-methods": "error",
+        "unicorn-x/prefer-code-point": "error",
+        "unicorn-x/prefer-date-now": "error",
+        "unicorn-x/prefer-default-parameters": "off",
+        "unicorn-x/prefer-dom-node-append": "off",
+        "unicorn-x/prefer-dom-node-dataset": "off",
+        "unicorn-x/prefer-dom-node-remove": "off",
+        "unicorn-x/prefer-dom-node-text-content": "error",
+        "unicorn-x/prefer-event-target": "error",
+        "unicorn-x/prefer-export-from": [
+          "error",
+          {
+            "ignoreUsedVariables": true
+          }
+        ],
+        "unicorn-x/prefer-global-this": "error",
+        "unicorn-x/prefer-import-meta-properties": "off",
+        "unicorn-x/prefer-includes": "error",
+        "unicorn-x/prefer-json-parse-buffer": "error",
+        "unicorn-x/prefer-keyboard-event-key": "error",
+        "unicorn-x/prefer-logical-operator-over-ternary": "error",
+        "unicorn-x/prefer-math-min-max": "error",
+        "unicorn-x/prefer-math-trunc": "error",
+        "unicorn-x/prefer-modern-dom-apis": "off",
+        "unicorn-x/prefer-modern-math-apis": "error",
+        "unicorn-x/prefer-module": "off",
+        "unicorn-x/prefer-native-coercion-functions": "error",
+        "unicorn-x/prefer-negative-index": "error",
+        "unicorn-x/prefer-node-protocol": "error",
+        "unicorn-x/prefer-number-properties": "error",
+        "unicorn-x/prefer-object-from-entries": "error",
+        "unicorn-x/prefer-optional-catch-binding": "error",
+        "unicorn-x/prefer-prototype-methods": "error",
+        "unicorn-x/prefer-query-selector": "off",
+        "unicorn-x/prefer-reflect-apply": "error",
+        "unicorn-x/prefer-regexp-test": "error",
+        "unicorn-x/prefer-set-has": "error",
+        "unicorn-x/prefer-set-size": "error",
+        "unicorn-x/prefer-single-call": "error",
+        "unicorn-x/prefer-spread": "error",
+        "unicorn-x/prefer-string-raw": "off",
+        "unicorn-x/prefer-string-replace-all": "error",
+        "unicorn-x/prefer-string-slice": "error",
+        "unicorn-x/prefer-string-starts-ends-with": "error",
+        "unicorn-x/prefer-string-trim-start-end": "error",
+        "unicorn-x/prefer-structured-clone": "error",
+        "unicorn-x/prefer-switch": "error",
+        "unicorn-x/prefer-ternary": "off",
+        "unicorn-x/prefer-top-level-await": "error",
+        "unicorn-x/prefer-type-error": "error",
+        "unicorn-x/prevent-abbreviations": [
+          "error",
+          {
+            "checkDefaultAndNamespaceImports": true,
+            "checkShorthandImports": true,
+            "checkShorthandProperties": true
+          }
+        ],
+        "unicorn-x/relative-url-style": [
+          "error",
+          "always"
+        ],
+        "unicorn-x/require-array-join-separator": "error",
+        "unicorn-x/require-number-to-fixed-digits-argument": "error",
+        "unicorn-x/require-post-message-target-origin": "off",
+        "unicorn-x/string-content": "off",
+        "unicorn-x/switch-case-braces": [
+          "error",
+          "avoid"
+        ],
+        "unicorn-x/template-indent": "error",
+        "unicorn-x/text-encoding-identifier-case": "error",
+        "unicorn-x/throw-new-error": "error",
+        "unicorn-x/import-index": "off",
+        "unicorn-x/no-instanceof-array": "error"
+      },
+      "index": 10
+    },
+    {
       "name": "@chronoverse/comments/rules",
       "plugins": {
         "@eslint-community/eslint-comments": {}
@@ -2620,7 +2869,7 @@
         "@eslint-community/eslint-comments/no-unlimited-disable": "error",
         "@eslint-community/eslint-comments/no-unused-enable": "error"
       },
-      "index": 9
+      "index": 11
     },
     {
       "name": "@chronoverse/node/rules",
@@ -2645,7 +2894,7 @@
         "n/no-new-require": "error",
         "n/no-path-concat": "error"
       },
-      "index": 10
+      "index": 12
     },
     {
       "name": "@chronoverse/promise/rules",
@@ -2671,7 +2920,7 @@
         "promise/no-return-in-finally": "warn",
         "promise/valid-params": "warn"
       },
-      "index": 11
+      "index": 13
     },
     {
       "name": "@chronoverse/regexp/rules",
@@ -2747,7 +2996,7 @@
         "regexp/strict": "error",
         "regexp/use-ignore-case": "error"
       },
-      "index": 12
+      "index": 14
     },
     {
       "plugins": {
@@ -2757,14 +3006,14 @@
         "depend/ban-dependencies": "error"
       },
       "name": "@chronoverse/dependency/setup > depend/flat/recommended",
-      "index": 13
+      "index": 15
     },
     {
       "name": "@chronoverse/dependency/setup",
       "plugins": {
         "depend": {}
       },
-      "index": 14
+      "index": 16
     },
     {
       "name": "@chronoverse/typescript/setup",
@@ -2775,7 +3024,7 @@
           "sourceType": "module"
         }
       },
-      "index": 15
+      "index": 17
     },
     {
       "name": "@chronoverse/typescript/rules",
@@ -2943,7 +3192,7 @@
         "@susisu/safe-typescript/no-unsafe-object-property-check": "error",
         "@susisu/safe-typescript/no-unsafe-object-property-overwrite": "error"
       },
-      "index": 16
+      "index": 18
     },
     {
       "name": "@chronoverse/react/setup",
@@ -4084,7 +4333,7 @@
           }
         }
       },
-      "index": 17
+      "index": 19
     },
     {
       "name": "@chronoverse/react/rules > @eslint-react/recommended-typescript",
@@ -4184,14 +4433,14 @@
       "files": [
         "**/*.?([m])ts?(x)"
       ],
-      "index": 18
+      "index": 20
     },
     {
       "name": "@chronoverse/react/rules",
       "files": [
         "**/*.?([m])ts?(x)"
       ],
-      "index": 19
+      "index": 21
     },
     {
       "name": "@chronoverse/jsdoc/rules",
@@ -4302,7 +4551,7 @@
         "jsdoc/text-escaping": "off",
         "jsdoc/valid-types": "error"
       },
-      "index": 20
+      "index": 22
     },
     {
       "name": "@chronoverse/css/setup",
@@ -4324,7 +4573,7 @@
       "plugins": {
         "css": {}
       },
-      "index": 21
+      "index": 23
     },
     {
       "name": "@chronoverse/css/rules",
@@ -4341,7 +4590,7 @@
         "css/no-invalid-properties": "error",
         "css/use-baseline": "warn"
       },
-      "index": 22
+      "index": 24
     }
   ],
   "rules": {
@@ -9933,6 +10182,1641 @@
       "name": "perfectionist/sort-maps",
       "plugin": "perfectionist"
     },
+    "unicorn-x/better-regex": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Improve regexes by making them shorter, consistent, and safer.",
+        "recommended": false,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/better-regex.md"
+      },
+      "fixable": "code",
+      "defaultOptions": [
+        {
+          "sortCharacterClasses": true
+        }
+      ],
+      "name": "unicorn-x/better-regex",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/catch-error-name": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Enforce a specific parameter name in catch clauses.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/catch-error-name.md"
+      },
+      "fixable": "code",
+      "defaultOptions": [
+        {}
+      ],
+      "name": "unicorn-x/catch-error-name",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/consistent-assert": {
+      "type": "problem",
+      "docs": {
+        "description": "Enforce consistent assertion style with `node:assert`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/consistent-assert.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/consistent-assert",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/consistent-date-clone": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer passing `Date` directly to the constructor when cloning.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/consistent-date-clone.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/consistent-date-clone",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/consistent-destructuring": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Use destructured variables over properties.",
+        "recommended": false,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/consistent-destructuring.md"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "name": "unicorn-x/consistent-destructuring",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/consistent-empty-array-spread": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer consistent types when spreading a ternary in an array literal.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/consistent-empty-array-spread.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/consistent-empty-array-spread",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/consistent-existence-index-check": {
+      "type": "problem",
+      "docs": {
+        "description": "Enforce consistent style for element existence checks with `indexOf()`, `lastIndexOf()`, `findIndex()`, and `findLastIndex()`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/consistent-existence-index-check.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/consistent-existence-index-check",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/consistent-function-scoping": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Move function definitions to the highest possible scope.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/consistent-function-scoping.md"
+      },
+      "defaultOptions": [
+        {
+          "checkArrowFunctions": true
+        }
+      ],
+      "name": "unicorn-x/consistent-function-scoping",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/custom-error-definition": {
+      "type": "problem",
+      "docs": {
+        "description": "Enforce correct `Error` subclassing.",
+        "recommended": false,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/custom-error-definition.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/custom-error-definition",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/empty-brace-spaces": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce no spaces between braces.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/empty-brace-spaces.md"
+      },
+      "fixable": "whitespace",
+      "name": "unicorn-x/empty-brace-spaces",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/error-message": {
+      "type": "problem",
+      "docs": {
+        "description": "Enforce passing a `message` value when creating a built-in error.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/error-message.md"
+      },
+      "name": "unicorn-x/error-message",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/escape-case": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Require escape sequences to use uppercase or lowercase values.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/escape-case.md"
+      },
+      "fixable": "code",
+      "defaultOptions": [
+        "uppercase"
+      ],
+      "name": "unicorn-x/escape-case",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/expiring-todo-comments": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Add expiration conditions to TODO comments.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/expiring-todo-comments.md"
+      },
+      "defaultOptions": [
+        {
+          "terms": [
+            "todo",
+            "fixme",
+            "xxx"
+          ],
+          "ignore": [],
+          "ignoreDatesOnPullRequests": true,
+          "allowWarningComments": true
+        }
+      ],
+      "name": "unicorn-x/expiring-todo-comments",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/explicit-length-check": {
+      "type": "problem",
+      "docs": {
+        "description": "Enforce explicitly comparing the `length` or `size` property of a value.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/explicit-length-check.md"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "name": "unicorn-x/explicit-length-check",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/filename-case": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Enforce a case style for filenames.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/filename-case.md"
+      },
+      "defaultOptions": [],
+      "name": "unicorn-x/filename-case",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/import-style": {
+      "type": "problem",
+      "docs": {
+        "description": "Enforce specific import styles per module.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/import-style.md"
+      },
+      "defaultOptions": [
+        {}
+      ],
+      "name": "unicorn-x/import-style",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/new-for-builtins": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Enforce the use of `new` for all builtins, except `String`, `Number`, `Boolean`, `Symbol` and `BigInt`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/new-for-builtins.md"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "name": "unicorn-x/new-for-builtins",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-abusive-eslint-disable": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Enforce specifying rules to disable in `eslint-disable` comments.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-abusive-eslint-disable.md"
+      },
+      "name": "unicorn-x/no-abusive-eslint-disable",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-accessor-recursion": {
+      "type": "problem",
+      "docs": {
+        "description": "Disallow recursive access to `this` within getters and setters.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-accessor-recursion.md"
+      },
+      "defaultOptions": [],
+      "name": "unicorn-x/no-accessor-recursion",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-anonymous-default-export": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow anonymous functions and classes as the default export.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-anonymous-default-export.md"
+      },
+      "hasSuggestions": true,
+      "name": "unicorn-x/no-anonymous-default-export",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-array-callback-reference": {
+      "type": "problem",
+      "docs": {
+        "description": "Prevent passing a function reference directly to iterator methods.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-array-callback-reference.md"
+      },
+      "hasSuggestions": true,
+      "name": "unicorn-x/no-array-callback-reference",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-array-for-each": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer `for…of` over the `forEach` method.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-array-for-each.md"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "name": "unicorn-x/no-array-for-each",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-array-method-this-argument": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow using the `this` argument in array methods.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-array-method-this-argument.md"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "name": "unicorn-x/no-array-method-this-argument",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-array-reduce": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow `Array#reduce()` and `Array#reduceRight()`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-array-reduce.md"
+      },
+      "defaultOptions": [
+        {
+          "allowSimpleOperations": true
+        }
+      ],
+      "name": "unicorn-x/no-array-reduce",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-await-expression-member": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow member access from await expression.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-await-expression-member.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/no-await-expression-member",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-await-in-promise-methods": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow using `await` in `Promise` method parameters.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-await-in-promise-methods.md"
+      },
+      "hasSuggestions": true,
+      "name": "unicorn-x/no-await-in-promise-methods",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-console-spaces": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Do not use leading/trailing space between `console.log` parameters.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-console-spaces.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/no-console-spaces",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-document-cookie": {
+      "type": "problem",
+      "docs": {
+        "description": "Do not use `document.cookie` directly.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-document-cookie.md"
+      },
+      "name": "unicorn-x/no-document-cookie",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-empty-file": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow empty files.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-empty-file.md"
+      },
+      "name": "unicorn-x/no-empty-file",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-for-loop": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Do not use a `for` loop that can be replaced with a `for-of` loop.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-for-loop.md"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "name": "unicorn-x/no-for-loop",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-hex-escape": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Enforce the use of Unicode escapes instead of hexadecimal escapes.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-hex-escape.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/no-hex-escape",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-instanceof-builtins": {
+      "type": "problem",
+      "docs": {
+        "description": "Disallow `instanceof` with built-in objects",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-instanceof-builtins.md"
+      },
+      "fixable": "code",
+      "defaultOptions": [
+        {
+          "useErrorIsError": false,
+          "strategy": "loose",
+          "include": [],
+          "exclude": []
+        }
+      ],
+      "hasSuggestions": true,
+      "name": "unicorn-x/no-instanceof-builtins",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-invalid-fetch-options": {
+      "type": "problem",
+      "docs": {
+        "description": "Disallow invalid options in `fetch()` and `new Request()`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-invalid-fetch-options.md"
+      },
+      "name": "unicorn-x/no-invalid-fetch-options",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-invalid-remove-event-listener": {
+      "type": "problem",
+      "docs": {
+        "description": "Prevent calling `EventTarget#removeEventListener()` with the result of an expression.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-invalid-remove-event-listener.md"
+      },
+      "name": "unicorn-x/no-invalid-remove-event-listener",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-keyword-prefix": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow identifiers starting with `new` or `class`.",
+        "recommended": false,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-keyword-prefix.md"
+      },
+      "defaultOptions": [
+        {}
+      ],
+      "name": "unicorn-x/no-keyword-prefix",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-lonely-if": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow `if` statements as the only statement in `if` blocks without `else`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-lonely-if.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/no-lonely-if",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-magic-array-flat-depth": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow a magic number as the `depth` argument in `Array#flat(…).`",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-magic-array-flat-depth.md"
+      },
+      "name": "unicorn-x/no-magic-array-flat-depth",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-named-default": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow named usage of default import and export.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-named-default.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/no-named-default",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-negated-condition": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow negated conditions.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-negated-condition.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/no-negated-condition",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-negation-in-equality-check": {
+      "type": "problem",
+      "docs": {
+        "description": "Disallow negated expression in equality check.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-negation-in-equality-check.md"
+      },
+      "hasSuggestions": true,
+      "name": "unicorn-x/no-negation-in-equality-check",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-nested-ternary": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow nested ternary expressions.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-nested-ternary.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/no-nested-ternary",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-new-array": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow `new Array()`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-new-array.md"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "name": "unicorn-x/no-new-array",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-new-buffer": {
+      "type": "problem",
+      "docs": {
+        "description": "Enforce the use of `Buffer.from()` and `Buffer.alloc()` instead of the deprecated `new Buffer()`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-new-buffer.md"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "name": "unicorn-x/no-new-buffer",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-null": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow the use of the `null` literal.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-null.md"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "defaultOptions": [
+        {
+          "checkStrictEquality": false
+        }
+      ],
+      "name": "unicorn-x/no-null",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-object-as-default-parameter": {
+      "type": "problem",
+      "docs": {
+        "description": "Disallow the use of objects as default parameters.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-object-as-default-parameter.md"
+      },
+      "name": "unicorn-x/no-object-as-default-parameter",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-process-exit": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow `process.exit()`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-process-exit.md"
+      },
+      "name": "unicorn-x/no-process-exit",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-single-promise-in-promise-methods": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow passing single-element arrays to `Promise` methods.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-single-promise-in-promise-methods.md"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "name": "unicorn-x/no-single-promise-in-promise-methods",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-static-only-class": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow classes that only have static members.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-static-only-class.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/no-static-only-class",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-thenable": {
+      "type": "problem",
+      "docs": {
+        "description": "Disallow `then` property.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-thenable.md"
+      },
+      "name": "unicorn-x/no-thenable",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-this-assignment": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow assigning `this` to a variable.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-this-assignment.md"
+      },
+      "name": "unicorn-x/no-this-assignment",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-typeof-undefined": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow comparing `undefined` using `typeof`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-typeof-undefined.md"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "defaultOptions": [
+        {
+          "checkGlobalVariables": false
+        }
+      ],
+      "name": "unicorn-x/no-typeof-undefined",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-unnecessary-array-flat-depth": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow using `1` as the `depth` argument of `Array#flat()`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-unnecessary-array-flat-depth.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/no-unnecessary-array-flat-depth",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-unnecessary-array-splice-count": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow using `.length` or `Infinity` as the `deleteCount` or `skipCount` argument of `Array#{splice,toSpliced}()`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-unnecessary-array-splice-count.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/no-unnecessary-array-splice-count",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-unnecessary-await": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow awaiting non-promise values.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-unnecessary-await.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/no-unnecessary-await",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-unnecessary-polyfills": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Enforce the use of built-in methods instead of unnecessary polyfills.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-unnecessary-polyfills.md"
+      },
+      "defaultOptions": [],
+      "name": "unicorn-x/no-unnecessary-polyfills",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-unnecessary-slice-end": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow using `.length` or `Infinity` as the `end` argument of `{Array,String,TypedArray}#slice()`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-unnecessary-slice-end.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/no-unnecessary-slice-end",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-unreadable-array-destructuring": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow unreadable array destructuring.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-unreadable-array-destructuring.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/no-unreadable-array-destructuring",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-unreadable-iife": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow unreadable IIFEs.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-unreadable-iife.md"
+      },
+      "hasSuggestions": false,
+      "name": "unicorn-x/no-unreadable-iife",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-unused-properties": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow unused object properties.",
+        "recommended": false,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-unused-properties.md"
+      },
+      "name": "unicorn-x/no-unused-properties",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-useless-fallback-in-spread": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow useless fallback when spreading in object literals.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-useless-fallback-in-spread.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/no-useless-fallback-in-spread",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-useless-length-check": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow useless array length check.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-useless-length-check.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/no-useless-length-check",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-useless-promise-resolve-reject": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow returning/yielding `Promise.resolve/reject()` in async functions or promise callbacks",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-useless-promise-resolve-reject.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/no-useless-promise-resolve-reject",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-useless-spread": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow unnecessary spread.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-useless-spread.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/no-useless-spread",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-useless-switch-case": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow useless case in switch statements.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-useless-switch-case.md"
+      },
+      "hasSuggestions": true,
+      "name": "unicorn-x/no-useless-switch-case",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-useless-undefined": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow useless `undefined`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-useless-undefined.md"
+      },
+      "fixable": "code",
+      "defaultOptions": [
+        {}
+      ],
+      "name": "unicorn-x/no-useless-undefined",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-zero-fractions": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Disallow number literals with zero fractions or dangling dots.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/no-zero-fractions.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/no-zero-fractions",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/number-literal-case": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Enforce proper case for numeric literals.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/number-literal-case.md"
+      },
+      "fixable": "code",
+      "defaultOptions": [
+        {
+          "hexadecimalValue": "uppercase"
+        }
+      ],
+      "name": "unicorn-x/number-literal-case",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/numeric-separators-style": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Enforce the style of numeric separators by correctly grouping digits.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/numeric-separators-style.md"
+      },
+      "fixable": "code",
+      "defaultOptions": [
+        {
+          "onlyIfContainsSeparator": false,
+          "binary": {
+            "minimumDigits": 0,
+            "groupLength": 4
+          },
+          "octal": {
+            "minimumDigits": 0,
+            "groupLength": 4
+          },
+          "hexadecimal": {
+            "minimumDigits": 0,
+            "groupLength": 2
+          },
+          "number": {
+            "minimumDigits": 5,
+            "groupLength": 3
+          }
+        }
+      ],
+      "name": "unicorn-x/numeric-separators-style",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-add-event-listener": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer `.addEventListener()` and `.removeEventListener()` over `on`-functions.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-add-event-listener.md"
+      },
+      "fixable": "code",
+      "defaultOptions": [
+        {}
+      ],
+      "name": "unicorn-x/prefer-add-event-listener",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-array-find": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer `.find(…)` and `.findLast(…)` over the first or last element from `.filter(…)`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-array-find.md"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "defaultOptions": [
+        {
+          "checkFromLast": true
+        }
+      ],
+      "name": "unicorn-x/prefer-array-find",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-array-flat-map": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer `.flatMap(…)` over `.map(…).flat()`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-array-flat-map.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/prefer-array-flat-map",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-array-flat": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer `Array#flat()` over legacy techniques to flatten arrays.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-array-flat.md"
+      },
+      "fixable": "code",
+      "defaultOptions": [
+        {}
+      ],
+      "name": "unicorn-x/prefer-array-flat",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-array-index-of": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer `Array#{indexOf,lastIndexOf}()` over `Array#{findIndex,findLastIndex}()` when looking for the index of an item.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-array-index-of.md"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "name": "unicorn-x/prefer-array-index-of",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-array-some": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer `.some(…)` over `.filter(…).length` check and `.{find,findLast,findIndex,findLastIndex}(…)`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-array-some.md"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "name": "unicorn-x/prefer-array-some",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-at": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer `.at()` method for index access and `String#charAt()`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-at.md"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "defaultOptions": [
+        {
+          "getLastElementFunctions": [],
+          "checkAllIndexAccess": false
+        }
+      ],
+      "name": "unicorn-x/prefer-at",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-blob-reading-methods": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer `Blob#arrayBuffer()` over `FileReader#readAsArrayBuffer(…)` and `Blob#text()` over `FileReader#readAsText(…)`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-blob-reading-methods.md"
+      },
+      "name": "unicorn-x/prefer-blob-reading-methods",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-code-point": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer `String#codePointAt(…)` over `String#charCodeAt(…)` and `String.fromCodePoint(…)` over `String.fromCharCode(…)`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-code-point.md"
+      },
+      "hasSuggestions": true,
+      "name": "unicorn-x/prefer-code-point",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-date-now": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer `Date.now()` to get the number of milliseconds since the Unix Epoch.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-date-now.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/prefer-date-now",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-default-parameters": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer default parameters over reassignment.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-default-parameters.md"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "name": "unicorn-x/prefer-default-parameters",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-dom-node-append": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer `Node#append()` over `Node#appendChild()`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-dom-node-append.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/prefer-dom-node-append",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-dom-node-dataset": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer using `.dataset` on DOM elements over calling attribute methods.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-dom-node-dataset.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/prefer-dom-node-dataset",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-dom-node-remove": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer `childNode.remove()` over `parentNode.removeChild(childNode)`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-dom-node-remove.md"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "name": "unicorn-x/prefer-dom-node-remove",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-dom-node-text-content": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer `.textContent` over `.innerText`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-dom-node-text-content.md"
+      },
+      "hasSuggestions": true,
+      "name": "unicorn-x/prefer-dom-node-text-content",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-event-target": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer `EventTarget` over `EventEmitter`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-event-target.md"
+      },
+      "name": "unicorn-x/prefer-event-target",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-export-from": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer `export…from` when re-exporting.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-export-from.md"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "defaultOptions": [
+        {
+          "ignoreUsedVariables": false
+        }
+      ],
+      "name": "unicorn-x/prefer-export-from",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-global-this": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer `globalThis` over `window`, `self`, and `global`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-global-this.md"
+      },
+      "fixable": "code",
+      "hasSuggestions": false,
+      "name": "unicorn-x/prefer-global-this",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-import-meta-properties": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer `import.meta.{dirname,filename}` over legacy techniques for getting file paths.",
+        "recommended": false,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-import-meta-properties.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/prefer-import-meta-properties",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-includes": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer `.includes()` over `.indexOf()`, `.lastIndexOf()`, and `Array#some()` when checking for existence or non-existence.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-includes.md"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "name": "unicorn-x/prefer-includes",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-json-parse-buffer": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer reading a JSON file as a buffer.",
+        "recommended": false,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-json-parse-buffer.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/prefer-json-parse-buffer",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-keyboard-event-key": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer `KeyboardEvent#key` over `KeyboardEvent#keyCode`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-keyboard-event-key.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/prefer-keyboard-event-key",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-logical-operator-over-ternary": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer using a logical operator over a ternary.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-logical-operator-over-ternary.md"
+      },
+      "hasSuggestions": true,
+      "name": "unicorn-x/prefer-logical-operator-over-ternary",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-math-min-max": {
+      "type": "problem",
+      "docs": {
+        "description": "Prefer `Math.min()` and `Math.max()` over ternaries for simple comparisons.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-math-min-max.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/prefer-math-min-max",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-math-trunc": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Enforce the use of `Math.trunc` instead of bitwise operators.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-math-trunc.md"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "name": "unicorn-x/prefer-math-trunc",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-modern-dom-apis": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer `.before()` over `.insertBefore()`, `.replaceWith()` over `.replaceChild()`, prefer one of `.before()`, `.after()`, `.append()` or `.prepend()` over `insertAdjacentText()` and `insertAdjacentElement()`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-modern-dom-apis.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/prefer-modern-dom-apis",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-modern-math-apis": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer modern `Math` APIs over legacy patterns.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-modern-math-apis.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/prefer-modern-math-apis",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-module": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer JavaScript modules (ESM) over CommonJS.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-module.md"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "name": "unicorn-x/prefer-module",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-native-coercion-functions": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer using `String`, `Number`, `BigInt`, `Boolean`, and `Symbol` directly.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-native-coercion-functions.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/prefer-native-coercion-functions",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-negative-index": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer negative index over `.length - index` when possible.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-negative-index.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/prefer-negative-index",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-node-protocol": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer using the `node:` protocol when importing Node.js builtin modules.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-node-protocol.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/prefer-node-protocol",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-number-properties": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer `Number` static properties over global ones.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-number-properties.md"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "defaultOptions": [
+        {
+          "checkInfinity": false,
+          "checkNaN": true
+        }
+      ],
+      "name": "unicorn-x/prefer-number-properties",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-object-from-entries": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer using `Object.fromEntries(…)` to transform a list of key-value pairs into an object.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-object-from-entries.md"
+      },
+      "fixable": "code",
+      "defaultOptions": [
+        {}
+      ],
+      "name": "unicorn-x/prefer-object-from-entries",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-optional-catch-binding": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer omitting the `catch` binding parameter.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-optional-catch-binding.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/prefer-optional-catch-binding",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-prototype-methods": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer borrowing methods from the prototype instead of the instance.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-prototype-methods.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/prefer-prototype-methods",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-query-selector": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer `.querySelector()` over `.getElementById()`, `.querySelectorAll()` over `.getElementsByClassName()` and `.getElementsByTagName()` and `.getElementsByName()`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-query-selector.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/prefer-query-selector",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-reflect-apply": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer `Reflect.apply()` over `Function#apply()`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-reflect-apply.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/prefer-reflect-apply",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-regexp-test": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer `RegExp#test()` over `String#match()` and `RegExp#exec()`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-regexp-test.md"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "name": "unicorn-x/prefer-regexp-test",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-set-has": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer `Set#has()` over `Array#includes()` when checking for existence or non-existence.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-set-has.md"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "name": "unicorn-x/prefer-set-has",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-set-size": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer using `Set#size` instead of `Array#length`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-set-size.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/prefer-set-size",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-single-call": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Enforce combining multiple `Array#push()`, `Element#classList.{add,remove}()`, and `importScripts()` into one call.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-single-call.md"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "defaultOptions": [
+        {}
+      ],
+      "name": "unicorn-x/prefer-single-call",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-spread": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer the spread operator over `Array.from(…)`, `Array#concat(…)`, `Array#{slice,toSpliced}()` and `String#split('')`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-spread.md"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "name": "unicorn-x/prefer-spread",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-string-raw": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer using the `String.raw` tag to avoid escaping `\\`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-string-raw.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/prefer-string-raw",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-string-replace-all": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer `String#replaceAll()` over regex searches with the global flag.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-string-replace-all.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/prefer-string-replace-all",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-string-slice": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer `String#slice()` over `String#substr()` and `String#substring()`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-string-slice.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/prefer-string-slice",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-string-starts-ends-with": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer `String#startsWith()` & `String#endsWith()` over `RegExp#test()`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-string-starts-ends-with.md"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "name": "unicorn-x/prefer-string-starts-ends-with",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-string-trim-start-end": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer `String#trimStart()` / `String#trimEnd()` over `String#trimLeft()` / `String#trimRight()`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-string-trim-start-end.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/prefer-string-trim-start-end",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-structured-clone": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer using `structuredClone` to create a deep clone.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-structured-clone.md"
+      },
+      "hasSuggestions": true,
+      "defaultOptions": [
+        {}
+      ],
+      "name": "unicorn-x/prefer-structured-clone",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-switch": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer `switch` over multiple `else-if`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-switch.md"
+      },
+      "fixable": "code",
+      "defaultOptions": [
+        {
+          "minimumCases": 3,
+          "emptyDefaultCase": "no-default-comment"
+        }
+      ],
+      "name": "unicorn-x/prefer-switch",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-ternary": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer ternary expressions over simple `if-else` statements.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-ternary.md"
+      },
+      "fixable": "code",
+      "defaultOptions": [
+        "always"
+      ],
+      "name": "unicorn-x/prefer-ternary",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-top-level-await": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prefer top-level await over top-level promises and async function calls.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-top-level-await.md"
+      },
+      "hasSuggestions": true,
+      "name": "unicorn-x/prefer-top-level-await",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prefer-type-error": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Enforce throwing `TypeError` in type checking conditions.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prefer-type-error.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/prefer-type-error",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/prevent-abbreviations": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Prevent abbreviations.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/prevent-abbreviations.md"
+      },
+      "fixable": "code",
+      "defaultOptions": [
+        {}
+      ],
+      "name": "unicorn-x/prevent-abbreviations",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/relative-url-style": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Enforce consistent relative URL style.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/relative-url-style.md"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "defaultOptions": [
+        "never"
+      ],
+      "name": "unicorn-x/relative-url-style",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/require-array-join-separator": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Enforce using the separator argument with `Array#join()`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/require-array-join-separator.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/require-array-join-separator",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/require-number-to-fixed-digits-argument": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Enforce using the digits argument with `Number#toFixed()`.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/require-number-to-fixed-digits-argument.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/require-number-to-fixed-digits-argument",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/require-post-message-target-origin": {
+      "type": "problem",
+      "docs": {
+        "description": "Enforce using the `targetOrigin` argument with `window.postMessage()`.",
+        "recommended": false,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/require-post-message-target-origin.md"
+      },
+      "hasSuggestions": true,
+      "name": "unicorn-x/require-post-message-target-origin",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/string-content": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Enforce better string content.",
+        "recommended": false,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/string-content.md"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "defaultOptions": [
+        {}
+      ],
+      "name": "unicorn-x/string-content",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/switch-case-braces": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce consistent brace style for `case` clauses.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/switch-case-braces.md"
+      },
+      "fixable": "code",
+      "defaultOptions": [
+        "always"
+      ],
+      "name": "unicorn-x/switch-case-braces",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/template-indent": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Fix whitespace-insensitive template indentation.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/template-indent.md"
+      },
+      "fixable": "code",
+      "defaultOptions": [
+        {}
+      ],
+      "name": "unicorn-x/template-indent",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/text-encoding-identifier-case": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Enforce consistent case for text encoding identifiers.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/text-encoding-identifier-case.md"
+      },
+      "fixable": "code",
+      "hasSuggestions": true,
+      "name": "unicorn-x/text-encoding-identifier-case",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/throw-new-error": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Require `new` when creating an error.",
+        "recommended": true,
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/rules/throw-new-error.md"
+      },
+      "fixable": "code",
+      "name": "unicorn-x/throw-new-error",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-instanceof-array": {
+      "docs": {
+        "description": "Replaced by `unicorn-x/no-instanceof-builtins` which covers more cases.",
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/deprecated-rules.md#no-instanceof-array"
+      },
+      "deprecated": {
+        "message": "Replaced by `unicorn-x/no-instanceof-builtins` which covers more cases.",
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/deprecated-rules.md#no-instanceof-array",
+        "replacedBy": [
+          "unicorn-x/no-instanceof-builtins"
+        ]
+      },
+      "name": "unicorn-x/no-instanceof-array",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-length-as-slice-end": {
+      "docs": {
+        "description": "Replaced by `unicorn-x/no-unnecessary-slice-end` which covers more cases.",
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/deprecated-rules.md#no-length-as-slice-end"
+      },
+      "deprecated": {
+        "message": "Replaced by `unicorn-x/no-unnecessary-slice-end` which covers more cases.",
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/deprecated-rules.md#no-length-as-slice-end",
+        "replacedBy": [
+          "unicorn-x/no-unnecessary-slice-end"
+        ]
+      },
+      "name": "unicorn-x/no-length-as-slice-end",
+      "plugin": "unicorn-x"
+    },
+    "unicorn-x/no-array-push-push": {
+      "docs": {
+        "description": "Replaced by `unicorn/prefer-single-call` which covers more cases.",
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/deprecated-rules.md#no-array-push-push"
+      },
+      "deprecated": {
+        "message": "Replaced by `unicorn/prefer-single-call` which covers more cases.",
+        "url": "https://github.com/es-tooling/eslint-plugin-unicorn-x/blob/v1.0.5/docs/deprecated-rules.md#no-array-push-push",
+        "replacedBy": [
+          "unicorn/prefer-single-call"
+        ]
+      },
+      "name": "unicorn-x/no-array-push-push",
+      "plugin": "unicorn-x"
+    },
     "@eslint-community/eslint-comments/disable-enable-pair": {
       "docs": {
         "description": "require a `eslint-enable` comment for every `eslint-disable` comment",
@@ -15207,7 +17091,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1746133921917,
+    "lastUpdate": 1746221293071,
     "basePath": "",
     "configPath": ""
   }
