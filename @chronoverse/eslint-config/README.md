@@ -1,38 +1,28 @@
-# Chronoverse-ESLint
+# @chronoverse-eslint/eslint-config
 
 [English](#english) | [Русский](#русский)
 
+[![npm version](https://img.shields.io/npm/v/@chronoverse-eslint/eslint-config.svg)](https://www.npmjs.com/package/@chronoverse-eslint/eslint-config)
 [![ESLint](https://img.shields.io/badge/ESLint-v9.26.0-4B32C3.svg)](https://eslint.org)
 [![License](https://img.shields.io/badge/license-MIT-4B32C3.svg)](LICENSE)
 [![Demo](https://img.shields.io/badge/🛠️-Config%20Inspector-4B32C3)](https://gratisvictory.github.io/chronoverse-eslint)
 
 ## English
 
-A comprehensive suite of ESLint configurations for modern JavaScript and TypeScript projects, supporting React, Next.js, and various best practices.
+A comprehensive ESLint configuration for modern JavaScript and TypeScript projects, supporting React, Next.js, and various best practices.
 
 ### Table of Contents
 
-- [Packages](#packages-)
 - [Features](#features-)
 - [Installation](#installation-)
 - [Usage](#usage-️)
+- [Presets](#presets-)
 - [Requirements](#requirements-)
-- [Development](#development-)
-
-### Packages 📦
-
-- [@chronoverse-eslint/eslint-config](https://github.com/gratisvictory/chronoverse-eslint/tree/main/@chronoverse/eslint-config) - Main ESLint configuration
-- [@chronoverse-eslint/javascript](https://github.com/gratisvictory/chronoverse-eslint/tree/main/@chronoverse/javascript) - JavaScript configuration
-- [@chronoverse-eslint/typescript](https://github.com/gratisvictory/chronoverse-eslint/tree/main/@chronoverse/typescript) - TypeScript configuration
-- [@chronoverse-eslint/react](https://github.com/gratisvictory/chronoverse-eslint/tree/main/@chronoverse/react) - React configuration
-- [@chronoverse-eslint/prettier](https://github.com/gratisvictory/chronoverse-eslint/tree/main/@chronoverse/prettier) - Prettier integration
-- [@chronoverse-eslint/shared](https://github.com/gratisvictory/chronoverse-eslint/tree/main/@chronoverse/shared) - Shared utilities
 
 ### Features ✨
 
 - Modern JavaScript and TypeScript support
 - React and Next.js configurations
-- Prettier integration
 - Comprehensive best practices
 - Performance-focused rules
 - Security rules
@@ -41,8 +31,6 @@ A comprehensive suite of ESLint configurations for modern JavaScript and TypeScr
 - Git integration
 - CSS and Tailwind CSS support
 - JSDoc documentation rules
-- Accessibility rules
-- Type safety
 
 ### Installation 📦
 
@@ -79,6 +67,23 @@ export default [
 ];
 ```
 
+### Presets 📚
+
+The package provides several presets that you can use individually:
+
+- `js` - Base JavaScript configuration
+- `jsx` - React JavaScript configuration
+- `ts` - TypeScript configuration
+- `tsx` - React TypeScript configuration
+- `nextJSX` - Next.js JavaScript configuration
+- `nextTSX` - Next.js TypeScript configuration
+- `css` - CSS configuration
+- `tailwindcss` - Tailwind CSS configuration
+- `functionalJS` - Functional programming rules
+- `jsdocForJs` - JSDoc rules for JavaScript
+- `jsdocForTs` - JSDoc rules for TypeScript
+- `ignores` - Add EXCLUDE_PATTERNS (at the very beginning)
+
 ### Requirements 📋
 
 - ESLint >=9.26.0
@@ -89,31 +94,20 @@ export default [
 
 ## Русский
 
-Комплексный набор конфигураций ESLint для современных JavaScript и TypeScript проектов с поддержкой React, Next.js и различных лучших практик.
+Комплексная конфигурация ESLint для современных JavaScript и TypeScript проектов с поддержкой React, Next.js и различных лучших практик.
 
 ### Содержание
 
-- [Пакеты](#пакеты-)
 - [Возможности](#возможности-)
 - [Установка](#установка-)
 - [Использование](#использование-️)
+- [Пресеты](#пресеты-)
 - [Требования](#требования-)
-- [Разработка](#разработка-)
-
-### Пакеты 📦
-
-- [@chronoverse-eslint/eslint-config](https://github.com/gratisvictory/chronoverse-eslint/tree/main/@chronoverse/eslint-config) - Основная конфигурация ESLint
-- [@chronoverse-eslint/javascript](https://github.com/gratisvictory/chronoverse-eslint/tree/main/@chronoverse/javascript) - Конфигурация JavaScript
-- [@chronoverse-eslint/typescript](https://github.com/gratisvictory/chronoverse-eslint/tree/main/@chronoverse/typescript) - Конфигурация TypeScript
-- [@chronoverse-eslint/react](https://github.com/gratisvictory/chronoverse-eslint/tree/main/@chronoverse/react) - Конфигурация React
-- [@chronoverse-eslint/prettier](https://github.com/gratisvictory/chronoverse-eslint/tree/main/@chronoverse/prettier) - Интеграция с Prettier
-- [@chronoverse-eslint/shared](https://github.com/gratisvictory/chronoverse-eslint/tree/main/@chronoverse/shared) - Общие утилиты
 
 ### Возможности ✨
 
 - Поддержка современного JavaScript и TypeScript
 - Конфигурации для React и Next.js
-- Интеграция с Prettier
 - Комплексные лучшие практики
 - Правила, ориентированные на производительность
 - Правила безопасности
@@ -122,8 +116,6 @@ export default [
 - Интеграция с Git
 - Поддержка CSS и Tailwind CSS
 - Правила документации JSDoc
-- Правила доступности
-- Безопасность типов
 
 ### Установка 📦
 
@@ -159,6 +151,23 @@ export default [
   nextTSX,
 ];
 ```
+
+### Пресеты 📚
+
+Пакет предоставляет несколько пресетов, которые можно использовать по отдельности:
+
+- `js` - Базовая конфигурация JavaScript
+- `jsx` - Конфигурация React JavaScript
+- `ts` - Конфигурация TypeScript
+- `tsx` - Конфигурация React TypeScript
+- `nextJSX` - Конфигурация Next.js JavaScript
+- `nextTSX` - Конфигурация Next.js TypeScript
+- `css` - Конфигурация CSS
+- `tailwindcss` - Конфигурация Tailwind CSS
+- `functionalJS` - Правила функционального программирования
+- `jsdocForJs` - Правила JSDoc для JavaScript
+- `jsdocForTs` - Правила JSDoc для TypeScript
+- `ignores` - добавить EXCLUDE_PATTERNS (в самое начало)
 
 ### Требования 📋
 

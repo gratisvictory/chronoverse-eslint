@@ -1,13 +1,11 @@
-<h1 style="display: flex; align-items: center; gap: 8px;">
-  @chronoverse-eslint/javascript <img src="./assets/javascript.svg" width="28" alt="JS">
-</h1>
+# @chronoverse-eslint/javascript
 
 [English](#english) | [Русский](#русский)
 
 [![npm version](https://img.shields.io/npm/v/@chronoverse-eslint/javascript.svg)](https://www.npmjs.com/package/@chronoverse-eslint/javascript)
-[![ESLint](https://img.shields.io/badge/ESLint-v9.25.1-4B32C3.svg)](https://eslint.org)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Demo](https://img.shields.io/badge/🛠️-Config%20Inspector-8A2BE2)](https://gratisvictory.github.io/chronoverse-eslint)
+[![ESLint](https://img.shields.io/badge/ESLint-v9.26.0-4B32C3.svg)](https://eslint.org)
+[![License](https://img.shields.io/badge/license-MIT-4B32C3.svg)](LICENSE)
+[![Demo](https://img.shields.io/badge/🛠️-Config%20Inspector-4B32C3)](https://gratisvictory.github.io/chronoverse-eslint)
 
 ## English
 
@@ -67,14 +65,16 @@ export default defineConfig(javascript);
  */
 export default defineConfig([
   javascript,
-  /* Your custom rules here */
+  /*
+   * Your custom rules here
+   */
 ]);
 ```
 
 ### Requirements 📋
 
-- ESLint >=9.25.1
-- Bun >=1.2.10
+- ESLint >=9.26.0
+- Bun >=1.2.11
 - Node.js >=23.11.0
 
 ---
@@ -145,8 +145,8 @@ export default defineConfig([
 
 ### Требования 📋
 
-- ESLint >=9.25.1
-- Bun >=1.2.10
+- ESLint >=9.26.0
+- Bun >=1.2.11
 - Node.js >=23.11.0
 
 ---

@@ -6,7 +6,8 @@
     "moduleResolution": "Bundler",
     "lib": [
       "ESNext",
-      "DOM"
+      "DOM",
+      "DOM.Iterable"
     ],
     "allowJs": true,
     "checkJs": true,
@@ -29,5 +30,9 @@
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "verbatimModuleSyntax": true
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }

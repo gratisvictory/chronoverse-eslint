@@ -1,6 +1,6 @@
 import { getRulesByConfigName, JAVASCRIPT_FILES } from '@chronoverse-eslint/shared';
 import js from '@eslint/js';
-/** @ts-expect-error eslint-config-eslint is not typed */
+// @ts-expect-error eslint-config-eslint is not typed
 import eslintConfigBase from 'eslint-config-eslint';
 import { defineConfig } from 'eslint/config';
 import globals from 'globals';
@@ -12,7 +12,6 @@ import { strict } from './rules/strict.js';
 import { stylistic } from './rules/stylistic.js';
 import { variables } from './rules/variables.js';
 
-/** @type {import('eslint').Linter.Config[]} */
 const javascript = defineConfig([
 	{
 		name: '@chronoverse/javascript/setup',

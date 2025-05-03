@@ -1,4 +1,5 @@
 /**
+ * Glob patterns for files to exclude from linting.
  * @type {string[]}
  */
 export const EXCLUDE_PATTERNS = [

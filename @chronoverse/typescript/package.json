@@ -1,6 +1,6 @@
 {
   "name": "@chronoverse-eslint/typescript",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -24,9 +24,10 @@
   "dependencies": {
     "@chronoverse-eslint/shared": "workspace:^",
     "@susisu/eslint-plugin-safe-typescript": "^0.9.4",
-    "@typescript-eslint/eslint-plugin": "^8.31.0",
-    "@typescript-eslint/parser": "^8.31.0",
-    "eslint": "^9.25.1",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "eslint": "^9.26.0",
+    "eslint-plugin-functional": "^9.0.1",
     "eslint-plugin-tsdoc": "^0.4.0"
   },
   "devDependencies": {
@@ -35,12 +36,12 @@
     "typescript": "^5.8.3"
   },
   "peerDependencies": {
-    "eslint": "^9.25.1",
+    "eslint": "^9.26.0",
     "typescript": "^5.8.3"
   },
-  "packageManager": "bun@1.2.10",
+  "packageManager": "bun@1.2.11",
   "engines": {
-    "bun": ">=1.2.10"
+    "bun": ">=1.2.11"
   },
   "publishConfig": {
     "access": "public"

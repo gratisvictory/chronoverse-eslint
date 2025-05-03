@@ -22,17 +22,17 @@
     "clean:all": "rimraf dist node_modules"
   },
   "dependencies": {
-    "esbuild": "^0.25.2"
+    "esbuild": "^0.25.3"
   },
   "devDependencies": {
-    "@types/node": "^22.15.2",
+    "@types/node": "^22.15.3",
     "rimraf": "^6.0.1"
   },
   "peerDependencies": {
-    "esbuild": "^0.25.2"
+    "esbuild": "^0.25.3"
   },
-  "packageManager": "bun@1.2.10",
+  "packageManager": "bun@1.2.11",
   "engines": {
-    "bun": ">=1.2.10"
+    "bun": ">=1.2.11"
   }
 }

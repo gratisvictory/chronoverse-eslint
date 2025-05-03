@@ -11,7 +11,7 @@
  * Options for the `no-unused-vars` ESLint rule.
  * @type {NoUnusedVarsOption[]}
  */
-export const variablesNoUnusedVariables = [
+const variablesNoUnusedVariables = [
 	{
 		args: 'after-used',
 		argsIgnorePattern: '^_',
@@ -20,3 +20,5 @@ export const variablesNoUnusedVariables = [
 		varsIgnorePattern: '^_',
 	},
 ];
+
+export { variablesNoUnusedVariables };

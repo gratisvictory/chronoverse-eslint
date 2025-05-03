@@ -18,20 +18,21 @@ const rootDirection = process.cwd();
 const userPackageJsonPath = path.join(rootDirection, 'package.json');
 
 /**
- * @typedef {Object} PackageJson
- * @property {Record<string, string>} dependencies
- * @property {Record<string, string>} peerDependencies
- * @property {Record<string, string>} devDependencies
+ * @typedef {object} PackageJson
+ * @property {Record<string, string>} dependencies - Package dependencies
+ * @property {Record<string, string>} peerDependencies - Package peer dependencies
+ * @property {Record<string, string>} devDependencies - Package development dependencies
  */
 
 /**
  * @type {PackageJson}
  */
+// eslint-disable-next-line security/detect-non-literal-fs-filename
 const packageJson = JSON.parse(await readFile(userPackageJsonPath, 'utf8'));
 
 /**
  * Generates .d.ts files using TypeScript compiler.
- * @param {string} [tsconfigPath='./tsconfig.json'] - Path to TypeScript config.
+ * @param {string} tsconfigPath - Path to TypeScript config
  * @returns {Promise<void>}
  */
 const buildTypes = async (tsconfigPath = './tsconfig.json') => {
@@ -50,15 +51,26 @@ const buildTypes = async (tsconfigPath = './tsconfig.json') => {
 };
 
 /**
+ * @typedef {object} BuildOptions
+ * @property {string[]} entryPoints - Entry points for the build
+ * @property {string} outdir - Output directory
+ * @property {string} tsconfig - Path to the tsconfig file
+ * @property {boolean} minify - Whether to minify the build
+ */
+
+/**
  * Builds the bundle using esbuild.
- * @param {Object} [options={}] - Build options.
- * @param {string[]} [options.entryPoints=['src/index.js']] - Entry points for the build.
- * @param {string} [options.outdir='dist'] - Output directory.
- * @param {string} [options.tsconfig='./tsconfig.json'] - Path to the tsconfig file.
- * @param {boolean} [options.minify=true] - Whether to minify the build.
+ * @param {BuildOptions} options - Build options
  * @returns {Promise<void>}
  */
-const buildBundle = async (options = {}) => {
+const buildBundle = async (
+	options = {
+		entryPoints: ['src/index.js'],
+		minify: true,
+		outdir: 'dist',
+		tsconfig: './tsconfig.json',
+	},
+) => {
 	const { entryPoints = ['src/index.js'], minify = true, outdir = 'dist', tsconfig = './tsconfig.json' } = options;
 
 	try {
@@ -87,15 +99,21 @@ const buildBundle = async (options = {}) => {
 
 /**
  * Main build function to generate types and build the bundle.
- * @param {Object} [options={}] - Build options.
- * @param {string} [options.tsconfig='./tsconfig.json'] - Path to the tsconfig file.
+ * @param {BuildOptions} options - Build options
  * @returns {Promise<void>}
  */
-const build = async (options = {}) => {
-	const { tsconfig } = options;
+const build = async (
+	options = {
+		entryPoints: ['src/index.js'],
+		minify: true,
+		outdir: 'dist',
+		tsconfig: './tsconfig.json',
+	},
+) => {
+	const { entryPoints = ['src/index.js'], minify = true, outdir = 'dist', tsconfig = './tsconfig.json' } = options;
 	try {
 		await buildTypes(tsconfig);
-		await buildBundle(options);
+		await buildBundle({ entryPoints, minify, outdir, tsconfig });
 		console.log('🎉 Build complete!');
 	} catch (error) {
 		console.error('Build failed:', { cause: error });

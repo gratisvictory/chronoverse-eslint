@@ -1,5 +1,6 @@
 import { interopDefault, TYPESCRIPT_FILES } from '@chronoverse-eslint/shared';
 import safeTsPlugin from '@susisu/eslint-plugin-safe-typescript';
+import functional from 'eslint-plugin-functional';
 import eslintTsdoc from 'eslint-plugin-tsdoc';
 import { defineConfig } from 'eslint/config';
 import { consistent } from './rules/consistent.js';
@@ -7,7 +8,6 @@ import { extension } from './rules/extension.js';
 import { tsSafe } from './rules/safe.js';
 import { tsdoc } from './rules/tsdoc.js';
 
-/** @type {import('eslint').Linter.Config[]} */
 const typescript = await (async () => {
 	const [
 		tsParser,
@@ -30,6 +30,14 @@ const typescript = await (async () => {
 		},
 		{
 			name: '@chronoverse/typescript/rules',
+			extends: [
+				// @ts-expect-error
+				functional.configs.externalTypeScriptRecommended,
+				// @ts-expect-error
+				functional.configs.recommended,
+				// @ts-expect-error
+				functional.configs.stylistic,
+			],
 			files: TYPESCRIPT_FILES,
 			plugins: {
 				'@susisu/safe-typescript': safeTsPlugin,

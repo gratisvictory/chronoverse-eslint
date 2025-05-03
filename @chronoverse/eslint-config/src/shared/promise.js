@@ -1,8 +1,7 @@
-/** @ts-expect-error eslint-plugin-promise is not typed */
+// @ts-expect-error eslint-plugin-promise is not typed
 import pluginPromise from 'eslint-plugin-promise';
 import { defineConfig } from 'eslint/config';
 
-/** @type {import('eslint').Linter.Config[]} */
 const promise = defineConfig([
 	{
 		name: '@chronoverse/promise/rules',

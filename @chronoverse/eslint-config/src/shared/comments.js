@@ -1,8 +1,6 @@
-/** @ts-expect-error @eslint-community/eslint-plugin-eslint-comments is not typed */
+// @ts-expect-error @eslint-community/eslint-plugin-eslint-comments is not typed
 import eslintComments from '@eslint-community/eslint-plugin-eslint-comments';
 import { defineConfig } from 'eslint/config';
-
-/** @type {import('eslint').Linter.Config[]} */
 const comments = defineConfig([
 	{
 		name: '@chronoverse/comments/rules',
@@ -15,4 +13,4 @@ const comments = defineConfig([
 	},
 ]);
 
-export { comments };
+export default comments;

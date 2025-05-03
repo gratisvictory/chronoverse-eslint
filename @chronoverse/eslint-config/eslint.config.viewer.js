@@ -1,9 +1,13 @@
+import { prettier } from '@chronoverse-eslint/prettier';
 import { defineConfig } from 'eslint/config';
-import { css, jsdocTs, prettier, tsx } from './src/index.js';
+import { jsdocForTs, nextTSX, tailwindcss } from './src/index.js';
 
 export default defineConfig([
-	tsx,
-	jsdocTs,
-	css,
+	nextTSX,
+	jsdocForTs,
+	tailwindcss,
+	/**
+	 * prettier last position plugin
+	 */
 	prettier,
 ]);

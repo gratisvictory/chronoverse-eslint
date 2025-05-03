@@ -1,6 +1,6 @@
 {
   "name": "@chronoverse-eslint/shared",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Shared code for @chronoverse-eslint packages",
   "type": "module",
   "exports": {
@@ -25,8 +25,8 @@
     "@chronoverse-eslint/builder": "workspace:^",
     "rimraf": "^6.0.1"
   },
-  "packageManager": "bun@1.2.10",
+  "packageManager": "bun@1.2.11",
   "engines": {
-    "bun": ">=1.2.10"
+    "bun": ">=1.2.11"
   }
 }

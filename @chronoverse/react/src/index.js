@@ -1,35 +1,22 @@
 import { JAVASCRIPT_FILES, TYPESCRIPT_FILES } from '@chronoverse-eslint/shared';
 import eslintReact from '@eslint-react/eslint-plugin';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
+// eslint-disable-next-line depend/ban-dependencies
+import reactPlugin from 'eslint-plugin-react';
+import reactCompiler from 'eslint-plugin-react-compiler';
+import reactHooks from 'eslint-plugin-react-hooks';
 import { defineConfig } from 'eslint/config';
 import globals from 'globals';
 
-/** @type {import('eslint').Linter.Config[]} */
-const reactJsx = defineConfig([
+const reactJSX = defineConfig([
 	{
 		name: '@chronoverse/react/setup',
-		languageOptions: {
-			globals: globals.browser,
-			parserOptions: {
-				ecmaFeatures: {
-					jsx: true,
-				},
-			},
-		},
-	},
-	{
-		name: '@chronoverse/react/rules',
-		// @ts-ignore
-		extends: [eslintReact.configs.recommended],
 		files: JAVASCRIPT_FILES,
-	},
-]);
-
-/** @type {import('eslint').Linter.Config[]} */
-const reactTsx = defineConfig([
-	{
-		name: '@chronoverse/react/setup',
 		languageOptions: {
-			globals: globals.browser,
+			globals: {
+				...globals.browser,
+				...globals.serviceworker,
+			},
 			parserOptions: {
 				ecmaFeatures: {
 					jsx: true,
@@ -39,10 +26,46 @@ const reactTsx = defineConfig([
 	},
 	{
 		name: '@chronoverse/react/rules',
-		// @ts-ignore
-		extends: [eslintReact.configs['recommended-typescript']],
-		files: TYPESCRIPT_FILES,
+		extends: [
+			// @ts-expect-error
+			eslintReact.configs.recommended,
+			// @ts-expect-error
+			reactPlugin.configs.flat.recommended,
+			jsxA11y.flatConfigs.recommended,
+			reactCompiler.configs.recommended,
+			reactHooks.configs['recommended-latest'],
+		],
 	},
 ]);
 
-export { reactJsx, reactTsx };
+const reactTSX = defineConfig([
+	{
+		name: '@chronoverse/react/setup',
+		files: TYPESCRIPT_FILES,
+		languageOptions: {
+			globals: {
+				...globals.browser,
+				...globals.serviceworker,
+			},
+			parserOptions: {
+				ecmaFeatures: {
+					jsx: true,
+				},
+			},
+		},
+	},
+	{
+		name: '@chronoverse/react/rules',
+		extends: [
+			// @ts-expect-error
+			eslintReact.configs['recommended-typescript'],
+			// @ts-expect-error
+			reactPlugin.configs.flat.recommended,
+			jsxA11y.flatConfigs.recommended,
+			reactCompiler.configs.recommended,
+			reactHooks.configs['recommended-latest'],
+		],
+	},
+]);
+
+export { reactJSX, reactTSX };

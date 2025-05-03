@@ -1,6 +1,6 @@
 {
   "name": "@chronoverse-eslint/javascript",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -23,21 +23,21 @@
   },
   "dependencies": {
     "@chronoverse-eslint/shared": "workspace:^",
-    "eslint": "^9.25.1",
+    "eslint": "^9.26.0",
     "eslint-config-eslint": "^11.0.0"
   },
   "devDependencies": {
     "@chronoverse-eslint/builder": "workspace:^",
-    "@eslint/js": "^9.25.1",
+    "@eslint/js": "^9.26.0",
     "globals": "^16.0.0",
     "rimraf": "^6.0.1"
   },
   "peerDependencies": {
-    "eslint": "^9.25.1"
+    "eslint": "^9.26.0"
   },
-  "packageManager": "bun@1.2.10",
+  "packageManager": "bun@1.2.11",
   "engines": {
-    "bun": ">=1.2.10"
+    "bun": ">=1.2.11"
   },
   "publishConfig": {
     "access": "public"

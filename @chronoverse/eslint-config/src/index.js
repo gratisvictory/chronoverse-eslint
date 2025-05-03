@@ -1,72 +1,81 @@
 import { javascript } from '@chronoverse-eslint/javascript';
-import { perfectionist } from '@chronoverse-eslint/perfectionist';
-import { reactJsx, reactTsx } from '@chronoverse-eslint/react';
+import { reactJSX, reactTSX } from '@chronoverse-eslint/react';
 import { EXCLUDE_PATTERNS } from '@chronoverse-eslint/shared';
 import { typescript } from '@chronoverse-eslint/typescript';
 import gitignore from 'eslint-config-flat-gitignore';
 import { defineConfig, globalIgnores } from 'eslint/config';
 import { comments } from './shared/comments.js';
-import { css as cssConfig } from './shared/css.js';
-import { dependency } from './shared/depend.js';
-import { jsdocForJs, jsdocForTs } from './shared/jsdoc.js';
-// import { json } from './shared/json.js';
+import { dependency } from './shared/dependency.js';
+import { mutation } from './shared/mutation.js';
+import { next } from './shared/next.js';
 import { node } from './shared/node.js';
-import { prettier as prettierConfig } from './shared/prettier.js';
+import { perfectionist } from './shared/perfectionist.js';
 import { promise } from './shared/promise.js';
 import { regexp } from './shared/regexp.js';
+import { security } from './shared/security.js';
 import { unicorn } from './shared/unicorn.js';
 
-/** @type {import('eslint').Linter.Config[]} */
-const js = defineConfig([
+const ignores = defineConfig([
 	gitignore({ name: '@chronoverse/gitignore' }),
 	globalIgnores(EXCLUDE_PATTERNS, '@chronoverse/ignores'),
+]);
+
+const js = defineConfig([
+	ignores,
 	javascript,
 	perfectionist,
-	unicorn,
 	comments,
 	node,
 	promise,
 	regexp,
 	dependency,
-	// json,
+	mutation,
+	unicorn,
+	security,
 ]);
 
-/** @type {import('eslint').Linter.Config[]} */
 const ts = defineConfig([
 	...js,
 	typescript,
 ]);
 
-/** @type {import('eslint').Linter.Config[]} */
-const prettier = defineConfig([
-	prettierConfig,
-]);
-
-/** @type {import('eslint').Linter.Config[]} */
 const jsx = defineConfig([
 	...js,
-	reactJsx,
+	reactJSX,
 ]);
 
-/** @type {import('eslint').Linter.Config[]} */
 const tsx = defineConfig([
 	...ts,
-	reactTsx,
+	reactTSX,
 ]);
 
-/** @type {import('eslint').Linter.Config[]} */
-const jsdocJs = defineConfig([
-	jsdocForJs,
+const nextJSX = defineConfig([
+	...js,
+	reactJSX,
+	next,
 ]);
 
-/** @type {import('eslint').Linter.Config[]} */
-const jsdocTs = defineConfig([
-	jsdocForTs,
+const nextTSX = defineConfig([
+	...ts,
+	reactTSX,
+	next,
 ]);
 
-/** @type {import('eslint').Linter.Config[]} */
-const css = defineConfig([
-	cssConfig,
-]);
-
-export { css, js, jsdocJs, jsdocTs, jsx, prettier, ts, tsx };
+/** Main */
+export { js, jsx, nextJSX, nextTSX, ts, tsx };
+/** Presets */
+export { css } from './shared/css.js';
+export { functionalJS } from './shared/functional.js';
+export { jsdocForJs, jsdocForTs } from './shared/jsdoc.js';
+export { tailwindcss } from './shared/tailwindcss.js';
+export { comments };
+export { dependency };
+export { mutation };
+export { node };
+export { perfectionist };
+export { promise };
+export { regexp };
+export { unicorn };
+export { security };
+export { next };
+export { ignores };
