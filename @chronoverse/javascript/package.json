@@ -1,6 +1,6 @@
 {
   "name": "@chronoverse-eslint/javascript",
-  "version": "2.2.1",
+  "version": "2.3.1",
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -22,7 +22,7 @@
     "clean:all": "rimraf dist node_modules"
   },
   "dependencies": {
-    "@chronoverse-eslint/shared": "workspace:^",
+    "@chronoverse-eslint/shared": "^2.3.1",
     "eslint": "^9.26.0",
     "eslint-config-eslint": "^11.0.0"
   },
