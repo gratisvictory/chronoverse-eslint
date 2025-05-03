@@ -5145,6 +5145,45 @@
       "index": 34
     },
     {
+      "name": "@chronoverse/css/setup",
+      "files": [
+        "**/*.css"
+      ],
+      "languageOptions": {
+        "customSyntax": {
+          "atrules": {
+            "apply": {
+              "prelude": "<ident>+"
+            },
+            "tailwind": {
+              "prelude": "base | components | utilities"
+            },
+            "config": {
+              "prelude": "<string>"
+            }
+          }
+        }
+      },
+      "plugins": {
+        "css": {}
+      },
+      "index": 35
+    },
+    {
+      "name": "@chronoverse/css/rules",
+      "plugins": {
+        "css": {}
+      },
+      "rules": {
+        "css/no-empty-blocks": "error",
+        "css/no-duplicate-imports": "error",
+        "css/no-invalid-at-rules": "error",
+        "css/no-invalid-properties": "error",
+        "css/use-baseline": "warn"
+      },
+      "index": 36
+    },
+    {
       "name": "@chronoverse/prettier/rules",
       "plugins": {
         "prettier": {}
@@ -5152,7 +5191,7 @@
       "rules": {
         "prettier/prettier": "error"
       },
-      "index": 35
+      "index": 37
     },
     {
       "name": "@chronoverse/prettier/disables/rules",
@@ -5516,7 +5555,7 @@
         "yield-star-spacing": "off",
         "react/jsx-space-before-closing": "off"
       },
-      "index": 36
+      "index": 38
     }
   ],
   "rules": {
@@ -20015,6 +20054,93 @@
       "name": "tailwindcss/no-unnecessary-arbitrary-value",
       "plugin": "tailwindcss"
     },
+    "css/no-empty-blocks": {
+      "type": "problem",
+      "docs": {
+        "description": "Disallow empty blocks",
+        "recommended": true,
+        "url": "https://github.com/eslint/css/blob/main/docs/rules/no-empty-blocks.md"
+      },
+      "name": "css/no-empty-blocks",
+      "plugin": "css"
+    },
+    "css/no-duplicate-imports": {
+      "type": "problem",
+      "docs": {
+        "description": "Disallow duplicate @import rules",
+        "recommended": true,
+        "url": "https://github.com/eslint/css/blob/main/docs/rules/no-duplicate-imports.md"
+      },
+      "name": "css/no-duplicate-imports",
+      "plugin": "css"
+    },
+    "css/no-invalid-at-rules": {
+      "type": "problem",
+      "docs": {
+        "description": "Disallow invalid at-rules",
+        "recommended": true,
+        "url": "https://github.com/eslint/css/blob/main/docs/rules/no-invalid-at-rules.md"
+      },
+      "name": "css/no-invalid-at-rules",
+      "plugin": "css"
+    },
+    "css/no-invalid-properties": {
+      "type": "problem",
+      "docs": {
+        "description": "Disallow invalid properties",
+        "recommended": true,
+        "url": "https://github.com/eslint/css/blob/main/docs/rules/no-invalid-properties.md"
+      },
+      "name": "css/no-invalid-properties",
+      "plugin": "css"
+    },
+    "css/prefer-logical-properties": {
+      "type": "problem",
+      "fixable": "code",
+      "docs": {
+        "description": "Enforce the use of logical properties",
+        "url": "https://github.com/eslint/css/blob/main/docs/rules/prefer-logical-properties.md"
+      },
+      "defaultOptions": [
+        {
+          "allowProperties": [],
+          "allowUnits": []
+        }
+      ],
+      "name": "css/prefer-logical-properties",
+      "plugin": "css"
+    },
+    "css/use-layers": {
+      "type": "problem",
+      "docs": {
+        "description": "Require use of layers",
+        "url": "https://github.com/eslint/css/blob/main/docs/rules/use-layers.md"
+      },
+      "defaultOptions": [
+        {
+          "allowUnnamedLayers": false,
+          "requireImportLayers": true,
+          "layerNamePattern": ""
+        }
+      ],
+      "name": "css/use-layers",
+      "plugin": "css"
+    },
+    "css/use-baseline": {
+      "type": "problem",
+      "docs": {
+        "description": "Enforce the use of baseline features",
+        "recommended": true,
+        "url": "https://github.com/eslint/css/blob/main/docs/rules/use-baseline.md"
+      },
+      "defaultOptions": [
+        {
+          "available": "widely"
+        }
+      ],
+      "name": "css/use-baseline",
+      "plugin": "css"
+    },
     "prettier/prettier": {
       "docs": {
         "url": "https://github.com/prettier/eslint-plugin-prettier#options"
@@ -20215,7 +20341,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1746305681580,
+    "lastUpdate": 1746305984171,
     "basePath": "",
     "configPath": ""
   }
