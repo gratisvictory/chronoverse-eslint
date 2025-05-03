@@ -1,4 +1,4 @@
-# Chronoverse-ESLint
+# Chronoverse ESLint
 
 [English](#english) | [Русский](#русский)
 

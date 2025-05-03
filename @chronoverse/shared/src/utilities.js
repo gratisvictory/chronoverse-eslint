@@ -32,7 +32,7 @@ const getRulesByConfigName = (configName, configs) =>
  * Returns a rules object where all keys starting with `unicorn/`
  * are renamed to `unicorn-x/`. All other keys remain unchanged.
  * @param {Record<string, unknown>} rules - The rules object to reformat
- * @returns {Record<string, unknown>} The reformatted rules object
+ * @returns {import('eslint').Linter.Config['rules']} The reformatted rules object
  */
 const reformattedRules = rules =>
 	Object.keys(rules).reduce((accumulator, rule) => {

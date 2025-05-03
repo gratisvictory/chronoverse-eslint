@@ -21,6 +21,7 @@ const typescript = await (async () => {
 		{
 			name: '@chronoverse/typescript/setup',
 			languageOptions: {
+				// @ts-expect-error
 				parser: tsParser,
 				parserOptions: {
 					projectService: true,
@@ -41,12 +42,16 @@ const typescript = await (async () => {
 			files: TYPESCRIPT_FILES,
 			plugins: {
 				'@susisu/safe-typescript': safeTsPlugin,
+				// @ts-expect-error
 				'@typescript-eslint': tsPlugin,
 				tsdoc: eslintTsdoc,
 			},
 			rules: {
+				// @ts-expect-error
 				...tsPlugin.configs.recommended.rules,
+				// @ts-expect-error
 				...tsPlugin.configs['strict-type-checked'].rules,
+				// @ts-expect-error
 				...tsPlugin.configs['stylistic-type-checked'].rules,
 				...extension,
 				...consistent,
