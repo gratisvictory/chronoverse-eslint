@@ -54,9 +54,49 @@ jobs:
         id: versions
         run: |
           set -e
-          if ! bun release.js; then
-            echo "::error::Failed to get package versions"
-            exit 1
+
+          echo "--- Fetching changed packages ---"
+          changed=$(bunx lerna changed --json || echo "[]")
+
+          markdown=""
+          main_version=""
+          main_name=""
+          main_safe=""
+          index=0
+
+          for row in $(echo "${changed}" | jq -c '.[]'); do
+            private=$(echo "$row" | jq -r '.private')
+            if [ "$private" = "true" ]; then
+              continue
+            fi
+
+            name=$(echo "$row" | jq -r '.name')
+            location=$(echo "$row" | jq -r '.location')
+            version=$(jq -r '.version' "$location/package.json")
+            safe_name=$(echo "$name" | sed 's/^@//' | sed 's/[-\/]/_/g' | tr '[:lower:]' '[:upper:]')
+
+            echo "${safe_name}_VERSION=${version}" >> "$GITHUB_ENV"
+            echo "${safe_name}_VERSION=${version}" >> "$GITHUB_OUTPUT"
+
+            markdown="${markdown}- \`${name}\` → \`${version}\`\n"
+
+            if [ "$index" -eq 0 ]; then
+              main_version="$version"
+              main_name="$name"
+              main_safe="$safe_name"
+            fi
+
+            index=$((index + 1))
+          done
+
+          echo -e "RELEASE_PACKAGES_MARKDOWN<<EOF\n${markdown:-_No public packages changed_}\nEOF" >> "$GITHUB_ENV"
+          echo -e "RELEASE_PACKAGES_MARKDOWN<<EOF\n${markdown:-_No public packages changed_}\nEOF" >> "$GITHUB_OUTPUT"
+
+          if [ -n "$main_version" ]; then
+            echo "RELEASE_VERSION=${main_version}" >> "$GITHUB_ENV"
+            echo "RELEASE_NAME_SAFE=${main_safe}" >> "$GITHUB_ENV"
+            echo "RELEASE_VERSION=${main_version}" >> "$GITHUB_OUTPUT"
+            echo "RELEASE_NAME_SAFE=${main_safe}" >> "$GITHUB_OUTPUT"
           fi
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
@@ -76,16 +116,6 @@ jobs:
               name: 'OTP to publish package'
               description: 'OTP from authenticator app'
         timeout-minutes: 5
-
-      - name: Publish to npm
-        run: |
-          set -e
-          if ! bun run ci:release --otp ${{ steps.wait-for-secrets.outputs.OTP }}; then
-            echo "::error::Failed to publish packages"
-            exit 1
-          fi
-        env:
-          NODE_AUTH_TOKEN: '${{ secrets.PUBLISH_NPM_TOKEN }}'
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
