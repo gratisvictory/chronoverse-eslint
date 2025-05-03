@@ -5101,50 +5101,6 @@
       "index": 31
     },
     {
-      "name": "@chronoverse/tailwindcss/setup > tailwindcss:base",
-      "plugins": {
-        "tailwindcss": {}
-      },
-      "languageOptions": {
-        "parserOptions": {
-          "ecmaFeatures": {
-            "jsx": true
-          }
-        }
-      },
-      "index": 32
-    },
-    {
-      "name": "@chronoverse/tailwindcss/setup > tailwindcss:rules",
-      "rules": {
-        "tailwindcss/classnames-order": "warn",
-        "tailwindcss/enforces-negative-arbitrary-values": "warn",
-        "tailwindcss/enforces-shorthand": "warn",
-        "tailwindcss/migration-from-tailwind-2": "warn",
-        "tailwindcss/no-arbitrary-value": "off",
-        "tailwindcss/no-custom-classname": "warn",
-        "tailwindcss/no-contradicting-classname": "error",
-        "tailwindcss/no-unnecessary-arbitrary-value": "warn"
-      },
-      "index": 33
-    },
-    {
-      "name": "@chronoverse/tailwindcss/setup",
-      "settings": {
-        "tailwindcss": {
-          "callees": [
-            "classnames",
-            "clsx",
-            "ctl",
-            "cn",
-            "cx",
-            "cva"
-          ]
-        }
-      },
-      "index": 34
-    },
-    {
       "name": "@chronoverse/css/setup",
       "files": [
         "**/*.css"
@@ -5167,7 +5123,7 @@
       "plugins": {
         "css": {}
       },
-      "index": 35
+      "index": 32
     },
     {
       "name": "@chronoverse/css/rules",
@@ -5181,7 +5137,7 @@
         "css/no-invalid-properties": "error",
         "css/use-baseline": "warn"
       },
-      "index": 36
+      "index": 33
     },
     {
       "name": "@chronoverse/prettier/rules",
@@ -5191,7 +5147,7 @@
       "rules": {
         "prettier/prettier": "error"
       },
-      "index": 37
+      "index": 34
     },
     {
       "name": "@chronoverse/prettier/disables/rules",
@@ -5555,7 +5511,7 @@
         "yield-star-spacing": "off",
         "react/jsx-space-before-closing": "off"
       },
-      "index": 38
+      "index": 35
     }
   ],
   "rules": {
@@ -19966,94 +19922,6 @@
       "name": "jsdoc/valid-types",
       "plugin": "jsdoc"
     },
-    "tailwindcss/classnames-order": {
-      "docs": {
-        "description": "Enforce a consistent and logical order of the Tailwind CSS classnames",
-        "category": "Stylistic Issues",
-        "recommended": false,
-        "url": "https://github.com/francoismassart/eslint-plugin-tailwindcss/tree/master/docs/rules/classnames-order.md"
-      },
-      "fixable": "code",
-      "name": "tailwindcss/classnames-order",
-      "plugin": "tailwindcss"
-    },
-    "tailwindcss/enforces-negative-arbitrary-values": {
-      "docs": {
-        "description": "Warns about dash prefixed classnames using arbitrary values",
-        "category": "Best Practices",
-        "recommended": true,
-        "url": "https://github.com/francoismassart/eslint-plugin-tailwindcss/tree/master/docs/rules/enforces-negative-arbitrary-values.md"
-      },
-      "fixable": null,
-      "name": "tailwindcss/enforces-negative-arbitrary-values",
-      "plugin": "tailwindcss"
-    },
-    "tailwindcss/enforces-shorthand": {
-      "docs": {
-        "description": "Enforces the usage of shorthand Tailwind CSS classnames",
-        "category": "Best Practices",
-        "recommended": true,
-        "url": "https://github.com/francoismassart/eslint-plugin-tailwindcss/tree/master/docs/rules/enforces-shorthand.md"
-      },
-      "fixable": "code",
-      "name": "tailwindcss/enforces-shorthand",
-      "plugin": "tailwindcss"
-    },
-    "tailwindcss/migration-from-tailwind-2": {
-      "docs": {
-        "description": "Detect obsolete classnames when upgrading to Tailwind CSS v3",
-        "category": "Possible Errors",
-        "recommended": true,
-        "url": "https://github.com/francoismassart/eslint-plugin-tailwindcss/tree/master/docs/rules/migration-from-tailwind-2.md"
-      },
-      "fixable": "code",
-      "name": "tailwindcss/migration-from-tailwind-2",
-      "plugin": "tailwindcss"
-    },
-    "tailwindcss/no-arbitrary-value": {
-      "docs": {
-        "description": "Forbid using arbitrary values in classnames",
-        "category": "Best Practices",
-        "recommended": false,
-        "url": "https://github.com/francoismassart/eslint-plugin-tailwindcss/tree/master/docs/rules/no-arbitrary-value.md"
-      },
-      "fixable": null,
-      "name": "tailwindcss/no-arbitrary-value",
-      "plugin": "tailwindcss"
-    },
-    "tailwindcss/no-contradicting-classname": {
-      "docs": {
-        "description": "Avoid contradicting Tailwind CSS classnames (e.g. \"w-3 w-5\")",
-        "category": "Possible Errors",
-        "recommended": true,
-        "url": "https://github.com/francoismassart/eslint-plugin-tailwindcss/tree/master/docs/rules/no-contradicting-classname.md"
-      },
-      "fixable": null,
-      "name": "tailwindcss/no-contradicting-classname",
-      "plugin": "tailwindcss"
-    },
-    "tailwindcss/no-custom-classname": {
-      "docs": {
-        "description": "Detect classnames which do not belong to Tailwind CSS",
-        "category": "Best Practices",
-        "recommended": false,
-        "url": "https://github.com/francoismassart/eslint-plugin-tailwindcss/tree/master/docs/rules/no-custom-classname.md"
-      },
-      "fixable": null,
-      "name": "tailwindcss/no-custom-classname",
-      "plugin": "tailwindcss"
-    },
-    "tailwindcss/no-unnecessary-arbitrary-value": {
-      "docs": {
-        "description": "Forbid using arbitrary values in classnames when an equivalent preset exists",
-        "category": "Best Practices",
-        "recommended": true,
-        "url": "https://github.com/francoismassart/eslint-plugin-tailwindcss/tree/master/docs/rules/no-unnecessary-arbitrary-value.md"
-      },
-      "fixable": "code",
-      "name": "tailwindcss/no-unnecessary-arbitrary-value",
-      "plugin": "tailwindcss"
-    },
     "css/no-empty-blocks": {
       "type": "problem",
       "docs": {
@@ -20318,17 +20186,6 @@
       ]
     },
     {
-      "filepath": "src/shared/tailwindcss.js",
-      "globs": [
-        "**/*.js",
-        "**/*.?([cm])js?(x)"
-      ],
-      "configs": [
-        2,
-        7
-      ]
-    },
-    {
       "filepath": "src/shared/unicorn.js",
       "globs": [
         "**/*.js",
@@ -20341,7 +20198,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1746308570595,
+    "lastUpdate": 1746309528903,
     "basePath": "",
     "configPath": ""
   }
