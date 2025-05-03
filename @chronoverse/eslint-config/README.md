@@ -29,7 +29,7 @@ A comprehensive ESLint configuration for modern JavaScript and TypeScript projec
 - Functional programming style
 - Code quality and maintainability
 - Git integration
-- CSS and Tailwind CSS support
+- CSS support
 - JSDoc documentation rules
 
 ### Installation 📦
@@ -78,7 +78,7 @@ The package provides several presets that you can use individually:
 - `nextJSX` - Next.js JavaScript configuration
 - `nextTSX` - Next.js TypeScript configuration
 - `css` - CSS configuration
-- `tailwindcss` - Tailwind CSS configuration
+- `tailwindcss` - Tailwind CSS configuration (https://github.com/tailwindlabs/tailwindcss/discussions/15945)
 - `functionalJS` - Functional programming rules
 - `jsdocForJs` - JSDoc rules for JavaScript
 - `jsdocForTs` - JSDoc rules for TypeScript
@@ -114,7 +114,7 @@ The package provides several presets that you can use individually:
 - Функциональный стиль программирования
 - Качество и поддерживаемость кода
 - Интеграция с Git
-- Поддержка CSS и Tailwind CSS
+- Поддержка CSS
 - Правила документации JSDoc
 
 ### Установка 📦
@@ -163,7 +163,7 @@ export default [
 - `nextJSX` - Конфигурация Next.js JavaScript
 - `nextTSX` - Конфигурация Next.js TypeScript
 - `css` - Конфигурация CSS
-- `tailwindcss` - Конфигурация Tailwind CSS
+- `tailwindcss` - Tailwind CSS Конфигурация (https://github.com/tailwindlabs/tailwindcss/discussions/15945)
 - `functionalJS` - Правила функционального программирования
 - `jsdocForJs` - Правила JSDoc для JavaScript
 - `jsdocForTs` - Правила JSDoc для TypeScript

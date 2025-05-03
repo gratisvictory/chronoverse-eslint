@@ -67,7 +67,6 @@ export { js, jsx, nextJSX, nextTSX, ts, tsx };
 export { css } from './shared/css.js';
 export { functionalJS } from './shared/functional.js';
 export { jsdocForJs, jsdocForTs } from './shared/jsdoc.js';
-export { tailwindcss } from './shared/tailwindcss.js';
 export { comments };
 export { dependency };
 export { mutation };
