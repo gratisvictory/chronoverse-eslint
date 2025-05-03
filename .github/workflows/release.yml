@@ -59,13 +59,14 @@ jobs:
           changed=$(bunx lerna changed --json || echo "[]")
 
           markdown=""
+          main_version=""
+          main_name=""
+          main_safe=""
           index=0
 
-          echo "RELEASE_PACKAGES_MARKDOWN<<EOF" >> "$GITHUB_ENV"
-          echo "RELEASE_PACKAGES_MARKDOWN<<EOF" >> "$GITHUB_OUTPUT"
-
-          for row in $(echo "$changed" | jq -c '.[]'); do
-            if [ "$(echo "$row" | jq -r '.private')" = "true" ]; then
+          for row in $(echo "${changed}" | jq -c '.[]'); do
+            private=$(echo "$row" | jq -r '.private')
+            if [ "$private" = "true" ]; then
               continue
             fi
 
@@ -77,26 +78,26 @@ jobs:
             echo "${safe_name}_VERSION=${version}" >> "$GITHUB_ENV"
             echo "${safe_name}_VERSION=${version}" >> "$GITHUB_OUTPUT"
 
-            echo "- \`${name}\` → \`${version}\`" >> "$GITHUB_ENV"
-            echo "- \`${name}\` → \`${version}\`" >> "$GITHUB_OUTPUT"
+            markdown="${markdown}- \`${name}\` → \`${version}\`\n"
 
             if [ "$index" -eq 0 ]; then
-              echo "RELEASE_VERSION=${version}" >> "$GITHUB_ENV"
-              echo "RELEASE_NAME_SAFE=${safe_name}" >> "$GITHUB_ENV"
-              echo "RELEASE_VERSION=${version}" >> "$GITHUB_OUTPUT"
-              echo "RELEASE_NAME_SAFE=${safe_name}" >> "$GITHUB_OUTPUT"
+              main_version="$version"
+              main_name="$name"
+              main_safe="$safe_name"
             fi
 
             index=$((index + 1))
           done
 
-          if [ "$index" -eq 0 ]; then
-            echo "_No public packages changed_" >> "$GITHUB_ENV"
-            echo "_No public packages changed_" >> "$GITHUB_OUTPUT"
-          fi
+          echo -e "RELEASE_PACKAGES_MARKDOWN<<EOF\n${markdown:-_No public packages changed_}\nEOF" >> "$GITHUB_ENV"
+          echo -e "RELEASE_PACKAGES_MARKDOWN<<EOF\n${markdown:-_No public packages changed_}\nEOF" >> "$GITHUB_OUTPUT"
 
-          echo "EOF" >> "$GITHUB_ENV"
-          echo "EOF" >> "$GITHUB_OUTPUT"
+          if [ -n "$main_version" ]; then
+            echo "RELEASE_VERSION=${main_version}" >> "$GITHUB_ENV"
+            echo "RELEASE_NAME_SAFE=${main_safe}" >> "$GITHUB_ENV"
+            echo "RELEASE_VERSION=${main_version}" >> "$GITHUB_OUTPUT"
+            echo "RELEASE_NAME_SAFE=${main_safe}" >> "$GITHUB_OUTPUT"
+          fi
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
 
@@ -151,12 +152,11 @@ jobs:
           script: |
             try {
               const markdown = process.env.RELEASE_PACKAGES_MARKDOWN || '_No packages were released_';
-              const version = process.env.RELEASE_VERSION || '';
               await github.rest.issues.createComment({
                 issue_number: context.issue.number,
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                body: `### Released Packages 🚀\n\n${markdown}\n\nView release: https://github.com/${context.repo.owner}/${context.repo.repo}/releases/tag/v${version}`
+                body: `### Released Packages 🚀\n\n${markdown}\n\nView release: https://github.com/${context.repo.owner}/${context.repo.repo}/releases/tag/v${process.env.RELEASE_VERSION}`
               });
             } catch (error) {
               console.log(`::warning::Failed to create comment: ${error.message}`);
