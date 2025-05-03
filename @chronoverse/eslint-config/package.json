@@ -1,6 +1,6 @@
 {
   "name": "@chronoverse-eslint/eslint-config",
-  "version": "2.2.1",
+  "version": "2.3.1",
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -26,11 +26,11 @@
     "lint:inspector:deploy": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.viewer.js --base /chronoverse-eslint/ --outDir .eslint"
   },
   "dependencies": {
-    "@chronoverse-eslint/javascript": "workspace:^",
-    "@chronoverse-eslint/prettier": "workspace:^",
-    "@chronoverse-eslint/react": "workspace:^",
-    "@chronoverse-eslint/shared": "workspace:^",
-    "@chronoverse-eslint/typescript": "workspace:^",
+    "@chronoverse-eslint/javascript": "^2.3.1",
+    "@chronoverse-eslint/prettier": "^2.3.1",
+    "@chronoverse-eslint/react": "^2.3.1",
+    "@chronoverse-eslint/shared": "^2.3.1",
+    "@chronoverse-eslint/typescript": "^2.3.1",
     "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
     "@eslint/css": "^0.7.0",
     "@next/eslint-plugin-next": "^15.3.1",

@@ -1,6 +1,6 @@
 {
   "name": "@chronoverse-eslint/shared",
-  "version": "2.2.1",
+  "version": "2.3.1",
   "description": "Shared code for @chronoverse-eslint packages",
   "type": "module",
   "exports": {
