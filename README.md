@@ -17,7 +17,6 @@ A comprehensive suite of ESLint configurations for modern JavaScript and TypeScr
 - [Installation](#installation-)
 - [Usage](#usage-️)
 - [Requirements](#requirements-)
-- [Development](#development-)
 
 ### Packages 📦
 
@@ -61,9 +60,31 @@ bun add -D @chronoverse-eslint/eslint-config eslint
 Add to your `eslint.config.js`:
 
 ```javascript
-import { js, jsx, ts, tsx, nextJSX, nextTSX } from '@chronoverse-eslint/eslint-config';
+import { js, jsx, ts, tsx, nextJSX, nextTSX, ...presets } from '@chronoverse-eslint/eslint-config';
 
 export default [
+  // For JavaScript projects
+  ...js,
+  // For React JavaScript projects
+  ...jsx,
+  // For TypeScript projects
+  ...ts,
+  // For React TypeScript projects
+  ...tsx,
+  // For Next.js JavaScript projects
+  ...nextJSX,
+  // For Next.js TypeScript projects
+  ...nextTSX,
+];
+```
+
+#### or
+
+```javascript
+import { defineConfig } from 'eslint/config';
+import { js, jsx, ts, tsx, nextJSX, nextTSX, ...presets } from '@chronoverse-eslint/eslint-config';
+
+export default defineConfig([
   // For JavaScript projects
   js,
   // For React JavaScript projects
@@ -76,7 +97,7 @@ export default [
   nextJSX,
   // For Next.js TypeScript projects
   nextTSX,
-];
+]);
 ```
 
 ### Requirements 📋
@@ -142,9 +163,31 @@ bun add -D @chronoverse-eslint/eslint-config eslint
 Добавьте в ваш `eslint.config.js`:
 
 ```javascript
-import { js, jsx, ts, tsx, nextJSX, nextTSX } from '@chronoverse-eslint/eslint-config';
+import { js, jsx, ts, tsx, nextJSX, nextTSX, ...presets } from '@chronoverse-eslint/eslint-config';
 
 export default [
+  // Для JavaScript проектов
+  ...js,
+  // Для React JavaScript проектов
+  ...jsx,
+  // Для TypeScript проектов
+  ...ts,
+  // Для React TypeScript проектов
+  ...tsx,
+  // Для Next.js JavaScript проектов
+  ...nextJSX,
+  // Для Next.js TypeScript проектов
+  ...nextTSX,
+];
+```
+
+#### Или
+
+```javascript
+import { defineConfig } from 'eslint/config';
+import { js, jsx, ts, tsx, nextJSX, nextTSX, ...presets } from '@chronoverse-eslint/eslint-config';
+
+export default defineConfig([
   // Для JavaScript проектов
   js,
   // Для React JavaScript проектов
@@ -157,7 +200,7 @@ export default [
   nextJSX,
   // Для Next.js TypeScript проектов
   nextTSX,
-];
+]);
 ```
 
 ### Требования 📋
