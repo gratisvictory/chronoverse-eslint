@@ -15,3 +15,21 @@ export const TYPESCRIPT_FILES = ['**/*.?([m])ts?(x)'];
  * @type {string[]}
  */
 export const CSS_FILES = ['**/*.css'];
+
+/**
+ * Glob patterns for JSON files.
+ * @type {string[]}
+ */
+export const JSON_FILES = ['**/*.json'];
+
+/**
+ * Glob patterns for JSON5 files.
+ * @type {string[]}
+ */
+export const JSON5_FILES = ['**/*.json5'];
+
+/**
+ * Glob patterns for JSONC files.
+ * @type {string[]}
+ */
+export const JSONC_FILES = ['**/*.jsonc'];

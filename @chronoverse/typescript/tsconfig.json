@@ -7,6 +7,8 @@
     "node_modules",
     "dist"
   ],
-  "extends": "../../tsconfig.json",
-  "include": ["src/**/*.js"]
+  "extends": "../../tsconfig.base.json",
+  "include": [
+    "src/**/*.js"
+  ]
 }
