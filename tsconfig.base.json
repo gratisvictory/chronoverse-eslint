@@ -1,34 +1,37 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "target": "ESNext",
     "module": "ESNext",
+    "target": "ESNext",
     "moduleResolution": "Bundler",
     "lib": [
       "ESNext",
-      "DOM",
-      "DOM.Iterable"
+      "DOM"
     ],
-    "allowJs": true,
-    "checkJs": true,
-    "declaration": true,
-    "emitDeclarationOnly": true,
-    "declarationMap": false,
-    "removeComments": true,
-    "newLine": "lf",
-    "sourceMap": false,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
     "strict": true,
-    "noImplicitReturns": true,
+    "exactOptionalPropertyTypes": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitOverride": true,
-    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
-    "incremental": true,
-    "isolatedModules": false,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noUncheckedSideEffectImports": true,
     "resolveJsonModule": true,
-    "verbatimModuleSyntax": true
-  }
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "removeComments": true,
+    "allowJs": true,
+    "checkJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "incremental": true
+  },
+  "display": "Base"
 }

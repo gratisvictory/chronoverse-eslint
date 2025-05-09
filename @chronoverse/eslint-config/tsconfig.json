@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "declarationDir": "./dist/@types",
     "outDir": "./dist",
     "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json"
   },

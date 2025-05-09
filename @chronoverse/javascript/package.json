@@ -6,12 +6,11 @@
   "exports": {
     ".": {
       "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/@types/index.d.ts"
     }
   },
   "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "typings": "./dist/index.d.ts",
+  "types": "./dist/@types/index.d.ts",
   "files": [
     "dist"
   ],
