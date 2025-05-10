@@ -47,7 +47,7 @@
     "nx": "^20.8.1",
     "prettier": "^3.5.3",
     "prettier-plugin-multiline-arrays": "^4.0.3",
-    "prettier-plugin-packagejson": "^2.5.11",
+    "prettier-plugin-packagejson": "^2.5.12",
     "prettier-plugin-sort-json": "^4.1.1",
     "rimraf": "^6.0.1",
     "typescript": "^5.8.3"
