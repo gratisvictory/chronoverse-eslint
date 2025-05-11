@@ -1,0 +1,68 @@
+{
+  "name": "@chronoverse-shared/builder",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Reusable build script for JavaScript projects using esbuild. Compatible with Bun and Node.js.",
+  "keywords": [
+    "bun",
+    "node",
+    "builder",
+    "build-script",
+    "esbuild",
+    "shared",
+    "cli"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gratisvictory/chronoverse-eslint.git",
+    "directory": "@chronoverse-shared/builder"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "@gratisvictory",
+    "email": "gratisvictory.dev@proton.me",
+    "url": "https://github.com/gratisvictory"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/@types/index.d.ts"
+    },
+    "./cli": {
+      "import": "./dist/cli.js",
+      "types": "./dist/@types/cli.d.ts"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/@types/index.d.ts",
+  "bin": {
+    "builder": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bun build:clean && bun ./scripts/build.js",
+    "build:clean": "rimraf dist",
+    "build:node": "npm run build:clean && node ./scripts/build.js",
+    "clean": "rimraf node_modules",
+    "clean:all": "rimraf dist node_modules",
+    "postinstall": "bun scripts/postinstall.js"
+  },
+  "dependencies": {
+    "esbuild": "^0.25.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.17",
+    "rimraf": "^6.0.1"
+  },
+  "peerDependencies": {
+    "esbuild": "^0.25.3"
+  },
+  "packageManager": "bun@1.2.13",
+  "engines": {
+    "bun": ">=1.2.13",
+    "node": ">=16.0.0"
+  }
+}

@@ -4,7 +4,8 @@
   "license": "MIT",
   "type": "module",
   "workspaces": [
-    "@chronoverse/*"
+    "@chronoverse-eslint/*",
+    "@chronoverse-shared/*"
   ],
   "scripts": {
     "build": "lerna run build",
@@ -33,7 +34,7 @@
   "devDependencies": {
     "@changesets/cli": "^2.29.3",
     "@chronoverse-eslint/eslint-config": "workspace:^",
-    "@chronoverse-eslint/shared": "workspace:^",
+    "@chronoverse-shared/utilities": "workspace:^",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@commitlint/config-lerna-scopes": "^19.8.1",
@@ -52,8 +53,9 @@
     "rimraf": "^6.0.1",
     "typescript": "^5.8.3"
   },
-  "packageManager": "bun@1.2.11",
+  "packageManager": "bun@1.2.13",
   "engines": {
-    "bun": ">=1.2.11"
+    "bun": ">=1.2.13",
+    "node": ">=23.11.0"
   }
 }

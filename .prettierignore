@@ -22,3 +22,5 @@ coverage
 *.md
 .*ignore
 *.nx
+.eslint
+.eslint-javascript

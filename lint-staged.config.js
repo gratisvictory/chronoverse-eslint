@@ -1,11 +1,11 @@
-import { JAVASCRIPT_FILES, JSON_FILES } from '@chronoverse-eslint/shared';
+import { FILE_PATTERNS } from '@chronoverse-shared/utilities';
 
 const config = {
-	[JAVASCRIPT_FILES]: [
+	[FILE_PATTERNS.javascript]: [
 		'prettier --write --log-level=warn',
 		'eslint --fix',
 	],
-	[JSON_FILES]: ['prettier --write --log-level=warn'],
+	[FILE_PATTERNS.json]: ['prettier --write --log-level=warn'],
 	'*': () => 'bunx sherif@latest',
 };
 

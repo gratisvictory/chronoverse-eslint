@@ -1,0 +1,62 @@
+{
+  "name": "@chronoverse-shared/utilities",
+  "version": "2.3.1",
+  "private": false,
+  "description": "Shared constants and utilities for @chronoverse-eslint packages.",
+  "keywords": [
+    "eslint",
+    "shared",
+    "constants",
+    "configuration",
+    "chronoverse",
+    "utilities",
+    "flat-config",
+    "eslint-config"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gratisvictory/chronoverse-eslint.git",
+    "directory": "@chronoverse-shared/utilities"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "@gratisvictory",
+    "email": "gratisvictory.dev@proton.me",
+    "url": "https://github.com/gratisvictory"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/@types/index.d.ts"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/@types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bun run build:clean && bun builder -e src/index.js",
+    "build:clean": "rimraf dist",
+    "clean": "rimraf node_modules",
+    "clean:all": "rimraf dist node_modules"
+  },
+  "dependencies": {
+    "eslint-config-flat-gitignore": "^2.1.0",
+    "globals": "^16.0.0"
+  },
+  "devDependencies": {
+    "@chronoverse-shared/builder": "workspace:^",
+    "rimraf": "^6.0.1"
+  },
+  "packageManager": "bun@1.2.13",
+  "engines": {
+    "bun": ">=1.2.13",
+    "node": ">=23.11.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

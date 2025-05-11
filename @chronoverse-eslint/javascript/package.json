@@ -1,0 +1,46 @@
+{
+  "name": "@chronoverse-eslint/javascript",
+  "version": "2.3.1",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/@types/index.d.ts"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/@types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bun build:clean && bun builder -e src/index.js -o dist",
+    "build:clean": "rimraf dist",
+    "clean": "rimraf node_modules",
+    "clean:all": "rimraf dist node_modules",
+    "lint:build:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.javascript.js --outDir .eslint-javascript && bunx serve .eslint-javascript",
+    "lint:dev:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest --config ./eslint.config.javascript.js",
+    "lint:inspector:clean": "rimraf .eslint-javascript"
+  },
+  "dependencies": {
+    "@chronoverse-shared/utilities": "workspace:^",
+    "eslint": "^9.26.0",
+    "eslint-config-eslint": "^11.0.0"
+  },
+  "devDependencies": {
+    "@chronoverse-shared/builder": "workspace:^",
+    "@eslint/js": "^9.26.0",
+    "rimraf": "^6.0.1"
+  },
+  "peerDependencies": {
+    "eslint": "^9.26.0"
+  },
+  "packageManager": "bun@1.2.11",
+  "engines": {
+    "bun": ">=1.2.11"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

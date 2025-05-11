@@ -1,6 +1,8 @@
 {
-  "$schema": "node_modules/lerna/schemas/lerna-schema.json",
-  "packages": ["@chronoverse/*"],
+  "packages": [
+    "@chronoverse-eslint/*",
+    "@chronoverse-shared/*"
+  ],
   "useNx": true,
   "version": "independent"
 }
