@@ -43,9 +43,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "bun build:clean && bun ./scripts/build.js",
+    "build": "bun run build:clean && bun scripts/build.js",
     "build:clean": "rimraf dist",
-    "build:node": "npm run build:clean && node ./scripts/build.js",
+    "build:node": "npm run build:clean && node scripts/build.js",
     "clean": "rimraf node_modules",
     "clean:all": "rimraf dist node_modules",
     "postinstall": "bun scripts/postinstall.js"

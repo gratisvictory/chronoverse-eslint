@@ -38,17 +38,17 @@
     "dist"
   ],
   "scripts": {
-    "build": "bun run build:clean && bun builder -e src/index.js",
+    "build": "bun run build:clean && bun run builder -e src/index.js",
     "build:clean": "rimraf dist",
     "clean": "rimraf node_modules",
     "clean:all": "rimraf dist node_modules"
   },
   "dependencies": {
+    "@chronoverse-shared/builder": "workspace:^",
     "eslint-config-flat-gitignore": "^2.1.0",
     "globals": "^16.0.0"
   },
   "devDependencies": {
-    "@chronoverse-shared/builder": "workspace:^",
     "rimraf": "^6.0.1"
   },
   "packageManager": "bun@1.2.13",

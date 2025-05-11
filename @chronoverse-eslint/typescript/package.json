@@ -15,12 +15,13 @@
     "dist"
   ],
   "scripts": {
-    "build": "bun build:clean && bun builder -e src/index.js -o dist",
+    "build": "bun run build:clean && bun run builder -e src/index.js",
     "build:clean": "rimraf dist",
     "clean": "rimraf node_modules",
     "clean:all": "rimraf dist node_modules"
   },
   "dependencies": {
+    "@chronoverse-shared/builder": "workspace:^",
     "@chronoverse-shared/utilities": "workspace:^",
     "@susisu/eslint-plugin-safe-typescript": "^0.9.4",
     "@typescript-eslint/eslint-plugin": "^8.31.1",
@@ -30,7 +31,6 @@
     "eslint-plugin-tsdoc": "^0.4.0"
   },
   "devDependencies": {
-    "@chronoverse-shared/builder": "workspace:^",
     "rimraf": "^6.0.1",
     "typescript": "^5.8.3"
   },
