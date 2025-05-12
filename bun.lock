@@ -63,7 +63,7 @@
     },
     "@chronoverse-eslint/javascript": {
       "name": "@chronoverse-eslint/javascript",
-      "version": "2.3.1",
+      "version": "2.4.2",
       "dependencies": {
         "@chronoverse-shared/utilities": "workspace:^",
         "eslint": "^9.26.0",
@@ -119,6 +119,24 @@
         "typescript": "^5.8.3",
       },
     },
+    "@chronoverse-eslint/stylistic": {
+      "name": "@chronoverse-eslint/stylistic",
+      "version": "1.0.0",
+      "dependencies": {
+        "@chronoverse-shared/utilities": "workspace:^",
+        "@stylistic/eslint-plugin-js": "^4.2.0",
+        "@stylistic/eslint-plugin-jsx": "^4.2.0",
+        "@stylistic/eslint-plugin-plus": "^4.2.0",
+        "eslint": "^9.26.0",
+      },
+      "devDependencies": {
+        "@chronoverse-shared/builder": "workspace:^",
+        "rimraf": "^6.0.1",
+      },
+      "peerDependencies": {
+        "eslint": "^9.26.0",
+      },
+    },
     "@chronoverse-eslint/typescript": {
       "name": "@chronoverse-eslint/typescript",
       "version": "2.3.1",
@@ -160,7 +178,7 @@
     },
     "@chronoverse-shared/utilities": {
       "name": "@chronoverse-shared/utilities",
-      "version": "2.3.1",
+      "version": "2.4.2",
       "dependencies": {
         "eslint-config-flat-gitignore": "^2.1.0",
         "globals": "^16.1.0",
@@ -271,6 +289,8 @@
     "@chronoverse-eslint/prettier": ["@chronoverse-eslint/prettier@workspace:@chronoverse-eslint/prettier"],
 
     "@chronoverse-eslint/react": ["@chronoverse-eslint/react@workspace:@chronoverse-eslint/react"],
+
+    "@chronoverse-eslint/stylistic": ["@chronoverse-eslint/stylistic@workspace:@chronoverse-eslint/stylistic"],
 
     "@chronoverse-eslint/typescript": ["@chronoverse-eslint/typescript@workspace:@chronoverse-eslint/typescript"],
 
@@ -587,6 +607,12 @@
     "@sigstore/verify": ["@sigstore/verify@1.2.1", "", { "dependencies": { "@sigstore/bundle": "^2.3.2", "@sigstore/core": "^1.1.0", "@sigstore/protobuf-specs": "^0.3.2" } }, "sha512-8iKx79/F73DKbGfRf7+t4dqrc0bRr0thdPrxAtCKWRm/F0tG71i6O1rvlnScncJLLBZHn3h8M3c1BSUAb9yu8g=="],
 
     "@sinclair/typebox": ["@sinclair/typebox@0.27.8", "", {}, "sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA=="],
+
+    "@stylistic/eslint-plugin-js": ["@stylistic/eslint-plugin-js@4.2.0", "", { "dependencies": { "eslint-visitor-keys": "^4.2.0", "espree": "^10.3.0" }, "peerDependencies": { "eslint": ">=9.0.0" } }, "sha512-MiJr6wvyzMYl/wElmj8Jns8zH7Q1w8XoVtm+WM6yDaTrfxryMyb8n0CMxt82fo42RoLIfxAEtM6tmQVxqhk0/A=="],
+
+    "@stylistic/eslint-plugin-jsx": ["@stylistic/eslint-plugin-jsx@4.2.0", "", { "dependencies": { "eslint-visitor-keys": "^4.2.0", "espree": "^10.3.0", "estraverse": "^5.3.0", "picomatch": "^4.0.2" }, "peerDependencies": { "eslint": ">=9.0.0" } }, "sha512-V+AtcVs0a3ck2IWWH/fd/+TmOYSgBJlsJXIR65+3kqgNi3p3pPfo9C8nhRsU/KlcSwhnzyx+Z/kEcuWCMZtTcA=="],
+
+    "@stylistic/eslint-plugin-plus": ["@stylistic/eslint-plugin-plus@4.2.0", "", { "dependencies": { "eslint-visitor-keys": "^4.2.0", "espree": "^10.3.0" }, "peerDependencies": { "eslint": ">=9.0.0" } }, "sha512-w7HArI09lCB7u9hj0ZXojY49iQmcmL8mJKkZ3EXCRCy6nlM8AeHZCFxNDXJo4EW/sP08RiaspXEbL9ZtDs4cPQ=="],
 
     "@susisu/eslint-plugin-safe-typescript": ["@susisu/eslint-plugin-safe-typescript@0.9.4", "", { "dependencies": { "@typescript-eslint/utils": "^8.31.1" }, "peerDependencies": { "@typescript-eslint/parser": "^8.0.0", "eslint": "^9.10.0", "typescript": "*", "typescript-eslint": "^8.0.0" }, "optionalPeers": ["@typescript-eslint/parser", "typescript-eslint"] }, "sha512-mG3hea82ybJCz+F07Wwcp6QZHuROPud9M8VgTN4+7H4A5KRYM1Gn5ZvJXqnslQgID8mkafu8tSzgn4zjtNpi0w=="],
 

@@ -1,0 +1,24 @@
+0 silly argv {
+0 silly argv   _: [ 'run' ],
+0 silly argv   lernaVersion: '8.2.2',
+0 silly argv   '$0': '/home/gratisvictory/chronoverse-eslint/node_modules/.bin/lerna',
+0 silly argv   script: 'clean:all'
+0 silly argv }
+1 notice cli v8.2.2
+2 verbose packageConfigs Explicit "packages" configuration found in lerna.json. Resolving packages using the configured glob(s): ["@chronoverse-eslint/*","@chronoverse-shared/*"]
+3 verbose rootPath /home/gratisvictory/chronoverse-eslint
+4 error MultipleProjectsWithSameNameError: The following projects are defined in multiple locations:
+4 error   - @chronoverse-eslint/prettier:
+4 error     - @chronoverse-eslint/prettier
+4 error     - @chronoverse-eslint/stylistic
+4 error
+4 error   To fix this, set a unique name for each project in a project.json inside the project's root. If the project does not currently have a project.json, you can create one that contains only a name.
+4 error       at validateAndNormalizeProjectRootMap (/home/gratisvictory/chronoverse-eslint/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:467:15)
+4 error       at mergeCreateNodesResults (/home/gratisvictory/chronoverse-eslint/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:353:9)
+4 error       at /home/gratisvictory/chronoverse-eslint/node_modules/nx/src/project-graph/utils/project-configuration-utils.js:297:85
+4 error       at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+4 error       at async processFilesAndCreateAndSerializeProjectGraph (/home/gratisvictory/chronoverse-eslint/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:160:43)
+4 error       at async getCachedSerializedProjectGraphPromise (/home/gratisvictory/chronoverse-eslint/node_modules/nx/src/daemon/server/project-graph-incremental-recomputation.js:52:24)
+4 error       at async handleRequestProjectGraph (/home/gratisvictory/chronoverse-eslint/node_modules/nx/src/daemon/server/handle-request-project-graph.js:12:24)
+4 error       at async handleResult (/home/gratisvictory/chronoverse-eslint/node_modules/nx/src/daemon/server/server.js:186:16)
+4 error       at async handleMessage (/home/gratisvictory/chronoverse-eslint/node_modules/nx/src/daemon/server/server.js:109:9)

@@ -1,0 +1,49 @@
+{
+  "name": "@chronoverse-eslint/stylistic",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/@types/index.d.ts"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/@types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bun run clean:all && bun build.js",
+    "build:clean": "rimraf dist",
+    "build:cli": "bun run clean:all && bun run builder -e src/index.js -o dist",
+    "clean": "rimraf node_modules",
+    "clean:all": "rimraf dist node_modules",
+    "lint:build:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.stylistic.js --outDir .eslint-stylistic && bunx serve .eslint-stylistic",
+    "lint:check": "eslint",
+    "lint:debug": "eslint --debug",
+    "lint:dev:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest --config ./eslint.config.stylistic.js",
+    "lint:fix": "eslint --fix",
+    "lint:inspector:clean": "rimraf .eslint-stylistic"
+  },
+  "dependencies": {
+    "@chronoverse-shared/utilities": "workspace:^",
+    "@stylistic/eslint-plugin-js": "^4.2.0",
+    "@stylistic/eslint-plugin-jsx": "^4.2.0",
+    "@stylistic/eslint-plugin-plus": "^4.2.0",
+    "eslint": "^9.26.0"
+  },
+  "devDependencies": {
+    "@chronoverse-shared/builder": "workspace:^",
+    "rimraf": "^6.0.1"
+  },
+  "peerDependencies": {
+    "eslint": "^9.26.0"
+  },
+  "packageManager": "bun@1.2.13",
+  "engines": {
+    "bun": ">=1.2.13"
+  }
+}
