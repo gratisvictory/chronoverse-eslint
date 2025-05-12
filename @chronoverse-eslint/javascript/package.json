@@ -1,6 +1,6 @@
 {
   "name": "@chronoverse-eslint/javascript",
-  "version": "2.3.1",
+  "version": "2.4.1",
   "license": "MIT",
   "type": "module",
   "exports": {
