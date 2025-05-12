@@ -9,11 +9,11 @@ Modern ESLint configuration for JavaScript projects focused on best practices an
 
 ## Features
 
-- Modern JavaScript (ES2022+) support
-- Performance-focused rules
-- Browser and Node.js environments
-- Functional programming style
-- Comprehensive best practices
+- ✨ Modern JavaScript (ES2022+) support
+- ⚡ Performance-focused rules
+- 🌐 Browser and Node.js environments
+- 🧩 Functional programming style
+- 📚 Comprehensive best practices
 
 ## Installation
 
