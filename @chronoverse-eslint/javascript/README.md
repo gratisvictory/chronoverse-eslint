@@ -57,6 +57,23 @@ export default defineConfig([
 ]);
 ```
 
+## Examples
+
+Check out our [examples directory](https://github.com/gratisvictory/chronoverse-eslint/tree/main/examples/vanilla-js) to see practical demonstrations of ESLint rules in action:
+
+- **Array Methods** - Proper return statements in callbacks
+- **Variable Usage** - Best practices for const/let declarations
+- **Equality Operators** - Why strict equality (===) matters
+- **Object Syntax** - Modern shorthand property syntax
+- **Template Literals** - Clean string interpolation
+- **Destructuring** - Elegant object property access
+- **Arrow Functions** - Concise function expressions
+- **Code Blocks** - Properly structured conditionals
+- **Callback Patterns** - Error handling in asynchronous code
+- **Security Practices** - Avoiding risky functions
+
+Each example includes both problematic code (that ESLint flags) and the recommended approach.
+
 ## Requirements
 
 - ESLint ≥ 9.26.0
