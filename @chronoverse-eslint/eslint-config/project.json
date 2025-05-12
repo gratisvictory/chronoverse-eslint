@@ -1,0 +1,23 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "@chronoverse-eslint/eslint-config",
+  "projectType": "library",
+  "sourceRoot": "@chronoverse-eslint/eslint-config/src",
+  "targets": {
+    "build": {
+      "dependsOn": [
+        "@chronoverse-shared/builder:build",
+        "@chronoverse-shared/utilities:build",
+        "@chronoverse-eslint/javascript:build",
+        "@chronoverse-eslint/react:build",
+        "@chronoverse-eslint/typescript:build",
+        "@chronoverse-eslint/prettier:build"
+      ],
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "bun run build",
+        "cwd": "@chronoverse-eslint/eslint-config"
+      }
+    }
+  }
+}

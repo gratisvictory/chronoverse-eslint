@@ -1,0 +1,16 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "@chronoverse-shared/utilities",
+  "projectType": "library",
+  "sourceRoot": "@chronoverse-shared/utilities/src",
+  "targets": {
+    "build": {
+      "dependsOn": ["^build"],
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "bun run build",
+        "cwd": "@chronoverse-shared/utilities"
+      }
+    }
+  }
+}
