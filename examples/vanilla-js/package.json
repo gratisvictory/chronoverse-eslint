@@ -1,0 +1,20 @@
+{
+  "name": "vanilla-js",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint:build:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.js --outDir .eslint-javascript && bunx serve .eslint-javascript",
+    "lint:check": "eslint --cache --cache-location=node_modules/.cache/.eslintcache",
+    "lint:debug": "eslint --cache --cache-location=node_modules/.cache/.eslintcache --debug",
+    "lint:dev:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest --config ./eslint.config.js",
+    "lint:fix": "eslint --fix --cache --cache-location=node_modules/.cache/.eslintcache",
+    "lint:inspector:clean": "rimraf .eslint-javascript"
+  },
+  "devDependencies": {
+    "@chronoverse-eslint/javascript": "^2.4.2",
+    "@chronoverse-shared/utilities": "^2.4.2",
+    "eslint": "^9.26.0",
+    "rimraf": "^6.0.1"
+  },
+  "packageManager": "bun@1.2.13"
+}
