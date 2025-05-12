@@ -1,7 +1,30 @@
 {
   "name": "@chronoverse-eslint/javascript",
-  "version": "2.4.1",
+  "version": "2.4.2",
+  "private": false,
+  "description": "Modern ESLint configuration for JavaScript projects focused on best practices and performance optimization",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "javascript",
+    "lint",
+    "linter",
+    "style",
+    "chronoverse",
+    "performance",
+    "best-practices"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gratisvictory/chronoverse-eslint"
+  },
   "license": "MIT",
+  "author": {
+    "name": "@gratisvictory",
+    "email": "gratisvictory.dev@proton.me",
+    "url": "https://github.com/gratisvictory"
+  },
+  "sideEffects": false,
   "type": "module",
   "exports": {
     ".": {
@@ -25,7 +48,7 @@
     "lint:inspector:clean": "rimraf .eslint-javascript"
   },
   "dependencies": {
-    "@chronoverse-shared/utilities": "workspace:^",
+    "@chronoverse-shared/utilities": "^2.4.2",
     "eslint": "^9.26.0",
     "eslint-config-eslint": "^11.0.0"
   },
@@ -37,9 +60,10 @@
   "peerDependencies": {
     "eslint": "^9.26.0"
   },
-  "packageManager": "bun@1.2.11",
+  "packageManager": "bun@1.2.13",
   "engines": {
-    "bun": ">=1.2.11"
+    "bun": ">=1.2.13",
+    "node": ">=23.11.0"
   },
   "publishConfig": {
     "access": "public"
