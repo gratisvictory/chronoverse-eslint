@@ -1,6 +1,6 @@
 import eslintStylisticJs from '@stylistic/eslint-plugin-js';
 import { defineConfig } from 'eslint/config';
-import { base } from './rules/base.js';
+import { javascript } from './rules/javascript.js';
 
 const stylisticJs = defineConfig([
 	{
@@ -8,9 +8,7 @@ const stylisticJs = defineConfig([
 		plugins: {
 			'@stylistic/js': eslintStylisticJs,
 		},
-		rules: {
-			...base,
-		},
+		rules: { ...javascript },
 	},
 ]);
 

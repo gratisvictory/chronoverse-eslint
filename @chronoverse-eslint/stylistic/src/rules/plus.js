@@ -1,5 +1,5 @@
 /**
- * JavaScript stylistic rules for ESLint, migrated from eslint core.
+ * Plus stylistic rules for ESLint, migrated from eslint core.
  * @see https://eslint.style/packages/plus
  * @type {import('eslint').Linter.Config['rules']}
  */

@@ -8,9 +8,7 @@ const stylisticJsx = defineConfig([
 		plugins: {
 			'@stylistic/jsx': eslintStylisticJsx,
 		},
-		rules: {
-			...jsx,
-		},
+		rules: { ...jsx },
 	},
 ]);
 

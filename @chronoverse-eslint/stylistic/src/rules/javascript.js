@@ -3,7 +3,7 @@
  * @see https://eslint.style/packages/js
  * @type {import('eslint').Linter.Config['rules']}
  */
-const base = {
+const javascript = {
 	/**
 	 * Enforce linebreaks after opening and before closing array brackets.
 	 */
@@ -693,4 +693,4 @@ const base = {
 	],
 };
 
-export { base };
+export { javascript };

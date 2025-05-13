@@ -1,3 +1,5 @@
+import { FILE_PATTERNS } from '@chronoverse-shared/utilities';
+
 /** @type {import('prettier').Config} */
 const config = {
 	plugins: [
@@ -24,7 +26,7 @@ const config = {
 	multilineArraysWrapThreshold: 1,
 	overrides: [
 		{
-			files: ['*.json'],
+			files: FILE_PATTERNS.json,
 			options: {
 				tabWidth: 2,
 				useTabs: false,

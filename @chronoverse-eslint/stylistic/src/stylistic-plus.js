@@ -8,9 +8,7 @@ const stylisticPlus = defineConfig([
 		plugins: {
 			'@stylistic/plus': eslintStylisticPlus,
 		},
-		rules: {
-			...plus,
-		},
+		rules: { ...plus },
 	},
 ]);
 
