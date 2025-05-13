@@ -3,6 +3,9 @@ import eslintStylisticTs from '@stylistic/eslint-plugin-ts';
 import { defineConfig } from 'eslint/config';
 import { typescript } from './rules/typescript.js';
 
+/**
+ * @type {import('eslint').Linter.Config[]}
+ */
 const stylisticTs = await (async () => {
 	const tsOptions = await getTsLanguageOptions();
 	return defineConfig([
