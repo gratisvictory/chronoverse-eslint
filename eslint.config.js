@@ -1,5 +1,6 @@
 import { defineConfig } from 'eslint/config';
-import { js, functionalJS, jsdocForJs, stylisticJs, stylisticPlus, json } from '@chronoverse-eslint/eslint-config';
+import { js, jsdocForJs, stylisticJs, stylisticPlus, json } from '@chronoverse-eslint/eslint-config';
+import { functionalJs } from '@chronoverse-eslint/functional';
 
 export default defineConfig([
 	{
@@ -10,8 +11,14 @@ export default defineConfig([
 	},
 	js,
 	jsdocForJs,
-	functionalJS,
+	functionalJs,
 	stylisticJs,
 	stylisticPlus,
+	{
+		rules: {
+			// use prettier
+			'@stylistic/js/object-curly-newline': 'off',
+		},
+	},
 	// json,
 ]);

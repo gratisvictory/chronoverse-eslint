@@ -1,7 +1,7 @@
 {
   "name": "@chronoverse-eslint/stylistic",
   "version": "1.0.0",
-  "private": false,
+  "private": true,
   "description": "Comprehensive ESLint stylistic rules configuration for JavaScript, TypeScript, JSX and more",
   "keywords": [
     "eslint",

@@ -1,19 +1,9 @@
 {
-  "name": "@chronoverse-eslint/javascript",
-  "version": "2.4.2",
+  "name": "@chronoverse-eslint/functional",
+  "version": "1.0.0",
   "private": false,
-  "description": "Modern ESLint configuration for JavaScript projects focused on best practices and performance optimization",
-  "keywords": [
-    "eslint",
-    "eslintconfig",
-    "javascript",
-    "lint",
-    "linter",
-    "style",
-    "chronoverse",
-    "performance",
-    "best-practices"
-  ],
+  "description": "",
+  "keywords": [],
   "repository": {
     "type": "git",
     "url": "https://github.com/gratisvictory/chronoverse-eslint"
@@ -40,22 +30,25 @@
   "scripts": {
     "build": "bun run clean:all && bun build.js",
     "build:clean": "rimraf dist",
-    "build:cli": "bun run clean:all && bun run builder -e src/index.js",
+    "build:cli": "bun run clean:all && bun run builder -e src/index.js -o dist",
     "clean": "rimraf node_modules",
     "clean:all": "rimraf dist node_modules",
-    "lint:build:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.javascript.js --outDir .eslint-javascript && bunx serve .eslint-javascript",
-    "lint:dev:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest --config ./eslint.config.javascript.js",
-    "lint:inspector:clean": "rimraf .eslint-javascript"
+    "lint:build:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.functional.js --outDir .eslint-functional && bunx serve .eslint-functional",
+    "lint:check": "eslint --cache --cache-location=node_modules/.cache/.eslintcache",
+    "lint:debug": "eslint --cache --cache-location=node_modules/.cache/.eslintcache --debug",
+    "lint:dev:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest --config ./eslint.config.functional.js",
+    "lint:fix": "eslint --fix --cache --cache-location=node_modules/.cache/.eslintcache",
+    "lint:inspector:clean": "rimraf .eslint-functional"
   },
   "dependencies": {
     "@chronoverse-shared/utilities": "workspace:^",
     "eslint": "^9.26.0",
-    "eslint-config-eslint": "^11.0.0"
+    "eslint-plugin-functional": "^9.0.1"
   },
   "devDependencies": {
     "@chronoverse-shared/builder": "workspace:^",
-    "@eslint/js": "^9.26.0",
-    "rimraf": "^6.0.1"
+    "rimraf": "^6.0.1",
+    "typescript": "^5.8.3"
   },
   "peerDependencies": {
     "eslint": "^9.26.0"

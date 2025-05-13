@@ -1,0 +1,19 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "@chronoverse-eslint/functional",
+  "projectType": "library",
+  "sourceRoot": "@chronoverse-eslint/functional/src",
+  "targets": {
+    "build": {
+      "dependsOn": [
+        "@chronoverse-shared/builder:build",
+        "@chronoverse-shared/utilities:build"
+      ],
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "bun run build",
+        "cwd": "@chronoverse-eslint/functional"
+      }
+    }
+  }
+}

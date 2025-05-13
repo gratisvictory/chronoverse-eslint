@@ -56,17 +56,13 @@ const nextTSX = defineConfig([
 ]);
 
 /** Main */
-export {
-	js, jsx, nextJSX, nextTSX, ts, tsx,
-};
+export { js, jsx, nextJSX, nextTSX, ts, tsx };
 /** Presets */
 export { css } from './presets/css.js';
 export { functionalJS } from './presets/functional.js';
 export { jsdocForJs, jsdocForTs } from './presets/jsdoc.js';
 export { json } from './presets/json.js';
-export {
-	stylisticJs, stylisticJsx, stylisticPlus, stylisticTs,
-} from '@chronoverse-eslint/stylistic';
+export { stylisticJs, stylisticJsx, stylisticPlus, stylisticTs } from '@chronoverse-eslint/stylistic';
 export { comments };
 export { dependency };
 export { mutation };
