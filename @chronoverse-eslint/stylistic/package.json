@@ -1,8 +1,32 @@
 {
   "name": "@chronoverse-eslint/stylistic",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
+  "description": "Comprehensive ESLint stylistic rules configuration for JavaScript, TypeScript, JSX and more",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "stylistic",
+    "formatting",
+    "style",
+    "typescript",
+    "javascript",
+    "jsx",
+    "chronoverse",
+    "lint",
+    "linter"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gratisvictory/chronoverse-eslint"
+  },
   "license": "MIT",
+  "author": {
+    "name": "@gratisvictory",
+    "email": "gratisvictory.dev@proton.me",
+    "url": "https://github.com/gratisvictory"
+  },
+  "sideEffects": false,
   "type": "module",
   "exports": {
     ".": {
@@ -38,13 +62,18 @@
   },
   "devDependencies": {
     "@chronoverse-shared/builder": "workspace:^",
-    "rimraf": "^6.0.1"
+    "rimraf": "^6.0.1",
+    "typescript": "^5.8.3"
   },
   "peerDependencies": {
     "eslint": "^9.26.0"
   },
   "packageManager": "bun@1.2.13",
   "engines": {
-    "bun": ">=1.2.13"
+    "bun": ">=1.2.13",
+    "node": ">=23.11.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

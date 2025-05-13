@@ -208,7 +208,11 @@ const bestPractice = {
 	 */
 	'no-implicit-coercion': [
 		'error',
-		{ allow: ['!!'] },
+		{
+			allow: [
+				'!!',
+			],
+		},
 	],
 
 	/**

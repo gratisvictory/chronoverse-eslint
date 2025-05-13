@@ -23,6 +23,7 @@ const config = {
 	objectWrap: 'preserve',
 	trailingComma: 'all',
 	useTabs: true,
+	tabWidth: 4,
 	multilineArraysWrapThreshold: 1,
 	overrides: [
 		{

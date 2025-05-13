@@ -1,4 +1,4 @@
-import { FILE_PATTERNS, interopDefault } from '@chronoverse-shared/utilities';
+import { FILE_PATTERNS, getTsLanguageOptions, interopDefault } from '@chronoverse-shared/utilities';
 import safeTsPlugin from '@susisu/eslint-plugin-safe-typescript';
 import functional from 'eslint-plugin-functional';
 import eslintTsdoc from 'eslint-plugin-tsdoc';
@@ -9,24 +9,18 @@ import { tsSafe } from './rules/safe.js';
 import { tsdoc } from './rules/tsdoc.js';
 
 const typescript = await (async () => {
-	const [
-		tsParser,
-		tsPlugin,
-	] = await Promise.all([
-		interopDefault(import('@typescript-eslint/parser')),
-		interopDefault(import('@typescript-eslint/eslint-plugin')),
-	]);
+	// Get the TypeScript language options and parser
+	const tsOptions = await getTsLanguageOptions();
+	// Import the TypeScript ESLint plugin
+	const tsPlugin = await interopDefault(import('@typescript-eslint/eslint-plugin'));
 
 	return defineConfig([
 		{
 			name: '@chronoverse/typescript/setup',
 			languageOptions: {
-				// @ts-expect-error
-				parser: tsParser,
-				parserOptions: {
-					projectService: true,
-					sourceType: 'module',
-				},
+				// @ts-expect-error Parser type from ESLint
+				parser: tsOptions.parser,
+				parserOptions: tsOptions.parserOptions,
 			},
 		},
 		{

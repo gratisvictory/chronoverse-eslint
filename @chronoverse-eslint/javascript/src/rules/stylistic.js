@@ -13,7 +13,13 @@ const stylistic = {
 	 */
 	camelcase: [
 		'error',
-		{ allow: ['^UNSAFE_'], ignoreDestructuring: false, properties: 'never' },
+		{
+			allow: [
+				'^UNSAFE_',
+			],
+			ignoreDestructuring: false,
+			properties: 'never',
+		},
 	],
 
 	/**

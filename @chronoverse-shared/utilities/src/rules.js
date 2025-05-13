@@ -9,6 +9,7 @@ const getRulesByConfigName = (configName, configs) =>
 	configs.reduce((accumulator, config) => {
 		if (config.name === configName && config.rules) return { ...accumulator, ...config.rules };
 		return accumulator;
+		// eslint-disable-next-line @stylistic/js/no-extra-parens
 	}, /** @type {import('eslint').Linter.Config['rules']} */ ({}));
 
 /**

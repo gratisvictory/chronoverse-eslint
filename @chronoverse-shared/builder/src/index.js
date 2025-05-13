@@ -1,3 +1,7 @@
+// eslint-disable-next-line @eslint-community/eslint-comments/disable-enable-pair
+/* eslint-disable @stylistic/js/indent */
+// eslint-disable-next-line @eslint-community/eslint-comments/disable-enable-pair
+/* eslint-disable @stylistic/js/max-len */
 import { exec } from 'node:child_process';
 import { readFile } from 'node:fs/promises';
 import * as path from 'node:path';
@@ -75,7 +79,9 @@ export const buildTypes = async (tsconfigPath = './tsconfig.json') => {
  */
 export const buildBundle = async (options = {}) => {
 	const {
-		entryPoints = ['src/index.js'],
+		entryPoints = [
+			'src/index.js',
+		],
 		external = [],
 		format = 'esm',
 		minify = true,
@@ -142,7 +148,9 @@ export const buildBundle = async (options = {}) => {
  */
 export const build = async (options = {}) => {
 	const {
-		entryPoints = ['src/index.js'],
+		entryPoints = [
+			'src/index.js',
+		],
 		minify = true,
 		outdir = 'dist',
 		tsconfig = './tsconfig.json',
@@ -151,7 +159,14 @@ export const build = async (options = {}) => {
 	} = options;
 
 	try {
-		await buildBundle({ entryPoints, minify, outdir, tsconfig, watch, ...rest });
+		await buildBundle({
+			entryPoints,
+			minify,
+			outdir,
+			tsconfig,
+			watch,
+			...rest,
+		});
 
 		if (!watch) await buildTypes(tsconfig);
 

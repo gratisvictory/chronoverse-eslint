@@ -3,43 +3,69 @@
  */
 const FILE_PATTERNS = {
 	/** JavaScript files: .js, .mjs, .cjs, .jsx */
-	javascript: ['**/*.?([cm])js?(x)'],
+	javascript: [
+		'**/*.?([cm])js?(x)',
+	],
 
 	/** TypeScript files: .ts, .mts, .cts, .tsx */
-	typescript: ['**/*.?([cm])ts?(x)'],
+	typescript: [
+		'**/*.?([cm])ts?(x)',
+	],
 
 	/** JSX and TSX files only: .jsx, .tsx */
-	react: ['**/*.{jsx,tsx}'],
+	react: [
+		'**/*.{jsx,tsx}',
+	],
 
 	/** Style files: .css */
-	css: ['**/*.css'],
+	css: [
+		'**/*.css',
+	],
 
 	/** SCSS and Sass files */
-	sass: ['**/*.{scss,sass}'],
+	sass: [
+		'**/*.{scss,sass}',
+	],
 
 	/** Less files */
-	less: ['**/*.less'],
+	less: [
+		'**/*.less',
+	],
 
 	/** JSON files */
-	json: ['**/*.json'],
+	json: [
+		'**/*.json',
+	],
 
 	/** JSON5 files */
-	json5: ['**/*.json5'],
+	json5: [
+		'**/*.json5',
+	],
 
 	/** JSONC (JSON with comments) files */
-	jsonc: ['**/*.jsonc'],
+	jsonc: [
+		'**/*.jsonc',
+	],
 
 	/** YAML and YML files */
-	yaml: ['**/*.{yaml,yml}'],
+	yaml: [
+		'**/*.{yaml,yml}',
+	],
 
 	/** Markdown files */
-	markdown: ['**/*.md'],
+	markdown: [
+		'**/*.md',
+	],
 
 	/** MDX (Markdown + JSX) files */
-	mdx: ['**/*.mdx'],
+	mdx: [
+		'**/*.mdx',
+	],
 
 	/** Configuration files: .config.js/ts/json etc. */
-	config: ['**/*.config.@(js|ts|cjs|cts|mjs|mts|json)'],
+	config: [
+		'**/*.config.@(js|ts|cjs|cts|mjs|mts|json)',
+	],
 
 	/** Dotfiles (e.g., .eslintrc, .prettierrc, etc.) */
 	dotfiles: [
@@ -63,7 +89,9 @@ const FILE_PATTERNS = {
 	],
 
 	/** Markdown docs like README, CHANGELOG, etc. */
-	docs: ['**/{README,CHANGELOG,CONTRIBUTING}.md'],
+	docs: [
+		'**/{README,CHANGELOG,CONTRIBUTING}.md',
+	],
 
 	/** Binary or minified files */
 	binaries: [
@@ -72,7 +100,9 @@ const FILE_PATTERNS = {
 	],
 
 	/** Type declaration files */
-	types: ['**/*.d.ts'],
+	types: [
+		'**/*.d.ts',
+	],
 };
 
 export { FILE_PATTERNS };

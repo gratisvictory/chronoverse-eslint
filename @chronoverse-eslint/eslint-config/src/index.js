@@ -1,27 +1,21 @@
 import { javascript } from '@chronoverse-eslint/javascript';
 import { reactJSX, reactTSX } from '@chronoverse-eslint/react';
 import { typescript } from '@chronoverse-eslint/typescript';
-import { EXCLUDE_PATTERNS } from '@chronoverse-shared/utilities';
-import gitignore from 'eslint-config-flat-gitignore';
-import { defineConfig, globalIgnores } from 'eslint/config';
-import { comments } from './shared/comments.js';
-import { dependency } from './shared/dependency.js';
-import { mutation } from './shared/mutation.js';
-import { next } from './shared/next.js';
-import { node } from './shared/node.js';
-import { perfectionist } from './shared/perfectionist.js';
-import { promise } from './shared/promise.js';
-import { regexp } from './shared/regexp.js';
-import { security } from './shared/security.js';
-import { unicorn } from './shared/unicorn.js';
-
-const ignores = defineConfig([
-	gitignore({ name: '@chronoverse/gitignore' }),
-	globalIgnores(EXCLUDE_PATTERNS, '@chronoverse/ignores'),
-]);
+import { eslintIgnores } from '@chronoverse-shared/utilities';
+import { defineConfig } from 'eslint/config';
+import { comments } from './presets/comments.js';
+import { dependency } from './presets/dependency.js';
+import { mutation } from './presets/mutation.js';
+import { next } from './presets/next.js';
+import { node } from './presets/node.js';
+import { perfectionist } from './presets/perfectionist.js';
+import { promise } from './presets/promise.js';
+import { regexp } from './presets/regexp.js';
+import { security } from './presets/security.js';
+import { unicorn } from './presets/unicorn.js';
 
 const js = defineConfig([
-	ignores,
+	eslintIgnores,
 	javascript,
 	perfectionist,
 	comments,
@@ -62,11 +56,17 @@ const nextTSX = defineConfig([
 ]);
 
 /** Main */
-export { js, jsx, nextJSX, nextTSX, ts, tsx };
+export {
+	js, jsx, nextJSX, nextTSX, ts, tsx,
+};
 /** Presets */
-export { css } from './shared/css.js';
-export { functionalJS } from './shared/functional.js';
-export { jsdocForJs, jsdocForTs } from './shared/jsdoc.js';
+export { css } from './presets/css.js';
+export { functionalJS } from './presets/functional.js';
+export { jsdocForJs, jsdocForTs } from './presets/jsdoc.js';
+export { json } from './presets/json.js';
+export {
+	stylisticJs, stylisticJsx, stylisticPlus, stylisticTs,
+} from '@chronoverse-eslint/stylistic';
 export { comments };
 export { dependency };
 export { mutation };
@@ -77,4 +77,4 @@ export { regexp };
 export { unicorn };
 export { security };
 export { next };
-export { ignores };
+export {};

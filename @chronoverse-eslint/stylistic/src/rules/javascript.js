@@ -157,10 +157,7 @@ const javascript = {
 	/**
 	 * Enforce the location of arrow function bodies.
 	 */
-	'@stylistic/js/implicit-arrow-linebreak': [
-		'error',
-		'beside',
-	],
+	'@stylistic/js/implicit-arrow-linebreak': 'off',
 
 	/**
 	 * Enforce consistent indentation.
@@ -498,11 +495,7 @@ const javascript = {
 	/**
 	 * Enforce consistent linebreak style for operators
 	 */
-	'@stylistic/js/operator-linebreak': [
-		'error',
-		'before',
-		{ overrides: { '=': 'none' } },
-	],
+	'@stylistic/js/operator-linebreak': 'off',
 
 	/**
 	 * Require or disallow padding within blocks
@@ -539,6 +532,7 @@ const javascript = {
 	'@stylistic/js/quotes': [
 		'error',
 		'single',
+		{ avoidEscape: true },
 	],
 
 	/**
