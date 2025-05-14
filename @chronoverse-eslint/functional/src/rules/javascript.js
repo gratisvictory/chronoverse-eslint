@@ -11,7 +11,9 @@ const javascript = {
 	/**
 	 * Disallow inheritance in classes.
 	 */
-	'functional/no-class-inheritance': 'error',
+	'functional/no-class-inheritance': [
+		'error',
+	],
 
 	/**
 	 * Disallow mutable variables.
