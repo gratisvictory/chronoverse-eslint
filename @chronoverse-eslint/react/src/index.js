@@ -6,17 +6,12 @@ import reactPlugin from 'eslint-plugin-react';
 import reactCompiler from 'eslint-plugin-react-compiler';
 import reactHooks from 'eslint-plugin-react-hooks';
 import { defineConfig } from 'eslint/config';
-import globals from 'globals';
 
 const reactJSX = defineConfig([
 	{
 		name: '@chronoverse/react/setup',
 		files: FILE_PATTERNS.javascript,
 		languageOptions: {
-			globals: {
-				...globals.browser,
-				...globals.serviceworker,
-			},
 			parserOptions: {
 				ecmaFeatures: {
 					jsx: true,
@@ -43,10 +38,6 @@ const reactTSX = defineConfig([
 		name: '@chronoverse/react/setup',
 		files: FILE_PATTERNS.typescript,
 		languageOptions: {
-			globals: {
-				...globals.browser,
-				...globals.serviceworker,
-			},
 			parserOptions: {
 				ecmaFeatures: {
 					jsx: true,

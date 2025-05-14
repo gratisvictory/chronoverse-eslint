@@ -26,6 +26,7 @@
     "lint:inspector:deploy": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.viewer.js --base /chronoverse-eslint/ --outDir .eslint"
   },
   "dependencies": {
+    "@chronoverse-eslint/functional": "workspace:^",
     "@chronoverse-eslint/javascript": "workspace:^",
     "@chronoverse-eslint/prettier": "workspace:^",
     "@chronoverse-eslint/react": "workspace:^",
@@ -40,14 +41,13 @@
     "eslint-config-eslint": "^11.0.0",
     "eslint-plugin-better-mutation": "^2.0.2",
     "eslint-plugin-depend": "^1.2.0",
-    "eslint-plugin-functional": "^9.0.1",
-    "eslint-plugin-jsdoc": "^50.6.14",
+    "eslint-plugin-jsdoc": "^50.6.17",
     "eslint-plugin-n": "^17.18.0",
-    "eslint-plugin-perfectionist": "^4.12.3",
+    "eslint-plugin-perfectionist": "^4.13.0",
     "eslint-plugin-promise": "^7.2.1",
     "eslint-plugin-regexp": "^2.7.0",
     "eslint-plugin-security": "^3.0.1",
-    "eslint-plugin-unicorn-x": "^1.0.5"
+    "eslint-plugin-unicorn-x": "^1.0.7"
   },
   "devDependencies": {
     "@chronoverse-shared/builder": "workspace:^",
@@ -57,9 +57,9 @@
   "peerDependencies": {
     "eslint": "^9.26.0"
   },
-  "packageManager": "bun@1.2.11",
+  "packageManager": "bun@1.2.13",
   "engines": {
-    "bun": ">=1.2.11"
+    "bun": ">=1.2.13"
   },
   "publishConfig": {
     "access": "public"

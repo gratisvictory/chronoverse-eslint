@@ -1,16 +1,9 @@
-// import { prettier } from '@chronoverse-eslint/prettier';
+import { css, nextTsx } from '@chronoverse-eslint/eslint-config';
+import { eslintIgnores } from '@chronoverse-shared/utilities';
 import { defineConfig } from 'eslint/config';
-// import { css, jsdocForTs, nextTSX } from './src/index.js';
-import { json } from './src/presets/json.js';
 
 export default defineConfig([
-	json,
+	eslintIgnores,
+	nextTsx,
+	css,
 ]);
-
-// nextTSX,
-// jsdocForTs,
-// css,
-/**
- * prettier last position plugin
- */
-// prettier,

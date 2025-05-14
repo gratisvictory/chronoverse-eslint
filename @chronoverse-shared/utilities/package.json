@@ -51,6 +51,7 @@
   },
   "devDependencies": {
     "@chronoverse-shared/builder": "workspace:^",
+    "eslint": "^9.26.0",
     "rimraf": "^6.0.1"
   },
   "packageManager": "bun@1.2.13",

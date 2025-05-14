@@ -1,23 +1,31 @@
+import { FILE_PATTERNS } from '@chronoverse-shared/utilities';
 import { getRulesByConfigName } from '@chronoverse-shared/utilities';
 // @ts-expect-error eslint-config-eslint is not typed
 import eslintConfigUnicorn from 'eslint-config-eslint';
 import eslintPluginUnicornX from 'eslint-plugin-unicorn-x';
 import { defineConfig } from 'eslint/config';
-import globals from 'globals';
 
-/** @type {import('eslint').Linter.Config[]} */
-const unicorn = defineConfig([
+/**
+ * Unicorn-X rules for ESLint.
+ * Provides a collection of high-quality rules to enforce better JavaScript/TypeScript practices.
+ * Includes advanced rules for code consistency, preventing common errors, and encouraging modern patterns.
+ * Custom configuration with many specific rule overrides for project requirements.
+ * @see https://github.com/es-tooling/eslint-plugin-unicorn-x
+ */
+const unicornX = defineConfig([
 	{
 		name: '@chronoverse/unicorn-x/setup',
-		languageOptions: {
-			globals: globals.builtin,
+		plugins: {
+			'unicorn-x': eslintPluginUnicornX,
 		},
 	},
 	{
 		name: '@chronoverse/unicorn-x/rules',
-		plugins: {
-			'unicorn-x': eslintPluginUnicornX,
-		},
+		files: [
+			...FILE_PATTERNS.javascript,
+			...FILE_PATTERNS.typescript,
+			...FILE_PATTERNS.types,
+		],
 		rules: {
 			...eslintPluginUnicornX.configs.recommended.rules,
 			...Object.fromEntries(
@@ -110,4 +118,4 @@ const unicorn = defineConfig([
 	},
 ]);
 
-export { unicorn };
+export { unicornX };

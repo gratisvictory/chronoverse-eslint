@@ -1,6 +1,4 @@
-// eslint-disable-next-line @eslint-community/eslint-comments/disable-enable-pair
-/* eslint-disable @stylistic/js/indent */
-// eslint-disable-next-line @eslint-community/eslint-comments/disable-enable-pair
+/* eslint-disable eslint-comments/disable-enable-pair */
 /* eslint-disable @stylistic/js/max-len */
 import { exec } from 'node:child_process';
 import { readFile } from 'node:fs/promises';
@@ -114,6 +112,7 @@ export const buildBundle = async (options = {}) => {
 					target,
 					tsconfig: path.resolve(tsconfig),
 				})
+				// eslint-disable-next-line @stylistic/js/indent
 			:	undefined;
 
 		if (watch && context) {

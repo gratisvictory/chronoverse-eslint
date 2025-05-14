@@ -33,7 +33,7 @@ const javascript = defineConfig([
 			sourceType: 'module',
 		},
 		linterOptions: {
-			reportUnusedDisableDirectives: true,
+			reportUnusedDisableDirectives: 'error',
 			reportUnusedInlineConfigs: 'error',
 		},
 	},

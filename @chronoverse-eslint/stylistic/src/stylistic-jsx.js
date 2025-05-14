@@ -5,11 +5,21 @@ import { jsx } from './rules/jsx.js';
 
 const stylisticJsx = defineConfig([
 	{
-		name: '@chronoverse/stylisticJsx/rules',
-		files: FILE_PATTERNS.react,
+		name: '@chronoverse/stylisticJsx/setup',
+		files: [
+			...FILE_PATTERNS.javascript,
+			...FILE_PATTERNS.typescript,
+		],
 		plugins: {
 			'@stylistic/jsx': eslintStylisticJsx,
 		},
+	},
+	{
+		name: '@chronoverse/stylisticJsx/rules',
+		files: [
+			...FILE_PATTERNS.javascript,
+			...FILE_PATTERNS.typescript,
+		],
 		rules: { ...jsx },
 	},
 ]);

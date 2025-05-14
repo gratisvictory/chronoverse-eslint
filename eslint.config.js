@@ -1,6 +1,6 @@
+import { vanillaJs } from '@chronoverse-eslint/eslint-config';
+import { eslintIgnores } from '@chronoverse-shared/utilities';
 import { defineConfig } from 'eslint/config';
-import { js, jsdocForJs, stylisticJs, stylisticPlus, json } from '@chronoverse-eslint/eslint-config';
-import { functionalJs } from '@chronoverse-eslint/functional';
 
 export default defineConfig([
 	{
@@ -9,16 +9,12 @@ export default defineConfig([
 			'examples/**',
 		],
 	},
-	js,
-	jsdocForJs,
-	functionalJs,
-	stylisticJs,
-	stylisticPlus,
+	eslintIgnores,
+	vanillaJs,
 	{
 		rules: {
-			// use prettier
+			'n/no-process-exit': 'warn',
 			'@stylistic/js/object-curly-newline': 'off',
 		},
 	},
-	// json,
 ]);

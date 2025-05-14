@@ -5,14 +5,17 @@ import { plus } from './rules/plus.js';
 
 const stylisticPlus = defineConfig([
 	{
+		name: '@chronoverse/stylisticPlus/setup',
+		plugins: {
+			'@stylistic/plus': eslintStylisticPlus,
+		},
+	},
+	{
 		name: '@chronoverse/stylisticPlus/rules',
 		files: [
 			...FILE_PATTERNS.javascript,
 			...FILE_PATTERNS.typescript,
 		],
-		plugins: {
-			'@stylistic/plus': eslintStylisticPlus,
-		},
 		rules: { ...plus },
 	},
 ]);

@@ -4,6 +4,13 @@ import { defineConfig } from 'eslint/config';
 
 const jsonRules = eslintJson.configs.recommended.rules;
 
+/**
+ * JSON rules for ESLint.
+ * Provides linting capabilities for JSON, JSONC, and JSON5 files.
+ * Applies appropriate parser options for each JSON variant (standard, with comments, JSON5).
+ * Excludes package lock files from linting.
+ * @see https://github.com/eslint/json
+ */
 const json = defineConfig([
 	{
 		name: '@chronoverse/json/setup',

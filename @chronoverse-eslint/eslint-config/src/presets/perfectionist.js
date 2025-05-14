@@ -1,3 +1,4 @@
+import { FILE_PATTERNS } from '@chronoverse-shared/utilities';
 import eslintPerfectionistPlugin from 'eslint-plugin-perfectionist';
 import { defineConfig } from 'eslint/config';
 
@@ -92,12 +93,26 @@ const p11tGroups = {
 	],
 };
 
+/**
+ * Perfectionist rules for ESLint.
+ * Enforces consistent and logical sorting across various code constructs.
+ * Provides extensive configuration for sorting imports, objects, interfaces, and more.
+ * Customized with project-specific grouping rules for properties and imports.
+ * @see https://github.com/azat-io/eslint-plugin-perfectionist
+ */
 const perfectionist = defineConfig([
 	{
-		name: '@chronoverse/perfectionist/rules',
+		name: '@chronoverse/perfectionist/setup',
 		plugins: {
 			perfectionist: eslintPerfectionistPlugin,
 		},
+	},
+	{
+		name: '@chronoverse/perfectionist/rules',
+		files: [
+			...FILE_PATTERNS.javascript,
+			...FILE_PATTERNS.typescript,
+		],
 		rules: {
 			...eslintPerfectionistPlugin.configs['recommended-natural'].rules,
 			'perfectionist/sort-array-includes': 'error',

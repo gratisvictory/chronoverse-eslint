@@ -7,12 +7,15 @@ const functionalJs = await (async () => {
 
 	return defineConfig([
 		{
-			name: '@chronoverse/functionalJs/rules',
-			files: FILE_PATTERNS.javascript,
+			name: '@chronoverse/functionalJs/setup',
 			plugins: {
-				// @ts-expect-error Plugin type from Eslint
+				// @ts-ignore
 				functional: functionalJsPlugin,
 			},
+		},
+		{
+			name: '@chronoverse/functionalJs/rules',
+			files: FILE_PATTERNS.javascript,
 			rules: { ...javascript },
 		},
 	]);

@@ -36,7 +36,6 @@
   "devDependencies": {
     "@changesets/cli": "^2.29.4",
     "@chronoverse-eslint/eslint-config": "workspace:^",
-    "@chronoverse-eslint/functional": "workspace:^",
     "@chronoverse-shared/utilities": "workspace:^",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",

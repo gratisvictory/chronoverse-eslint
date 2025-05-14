@@ -7,17 +7,20 @@ const functionalTs = await (async () => {
 	const functionalTsPlugin = await interopDefault(import('eslint-plugin-functional'));
 	return defineConfig([
 		{
-			name: '@chronoverse/functionalTs/rules',
-			files: FILE_PATTERNS.typescript,
+			name: '@chronoverse/functionalTs/setup',
 			languageOptions: {
-				// @ts-expect-error Parser type from ESLint
+				// @ts-ignore
 				parser: tsOptions.parser,
 				parserOptions: tsOptions.parserOptions,
 			},
 			plugins: {
-				// @ts-expect-error Plugin type from Eslint
+				// @ts-ignore
 				functional: functionalTsPlugin,
 			},
+		},
+		{
+			name: '@chronoverse/functionalTs/rules',
+			files: FILE_PATTERNS.typescript,
 			rules: { ...typescript },
 		},
 	]);
