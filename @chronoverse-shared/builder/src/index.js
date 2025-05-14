@@ -82,7 +82,7 @@ export const buildBundle = async (options = {}) => {
 		],
 		external = [],
 		format = 'esm',
-		minify = true,
+		minify = false,
 		outdir = 'dist',
 		platform = 'node',
 		target = 'esnext',
