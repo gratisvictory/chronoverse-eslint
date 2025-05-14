@@ -19,7 +19,10 @@
     "build:clean": "rimraf dist",
     "build:cli": "bun run clean:all && bun run builder -e src/index.js -o dist",
     "clean": "rimraf node_modules",
-    "clean:all": "rimraf dist node_modules"
+    "clean:all": "rimraf dist node_modules",
+    "lint:build:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.react.js --outDir .eslint-functional && bunx serve .eslint-react",
+    "lint:dev:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest --config ./eslint.config.react.js",
+    "lint:inspector:clean": "rimraf .eslint-react"
   },
   "dependencies": {
     "@chronoverse-shared/utilities": "workspace:^",

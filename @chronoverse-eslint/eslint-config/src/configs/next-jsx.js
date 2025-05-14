@@ -1,5 +1,5 @@
 import { functionalJs } from '@chronoverse-eslint/functional';
-import { reactJSX } from '@chronoverse-eslint/react';
+import { eslintReactJsx, jsxA11y, react, reactCompiler, reactHooks } from '@chronoverse-eslint/react';
 import { stylisticJsx } from '@chronoverse-eslint/stylistic';
 import { defineConfig } from 'eslint/config';
 import { next } from '../presets/next.js';
@@ -9,7 +9,11 @@ const nextJsx = defineConfig([
 	base,
 	stylisticJsx,
 	functionalJs,
-	reactJSX,
+	react,
+	eslintReactJsx,
+	reactCompiler,
+	reactHooks,
+	jsxA11y,
 	next,
 ]);
 
