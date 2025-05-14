@@ -2812,34 +2812,11 @@
       "index": 13
     },
     {
-      "name": "@chronoverse/eslint-comments/setup",
-      "plugins": {
-        "eslint-comments": {}
-      },
-      "index": 14
-    },
-    {
-      "name": "@chronoverse/eslint-comments/rules",
-      "files": [
-        "**/*.?([cm])js?(x)",
-        "**/*.?([cm])ts?(x)",
-        "**/*.d.ts"
-      ],
-      "rules": {
-        "eslint-comments/disable-enable-pair": "error",
-        "eslint-comments/no-aggregating-enable": "error",
-        "eslint-comments/no-duplicate-disable": "error",
-        "eslint-comments/no-unlimited-disable": "error",
-        "eslint-comments/no-unused-enable": "error"
-      },
-      "index": 15
-    },
-    {
       "name": "@chronoverse/dependency/setup",
       "plugins": {
         "depend": {}
       },
-      "index": 16
+      "index": 14
     },
     {
       "name": "@chronoverse/dependency/rules",
@@ -2851,14 +2828,14 @@
       "rules": {
         "depend/ban-dependencies": "error"
       },
-      "index": 17
+      "index": 15
     },
     {
       "name": "@chronoverse/better-mutation/setup",
       "plugins": {
         "better-mutation": {}
       },
-      "index": 18
+      "index": 16
     },
     {
       "name": "@chronoverse/better-mutation/rules",
@@ -2871,14 +2848,14 @@
         "better-mutation/no-mutating-methods": "error",
         "better-mutation/no-mutation": "error"
       },
-      "index": 19
+      "index": 17
     },
     {
       "name": "@chronoverse/perfectionist/setup",
       "plugins": {
         "perfectionist": {}
       },
-      "index": 20
+      "index": 18
     },
     {
       "name": "@chronoverse/perfectionist/rules",
@@ -3250,14 +3227,14 @@
         "perfectionist/sort-sets": "error",
         "perfectionist/sort-maps": "error"
       },
-      "index": 21
+      "index": 19
     },
     {
       "name": "@chronoverse/promise/setup",
       "plugins": {
         "promise": {}
       },
-      "index": 22
+      "index": 20
     },
     {
       "name": "@chronoverse/promise/rules",
@@ -3287,14 +3264,14 @@
         "promise/no-return-in-finally": "warn",
         "promise/valid-params": "warn"
       },
-      "index": 23
+      "index": 21
     },
     {
       "name": "@chronoverse/regexp/setup",
       "plugins": {
         "regexp": {}
       },
-      "index": 24
+      "index": 22
     },
     {
       "name": "@chronoverse/regexp/rules",
@@ -3371,14 +3348,14 @@
         "regexp/strict": "error",
         "regexp/use-ignore-case": "error"
       },
-      "index": 25
+      "index": 23
     },
     {
       "name": "@chronoverse/node/setup",
       "plugins": {
         "n": {}
       },
-      "index": 26
+      "index": 24
     },
     {
       "name": "@chronoverse/node/rules",
@@ -3426,14 +3403,14 @@
         "n/no-new-require": "error",
         "n/no-path-concat": "error"
       },
-      "index": 27
+      "index": 25
     },
     {
       "name": "@chronoverse/security/setup",
       "plugins": {
         "security": {}
       },
-      "index": 28
+      "index": 26
     },
     {
       "name": "@chronoverse/security/rules",
@@ -3458,14 +3435,14 @@
         "security/detect-unsafe-regex": "warn",
         "security/detect-bidi-characters": "warn"
       },
-      "index": 29
+      "index": 27
     },
     {
       "name": "@chronoverse/unicorn-x/setup",
       "plugins": {
         "unicorn-x": {}
       },
-      "index": 30
+      "index": 28
     },
     {
       "name": "@chronoverse/unicorn-x/rules",
@@ -3646,14 +3623,14 @@
         "unicorn-x/throw-new-error": "error",
         "unicorn-x/import-index": "off"
       },
-      "index": 31
+      "index": 29
     },
     {
       "name": "@chronoverse/json/setup",
       "plugins": {
         "json": {}
       },
-      "index": 32
+      "index": 30
     },
     {
       "name": "@chronoverse/json/rules",
@@ -3670,7 +3647,7 @@
         "json/no-unsafe-values": "error",
         "json/no-unnormalized-keys": "error"
       },
-      "index": 33
+      "index": 31
     },
     {
       "name": "@chronoverse/jsonc/rules",
@@ -3687,7 +3664,7 @@
         "json/no-unsafe-values": "error",
         "json/no-unnormalized-keys": "error"
       },
-      "index": 34
+      "index": 32
     },
     {
       "name": "@chronoverse/json5/rules",
@@ -3701,7 +3678,7 @@
         "json/no-unsafe-values": "error",
         "json/no-unnormalized-keys": "error"
       },
-      "index": 35
+      "index": 33
     },
     {
       "name": "@chronoverse/typescript/setup",
@@ -3716,7 +3693,7 @@
           "sourceType": "module"
         }
       },
-      "index": 36
+      "index": 34
     },
     {
       "plugins": {
@@ -3733,7 +3710,7 @@
         "**/*.?([cm])ts?(x)"
       ],
       "name": "@chronoverse/typescript/rules > ExtendedConfig[0]",
-      "index": 37
+      "index": 35
     },
     {
       "plugins": {
@@ -3885,7 +3862,7 @@
         "**/*.?([cm])ts?(x)"
       ],
       "name": "@chronoverse/typescript/rules > ExtendedConfig[1]",
-      "index": 38
+      "index": 36
     },
     {
       "plugins": {
@@ -3900,7 +3877,7 @@
         "**/*.?([cm])ts?(x)"
       ],
       "name": "@chronoverse/typescript/rules > ExtendedConfig[2]",
-      "index": 39
+      "index": 37
     },
     {
       "name": "@chronoverse/typescript/rules",
@@ -4068,7 +4045,7 @@
         "@susisu/safe-typescript/no-unsafe-object-property-check": "error",
         "@susisu/safe-typescript/no-unsafe-object-property-overwrite": "error"
       },
-      "index": 40
+      "index": 38
     },
     {
       "name": "@chronoverse/stylisticJsx/setup",
@@ -4079,7 +4056,7 @@
       "plugins": {
         "@stylistic/jsx": {}
       },
-      "index": 41
+      "index": 39
     },
     {
       "name": "@chronoverse/stylisticJsx/rules",
@@ -4181,7 +4158,7 @@
           }
         ]
       },
-      "index": 42
+      "index": 40
     },
     {
       "name": "@chronoverse/functionalTs/setup",
@@ -4199,7 +4176,7 @@
       "plugins": {
         "functional": {}
       },
-      "index": 43
+      "index": 41
     },
     {
       "name": "@chronoverse/functionalTs/rules",
@@ -4353,7 +4330,7 @@
         "functional/prefer-tacit": "warn",
         "functional/readonly-type": "error"
       },
-      "index": 44
+      "index": 42
     },
     {
       "name": "@chronoverse/react/setup",
@@ -4367,7 +4344,7 @@
           }
         }
       },
-      "index": 45
+      "index": 43
     },
     {
       "name": "@chronoverse/react/rules > @eslint-react/recommended-typescript",
@@ -4465,7 +4442,7 @@
           }
         }
       },
-      "index": 46
+      "index": 44
     },
     {
       "plugins": {
@@ -4503,7 +4480,7 @@
         }
       },
       "name": "@chronoverse/react/rules > ExtendedConfig[1]",
-      "index": 47
+      "index": 45
     },
     {
       "languageOptions": {
@@ -4705,7 +4682,7 @@
         "jsx-a11y/scope": "error",
         "jsx-a11y/tabindex-no-positive": "error"
       },
-      "index": 48
+      "index": 46
     },
     {
       "plugins": {
@@ -4715,7 +4692,7 @@
         "react-compiler/react-compiler": "error"
       },
       "name": "@chronoverse/react/rules > ExtendedConfig[3]",
-      "index": 49
+      "index": 47
     },
     {
       "name": "@chronoverse/react/rules > react-hooks/recommended",
@@ -4726,14 +4703,14 @@
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn"
       },
-      "index": 50
+      "index": 48
     },
     {
       "name": "@chronoverse/next/setup",
       "plugins": {
         "@next/next": {}
       },
-      "index": 51
+      "index": 49
     },
     {
       "name": "@chronoverse/next/rules",
@@ -4764,7 +4741,7 @@
         "@next/next/no-head-import-in-document": "error",
         "@next/next/no-script-component-in-head": "error"
       },
-      "index": 52
+      "index": 50
     },
     {
       "name": "@chronoverse/css/setup",
@@ -4786,7 +4763,7 @@
       "plugins": {
         "css": {}
       },
-      "index": 53
+      "index": 51
     },
     {
       "name": "@chronoverse/css/rules",
@@ -4800,7 +4777,7 @@
         "css/no-invalid-properties": "error",
         "css/use-baseline": "warn"
       },
-      "index": 54
+      "index": 52
     }
   ],
   "rules": {
@@ -19783,10 +19760,9 @@
         25,
         27,
         29,
-        31,
-        41,
-        42,
-        52
+        39,
+        40,
+        50
       ]
     },
     {
@@ -19809,10 +19785,9 @@
         25,
         27,
         29,
-        31,
-        41,
-        42,
-        52
+        39,
+        40,
+        50
       ]
     },
     {
@@ -19821,7 +19796,7 @@
         "**/*.json"
       ],
       "configs": [
-        33
+        31
       ]
     },
     {
@@ -19830,7 +19805,7 @@
         "**/*.json"
       ],
       "configs": [
-        33
+        31
       ]
     },
     {
@@ -19853,10 +19828,9 @@
         25,
         27,
         29,
-        31,
-        41,
-        42,
-        52
+        39,
+        40,
+        50
       ]
     },
     {
@@ -19879,10 +19853,9 @@
         25,
         27,
         29,
-        31,
-        41,
-        42,
-        52
+        39,
+        40,
+        50
       ]
     },
     {
@@ -19905,10 +19878,9 @@
         25,
         27,
         29,
-        31,
-        41,
-        42,
-        52
+        39,
+        40,
+        50
       ]
     },
     {
@@ -19931,10 +19903,9 @@
         25,
         27,
         29,
-        31,
-        41,
-        42,
-        52
+        39,
+        40,
+        50
       ]
     },
     {
@@ -19957,10 +19928,9 @@
         25,
         27,
         29,
-        31,
-        41,
-        42,
-        52
+        39,
+        40,
+        50
       ]
     },
     {
@@ -19983,10 +19953,9 @@
         25,
         27,
         29,
-        31,
-        41,
-        42,
-        52
+        39,
+        40,
+        50
       ]
     },
     {
@@ -20009,10 +19978,9 @@
         25,
         27,
         29,
-        31,
-        41,
-        42,
-        52
+        39,
+        40,
+        50
       ]
     },
     {
@@ -20035,10 +20003,9 @@
         25,
         27,
         29,
-        31,
-        41,
-        42,
-        52
+        39,
+        40,
+        50
       ]
     },
     {
@@ -20061,10 +20028,9 @@
         25,
         27,
         29,
-        31,
-        41,
-        42,
-        52
+        39,
+        40,
+        50
       ]
     },
     {
@@ -20087,10 +20053,9 @@
         25,
         27,
         29,
-        31,
-        41,
-        42,
-        52
+        39,
+        40,
+        50
       ]
     },
     {
@@ -20113,10 +20078,9 @@
         25,
         27,
         29,
-        31,
-        41,
-        42,
-        52
+        39,
+        40,
+        50
       ]
     },
     {
@@ -20139,10 +20103,9 @@
         25,
         27,
         29,
-        31,
-        41,
-        42,
-        52
+        39,
+        40,
+        50
       ]
     },
     {
@@ -20165,10 +20128,9 @@
         25,
         27,
         29,
-        31,
-        41,
-        42,
-        52
+        39,
+        40,
+        50
       ]
     },
     {
@@ -20191,10 +20153,9 @@
         25,
         27,
         29,
-        31,
-        41,
-        42,
-        52
+        39,
+        40,
+        50
       ]
     },
     {
@@ -20217,10 +20178,9 @@
         25,
         27,
         29,
-        31,
-        41,
-        42,
-        52
+        39,
+        40,
+        50
       ]
     },
     {
@@ -20243,10 +20203,9 @@
         25,
         27,
         29,
-        31,
-        41,
-        42,
-        52
+        39,
+        40,
+        50
       ]
     },
     {
@@ -20269,10 +20228,9 @@
         25,
         27,
         29,
-        31,
-        41,
-        42,
-        52
+        39,
+        40,
+        50
       ]
     },
     {
@@ -20295,10 +20253,9 @@
         25,
         27,
         29,
-        31,
-        41,
-        42,
-        52
+        39,
+        40,
+        50
       ]
     },
     {
@@ -20321,10 +20278,9 @@
         25,
         27,
         29,
-        31,
-        41,
-        42,
-        52
+        39,
+        40,
+        50
       ]
     },
     {
@@ -20347,10 +20303,9 @@
         25,
         27,
         29,
-        31,
-        41,
-        42,
-        52
+        39,
+        40,
+        50
       ]
     },
     {
@@ -20373,10 +20328,9 @@
         25,
         27,
         29,
-        31,
-        41,
-        42,
-        52
+        39,
+        40,
+        50
       ]
     },
     {
@@ -20385,12 +20339,12 @@
         "**/*.json"
       ],
       "configs": [
-        33
+        31
       ]
     }
   ],
   "meta": {
-    "lastUpdate": 1747249787764,
+    "lastUpdate": 1747250503429,
     "basePath": "",
     "configPath": ""
   }
