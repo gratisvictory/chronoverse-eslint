@@ -26,6 +26,7 @@
     "emitDeclarationOnly": true,
     "removeComments": true,
     "allowJs": true,
+    "noEmitOnError": false,
     "checkJs": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
