@@ -17,7 +17,6 @@ const base = defineConfig([
 	comments,
 	stylisticJs,
 	stylisticPlus,
-	comments,
 	dependency,
 	mutation,
 	perfectionist,
