@@ -11,8 +11,8 @@
     "lint:inspector:clean": "rimraf .eslint-javascript"
   },
   "devDependencies": {
-    "@chronoverse-eslint/javascript": "^2.4.2",
-    "@chronoverse-shared/utilities": "^2.4.2",
+    "@chronoverse-eslint/javascript": "^3.0.0",
+    "@chronoverse-shared/utilities": "^3.0.0",
     "eslint": "^9.26.0",
     "rimraf": "^6.0.1"
   },
