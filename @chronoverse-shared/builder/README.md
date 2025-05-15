@@ -1,6 +1,17 @@
 # @chronoverse-shared/builder
 
-A versatile build tool for JavaScript/TypeScript projects based on esbuild. Compatible with both Bun and Node.js runtimes.
+[![License](https://img.shields.io/badge/license-MIT-4B32C3.svg)](LICENSE)
+
+Internal build tool for the Chronoverse ESLint configuration packages. This package is used to build all the ESLint configurations but is not published to npm.
+
+## Role in the Chronoverse Ecosystem
+
+This builder provides:
+
+- 🚀 Fast, consistent builds for all Chronoverse ESLint packages
+- 📦 TypeScript compilation and bundling
+- 🔄 Development workflow with watch mode
+- 🧩 JSDoc types generation
 
 ## Features
 
@@ -11,119 +22,28 @@ A versatile build tool for JavaScript/TypeScript projects based on esbuild. Comp
 - 🔀 Works with both Bun and Node.js
 - 🛠️ Configurable build options
 
-## Installation
-
-```bash
-# Using npm
-npm install --save-dev @chronoverse-shared/builder
-
-# Using Yarn
-yarn add --dev @chronoverse-shared/builder
-
-# Using pnpm
-pnpm add --save-dev @chronoverse-shared/builder
-
-# Using Bun
-bun add --dev @chronoverse-shared/builder
-```
-
 ## Usage
 
-### Programmatic API
+The builder is used internally in all package.json build scripts:
 
 ```js
-// build.js
+// build.js (in each package)
 import { build } from '@chronoverse-shared/builder';
 
 await build({
   entryPoints: ['src/index.js'],
   outdir: 'dist',
   minify: true,
-  tsconfig: './tsconfig.json',
-  format: 'esm',      // 'esm' or 'cjs'
-  platform: 'node',   // 'node', 'browser', or 'neutral'
-  target: 'esnext',   // JavaScript target
-  watch: false,       // Enable watch mode
+  format: 'esm',
+  platform: 'node',
+  target: 'esnext'
 });
 ```
 
-Then run:
+## Note
 
-```bash
-# Using Node.js
-node build.js
+This package is intended for internal use in the Chronoverse ESLint ecosystem and is not published to npm. It's included in the workspace to provide consistent build processes across all configuration packages.
 
-# Using Bun
-bun build.js
-```
+---
 
-### CLI Usage
-
-You can use the builder directly from the command line:
-
-```bash
-# Using npx
-npx @chronoverse-shared/builder --entry src/index.js --outdir dist --minify
-
-# Using Bun
-bunx @chronoverse-shared/builder -e src/index.js -o dist -w
-```
-
-Or add it to your package.json scripts:
-
-```json
-{
-  "scripts": {
-    "build": "builder --entry src/index.js --outdir dist",
-    "dev": "builder --entry src/index.js --outdir dist --watch"
-  }
-}
-```
-
-## CLI Options
-
-```
-Usage: builder [options] [entry-files...]
-
-Options:
-  -e, --entry     Entry point files (can be specified multiple times)
-  -o, --outdir    Output directory (default: "dist")
-  -t, --tsconfig  Path to tsconfig.json (default: "./tsconfig.json")
-  -m, --minify    Minify the output (default: true)
-  -p, --platform  Build platform: "node", "browser", or "neutral" (default: "node")
-  -f, --format    Module format: "esm" or "cjs" (default: "esm")
-  --target        JavaScript target (default: "esnext")
-  -w, --watch     Watch mode (default: false)
-  -h, --help      Show this help message
-```
-
-## API Reference
-
-### `build(options)`
-
-Main build function to generate bundles and types.
-
-#### Options
-
-- `entryPoints`: Array of entry point files (default: `['src/index.js']`)
-- `outdir`: Output directory (default: `'dist'`)
-- `tsconfig`: Path to tsconfig.json (default: `'./tsconfig.json'`)
-- `minify`: Whether to minify the output (default: `true`)
-- `platform`: Build platform - 'node', 'browser', or 'neutral' (default: `'node'`)
-- `format`: Module format - 'esm' or 'cjs' (default: `'esm'`)
-- `target`: JavaScript target (default: `'esnext'`)
-- `watch`: Enable watch mode (default: `false`)
-- `external`: Array of package names to exclude from bundling (auto-detected from package.json by default)
-
-### Advanced API
-
-The package also exposes some utility functions:
-
-- `buildBundle(options)`: Build only the bundle without generating types
-- `buildTypes(tsconfigPath)`: Generate types only
-- `isBun()`: Detect if running in Bun environment
-- `getPackageJson(rootDir)`: Get package.json content
-
-## License
-
-MIT
+MIT © Chronoverse

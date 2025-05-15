@@ -9,7 +9,6 @@ const functionalJs = await (async () => {
 		{
 			name: '@chronoverse/functionalJs/setup',
 			plugins: {
-				// @ts-ignore
 				functional: functionalJsPlugin,
 			},
 		},

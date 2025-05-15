@@ -1,7 +1,35 @@
 {
   "name": "@chronoverse-eslint/react",
   "version": "2.3.1",
+  "private": false,
+  "description": "Comprehensive ESLint configuration for React projects with focus on best practices, accessibility, and performance",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "react",
+    "typescript",
+    "javascript",
+    "jsx",
+    "tsx",
+    "a11y",
+    "accessibility",
+    "lint",
+    "linter",
+    "chronoverse",
+    "performance",
+    "best-practices"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gratisvictory/chronoverse-eslint"
+  },
   "license": "MIT",
+  "author": {
+    "name": "@gratisvictory",
+    "email": "gratisvictory.dev@proton.me",
+    "url": "https://github.com/gratisvictory"
+  },
+  "sideEffects": false,
   "type": "module",
   "exports": {
     ".": {
@@ -43,8 +71,12 @@
     "eslint": "^9.26.0",
     "typescript": "^5.8.3"
   },
-  "packageManager": "bun@1.2.11",
+  "packageManager": "bun@1.2.13",
   "engines": {
-    "bun": ">=1.2.11"
+    "bun": ">=1.2.13",
+    "node": ">=23.11.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

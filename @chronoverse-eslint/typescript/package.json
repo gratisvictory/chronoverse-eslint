@@ -1,7 +1,32 @@
 {
   "name": "@chronoverse-eslint/typescript",
   "version": "2.3.1",
+  "private": false,
+  "description": "Comprehensive ESLint configuration for TypeScript projects focusing on type safety, code quality, and best practices",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "typescript",
+    "tsdoc",
+    "ts",
+    "lint",
+    "linter",
+    "chronoverse",
+    "type-safety",
+    "code-quality",
+    "best-practices"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gratisvictory/chronoverse-eslint"
+  },
   "license": "MIT",
+  "author": {
+    "name": "@gratisvictory",
+    "email": "gratisvictory.dev@proton.me",
+    "url": "https://github.com/gratisvictory"
+  },
+  "sideEffects": false,
   "type": "module",
   "exports": {
     ".": {
@@ -26,7 +51,6 @@
     "@susisu/eslint-plugin-safe-typescript": "^0.9.4",
     "@typescript-eslint/eslint-plugin": "^8.32.1",
     "eslint": "^9.26.0",
-    "eslint-plugin-functional": "^9.0.1",
     "eslint-plugin-tsdoc": "^0.4.0"
   },
   "devDependencies": {
@@ -38,9 +62,9 @@
     "eslint": "^9.26.0",
     "typescript": "^5.8.3"
   },
-  "packageManager": "bun@1.2.11",
+  "packageManager": "bun@1.2.13",
   "engines": {
-    "bun": ">=1.2.11"
+    "bun": ">=1.2.13"
   },
   "publishConfig": {
     "access": "public"

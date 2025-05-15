@@ -78,7 +78,7 @@ Each example includes both problematic code (that ESLint flags) and the recommen
 
 - ESLint ≥ 9.26.0
 - Node.js ≥ 23.11.0
-- Bun ≥ 1.2.11
+- Bun ≥ 1.2.13
 
 ---
 

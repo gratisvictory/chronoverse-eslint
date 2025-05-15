@@ -1,222 +1,133 @@
 # @chronoverse-eslint/eslint-config
 
-[English](#english) | [Русский](#русский)
-
 [![npm version](https://img.shields.io/npm/v/@chronoverse-eslint/eslint-config.svg)](https://www.npmjs.com/package/@chronoverse-eslint/eslint-config)
 [![ESLint](https://img.shields.io/badge/ESLint-v9.26.0-4B32C3.svg)](https://eslint.org)
 [![License](https://img.shields.io/badge/license-MIT-4B32C3.svg)](LICENSE)
 [![Demo](https://img.shields.io/badge/🛠️-Config%20Inspector-4B32C3)](https://gratisvictory.github.io/chronoverse-eslint)
 
-## English
+All-in-one ESLint configuration for modern JavaScript, TypeScript, React, and Next.js projects with comprehensive best practices and security rules.
 
-A comprehensive ESLint configuration for modern JavaScript and TypeScript projects, supporting React, Next.js, and various best practices.
+## Features
 
-### Table of Contents
+- ✨ Modern JavaScript and TypeScript support
+- ⚛️ React and Next.js configurations
+- 🛡️ Security rules
+- 🧩 Functional programming style
+- 📏 Code quality and maintainability
+- 🔄 Git integration
+- 🎨 CSS and Tailwind support
+- 📚 JSDoc documentation rules
+- 🔍 Comprehensive best practices
+- ⚡ Performance optimization
 
-- [Features](#features-)
-- [Installation](#installation-)
-- [Usage](#usage-️)
-- [Presets](#presets-)
-- [Requirements](#requirements-)
-
-### Features ✨
-
-- Modern JavaScript and TypeScript support
-- React and Next.js configurations
-- Comprehensive best practices
-- Performance-focused rules
-- Security rules
-- Functional programming style
-- Code quality and maintainability
-- Git integration
-- CSS support
-- JSDoc documentation rules
-
-### Installation 📦
+## Installation
 
 ```bash
 npm install -D @chronoverse-eslint/eslint-config eslint
-# or
+```
+
+Or using alternative package managers:
+
+```bash
 yarn add -D @chronoverse-eslint/eslint-config eslint
-# or
 pnpm add -D @chronoverse-eslint/eslint-config eslint
-# or
 bun add -D @chronoverse-eslint/eslint-config eslint
 ```
 
-### Usage 🛠️
+## Usage
 
 Add to your `eslint.config.js`:
 
 ```javascript
-import { js, jsx, ts, tsx, nextJSX, nextTSX, ...presets } from '@chronoverse-eslint/eslint-config';
+import {
+  vanillaJs,
+  vanillaTs,
+  reactJsx,
+  reactTsx,
+  css,
+  json,
+  next,
+  jsdocJs,
+  jsdocTs,
+  security,
+  dependency,
+  unicornX
+} from '@chronoverse-eslint/eslint-config';
 
 export default [
   // For JavaScript projects
-  ...js,
-  // For React JavaScript projects
-  ...jsx,
+  ...vanillaJs,
   // For TypeScript projects
-  ...ts,
-  // For React TypeScript projects
-  ...tsx,
-  // For Next.js JavaScript projects
-  ...nextJSX,
-  // For Next.js TypeScript projects
-  ...nextTSX,
+  ...vanillaTs,
+  // For React JSX projects
+  ...reactJsx,
+  // For React TSX projects
+  ...reactTsx,
+  // Additional presets as needed
+  ...css,
+  ...security,
+  ...json
 ];
 ```
 
-#### or
+Or with `defineConfig`:
 
 ```javascript
 import { defineConfig } from 'eslint/config';
-import { js, jsx, ts, tsx, nextJSX, nextTSX, ...presets } from '@chronoverse-eslint/eslint-config';
+import {
+  vanillaJs,
+  vanillaTs,
+  reactJsx,
+  reactTsx,
+  css
+} from '@chronoverse-eslint/eslint-config';
 
 export default defineConfig([
-  // For JavaScript projects
-  js,
-  // For React JavaScript projects
-  jsx,
-  // For TypeScript projects
-  ts,
-  // For React TypeScript projects
-  tsx,
-  // For Next.js JavaScript projects
-  nextJSX,
-  // For Next.js TypeScript projects
-  nextTSX,
+  // Base JavaScript
+  vanillaJs,
+  // Base TypeScript
+  vanillaTs,
+  // React JSX
+  reactJsx,
+  // React TSX
+  reactTsx,
+  // CSS support
+  css
 ]);
 ```
 
-### Presets 📚
+## Available Configs and Presets
 
-The package provides several presets that you can use individually:
+The package provides several configs and presets:
 
-- `js` - Base JavaScript configuration
-- `jsx` - React JavaScript configuration
-- `ts` - TypeScript configuration
-- `tsx` - React TypeScript configuration
-- `nextJSX` - Next.js JavaScript configuration
-- `nextTSX` - Next.js TypeScript configuration
+### Main Configs
+
+- `vanillaJs` - Base JavaScript configuration
+- `vanillaTs` - Base TypeScript configuration
+- `reactJsx` - React JavaScript configuration
+- `reactTsx` - React TypeScript configuration
+
+### Presets
+
 - `css` - CSS configuration
-- `tailwindcss` - Tailwind CSS configuration (https://github.com/tailwindlabs/tailwindcss/discussions/15945)
-- `functionalJS` - Functional programming rules
-- `jsdocForJs` - JSDoc rules for JavaScript
-- `jsdocForTs` - JSDoc rules for TypeScript
-- `ignores` - Add EXCLUDE_PATTERNS (at the very beginning)
+- `json` - JSON configuration
+- `next` - Next.js integration
+- `jsdocJs` - JSDoc rules for JavaScript
+- `jsdocTs` - JSDoc rules for TypeScript
+- `security` - Security rules
+- `dependency` - Dependency management rules
+- `comments` - ESLint comments rules
+- `mutation` - Better mutation rules
+- `perfectionist` - Code organization rules
+- `promise` - Promise handling rules
+- `regexp` - Regular expression rules
+- `unicornX` - Extended unicorn rules
+- `node` - Node.js specific rules
 
-### Requirements 📋
-
-- ESLint >=9.26.0
-- Bun >=1.2.11
-- Node.js >=23.11.0
-
----
-
-## Русский
-
-Комплексная конфигурация ESLint для современных JavaScript и TypeScript проектов с поддержкой React, Next.js и различных лучших практик.
-
-### Содержание
-
-- [Возможности](#возможности-)
-- [Установка](#установка-)
-- [Использование](#использование-️)
-- [Пресеты](#пресеты-)
-- [Требования](#требования-)
-
-### Возможности ✨
-
-- Поддержка современного JavaScript и TypeScript
-- Конфигурации для React и Next.js
-- Комплексные лучшие практики
-- Правила, ориентированные на производительность
-- Правила безопасности
-- Функциональный стиль программирования
-- Качество и поддерживаемость кода
-- Интеграция с Git
-- Поддержка CSS
-- Правила документации JSDoc
-
-### Установка 📦
-
-```bash
-npm install -D @chronoverse-eslint/eslint-config eslint
-# or
-yarn add -D @chronoverse-eslint/eslint-config eslint
-# or
-pnpm add -D @chronoverse-eslint/eslint-config eslint
-# or
-bun add -D @chronoverse-eslint/eslint-config eslint
-```
-
-### Использование 🛠️
-
-Добавьте в ваш `eslint.config.js`:
-
-```javascript
-import { js, jsx, ts, tsx, nextJSX, nextTSX, ...presets } from '@chronoverse-eslint/eslint-config';
-
-export default [
-  // Для JavaScript проектов
-  ...js,
-  // Для React JavaScript проектов
-  ...jsx,
-  // Для TypeScript проектов
-  ...ts,
-  // Для React TypeScript проектов
-  ...tsx,
-  // Для Next.js JavaScript проектов
-  ...nextJSX,
-  // Для Next.js TypeScript проектов
-  ...nextTSX,
-];
-```
-
-#### Или
-
-```javascript
-import { defineConfig } from 'eslint/config';
-import { js, jsx, ts, tsx, nextJSX, nextTSX, ...presets } from '@chronoverse-eslint/eslint-config';
-
-export default defineConfig([
-  // Для JavaScript проектов
-  js,
-  // Для React JavaScript проектов
-  jsx,
-  // Для TypeScript проектов
-  ts,
-  // Для React TypeScript проектов
-  tsx,
-  // Для Next.js JavaScript проектов
-  nextJSX,
-  // Для Next.js TypeScript проектов
-  nextTSX,
-]);
-```
-
-### Пресеты 📚
-
-Пакет предоставляет несколько пресетов, которые можно использовать по отдельности:
-
-- `js` - Базовая конфигурация JavaScript
-- `jsx` - Конфигурация React JavaScript
-- `ts` - Конфигурация TypeScript
-- `tsx` - Конфигурация React TypeScript
-- `nextJSX` - Конфигурация Next.js JavaScript
-- `nextTSX` - Конфигурация Next.js TypeScript
-- `css` - Конфигурация CSS
-- `tailwindcss` - Tailwind CSS Конфигурация (https://github.com/tailwindlabs/tailwindcss/discussions/15945)
-- `functionalJS` - Правила функционального программирования
-- `jsdocForJs` - Правила JSDoc для JavaScript
-- `jsdocForTs` - Правила JSDoc для TypeScript
-- `ignores` - добавить EXCLUDE_PATTERNS (в самое начало)
-
-### Требования 📋
+## Requirements
 
 - ESLint >=9.26.0
-- Bun >=1.2.11
+- Bun >=1.2.13
 - Node.js >=23.11.0
 
 ---

@@ -1,7 +1,33 @@
 {
   "name": "@chronoverse-eslint/prettier",
   "version": "2.3.1",
+  "private": false,
+  "description": "Seamless ESLint configuration for Prettier integration with automatic code formatting and consistent style",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "prettier",
+    "formatting",
+    "style",
+    "typescript",
+    "javascript",
+    "lint",
+    "linter",
+    "chronoverse",
+    "code-quality",
+    "best-practices"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gratisvictory/chronoverse-eslint"
+  },
   "license": "MIT",
+  "author": {
+    "name": "@gratisvictory",
+    "email": "gratisvictory.dev@proton.me",
+    "url": "https://github.com/gratisvictory"
+  },
+  "sideEffects": false,
   "type": "module",
   "exports": {
     ".": {
@@ -29,14 +55,13 @@
   },
   "devDependencies": {
     "@chronoverse-shared/builder": "workspace:^",
-    "rimraf": "^6.0.1",
-    "typescript": "^5.8.3"
+    "rimraf": "^6.0.1"
   },
   "peerDependencies": {
     "eslint": "^9.26.0"
   },
-  "packageManager": "bun@1.2.11",
+  "packageManager": "bun@1.2.13",
   "engines": {
-    "bun": ">=1.2.11"
+    "bun": ">=1.2.13"
   }
 }

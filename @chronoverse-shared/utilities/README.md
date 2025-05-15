@@ -21,13 +21,15 @@
 ## Installation
 
 ```bash
-bun add -D @chronoverse-shared/utilities
-# or
-npm install -D @chronoverse-shared/utilities
-# or
-pnpm add -D @chronoverse-shared/utilities
-# or
-yarn add -D @chronoverse-shared/utilities
+npm install -D @chronoverse-eslint/stylistic eslint
+```
+
+Or using alternative package managers:
+
+```bash
+yarn add -D @chronoverse-eslint/stylistic eslint
+pnpm add -D @chronoverse-eslint/stylistic eslint
+bun add -D @chronoverse-eslint/stylistic eslint
 ```
 
 ### Usage
@@ -41,7 +43,8 @@ import {
   RULE_OPTIONS,
   sharedGlobals,
   getRulesByConfigName,
-  reformattedRules
+  reformattedRules,
+  disables,
   // interopDefault,
 } from '@chronoverse-shared/utilities';
 import { defineConfig } from 'eslint/config';
@@ -69,13 +72,16 @@ export default defineConfig([
       'no-restricted-globals': ['error', ...RULE_OPTIONS.variablesNoRestrictedGlobals],
     }
   }
+
+  disables,
+
 ]);
 ```
 
 ### Requirements
 
 - ESLint >=9.26.0
-- Bun >=1.2.11
+- Bun >=1.2.13
 - Node.js >=23.11.0
 
 ---

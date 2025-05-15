@@ -1,9 +1,7 @@
-export { base } from './configs/base.js';
-export { nextJsx } from './configs/next-jsx.js';
-export { nextTsx } from './configs/next-tsx.js';
 export { reactJsx } from './configs/react-jsx.js';
 export { reactTsx } from './configs/react-tsx.js';
 export { vanillaJs } from './configs/vanilla-js.js';
+export { vanillaTs } from './configs/vanilla-ts.js';
 export { comments } from './presets/comments.js';
 export { css } from './presets/css.js';
 export { dependency } from './presets/dependency.js';

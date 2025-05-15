@@ -1,46 +1,37 @@
 # @chronoverse-eslint/prettier
 
-[English](#english) | [Русский](#русский)
-
 [![npm version](https://img.shields.io/npm/v/@chronoverse-eslint/prettier.svg)](https://www.npmjs.com/package/@chronoverse-eslint/prettier)
 [![ESLint](https://img.shields.io/badge/ESLint-v9.26.0-4B32C3.svg)](https://eslint.org)
 [![Prettier](https://img.shields.io/badge/Prettier-v3.5.3-F7B93E.svg)](https://prettier.io)
 [![License](https://img.shields.io/badge/license-MIT-4B32C3.svg)](LICENSE)
 
-## English
+Seamless ESLint configuration for Prettier integration with automatic code formatting and consistent style for JavaScript and TypeScript projects.
 
-A comprehensive ESLint configuration for Prettier integration, ensuring consistent code formatting across your JavaScript and TypeScript projects.
+## Features
 
-### Table of Contents
+- ✨ Seamless Prettier integration with ESLint
+- 🔄 Automatic code formatting
+- 🎨 Consistent code style across projects
+- 🚫 Disables conflicting ESLint rules
+- 🔍 Error reporting for formatting issues
+- 📝 Works with both JavaScript and TypeScript
+- 🔄 Compatible with modern JavaScript features
 
-- [Features](#features-)
-- [Installation](#installation-)
-- [Usage](#usage-️)
-- [Requirements](#requirements-)
-
-### Features ✨
-
-- Seamless Prettier integration with ESLint
-- Automatic code formatting
-- Consistent code style across projects
-- Disables conflicting ESLint rules
-- Error reporting for formatting issues
-- Works with both JavaScript and TypeScript
-- Compatible with modern JavaScript features
-
-### Installation 📦
+## Installation
 
 ```bash
-npm install -D @chronoverse-eslint/prettier eslint prettier
-# or
-yarn add -D @chronoverse-eslint/prettier eslint prettier
-# or
-pnpm add -D @chronoverse-eslint/prettier eslint prettier
-# or
-bun add -D @chronoverse-eslint/prettier eslint prettier
+npm install -D @chronoverse-eslint/prettier eslint
 ```
 
-### Usage 🛠️
+Or using alternative package managers:
+
+```bash
+yarn add -D @chronoverse-eslint/prettier eslint
+pnpm add -D @chronoverse-eslint/prettier eslint
+bun add -D @chronoverse-eslint/prettier eslint
+```
+
+## Usage
 
 Add to your `eslint.config.js`:
 
@@ -48,113 +39,30 @@ Add to your `eslint.config.js`:
 import { prettier } from '@chronoverse-eslint/prettier';
 
 export default [
-  /**
-   * Your other ESLint configurations
-   * at the very end
-   */
+  // Your other ESLint configurations
+  // Add Prettier at the very end
   ...prettier,
 ];
 ```
 
-#### or
+Or with `defineConfig`:
 
 ```javascript
 import { defineConfig } from 'eslint/config';
 import { prettier } from '@chronoverse-eslint/prettier';
 
-export default defineConfig(prettier);
-/**
- * or
- */
 export default defineConfig([
-  /**
-   * Your custom rules here
-   */
+  // Your custom rules here
+  // Add Prettier at the very end
   prettier,
 ]);
 ```
 
-### Requirements 📋
+## Requirements
 
 - ESLint >=9.26.0
 - Prettier >=3.5.3
-- Bun >=1.2.11
-- Node.js >=23.11.0
-
----
-
-## Русский
-
-Комплексная конфигурация ESLint для интеграции с Prettier, обеспечивающая единообразное форматирование кода в ваших JavaScript и TypeScript проектах.
-
-### Содержание
-
-- [Возможности](#возможности-)
-- [Установка](#установка-)
-- [Использование](#использование-️)
-- [Требования](#требования-)
-
-### Возможности ✨
-
-- Бесшовная интеграция Prettier с ESLint
-- Автоматическое форматирование кода
-- Единый стиль кода во всех проектах
-- Отключение конфликтующих правил ESLint
-- Отчеты об ошибках форматирования
-- Работает с JavaScript и TypeScript
-- Совместимость с современными возможностями JavaScript
-
-### Установка 📦
-
-```bash
-npm install -D @chronoverse-eslint/prettier eslint prettier
-# or
-yarn add -D @chronoverse-eslint/prettier eslint prettier
-# or
-pnpm add -D @chronoverse-eslint/prettier eslint prettier
-# or
-bun add -D @chronoverse-eslint/prettier eslint prettier
-```
-
-### Использование 🛠️
-
-Добавьте в ваш `eslint.config.js`:
-
-```javascript
-import { prettier } from '@chronoverse-eslint/prettier';
-
-export default [
-  /*
-   * Ваши другие конфигурации ESLint
-   * Добавить в самый конец конфигурации
-   */
-  ...prettier,
-];
-```
-
-#### Или
-
-```javascript
-import { defineConfig } from 'eslint/config';
-import { prettier } from '@chronoverse-eslint/prettier';
-
-export default defineConfig(prettier);
-/**
- * Или
- */
-export default defineConfig([
-  /**
-   * Ваши собственные правила здесь
-   */
-  prettier,
-]);
-```
-
-### Требования 📋
-
-- ESLint >=9.26.0
-- Prettier >=3.5.3
-- Bun >=1.2.11
+- Bun >=1.2.13
 - Node.js >=23.11.0
 
 ---

@@ -1,5 +1,4 @@
 import { FILE_PATTERNS, getRulesByConfigName } from '@chronoverse-shared/utilities';
-// @ts-expect-error eslint-config-eslint is not typed
 import eslintConfigJsdoc from 'eslint-config-eslint';
 import jsdocPlugin from 'eslint-plugin-jsdoc';
 import { defineConfig } from 'eslint/config';

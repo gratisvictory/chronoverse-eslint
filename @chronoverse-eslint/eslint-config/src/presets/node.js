@@ -1,6 +1,5 @@
 import { FILE_PATTERNS } from '@chronoverse-shared/utilities';
 import { getRulesByConfigName } from '@chronoverse-shared/utilities';
-// @ts-expect-error
 import eslintConfigNode from 'eslint-config-eslint';
 import nodePlugin from 'eslint-plugin-n';
 import { defineConfig } from 'eslint/config';

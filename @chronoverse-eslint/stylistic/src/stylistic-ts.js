@@ -9,7 +9,6 @@ const stylisticTs = await (async () => {
 		{
 			name: '@chronoverse/stylisticTs/setup',
 			languageOptions: {
-				// @ts-ignore
 				parser: tsOptions.parser,
 				parserOptions: tsOptions.parserOptions,
 			},

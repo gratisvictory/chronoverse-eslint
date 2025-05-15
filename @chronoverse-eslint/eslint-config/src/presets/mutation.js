@@ -1,5 +1,4 @@
 import { FILE_PATTERNS } from '@chronoverse-shared/utilities';
-// @ts-expect-error eslint-plugin-better-mutation is not typed
 import pluginBetterMutation from 'eslint-plugin-better-mutation';
 import { defineConfig } from 'eslint/config';
 

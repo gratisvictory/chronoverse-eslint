@@ -1,5 +1,4 @@
 import { FILE_PATTERNS } from '@chronoverse-shared/utilities';
-// @ts-expect-error eslint-plugin-promise is not typed
 import pluginPromise from 'eslint-plugin-promise';
 import { defineConfig } from 'eslint/config';
 

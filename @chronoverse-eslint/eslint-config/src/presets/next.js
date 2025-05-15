@@ -1,5 +1,4 @@
 import { FILE_PATTERNS } from '@chronoverse-shared/utilities';
-// @ts-expect-error @next/eslint-plugin-next is not typed
 import nextPlugin from '@next/eslint-plugin-next';
 import { defineConfig } from 'eslint/config';
 

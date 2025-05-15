@@ -9,12 +9,10 @@ const functionalTs = await (async () => {
 		{
 			name: '@chronoverse/functionalTs/setup',
 			languageOptions: {
-				// @ts-ignore
 				parser: tsOptions.parser,
 				parserOptions: tsOptions.parserOptions,
 			},
 			plugins: {
-				// @ts-ignore
 				functional: functionalTsPlugin,
 			},
 		},

@@ -1,6 +1,5 @@
 import { FILE_PATTERNS } from '@chronoverse-shared/utilities';
 import { getRulesByConfigName } from '@chronoverse-shared/utilities';
-// @ts-expect-error eslint-config-eslint is not typed
 import eslintConfigUnicorn from 'eslint-config-eslint';
 import eslintPluginUnicornX from 'eslint-plugin-unicorn-x';
 import { defineConfig } from 'eslint/config';

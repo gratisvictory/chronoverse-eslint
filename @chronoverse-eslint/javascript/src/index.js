@@ -1,6 +1,5 @@
 import { FILE_PATTERNS, getRulesByConfigName, sharedGlobals } from '@chronoverse-shared/utilities';
 import js from '@eslint/js';
-// @ts-expect-error eslint-config-eslint is not typed
 import eslintConfigBase from 'eslint-config-eslint';
 import { defineConfig } from 'eslint/config';
 

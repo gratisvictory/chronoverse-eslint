@@ -1,4 +1,5 @@
 export { EXCLUDE_PATTERNS } from './constants.js';
+export { disables } from './disables.js';
 export { FILE_PATTERNS } from './files.js';
 export { getTsLanguageOptions, getTsLanguageOptionsSync } from './get-ts.js';
 export { sharedGlobals } from './globals.js';

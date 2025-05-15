@@ -1,5 +1,4 @@
 import { FILE_PATTERNS } from '@chronoverse-shared/utilities';
-// @ts-expect-error @eslint-community/eslint-plugin-eslint-comments is not typed
 import eslintComments from '@eslint-community/eslint-plugin-eslint-comments';
 import { defineConfig } from 'eslint/config';
 
