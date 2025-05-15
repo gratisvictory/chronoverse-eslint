@@ -4151,9 +4151,6 @@
           }
         }
       },
-      "plugins": {
-        "@eslint-react": {}
-      },
       "index": 26
     },
     {
@@ -4275,9 +4272,6 @@
           "projectService": true,
           "sourceType": "module"
         }
-      },
-      "plugins": {
-        "@eslint-react": {}
       },
       "index": 29
     },
@@ -16948,6 +16942,60 @@
       "name": "@eslint-react/web-api/no-leaked-timeout",
       "plugin": "@eslint-react/web-api"
     },
+    "@eslint-react/debug/class-component": {
+      "type": "problem",
+      "docs": {
+        "description": "Reports all class components.",
+        "url": "https://eslint-react.xyz/docs/rules/debug-class-component"
+      },
+      "name": "@eslint-react/debug/class-component",
+      "plugin": "@eslint-react/debug"
+    },
+    "@eslint-react/debug/function-component": {
+      "type": "problem",
+      "docs": {
+        "description": "Reports all function components.",
+        "url": "https://eslint-react.xyz/docs/rules/debug-function-component"
+      },
+      "name": "@eslint-react/debug/function-component",
+      "plugin": "@eslint-react/debug"
+    },
+    "@eslint-react/debug/hook": {
+      "type": "problem",
+      "docs": {
+        "description": "Reports all React Hooks.",
+        "url": "https://eslint-react.xyz/docs/rules/debug-hook"
+      },
+      "name": "@eslint-react/debug/hook",
+      "plugin": "@eslint-react/debug"
+    },
+    "@eslint-react/debug/is-from-react": {
+      "type": "problem",
+      "docs": {
+        "description": "Reports all identifiers that are initialized from React.",
+        "url": "https://eslint-react.xyz/docs/rules/debug-is-from-react"
+      },
+      "name": "@eslint-react/debug/is-from-react",
+      "plugin": "@eslint-react/debug"
+    },
+    "@eslint-react/debug/jsx": {
+      "type": "problem",
+      "docs": {
+        "description": "Reports all JSX elements and fragments.",
+        "url": "https://eslint-react.xyz/docs/rules/debug-jsx"
+      },
+      "name": "@eslint-react/debug/jsx",
+      "plugin": "@eslint-react/debug"
+    },
+    "@eslint-react/debug/react-hooks": {
+      "type": "problem",
+      "docs": {
+        "description": "Reports all React Hooks.",
+        "url": "https://eslint-react.xyz/docs/rules/debug-hook"
+      },
+      "name": "@eslint-react/debug/react-hooks",
+      "plugin": "@eslint-react/debug"
+    },
     "@eslint-react/hooks-extra/no-direct-set-state-in-use-effect": {
       "type": "problem",
       "docs": {
@@ -17122,60 +17170,6 @@
       },
       "name": "@eslint-react/naming-convention/use-state",
       "plugin": "@eslint-react/naming-convention"
-    },
-    "@eslint-react/debug/class-component": {
-      "type": "problem",
-      "docs": {
-        "description": "Reports all class components.",
-        "url": "https://eslint-react.xyz/docs/rules/debug-class-component"
-      },
-      "name": "@eslint-react/debug/class-component",
-      "plugin": "@eslint-react/debug"
-    },
-    "@eslint-react/debug/function-component": {
-      "type": "problem",
-      "docs": {
-        "description": "Reports all function components.",
-        "url": "https://eslint-react.xyz/docs/rules/debug-function-component"
-      },
-      "name": "@eslint-react/debug/function-component",
-      "plugin": "@eslint-react/debug"
-    },
-    "@eslint-react/debug/hook": {
-      "type": "problem",
-      "docs": {
-        "description": "Reports all React Hooks.",
-        "url": "https://eslint-react.xyz/docs/rules/debug-hook"
-      },
-      "name": "@eslint-react/debug/hook",
-      "plugin": "@eslint-react/debug"
-    },
-    "@eslint-react/debug/is-from-react": {
-      "type": "problem",
-      "docs": {
-        "description": "Reports all identifiers that are initialized from React.",
-        "url": "https://eslint-react.xyz/docs/rules/debug-is-from-react"
-      },
-      "name": "@eslint-react/debug/is-from-react",
-      "plugin": "@eslint-react/debug"
-    },
-    "@eslint-react/debug/jsx": {
-      "type": "problem",
-      "docs": {
-        "description": "Reports all JSX elements and fragments.",
-        "url": "https://eslint-react.xyz/docs/rules/debug-jsx"
-      },
-      "name": "@eslint-react/debug/jsx",
-      "plugin": "@eslint-react/debug"
-    },
-    "@eslint-react/debug/react-hooks": {
-      "type": "problem",
-      "docs": {
-        "description": "Reports all React Hooks.",
-        "url": "https://eslint-react.xyz/docs/rules/debug-hook"
-      },
-      "name": "@eslint-react/debug/react-hooks",
-      "plugin": "@eslint-react/debug"
     },
     "react-hooks/exhaustive-deps": {
       "type": "suggestion",
@@ -22612,7 +22606,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1747334964279,
+    "lastUpdate": 1747335598254,
     "basePath": "",
     "configPath": ""
   }
