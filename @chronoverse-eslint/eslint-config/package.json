@@ -1,6 +1,6 @@
 {
   "name": "@chronoverse-eslint/eslint-config",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "private": false,
   "description": "All-in-one ESLint configuration for modern JavaScript, TypeScript, React, and Next.js projects with comprehensive best practices and security rules",
   "keywords": [
@@ -60,7 +60,7 @@
     "@chronoverse-eslint/functional": "^3.0.0",
     "@chronoverse-eslint/javascript": "^3.0.0",
     "@chronoverse-eslint/prettier": "^3.0.0",
-    "@chronoverse-eslint/react": "^3.0.1",
+    "@chronoverse-eslint/react": "^3.0.2",
     "@chronoverse-eslint/stylistic": "^3.0.0",
     "@chronoverse-eslint/typescript": "^3.0.0",
     "@chronoverse-shared/utilities": "^3.0.0",
