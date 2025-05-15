@@ -1,6 +1,6 @@
 {
   "name": "@chronoverse-eslint/eslint-config",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "private": false,
   "description": "All-in-one ESLint configuration for modern JavaScript, TypeScript, React, and Next.js projects with comprehensive best practices and security rules",
   "keywords": [
