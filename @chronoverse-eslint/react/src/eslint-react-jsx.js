@@ -12,9 +12,6 @@ const eslintReactJsx = defineConfig([
 				},
 			},
 		},
-		plugins: {
-			'@eslint-react': eslintReactPlugin,
-		},
 	},
 	{
 		name: '@chronoverse/@eslint-react-jsx/rules',

@@ -12,9 +12,6 @@ const eslintReactTsx = await (async () => {
 				parser: tsOptions.parser,
 				parserOptions: tsOptions.parserOptions,
 			},
-			plugins: {
-				'@eslint-react': eslintReactPlugin,
-			},
 		},
 		{
 			name: '@chronoverse/@eslint-react-tsx/rules',
