@@ -1,6 +1,6 @@
 {
   "name": "@chronoverse-eslint/prettier",
-  "version": "2.3.1",
+  "version": "3.0.0",
   "private": false,
   "description": "Seamless ESLint configuration for Prettier integration with automatic code formatting and consistent style",
   "keywords": [
@@ -48,7 +48,7 @@
     "clean:all": "rimraf dist node_modules"
   },
   "dependencies": {
-    "@chronoverse-shared/utilities": "workspace:^",
+    "@chronoverse-shared/utilities": "^3.0.0",
     "eslint": "^9.26.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-prettier": "^5.4.0"

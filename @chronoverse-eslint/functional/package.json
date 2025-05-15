@@ -1,6 +1,6 @@
 {
   "name": "@chronoverse-eslint/functional",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "private": false,
   "description": "Modern ESLint configuration for functional programming best practices, enforcing immutability and side-effect free patterns",
   "keywords": [
@@ -54,7 +54,7 @@
     "lint:inspector:clean": "rimraf .eslint-functional"
   },
   "dependencies": {
-    "@chronoverse-shared/utilities": "workspace:^",
+    "@chronoverse-shared/utilities": "^3.0.0",
     "eslint": "^9.26.0",
     "eslint-plugin-functional": "^9.0.1"
   },

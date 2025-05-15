@@ -1,6 +1,6 @@
 {
   "name": "@chronoverse-eslint/typescript",
-  "version": "2.3.1",
+  "version": "3.0.0",
   "private": false,
   "description": "Comprehensive ESLint configuration for TypeScript projects focusing on type safety, code quality, and best practices",
   "keywords": [
@@ -47,7 +47,7 @@
     "clean:all": "rimraf dist node_modules"
   },
   "dependencies": {
-    "@chronoverse-shared/utilities": "workspace:^",
+    "@chronoverse-shared/utilities": "^3.0.0",
     "@susisu/eslint-plugin-safe-typescript": "^0.9.4",
     "@typescript-eslint/eslint-plugin": "^8.32.1",
     "eslint": "^9.26.0",
@@ -64,7 +64,8 @@
   },
   "packageManager": "bun@1.2.13",
   "engines": {
-    "bun": ">=1.2.13"
+    "bun": ">=1.2.13",
+    "node": ">=23.11.0"
   },
   "publishConfig": {
     "access": "public"
