@@ -14,7 +14,6 @@ export default defineConfig([
 	{
 		rules: {
 			'n/no-process-exit': 'warn',
-			'n/no-unsupported-features/node-builtins': 'off',
 			'@stylistic/js/object-curly-newline': 'off',
 		},
 	},
