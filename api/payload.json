@@ -5591,6 +5591,17 @@
     },
     {
       "name": "@chronoverse/css/setup",
+      "plugins": {
+        "css": {}
+      },
+      "index": 60
+    },
+    {
+      "name": "@chronoverse/css/rules",
+      "files": [
+        "**/*.css"
+      ],
+      "language": "css/css",
       "languageOptions": {
         "customSyntax": {
           "atrules": {
@@ -5606,16 +5617,6 @@
           }
         }
       },
-      "plugins": {
-        "css": {}
-      },
-      "index": 60
-    },
-    {
-      "name": "@chronoverse/css/rules",
-      "files": [
-        "**/*.css"
-      ],
       "rules": {
         "css/no-empty-blocks": "error",
         "css/no-duplicate-imports": "error",
@@ -22611,7 +22612,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1747332816366,
+    "lastUpdate": 1747334964279,
     "basePath": "",
     "configPath": ""
   }
