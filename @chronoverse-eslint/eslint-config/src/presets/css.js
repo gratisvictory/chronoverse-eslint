@@ -13,9 +13,6 @@ import { defineConfig } from 'eslint/config';
 const css = defineConfig([
 	{
 		name: '@chronoverse/css/setup',
-		languageOptions: {
-			customSyntax: tailwindSyntax,
-		},
 		plugins: {
 			css: eslintCss,
 		},
@@ -23,6 +20,10 @@ const css = defineConfig([
 	{
 		name: '@chronoverse/css/rules',
 		files: FILE_PATTERNS.css,
+		language: 'css/css',
+		languageOptions: {
+			customSyntax: tailwindSyntax,
+		},
 		rules: {
 			...eslintCss.configs.recommended.rules,
 		},
