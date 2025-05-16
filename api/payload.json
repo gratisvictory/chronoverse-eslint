@@ -2346,7 +2346,7 @@
     {
       "name": "@chronoverse/functionalJs/rules",
       "files": [
-        "**/*.?([cm])js?(x)"
+        "**/*.?([cm])js"
       ],
       "rules": {
         "functional/functional-parameters": "off",
@@ -3234,7 +3234,7 @@
     {
       "name": "@chronoverse/functionalTs/rules",
       "files": [
-        "**/*.?([cm])ts?(x)"
+        "**/*.?([cm])ts"
       ],
       "rules": {
         "functional/functional-parameters": [
@@ -3847,7 +3847,8 @@
           "error",
           {
             "extensions": [
-              ".jsx"
+              ".jsx",
+              ".tsx"
             ]
           }
         ],
@@ -21881,7 +21882,8 @@
       "filepath": "build.js",
       "globs": [
         "**/*.js",
-        "**/*.?([cm])js?(x)"
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
       ],
       "configs": [
         2,
@@ -21916,7 +21918,8 @@
       "filepath": "eslint.config.viewer.js",
       "globs": [
         "**/*.js",
-        "**/*.?([cm])js?(x)"
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
       ],
       "configs": [
         2,
@@ -21969,7 +21972,8 @@
       "filepath": "src/configs/react-jsx.js",
       "globs": [
         "**/*.js",
-        "**/*.?([cm])js?(x)"
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
       ],
       "configs": [
         2,
@@ -22004,7 +22008,8 @@
       "filepath": "src/configs/react-tsx.js",
       "globs": [
         "**/*.js",
-        "**/*.?([cm])js?(x)"
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
       ],
       "configs": [
         2,
@@ -22039,7 +22044,8 @@
       "filepath": "src/configs/vanilla-js.js",
       "globs": [
         "**/*.js",
-        "**/*.?([cm])js?(x)"
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
       ],
       "configs": [
         2,
@@ -22074,7 +22080,8 @@
       "filepath": "src/configs/vanilla-ts.js",
       "globs": [
         "**/*.js",
-        "**/*.?([cm])js?(x)"
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
       ],
       "configs": [
         2,
@@ -22109,7 +22116,8 @@
       "filepath": "src/index.js",
       "globs": [
         "**/*.js",
-        "**/*.?([cm])js?(x)"
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
       ],
       "configs": [
         2,
@@ -22144,7 +22152,8 @@
       "filepath": "src/presets/comments.js",
       "globs": [
         "**/*.js",
-        "**/*.?([cm])js?(x)"
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
       ],
       "configs": [
         2,
@@ -22179,7 +22188,8 @@
       "filepath": "src/presets/css.js",
       "globs": [
         "**/*.js",
-        "**/*.?([cm])js?(x)"
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
       ],
       "configs": [
         2,
@@ -22214,7 +22224,8 @@
       "filepath": "src/presets/dependency.js",
       "globs": [
         "**/*.js",
-        "**/*.?([cm])js?(x)"
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
       ],
       "configs": [
         2,
@@ -22249,7 +22260,8 @@
       "filepath": "src/presets/jsdoc.js",
       "globs": [
         "**/*.js",
-        "**/*.?([cm])js?(x)"
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
       ],
       "configs": [
         2,
@@ -22284,7 +22296,8 @@
       "filepath": "src/presets/json.js",
       "globs": [
         "**/*.js",
-        "**/*.?([cm])js?(x)"
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
       ],
       "configs": [
         2,
@@ -22319,7 +22332,8 @@
       "filepath": "src/presets/mutation.js",
       "globs": [
         "**/*.js",
-        "**/*.?([cm])js?(x)"
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
       ],
       "configs": [
         2,
@@ -22354,7 +22368,8 @@
       "filepath": "src/presets/next.js",
       "globs": [
         "**/*.js",
-        "**/*.?([cm])js?(x)"
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
       ],
       "configs": [
         2,
@@ -22389,7 +22404,8 @@
       "filepath": "src/presets/node.js",
       "globs": [
         "**/*.js",
-        "**/*.?([cm])js?(x)"
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
       ],
       "configs": [
         2,
@@ -22424,7 +22440,8 @@
       "filepath": "src/presets/perfectionist.js",
       "globs": [
         "**/*.js",
-        "**/*.?([cm])js?(x)"
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
       ],
       "configs": [
         2,
@@ -22459,7 +22476,8 @@
       "filepath": "src/presets/promise.js",
       "globs": [
         "**/*.js",
-        "**/*.?([cm])js?(x)"
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
       ],
       "configs": [
         2,
@@ -22494,7 +22512,8 @@
       "filepath": "src/presets/regexp.js",
       "globs": [
         "**/*.js",
-        "**/*.?([cm])js?(x)"
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
       ],
       "configs": [
         2,
@@ -22529,7 +22548,8 @@
       "filepath": "src/presets/security.js",
       "globs": [
         "**/*.js",
-        "**/*.?([cm])js?(x)"
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
       ],
       "configs": [
         2,
@@ -22564,7 +22584,8 @@
       "filepath": "src/presets/unicorn-x.js",
       "globs": [
         "**/*.js",
-        "**/*.?([cm])js?(x)"
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
       ],
       "configs": [
         2,
@@ -22606,7 +22627,7 @@
     }
   ],
   "meta": {
-    "lastUpdate": 1747336253302,
+    "lastUpdate": 1747411506214,
     "basePath": "",
     "configPath": ""
   }
