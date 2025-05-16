@@ -47,7 +47,7 @@
     "clean:all": "rimraf dist node_modules"
   },
   "dependencies": {
-    "@chronoverse-shared/utilities": "^3.0.0",
+    "@chronoverse-shared/utilities": "^3.0.1",
     "@susisu/eslint-plugin-safe-typescript": "^0.9.4",
     "@typescript-eslint/eslint-plugin": "^8.32.1",
     "eslint": "^9.26.0",

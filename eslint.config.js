@@ -14,6 +14,7 @@ export default defineConfig([
 	{
 		rules: {
 			'n/no-process-exit': 'warn',
+			// use prettier for object-curly-newline
 			'@stylistic/js/object-curly-newline': 'off',
 		},
 	},
