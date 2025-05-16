@@ -14,7 +14,7 @@ const functionalJs = await (async () => {
 		},
 		{
 			name: '@chronoverse/functionalJs/rules',
-			files: FILE_PATTERNS.javascript,
+			files: FILE_PATTERNS.onlyJavascript,
 			rules: { ...javascript },
 		},
 	]);
