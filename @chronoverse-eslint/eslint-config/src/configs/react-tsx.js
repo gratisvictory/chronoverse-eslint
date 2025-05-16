@@ -10,7 +10,6 @@ import { dependency } from '../presets/dependency.js';
 import { jsdocTs } from '../presets/jsdoc.js';
 import { json } from '../presets/json.js';
 import { mutation } from '../presets/mutation.js';
-import { next } from '../presets/next.js';
 import { node } from '../presets/node.js';
 import { perfectionist } from '../presets/perfectionist.js';
 import { promise } from '../presets/promise.js';
@@ -32,7 +31,6 @@ const reactTsx = defineConfig([
 	reactCompiler,
 	reactHooks,
 	jsxA11y,
-	next,
 	comments,
 	dependency,
 	jsdocTs,
