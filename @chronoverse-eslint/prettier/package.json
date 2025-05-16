@@ -48,7 +48,7 @@
     "clean:all": "rimraf dist node_modules"
   },
   "dependencies": {
-    "@chronoverse-shared/utilities": "^3.0.0",
+    "@chronoverse-shared/utilities": "^3.0.1",
     "eslint": "^9.26.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-prettier": "^5.4.0"

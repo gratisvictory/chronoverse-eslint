@@ -1,6 +1,6 @@
 {
   "name": "@chronoverse-eslint/eslint-config",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "private": false,
   "description": "All-in-one ESLint configuration for modern JavaScript, TypeScript, React, and Next.js projects with comprehensive best practices and security rules",
   "keywords": [
@@ -57,15 +57,15 @@
     "lint:inspector:deploy": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.viewer.js --base /chronoverse-eslint/ --outDir .eslint-config"
   },
   "dependencies": {
-    "@chronoverse-eslint/functional": "^3.0.0",
+    "@chronoverse-eslint/functional": "^3.0.1",
     "@chronoverse-eslint/javascript": "^3.0.0",
     "@chronoverse-eslint/prettier": "^3.0.0",
-    "@chronoverse-eslint/react": "^3.0.2",
+    "@chronoverse-eslint/react": "^3.0.3",
     "@chronoverse-eslint/stylistic": "^3.0.0",
     "@chronoverse-eslint/typescript": "^3.0.0",
-    "@chronoverse-shared/utilities": "^3.0.0",
+    "@chronoverse-shared/utilities": "^3.0.1",
     "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
-    "@eslint/css": "^0.8.0",
+    "@eslint/css": "^0.8.1",
     "@eslint/json": "^0.12.0",
     "@next/eslint-plugin-next": "^15.3.2",
     "eslint": "^9.26.0",

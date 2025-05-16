@@ -18,7 +18,7 @@ const functionalTs = await (async () => {
 		},
 		{
 			name: '@chronoverse/functionalTs/rules',
-			files: FILE_PATTERNS.typescript,
+			files: FILE_PATTERNS.onlyTypescript,
 			rules: { ...typescript },
 		},
 	]);

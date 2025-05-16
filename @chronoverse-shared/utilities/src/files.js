@@ -12,6 +12,16 @@ const FILE_PATTERNS = {
 		'**/*.?([cm])ts?(x)',
 	],
 
+	/** Only .js, .cjs, and .mjs files (no jsx) */
+	onlyJavascript: [
+		'**/*.?([cm])js',
+	],
+
+	/** Only .ts, .cts, and .mts files (no tsx) */
+	onlyTypescript: [
+		'**/*.?([cm])ts',
+	],
+
 	/** JSX and TSX files only: .jsx, .tsx */
 	react: [
 		'**/*.{jsx,tsx}',
