@@ -415,6 +415,7 @@ const react = {
 		{
 			extensions: [
 				'.jsx',
+				'.tsx',
 			],
 		},
 	],
