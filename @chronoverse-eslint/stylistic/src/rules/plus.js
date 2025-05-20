@@ -7,18 +7,12 @@ const plus = {
 	/**
 	 * Enforce consistent line breaks after opening and before closing braces.
 	 */
-	'@stylistic/plus/curly-newline': [
-		'error',
-		'always',
-	],
+	'@stylistic/plus/curly-newline': ['error', 'always'],
 
 	/**
 	 * Indentation for binary operators.
 	 */
-	'@stylistic/plus/indent-binary-ops': [
-		'error',
-		'tab',
-	],
+	'@stylistic/plus/indent-binary-ops': ['error', 'tab'],
 
 	/**
 	 * Enforces consistent spacing inside TypeScript type generics.

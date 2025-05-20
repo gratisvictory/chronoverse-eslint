@@ -1,4 +1,13 @@
-export { stylisticJs } from './stylistic-js.js';
-export { stylisticJsx } from './stylistic-jsx.js';
-export { stylisticPlus } from './stylistic-plus.js';
-export { stylisticTs } from './stylistic-ts.js';
+import { stylisticJs } from './stylistic-js.js';
+import { stylisticJsx } from './stylistic-jsx.js';
+import { stylisticPlus } from './stylistic-plus.js';
+import { stylisticTs } from './stylistic-ts.js';
+
+const CHRONOVERSE_STYLISTIC = {
+	stylisticJs,
+	stylisticJsx,
+	stylisticPlus,
+	stylisticTs,
+};
+
+export { CHRONOVERSE_STYLISTIC };

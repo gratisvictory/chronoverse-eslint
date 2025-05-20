@@ -23,7 +23,7 @@ const config = {
 	objectWrap: 'preserve',
 	trailingComma: 'all',
 	useTabs: true,
-	multilineArraysWrapThreshold: 1,
+	multilineArraysWrapThreshold: 3,
 	overrides: [
 		{
 			files: FILE_PATTERNS.json,

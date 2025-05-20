@@ -1,0 +1,88 @@
+{
+  "name": "@chronoverse-eslint/presets",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Comprehensive collection of ESLint presets for modern JavaScript and TypeScript projects",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "presets",
+    "javascript",
+    "typescript",
+    "lint",
+    "linter",
+    "chronoverse",
+    "code-quality",
+    "best-practices",
+    "node",
+    "next",
+    "prettier",
+    "security",
+    "unicorn"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gratisvictory/chronoverse-eslint"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "@gratisvictory",
+    "email": "gratisvictory.dev@proton.me",
+    "url": "https://github.com/gratisvictory"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/@types/index.d.ts"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/@types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bun run clean:all && bun build.js",
+    "build:clean": "rimraf dist",
+    "build:cli": "bun run clean:all && bun run builder -e src/index.js -o dist",
+    "clean": "rimraf node_modules",
+    "clean:all": "rimraf dist node_modules",
+    "lint:build:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.presets.js --outDir .eslint-presets && bunx serve .eslint-presets",
+    "lint:dev:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest --config ./eslint.config.presets.js",
+    "lint:inspector:clean": "rimraf .eslint-presets"
+  },
+  "dependencies": {
+    "@chronoverse-shared/utilities": "^3.0.1",
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
+    "@eslint/css": "^0.8.1",
+    "@eslint/json": "^0.12.0",
+    "@next/eslint-plugin-next": "^15.3.2",
+    "eslint": "^9.27.0",
+    "eslint-config-eslint": "^11.0.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-better-mutation": "^2.1.0",
+    "eslint-plugin-depend": "^1.2.0",
+    "eslint-plugin-jsdoc": "^50.6.17",
+    "eslint-plugin-n": "^17.18.0",
+    "eslint-plugin-perfectionist": "^4.13.0",
+    "eslint-plugin-prettier": "^5.4.0",
+    "eslint-plugin-promise": "^7.2.1",
+    "eslint-plugin-regexp": "^2.7.0",
+    "eslint-plugin-security": "^3.0.1",
+    "eslint-plugin-unicorn": "^59.0.1"
+  },
+  "devDependencies": {
+    "@chronoverse-shared/builder": "workspace:^",
+    "rimraf": "^6.0.1"
+  },
+  "peerDependencies": {
+    "eslint": "^9.27.0"
+  },
+  "packageManager": "bun@1.2.13",
+  "engines": {
+    "bun": ">=1.2.13",
+    "node": ">=23.11.0"
+  }
+}

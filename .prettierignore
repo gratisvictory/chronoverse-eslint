@@ -24,3 +24,7 @@ coverage
 *.nx
 .eslint
 .eslint-javascript
+.eslint-presets
+.eslint-react
+.eslint-stylistic
+.eslint-typescript

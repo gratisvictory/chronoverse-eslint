@@ -12,10 +12,7 @@ const jsxA11y = defineConfig([
 	},
 	{
 		name: '@chronoverse/jsx-a11y/rules',
-		files: [
-			...FILE_PATTERNS.javascript,
-			...FILE_PATTERNS.typescript,
-		],
+		files: [...FILE_PATTERNS.javascript, ...FILE_PATTERNS.typescript],
 		rules: {
 			...eslintJsxA11y.flatConfigs.recommended.rules,
 			...a11y,

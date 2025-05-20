@@ -7,50 +7,32 @@ const javascript = {
 	/**
 	 * Enforce linebreaks after opening and before closing array brackets.
 	 */
-	'@stylistic/js/array-bracket-newline': [
-		'error',
-		{ minItems: 1, multiline: true },
-	],
+	'@stylistic/js/array-bracket-newline': ['error', { minItems: 3, multiline: true }],
 
 	/**
 	 * Enforce consistent spacing inside array brackets.
 	 */
-	'@stylistic/js/array-bracket-spacing': [
-		'error',
-		'never',
-	],
+	'@stylistic/js/array-bracket-spacing': ['error', 'never'],
 
 	/**
 	 * Enforce line breaks after each array element.
 	 */
-	'@stylistic/js/array-element-newline': [
-		'error',
-		{ minItems: 1, multiline: true },
-	],
+	'@stylistic/js/array-element-newline': 'off',
 
 	/**
 	 * Require parentheses around arrow function arguments.
 	 */
-	'@stylistic/js/arrow-parens': [
-		'error',
-		'as-needed',
-	],
+	'@stylistic/js/arrow-parens': ['error', 'as-needed'],
 
 	/**
 	 * Enforce consistent spacing before and after the arrow in arrow functions.
 	 */
-	'@stylistic/js/arrow-spacing': [
-		'error',
-		{ after: true, before: true },
-	],
+	'@stylistic/js/arrow-spacing': ['error', { after: true, before: true }],
 
 	/**
 	 * Disallow or enforce spaces inside of blocks after opening block and before closing block.
 	 */
-	'@stylistic/js/block-spacing': [
-		'error',
-		'always',
-	],
+	'@stylistic/js/block-spacing': ['error', 'always'],
 
 	/**
 	 * Enforce consistent brace style for blocks.
@@ -78,10 +60,7 @@ const javascript = {
 	/**
 	 * Enforce consistent spacing before and after commas.
 	 */
-	'@stylistic/js/comma-spacing': [
-		'error',
-		{ after: true, before: false },
-	],
+	'@stylistic/js/comma-spacing': ['error', { after: true, before: false }],
 
 	/**
 	 * Enforce consistent comma style.
@@ -109,50 +88,32 @@ const javascript = {
 	/**
 	 * Enforce consistent spacing inside computed property brackets.
 	 */
-	'@stylistic/js/computed-property-spacing': [
-		'error',
-		'never',
-	],
+	'@stylistic/js/computed-property-spacing': ['error', 'never'],
 
 	/**
 	 * Enforce consistent newlines before and after dots.
 	 */
-	'@stylistic/js/dot-location': [
-		'error',
-		'property',
-	],
+	'@stylistic/js/dot-location': ['error', 'property'],
 
 	/**
 	 * Require or disallow newline at the end of files.
 	 */
-	'@stylistic/js/eol-last': [
-		'error',
-		'always',
-	],
+	'@stylistic/js/eol-last': ['error', 'always'],
 
 	/**
 	 *  Require or disallow spacing between function identifiers and their invocations.
 	 */
-	'@stylistic/js/function-call-spacing': [
-		'error',
-		'never',
-	],
+	'@stylistic/js/function-call-spacing': ['error', 'never'],
 
 	/**
 	 * Enforce consistent line breaks inside function parentheses.
 	 */
-	'@stylistic/js/function-paren-newline': [
-		'error',
-		'multiline-arguments',
-	],
+	'@stylistic/js/function-paren-newline': ['error', 'multiline-arguments'],
 
 	/**
 	 * Enforce consistent spacing around `*` operators in generator functions.
 	 */
-	'@stylistic/js/generator-star-spacing': [
-		'error',
-		{ after: false, before: true },
-	],
+	'@stylistic/js/generator-star-spacing': ['error', { after: false, before: true }],
 
 	/**
 	 * Enforce the location of arrow function bodies.
@@ -209,18 +170,12 @@ const javascript = {
 	/**
 	 * Enforce the consistent use of either double or single quotes in JSX attributes.
 	 */
-	'@stylistic/js/jsx-quotes': [
-		'error',
-		'prefer-single',
-	],
+	'@stylistic/js/jsx-quotes': ['error', 'prefer-single'],
 
 	/**
 	 * Enforce consistent spacing between keys and values in object literal properties.
 	 */
-	'@stylistic/js/key-spacing': [
-		'error',
-		{ afterColon: true, beforeColon: false },
-	],
+	'@stylistic/js/key-spacing': ['error', { afterColon: true, beforeColon: false }],
 
 	/**
 	 * Enforce consistent spacing before and after keywords.
@@ -253,10 +208,7 @@ const javascript = {
 	/**
 	 * Enforce consistent linebreak style.
 	 */
-	'@stylistic/js/linebreak-style': [
-		'error',
-		'unix',
-	],
+	'@stylistic/js/linebreak-style': ['error', 'unix'],
 
 	/**
 	 * Require empty lines around comments.
@@ -291,26 +243,17 @@ const javascript = {
 	/**
 	 * Enforce a maximum number of statements allowed per line.
 	 */
-	'@stylistic/js/max-statements-per-line': [
-		'off',
-		{ max: 1 },
-	],
+	'@stylistic/js/max-statements-per-line': ['off', { max: 1 }],
 
 	/**
 	 * Enforce a particular style for multiline comments
 	 */
-	'@stylistic/js/multiline-comment-style': [
-		'off',
-		'starred-block',
-	],
+	'@stylistic/js/multiline-comment-style': ['off', 'starred-block'],
 
 	/**
 	 * Enforce newlines between operands of ternary expressions
 	 */
-	'@stylistic/js/multiline-ternary': [
-		'off',
-		'never',
-	],
+	'@stylistic/js/multiline-ternary': ['off', 'never'],
 
 	/**
 	 * Enforce or disallow parentheses when invoking a constructor with no arguments
@@ -320,18 +263,12 @@ const javascript = {
 	/**
 	 * Require a newline after each call in a method chain
 	 */
-	'@stylistic/js/newline-per-chained-call': [
-		'error',
-		{ ignoreChainWithDepth: 4 },
-	],
+	'@stylistic/js/newline-per-chained-call': ['error', { ignoreChainWithDepth: 4 }],
 
 	/**
 	 * Disallow arrow functions where they could be confused with comparisons
 	 */
-	'@stylistic/js/no-confusing-arrow': [
-		'error',
-		{ onlyOneSimpleParam: true },
-	],
+	'@stylistic/js/no-confusing-arrow': ['error', { onlyOneSimpleParam: true }],
 
 	/**
 	 * Disallow unnecessary parentheses
@@ -360,30 +297,12 @@ const javascript = {
 		{
 			allowSamePrecedence: false,
 			groups: [
-				[
-					'%',
-					'**',
-				],
-				[
-					'%',
-					'+',
-				],
-				[
-					'%',
-					'-',
-				],
-				[
-					'%',
-					'*',
-				],
-				[
-					'%',
-					'/',
-				],
-				[
-					'/',
-					'*',
-				],
+				['%', '**'],
+				['%', '+'],
+				['%', '-'],
+				['%', '*'],
+				['%', '/'],
+				['/', '*'],
 				[
 					'&',
 					'|',
@@ -397,10 +316,7 @@ const javascript = {
 					'===',
 					'!==',
 				],
-				[
-					'&&',
-					'||',
-				],
+				['&&', '||'],
 			],
 		},
 	],
@@ -418,10 +334,7 @@ const javascript = {
 	/**
 	 * Disallow multiple empty lines
 	 */
-	'@stylistic/js/no-multiple-empty-lines': [
-		'error',
-		{ max: 1, maxBOF: 0, maxEOF: 0 },
-	],
+	'@stylistic/js/no-multiple-empty-lines': ['error', { max: 1, maxBOF: 0, maxEOF: 0 }],
 
 	/**
 	 * Disallow all tabs
@@ -469,10 +382,7 @@ const javascript = {
 	/**
 	 * Enforce consistent spacing inside braces
 	 */
-	'@stylistic/js/object-curly-spacing': [
-		'error',
-		'always',
-	],
+	'@stylistic/js/object-curly-spacing': ['error', 'always'],
 
 	/**
 	 * Enforce placing object properties on separate lines
@@ -487,10 +397,7 @@ const javascript = {
 	/**
 	 * Require or disallow newlines around variable declarations
 	 */
-	'@stylistic/js/one-var-declaration-per-line': [
-		'error',
-		'always',
-	],
+	'@stylistic/js/one-var-declaration-per-line': ['error', 'always'],
 
 	/**
 	 * Enforce consistent linebreak style for operators
@@ -538,34 +445,22 @@ const javascript = {
 	/**
 	 * Enforce spacing between rest and spread operators and their expressions
 	 */
-	'@stylistic/js/rest-spread-spacing': [
-		'error',
-		'never',
-	],
+	'@stylistic/js/rest-spread-spacing': ['error', 'never'],
 
 	/**
 	 * Require or disallow semicolons instead of ASI
 	 */
-	'@stylistic/js/semi': [
-		'error',
-		'always',
-	],
+	'@stylistic/js/semi': ['error', 'always'],
 
 	/**
 	 * Enforce consistent spacing before and after semicolons
 	 */
-	'@stylistic/js/semi-spacing': [
-		'error',
-		{ after: true, before: false },
-	],
+	'@stylistic/js/semi-spacing': ['error', { after: true, before: false }],
 
 	/**
 	 * Enforce location of semicolons
 	 */
-	'@stylistic/js/semi-style': [
-		'error',
-		'last',
-	],
+	'@stylistic/js/semi-style': ['error', 'last'],
 
 	/**
 	 * Enforce consistent spacing before blocks
@@ -587,10 +482,7 @@ const javascript = {
 	/**
 	 * Enforce consistent spacing inside parentheses
 	 */
-	'@stylistic/js/space-in-parens': [
-		'error',
-		'never',
-	],
+	'@stylistic/js/space-in-parens': ['error', 'never'],
 
 	/**
 	 * Require spacing around infix operators
@@ -618,10 +510,7 @@ const javascript = {
 		{
 			block: {
 				balanced: true,
-				exceptions: [
-					'-',
-					'+',
-				],
+				exceptions: ['-', '+'],
 				markers: [
 					'=',
 					'!',
@@ -630,10 +519,7 @@ const javascript = {
 				],
 			},
 			line: {
-				exceptions: [
-					'-',
-					'+',
-				],
+				exceptions: ['-', '+'],
 				markers: [
 					'=',
 					'!',
@@ -646,10 +532,7 @@ const javascript = {
 	/**
 	 * Enforce spacing around colons of switch statements
 	 */
-	'@stylistic/js/switch-colon-spacing': [
-		'error',
-		{ after: true, before: false },
-	],
+	'@stylistic/js/switch-colon-spacing': ['error', { after: true, before: false }],
 
 	/**
 	 * Require or disallow spacing around embedded expressions of template strings
@@ -659,10 +542,7 @@ const javascript = {
 	/**
 	 * Require or disallow spacing between template tags and their literals
 	 */
-	'@stylistic/js/template-tag-spacing': [
-		'error',
-		'never',
-	],
+	'@stylistic/js/template-tag-spacing': ['error', 'never'],
 
 	/**
 	 * Require parentheses around immediate `function` invocations
@@ -681,10 +561,7 @@ const javascript = {
 	/**
 	 * Require or disallow spacing around the `*` in `yield*` expressions
 	 */
-	'@stylistic/js/yield-star-spacing': [
-		'error',
-		'after',
-	],
+	'@stylistic/js/yield-star-spacing': ['error', 'after'],
 };
 
 export { javascript };

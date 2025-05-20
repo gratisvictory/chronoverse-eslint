@@ -1,11 +1,9 @@
-/* eslint-disable eslint-comments/disable-enable-pair */
-/* eslint-disable @stylistic/js/max-len */
 import { exec } from 'node:child_process';
 import { readFile } from 'node:fs/promises';
-import * as path from 'node:path';
-import * as process from 'node:process';
+import path from 'node:path';
+import process from 'node:process';
 import { promisify } from 'node:util';
-import * as esbuild from 'esbuild';
+import esbuild from 'esbuild';
 
 /**
  * Promisified version of `exec`.
@@ -14,7 +12,7 @@ import * as esbuild from 'esbuild';
 const execAsync = promisify(exec);
 
 /**
- * @typedef {object} BuildOptions
+ * @typedef {Object} BuildOptions
  * @property {string[]} [entryPoints] - Entry points for the build
  * @property {string} [outdir] - Output directory
  * @property {string} [tsconfig] - Path to the tsconfig file
@@ -77,9 +75,7 @@ export const buildTypes = async (tsconfigPath = './tsconfig.json') => {
  */
 export const buildBundle = async (options = {}) => {
 	const {
-		entryPoints = [
-			'src/index.js',
-		],
+		entryPoints = ['src/index.js'],
 		external = [],
 		format = 'esm',
 		minify = true,
@@ -147,9 +143,7 @@ export const buildBundle = async (options = {}) => {
  */
 export const build = async (options = {}) => {
 	const {
-		entryPoints = [
-			'src/index.js',
-		],
+		entryPoints = ['src/index.js'],
 		minify = true,
 		outdir = 'dist',
 		tsconfig = './tsconfig.json',

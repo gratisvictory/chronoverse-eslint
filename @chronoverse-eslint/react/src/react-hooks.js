@@ -11,10 +11,7 @@ const reactHooks = defineConfig([
 	},
 	{
 		name: '@chronoverse/react-hooks/rules',
-		files: [
-			...FILE_PATTERNS.javascript,
-			...FILE_PATTERNS.typescript,
-		],
+		files: [...FILE_PATTERNS.javascript, ...FILE_PATTERNS.typescript],
 		rules: {
 			...eslintReactHooks.configs['recommended-latest'].rules,
 		},

@@ -17,10 +17,7 @@ const react = {
 	/**
 	 * Disallow missing displayName in a React component definition
 	 */
-	'react/display-name': [
-		'off',
-		{ ignoreTranspilerName: false },
-	],
+	'react/display-name': ['off', { ignoreTranspilerName: false }],
 
 	/**
 	 * Disallow certain propTypes
@@ -41,10 +38,7 @@ const react = {
 	/**
 	 * Disallow certain props on DOM Nodes
 	 */
-	'react/forbid-dom-props': [
-		'off',
-		{ forbid: [] },
-	],
+	'react/forbid-dom-props': ['off', { forbid: [] }],
 
 	/**
 	 * Enforce boolean attributes notation in JSX
@@ -58,10 +52,7 @@ const react = {
 	/**
 	 * Enforce closing bracket location in JSX
 	 */
-	'react/jsx-closing-bracket-location': [
-		'error',
-		'line-aligned',
-	],
+	'react/jsx-closing-bracket-location': ['error', 'line-aligned'],
 
 	/**
 	 * Enforce closing tag location for multiline JSX
@@ -91,10 +82,7 @@ const react = {
 	/**
 	 * Enforce props indentation in JSX
 	 */
-	'react/jsx-indent-props': [
-		'error',
-		'tab',
-	],
+	'react/jsx-indent-props': ['error', 'tab'],
 
 	/**
 	 * Disallow missing `key` props in iterators/collection literals
@@ -104,10 +92,7 @@ const react = {
 	/**
 	 * Enforce maximum of props on a single line in JSX
 	 */
-	'react/jsx-max-props-per-line': [
-		'error',
-		{ maximum: 1, when: 'multiline' },
-	],
+	'react/jsx-max-props-per-line': ['error', { maximum: 1, when: 'multiline' }],
 
 	/**
 	 * Disallow `.bind()` or arrow functions in JSX props
@@ -126,18 +111,12 @@ const react = {
 	/**
 	 * Disallow duplicate properties in JSX
 	 */
-	'react/jsx-no-duplicate-props': [
-		'error',
-		{ ignoreCase: true },
-	],
+	'react/jsx-no-duplicate-props': ['error', { ignoreCase: true }],
 
 	/**
 	 * Disallow usage of string literals in JSX
 	 */
-	'react/jsx-no-literals': [
-		'off',
-		{ noStrings: true },
-	],
+	'react/jsx-no-literals': ['off', { noStrings: true }],
 
 	/**
 	 * Disallow undeclared variables in JSX
@@ -262,18 +241,12 @@ const react = {
 	/**
 	 * Enforce ES5 or ES6 class for React Components
 	 */
-	'react/prefer-es6-class': [
-		'error',
-		'always',
-	],
+	'react/prefer-es6-class': ['error', 'always'],
 
 	/**
 	 * Enforce stateless components to be written as a pure function
 	 */
-	'react/prefer-stateless-function': [
-		'error',
-		{ ignorePureComponents: true },
-	],
+	'react/prefer-stateless-function': ['error', { ignorePureComponents: true }],
 
 	/**
 	 * Disallow missing props validation in a React component definition
@@ -336,10 +309,7 @@ const react = {
 					'componentDidCatch',
 					'componentWillUnmount',
 				],
-				rendering: [
-					'/^render.+$/',
-					'render',
-				],
+				rendering: ['/^render.+$/', 'render'],
 			},
 			order: [
 				'static-variables',
@@ -377,35 +347,23 @@ const react = {
 	/**
 	 * Enforce proper position of the first property in JSX
 	 */
-	'react/jsx-first-prop-new-line': [
-		'error',
-		'multiline-multiprop',
-	],
+	'react/jsx-first-prop-new-line': ['error', 'multiline-multiprop'],
 
 	/**
 	 * Enforce or disallow spaces around equal signs in JSX attributes
 	 */
-	'react/jsx-equals-spacing': [
-		'error',
-		'never',
-	],
+	'react/jsx-equals-spacing': ['error', 'never'],
 
 	/**
 	 * Enforce JSX indentation
 	 * @deprecated
 	 */
-	'react/jsx-indent': [
-		'off',
-		'tab',
-	],
+	'react/jsx-indent': ['off', 'tab'],
 
 	/**
 	 * Disallow `target="_blank"` attribute without `rel="noreferrer"`
 	 */
-	'react/jsx-no-target-blank': [
-		'error',
-		{ enforceDynamicLinks: 'always' },
-	],
+	'react/jsx-no-target-blank': ['error', { enforceDynamicLinks: 'always' }],
 
 	/**
 	 * Disallow file extensions that may contain JSX
@@ -413,10 +371,7 @@ const react = {
 	'react/jsx-filename-extension': [
 		'error',
 		{
-			extensions: [
-				'.jsx',
-				'.tsx',
-			],
+			extensions: ['.jsx', '.tsx'],
 		},
 	],
 
@@ -433,10 +388,7 @@ const react = {
 	/**
 	 * Enforce React components to have a shouldComponentUpdate method
 	 */
-	'react/require-optimization': [
-		'off',
-		{ allowDecorators: [] },
-	],
+	'react/require-optimization': ['off', { allowDecorators: [] }],
 
 	/**
 	 * Disallow usage of findDOMNode
@@ -446,18 +398,12 @@ const react = {
 	/**
 	 * Disallow certain props on components
 	 */
-	'react/forbid-component-props': [
-		'off',
-		{ forbid: [] },
-	],
+	'react/forbid-component-props': ['off', { forbid: [] }],
 
 	/**
 	 * Disallow certain elements
 	 */
-	'react/forbid-elements': [
-		'off',
-		{ forbid: [] },
-	],
+	'react/forbid-elements': ['off', { forbid: [] }],
 
 	/**
 	 * Disallow when a DOM element is using both children and dangerouslySetInnerHTML
@@ -507,10 +453,7 @@ const react = {
 	 * Enforce spacing before closing bracket in JSX DEPRECATED
 	 * @deprecated
 	 */
-	'react/jsx-space-before-closing': [
-		'off',
-		'always',
-	],
+	'react/jsx-space-before-closing': ['off', 'always'],
 
 	/**
 	 * Disallow usage of Array index in keys
@@ -530,10 +473,7 @@ const react = {
 	/**
 	 * Disallow using another component's propTypes
 	 */
-	'react/forbid-foreign-prop-types': [
-		'warn',
-		{ allowInPropTypes: true },
-	],
+	'react/forbid-foreign-prop-types': ['warn', { allowInPropTypes: true }],
 
 	/**
 	 * Disallow void DOM elements (e.g. `<img />`, `<br />`) from receiving children
@@ -543,10 +483,7 @@ const react = {
 	/**
 	 * Enforce all defaultProps have a corresponding non-required PropType
 	 */
-	'react/default-props-match-prop-types': [
-		'error',
-		{ allowRequiredDefaults: false },
-	],
+	'react/default-props-match-prop-types': ['error', { allowRequiredDefaults: false }],
 
 	/**
 	 * Disallow usage of shouldComponentUpdate when extending React.PureComponent
@@ -565,10 +502,7 @@ const react = {
 		'off',
 		{
 			message: '',
-			propTypeNames: [
-				'bool',
-				'mutuallyExclusiveTrueProps',
-			],
+			propTypeNames: ['bool', 'mutuallyExclusiveTrueProps'],
 			rule: '^(is|has)[A-Z]([A-Za-z0-9]?)+',
 		},
 	],
@@ -581,26 +515,17 @@ const react = {
 	/**
 	 * Enforce curly braces or disallow unnecessary curly braces in JSX props and/or children
 	 */
-	'react/jsx-curly-brace-presence': [
-		'error',
-		{ children: 'never', props: 'never' },
-	],
+	'react/jsx-curly-brace-presence': ['error', { children: 'never', props: 'never' }],
 
 	/**
 	 * Require one JSX element per line
 	 */
-	'react/jsx-one-expression-per-line': [
-		'error',
-		{ allow: 'single-child' },
-	],
+	'react/jsx-one-expression-per-line': ['error', { allow: 'single-child' }],
 
 	/**
 	 * Enforce consistent usage of destructuring assignment of props, state, and context
 	 */
-	'react/destructuring-assignment': [
-		'error',
-		'always',
-	],
+	'react/destructuring-assignment': ['error', 'always'],
 
 	/**
 	 * Disallow when this.state is accessed within setState
@@ -647,10 +572,7 @@ const react = {
 	/**
 	 * Enforce shorthand or standard form for React fragments
 	 */
-	'react/jsx-fragments': [
-		'error',
-		'syntax',
-	],
+	'react/jsx-fragments': ['error', 'syntax'],
 
 	/**
 	 * Enforce consistent linebreaks in curly braces in JSX attributes and expressions
@@ -666,18 +588,12 @@ const react = {
 	/**
 	 * Enforce class component state initialization style
 	 */
-	'react/state-in-constructor': [
-		'error',
-		'always',
-	],
+	'react/state-in-constructor': ['error', 'always'],
 
 	/**
 	 * Enforces where React component static properties should be positioned.
 	 */
-	'react/static-property-placement': [
-		'error',
-		'property assignment',
-	],
+	'react/static-property-placement': ['error', 'property assignment'],
 
 	/**
 	 * Disallow JSX prop spreading
@@ -705,9 +621,7 @@ const react = {
 		[
 			{
 				name: 'Link',
-				props: [
-					'to',
-				],
+				props: ['to'],
 			},
 		],
 	],
@@ -728,10 +642,7 @@ const react = {
 	'react/function-component-definition': [
 		'error',
 		{
-			namedComponents: [
-				'arrow-function',
-				'arrow-function',
-			],
+			namedComponents: ['arrow-function', 'arrow-function'],
 			unnamedComponents: 'arrow-function',
 		},
 	],

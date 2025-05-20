@@ -55,7 +55,7 @@
   },
   "dependencies": {
     "@chronoverse-shared/utilities": "^3.0.1",
-    "eslint": "^9.26.0",
+    "eslint": "^9.27.0",
     "eslint-plugin-functional": "^9.0.1"
   },
   "devDependencies": {
@@ -64,7 +64,7 @@
     "typescript": "^5.8.3"
   },
   "peerDependencies": {
-    "eslint": "^9.26.0"
+    "eslint": "^9.27.0"
   },
   "packageManager": "bun@1.2.13",
   "engines": {

@@ -18,10 +18,7 @@ const stylisticTs = await (async () => {
 		},
 		{
 			name: '@chronoverse/stylisticTs/rules',
-			files: [
-				...FILE_PATTERNS.typescript,
-				...FILE_PATTERNS.types,
-			],
+			files: [...FILE_PATTERNS.typescript, ...FILE_PATTERNS.types],
 			rules: { ...typescript },
 		},
 	]);

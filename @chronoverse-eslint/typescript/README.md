@@ -37,29 +37,35 @@ bun add -D @chronoverse-eslint/typescript eslint
 Add to your `eslint.config.js`:
 
 ```javascript
-import { typescript } from '@chronoverse-eslint/typescript';
+import { CHRONOVERSE_TYPESCRIPT } from '@chronoverse-eslint/typescript';
 
-export default [
+const eslintConfig = [
   // For TypeScript projects
-  ...typescript,
+  ...CHRONOVERSE_TYPESCRIPT.typescript,
 ];
+
+export default eslintConfig;
 ```
 
 Or with `defineConfig`:
 
 ```javascript
 import { defineConfig } from 'eslint/config';
-import { typescript } from '@chronoverse-eslint/typescript';
+import { CHRONOVERSE_TYPESCRIPT } from '@chronoverse-eslint/typescript';
 
-export default defineConfig([
+export default defineConfig(CHRONOVERSE_JAVASCRIPT.typescript);
+// or
+const eslintConfig = defineConfig([
   // Your custom rules here
-  typescript,
+  CHRONOVERSE_TYPESCRIPT.typescript,
 ]);
+
+export default eslintConfig;
 ```
 
 ## Requirements
 
-- ESLint >=9.26.0
+- ESLint >=9.27.0
 - TypeScript >=5.8.3
 - Bun >=1.2.13
 - Node.js >=23.11.0

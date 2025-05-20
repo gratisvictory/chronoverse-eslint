@@ -31,10 +31,7 @@ const a11y = {
 	/**
 	 * Enforce all anchors to contain accessible content.
 	 */
-	'jsx-a11y/anchor-has-content': [
-		'error',
-		{ components: [] },
-	],
+	'jsx-a11y/anchor-has-content': ['error', { components: [] }],
 
 	/**
 	 * Enforce all anchors are valid, navigable elements
@@ -47,12 +44,8 @@ const a11y = {
 				'invalidHref',
 				'preferButton',
 			],
-			components: [
-				'Link',
-			],
-			specialLink: [
-				'to',
-			],
+			components: ['Link'],
+			specialLink: ['to'],
 		},
 	],
 
@@ -74,10 +67,7 @@ const a11y = {
 	/**
 	 * Enforce that elements with ARIA roles must use a valid, non-abstract ARIA role.
 	 */
-	'jsx-a11y/aria-role': [
-		'error',
-		{ ignoreNonDOM: false },
-	],
+	'jsx-a11y/aria-role': ['error', { ignoreNonDOM: false }],
 
 	/**
 	 * Enforce that elements that do not support ARIA roles, states, and properties do not have those attributes.
@@ -128,9 +118,7 @@ const a11y = {
 				'tree',
 				'treegrid',
 			],
-			labelAttributes: [
-				'label',
-			],
+			labelAttributes: ['label'],
 		},
 	],
 
@@ -140,9 +128,7 @@ const a11y = {
 	'jsx-a11y/heading-has-content': [
 		'error',
 		{
-			components: [
-				'',
-			],
+			components: [''],
 		},
 	],
 
@@ -210,10 +196,7 @@ const a11y = {
 	/**
 	 * Enforce autoFocus prop is not used.
 	 */
-	'jsx-a11y/no-autofocus': [
-		'error',
-		{ ignoreNonDOM: true },
-	],
+	'jsx-a11y/no-autofocus': ['error', { ignoreNonDOM: true }],
 
 	/**
 	 * Enforce distracting elements are not used.
@@ -221,10 +204,7 @@ const a11y = {
 	'jsx-a11y/no-distracting-elements': [
 		'error',
 		{
-			elements: [
-				'marquee',
-				'blink',
-			],
+			elements: ['marquee', 'blink'],
 		},
 	],
 
@@ -234,10 +214,7 @@ const a11y = {
 	'jsx-a11y/no-interactive-element-to-noninteractive-role': [
 		'error',
 		{
-			tr: [
-				'none',
-				'presentation',
-			],
+			tr: ['none', 'presentation'],
 		},
 	],
 
@@ -280,12 +257,8 @@ const a11y = {
 				'tree',
 				'treegrid',
 			],
-			table: [
-				'grid',
-			],
-			td: [
-				'gridcell',
-			],
+			table: ['grid'],
+			td: ['gridcell'],
 			ul: [
 				'listbox',
 				'menu',
@@ -305,9 +278,7 @@ const a11y = {
 		'error',
 		{
 			allowExpressionValues: true,
-			roles: [
-				'tabpanel',
-			],
+			roles: ['tabpanel'],
 			tags: [],
 		},
 	],
@@ -324,9 +295,7 @@ const a11y = {
 	'jsx-a11y/no-redundant-roles': [
 		'error',
 		{
-			nav: [
-				'navigation',
-			],
+			nav: ['navigation'],
 		},
 	],
 
@@ -378,10 +347,7 @@ const a11y = {
 			allowChildren: false,
 			components: [],
 			required: {
-				every: [
-					'nesting',
-					'id',
-				],
+				every: ['nesting', 'id'],
 			},
 		},
 	],

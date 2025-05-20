@@ -8,10 +8,7 @@ const strict = {
 	/**
 	 * Enforce or disallow strict mode.
 	 */
-	strict: [
-		'error',
-		'never',
-	],
+	strict: ['error', 'never'],
 };
 
 export { strict };

@@ -14,9 +14,7 @@ const stylistic = {
 	camelcase: [
 		'error',
 		{
-			allow: [
-				'^UNSAFE_',
-			],
+			allow: ['^UNSAFE_'],
 			ignoreDestructuring: false,
 			properties: 'never',
 		},
@@ -25,34 +23,22 @@ const stylistic = {
 	/**
 	 * Require function expressions to have a name if beneficial.
 	 */
-	'func-names': [
-		'error',
-		'as-needed',
-	],
+	'func-names': ['error', 'as-needed'],
 
 	/**
 	 * Enforce function declarations to be written as expressions.
 	 */
-	'func-style': [
-		'error',
-		'expression',
-	],
+	'func-style': ['error', 'expression'],
 
 	/**
 	 * Limit the number of parameters a function can have.
 	 */
-	'max-params': [
-		'error',
-		MAX_PARAMS,
-	],
+	'max-params': ['error', MAX_PARAMS],
 
 	/**
 	 * Require constructor names to begin with a capital letter.
 	 */
-	'new-cap': [
-		'error',
-		{ capIsNew: false },
-	],
+	'new-cap': ['error', { capIsNew: false }],
 
 	/**
 	 * Require parentheses when invoking a constructor with no arguments.
@@ -94,10 +80,7 @@ const stylistic = {
 	 * Disallow confusing or discouraged syntax patterns.
 	 * @see RULE_OPTIONS.stylisticNoRestrictedSyntax
 	 */
-	'no-restricted-syntax': [
-		'error',
-		...RULE_OPTIONS.stylisticNoRestrictedSyntax,
-	],
+	'no-restricted-syntax': ['error', ...RULE_OPTIONS.stylisticNoRestrictedSyntax],
 
 	/**
 	 * Disallow dangling underscores in identifiers (e.g., `_foo`), except for Node globals.
@@ -105,10 +88,7 @@ const stylistic = {
 	'no-underscore-dangle': [
 		'error',
 		{
-			allow: [
-				'__dirname',
-				'__filename',
-			],
+			allow: ['__dirname', '__filename'],
 		},
 	],
 

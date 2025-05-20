@@ -20,10 +20,7 @@ const extension = {
 	/**
 	 * Disallow unused variables.
 	 */
-	'@typescript-eslint/no-unused-vars': [
-		'error',
-		...RULE_OPTIONS.variablesNoUnusedVariables,
-	],
+	'@typescript-eslint/no-unused-vars': ['error', ...RULE_OPTIONS.variablesNoUnusedVariables],
 	/**
 	 * Disallow unnecessary constructors.
 	 */

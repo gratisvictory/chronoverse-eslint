@@ -6,23 +6,11 @@
  * @returns {import('eslint').Linter.Config['rules']} The merged rules from matching configs
  */
 const getRulesByConfigName = (configName, configs) =>
+	// eslint-disable-next-line unicorn/no-array-reduce
 	configs.reduce((accumulator, config) => {
 		if (config.name === configName && config.rules) return { ...accumulator, ...config.rules };
 		return accumulator;
 		// eslint-disable-next-line @stylistic/js/no-extra-parens
 	}, /** @type {import('eslint').Linter.Config['rules']} */ ({}));
 
-/**
- * Returns a rules object where all keys starting with `unicorn/`
- * are renamed to `unicorn-x/`. All other keys remain unchanged.
- * @param {Record<string, unknown>} rules - The rules object to reformat
- * @returns {import('eslint').Linter.Config['rules']} The reformatted rules object
- */
-const reformattedRules = rules =>
-	Object.keys(rules).reduce((accumulator, rule) => {
-		const newKeys = rule.replace('unicorn/', 'unicorn-x/');
-		// eslint-disable-next-line security/detect-object-injection
-		return { ...accumulator, [newKeys]: rules[rule] };
-	}, {});
-
-export { getRulesByConfigName, reformattedRules };
+export { getRulesByConfigName };

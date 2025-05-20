@@ -11,10 +11,7 @@ const reactCompiler = defineConfig([
 	},
 	{
 		name: '@chronoverse/react-compiler/rules',
-		files: [
-			...FILE_PATTERNS.javascript,
-			...FILE_PATTERNS.typescript,
-		],
+		files: [...FILE_PATTERNS.javascript, ...FILE_PATTERNS.typescript],
 		rules: {
 			...eslintReactCompiler.configs.recommended.rules,
 		},

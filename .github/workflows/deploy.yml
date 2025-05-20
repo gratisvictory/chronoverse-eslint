@@ -14,10 +14,10 @@ jobs:
       - name: Build Tools
         run: bun run build
       - name: Build the Inspector
-        run: 'bun run build:inspector:deploy'
+        run: 'bun run lint:build:inspector'
       - name: Deploy to GitHub Pages (for main branch)
         if: ${{ github.ref == 'refs/heads/main' }}
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: '@chronoverse-eslint/eslint-config/.eslint-config'
+          publish_dir: '.eslint'

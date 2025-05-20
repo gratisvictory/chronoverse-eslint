@@ -44,13 +44,16 @@
     "build:clean": "rimraf dist",
     "build:cli": "bun run clean:all && bun run builder -e src/index.js",
     "clean": "rimraf node_modules",
-    "clean:all": "rimraf dist node_modules"
+    "clean:all": "rimraf dist node_modules",
+    "lint:build:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.typescript.js --outDir .eslint-typescript && bunx serve .eslint-typescript",
+    "lint:dev:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest --config ./eslint.config.typescript.js",
+    "lint:inspector:clean": "rimraf .eslint-typescript"
   },
   "dependencies": {
     "@chronoverse-shared/utilities": "^3.0.1",
     "@susisu/eslint-plugin-safe-typescript": "^0.9.4",
     "@typescript-eslint/eslint-plugin": "^8.32.1",
-    "eslint": "^9.26.0",
+    "eslint": "^9.27.0",
     "eslint-plugin-tsdoc": "^0.4.0"
   },
   "devDependencies": {
@@ -59,7 +62,7 @@
     "typescript": "^5.8.3"
   },
   "peerDependencies": {
-    "eslint": "^9.26.0",
+    "eslint": "^9.27.0",
     "typescript": "^5.8.3"
   },
   "packageManager": "bun@1.2.13",

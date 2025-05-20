@@ -44,9 +44,7 @@ const typescript = {
 	/**
 	 * Disallow inheritance in classes.
 	 */
-	'functional/no-class-inheritance': [
-		'error',
-	],
+	'functional/no-class-inheritance': ['error'],
 
 	/**
 	 * Disallow conditional statements.
@@ -156,23 +154,17 @@ const typescript = {
 			rules: [
 				{
 					comparator: 1,
-					identifiers: [
-						'^I?Immutable.+',
-					],
+					identifiers: ['^I?Immutable.+'],
 					immutability: 5,
 				},
 				{
 					comparator: 1,
-					identifiers: [
-						'^I?ReadonlyDeep.+',
-					],
+					identifiers: ['^I?ReadonlyDeep.+'],
 					immutability: 4,
 				},
 				{
 					comparator: 1,
-					identifiers: [
-						'^I?Readonly.+',
-					],
+					identifiers: ['^I?Readonly.+'],
 					immutability: 3,
 					suggestions: [
 						{
@@ -187,9 +179,7 @@ const typescript = {
 				},
 				{
 					comparator: -1,
-					identifiers: [
-						'^I?Mutable.+',
-					],
+					identifiers: ['^I?Mutable.+'],
 					immutability: 2,
 					suggestions: [
 						{

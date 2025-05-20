@@ -36,13 +36,13 @@ bun add -D @chronoverse-eslint/functional eslint
 Add to your `eslint.config.js`:
 
 ```javascript
-import { functionalJs, functionalTs } from '@chronoverse-eslint/functional';
+import { CHRONOVERSE_FUNCTIONAL } from '@chronoverse-eslint/functional';
 
 export default [
   // For JavaScript projects
-  ...functionalJs,
+  ...CHRONOVERSE_FUNCTIONAL.functionalJs,
   // For TypeScript projects
-  ...functionalTs,
+  ...CHRONOVERSE_FUNCTIONAL.functionalTs,
 ];
 ```
 
@@ -50,18 +50,18 @@ Or with `defineConfig`:
 
 ```javascript
 import { defineConfig } from 'eslint/config';
-import { functionalJs, functionalTs } from '@chronoverse-eslint/functional';
+import { CHRONOVERSE_FUNCTIONAL } from '@chronoverse-eslint/functional';
 
 export default defineConfig([
   // Your custom rules here
-  functionalJs,
-  functionalTs,
+  CHRONOVERSE_FUNCTIONAL.functionalJs,
+  CHRONOVERSE_FUNCTIONAL.functionalTs,
 ]);
 ```
 
 ## Requirements
 
-- ESLint >=9.26.0
+- ESLint >=9.27.0
 - Bun >=1.2.13
 - Node.js >=23.11.0
 

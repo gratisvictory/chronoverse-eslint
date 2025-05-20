@@ -15,9 +15,7 @@ const eslintReactJsx = defineConfig([
 	},
 	{
 		name: '@chronoverse/@eslint-react-jsx/rules',
-		extends: [
-			eslintReactPlugin.configs.recommended,
-		],
+		extends: [eslintReactPlugin.configs.recommended],
 		files: FILE_PATTERNS.javascript,
 	},
 ]);

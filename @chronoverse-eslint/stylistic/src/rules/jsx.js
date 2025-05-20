@@ -12,10 +12,7 @@ const jsx = {
 	/**
 	 * Enforce closing bracket location in JSX.
 	 */
-	'@stylistic/jsx/jsx-closing-bracket-location': [
-		'error',
-		'line-aligned',
-	],
+	'@stylistic/jsx/jsx-closing-bracket-location': ['error', 'line-aligned'],
 
 	/**
 	 * Enforce closing tag location for multiline JSX.
@@ -26,10 +23,7 @@ const jsx = {
 	 * Disallow unnecessary JSX expressions when literals alone are sufficient or enforce JSX expressions
 	 * on literals in JSX children or attributes.
 	 */
-	'@stylistic/jsx/jsx-curly-brace-presence': [
-		'error',
-		{ children: 'never', props: 'never' },
-	],
+	'@stylistic/jsx/jsx-curly-brace-presence': ['error', { children: 'never', props: 'never' }],
 
 	/**
 	 * Enforce consistent linebreaks in curly braces in JSX attributes and expressions.
@@ -54,51 +48,33 @@ const jsx = {
 	/**
 	 * Enforce or disallow spaces around equal signs in JSX attributes.
 	 */
-	'@stylistic/jsx/jsx-equals-spacing': [
-		'error',
-		'never',
-	],
+	'@stylistic/jsx/jsx-equals-spacing': ['error', 'never'],
 
 	/**
 	 * Enforce proper position of the first property in JSX.
 	 */
-	'@stylistic/jsx/jsx-first-prop-new-line': [
-		'error',
-		'multiline-multiprop',
-	],
+	'@stylistic/jsx/jsx-first-prop-new-line': ['error', 'multiline-multiprop'],
 
 	/**
 	 * Enforce line breaks before and after JSX elements when they are used as arguments to a function.
 	 */
-	'@stylistic/jsx/jsx-function-call-newline': [
-		'error',
-		'always',
-	],
+	'@stylistic/jsx/jsx-function-call-newline': ['error', 'always'],
 
 	/**
 	 * Enforce JSX indentation. Deprecated, use `indent` rule instead.
 	 * @deprecated
 	 */
-	'@stylistic/jsx/jsx-indent': [
-		'off',
-		'tab',
-	],
+	'@stylistic/jsx/jsx-indent': ['off', 'tab'],
 
 	/**
 	 * Enforce props indentation in JSX.
 	 */
-	'@stylistic/jsx/jsx-indent-props': [
-		'error',
-		'tab',
-	],
+	'@stylistic/jsx/jsx-indent-props': ['error', 'tab'],
 
 	/**
 	 * Enforce maximum of props on a single line in JSX.
 	 */
-	'@stylistic/jsx/jsx-max-props-per-line': [
-		'error',
-		{ maximum: 1, when: 'multiline' },
-	],
+	'@stylistic/jsx/jsx-max-props-per-line': ['error', { maximum: 1, when: 'multiline' }],
 
 	/**
 	 * Require or prevent a new line after jsx elements and expressions.
@@ -108,10 +84,7 @@ const jsx = {
 	/**
 	 * Require one JSX element per line.
 	 */
-	'@stylistic/jsx/jsx-one-expression-per-line': [
-		'error',
-		{ allow: 'single-child' },
-	],
+	'@stylistic/jsx/jsx-one-expression-per-line': ['error', { allow: 'single-child' }],
 
 	/**
 	 * Enforce PascalCase for user-defined JSX components.

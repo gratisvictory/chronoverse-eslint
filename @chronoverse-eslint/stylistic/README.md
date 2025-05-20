@@ -35,32 +35,36 @@ Add to your ESLint configuration:
 
 ```javascript
 // eslint.config.js
-import { stylisticJs, stylisticTs, stylisticJsx, stylisticPlus } from '@chronoverse-eslint/stylistic';
+import { CHRONOVERSE_STYLISTIC } from '@chronoverse-eslint/stylistic';
 
-export default [
-  stylisticJs,
-  stylisticTs,
-  stylisticJsx,
-  stylisticPlus,
+const eslintConfig = [
+  ...CHRONOVERSE_STYLISTIC.stylisticJs,
+  ...CHRONOVERSE_STYLISTIC.stylisticTs,
+  ...CHRONOVERSE_STYLISTIC.stylisticJsx,
+  ...CHRONOVERSE_STYLISTIC.stylisticPlus,
   // Your custom rules here
 ];
+
+export default eslintConfig;
 ```
 
 Or use `defineConfig` with all stylistic rules:
 
 ```javascript
 import { defineConfig } from 'eslint/config';
-import { stylisticJs, stylisticJsx, stylisticPlus, stylisticTs } from '@chronoverse-eslint/stylistic';
+import { CHRONOVERSE_STYLISTIC } from '@chronoverse-eslint/stylistic';
 import { eslintIgnores } from '@chronoverse-shared/utilities';
 
-export default defineConfig([
-  eslintIgnores,
-  stylisticJs,
-  stylisticPlus,
-  stylisticJsx,
-  stylisticTs,
+const eslintConfig = defineConfig([
+  CHRONOVERSE_STYLISTIC.eslintIgnores,
+  CHRONOVERSE_STYLISTIC.stylisticJs,
+  CHRONOVERSE_STYLISTIC.stylisticPlus,
+  CHRONOVERSE_STYLISTIC.stylisticJsx,
+  CHRONOVERSE_STYLISTIC.stylisticTs,
   // Your custom rules here
 ]);
+
+export default eslintConfig;
 ```
 
 ## Available Rule Sets
@@ -72,7 +76,7 @@ export default defineConfig([
 
 ## Requirements
 
-- ESLint ≥ 9.26.0
+- ESLint ≥ 9.27.0
 - Node.js ≥ 23.11.0
 - Bun ≥ 1.2.13
 

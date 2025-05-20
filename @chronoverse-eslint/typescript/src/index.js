@@ -26,10 +26,7 @@ const typescript = await (async () => {
 		},
 		{
 			name: '@chronoverse/typescript/rules',
-			files: [
-				...FILE_PATTERNS.typescript,
-				...FILE_PATTERNS.types,
-			],
+			files: FILE_PATTERNS.typescript,
 			rules: {
 				...tsPlugin.configs.recommended.rules,
 				...tsPlugin.configs['strict-type-checked'].rules,
@@ -43,4 +40,8 @@ const typescript = await (async () => {
 	]);
 })();
 
-export { typescript };
+const CHRONOVERSE_TYPESCRIPT = {
+	typescript,
+};
+
+export { CHRONOVERSE_TYPESCRIPT };

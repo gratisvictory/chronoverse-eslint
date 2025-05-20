@@ -35,48 +35,33 @@ Add to your ESLint configuration:
 
 ```javascript
 // eslint.config.js
-import { javascript } from '@chronoverse-eslint/javascript';
+import { CHRONOVERSE_JAVASCRIPT } from '@chronoverse-eslint/javascript';
 
-export default [
-  ...javascript,
+const eslintConfig = [
+  ...CHRONOVERSE_JAVASCRIPT.javascript,
   // Your custom rules here
 ];
+
+export default eslintConfig
 ```
 
 Or with `defineConfig`:
 
 ```javascript
 import { defineConfig } from 'eslint/config';
-import { javascript } from '@chronoverse-eslint/javascript';
+import { CHRONOVERSE_JAVASCRIPT } from '@chronoverse-eslint/javascript';
 
-export default defineConfig(javascript);
+export default defineConfig(CHRONOVERSE_JAVASCRIPT.javascript);
 // or
 export default defineConfig([
-  javascript,
+  CHRONOVERSE_JAVASCRIPT.javascript,
   // Your custom rules here
 ]);
 ```
 
-## Examples
-
-Check out our [examples directory](https://github.com/gratisvictory/chronoverse-eslint/tree/main/examples/vanilla-js) to see practical demonstrations of ESLint rules in action:
-
-- **Array Methods** - Proper return statements in callbacks
-- **Variable Usage** - Best practices for const/let declarations
-- **Equality Operators** - Why strict equality (===) matters
-- **Object Syntax** - Modern shorthand property syntax
-- **Template Literals** - Clean string interpolation
-- **Destructuring** - Elegant object property access
-- **Arrow Functions** - Concise function expressions
-- **Code Blocks** - Properly structured conditionals
-- **Callback Patterns** - Error handling in asynchronous code
-- **Security Practices** - Avoiding risky functions
-
-Each example includes both problematic code (that ESLint flags) and the recommended approach.
-
 ## Requirements
 
-- ESLint ≥ 9.26.0
+- ESLint ≥ 9.27.0
 - Node.js ≥ 23.11.0
 - Bun ≥ 1.2.13
 

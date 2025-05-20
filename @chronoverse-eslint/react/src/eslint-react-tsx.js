@@ -15,9 +15,7 @@ const eslintReactTsx = await (async () => {
 		},
 		{
 			name: '@chronoverse/@eslint-react-tsx/rules',
-			extends: [
-				eslintReactPlugin.configs['recommended-typescript'],
-			],
+			extends: [eslintReactPlugin.configs['recommended-typescript']],
 			files: FILE_PATTERNS.typescript,
 		},
 	]);

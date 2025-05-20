@@ -54,7 +54,7 @@
     "esbuild": "^0.25.4"
   },
   "devDependencies": {
-    "@types/node": "^22.15.17",
+    "@types/node": "^22.15.19",
     "rimraf": "^6.0.1"
   },
   "peerDependencies": {

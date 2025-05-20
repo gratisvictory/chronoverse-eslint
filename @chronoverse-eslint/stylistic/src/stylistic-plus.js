@@ -12,10 +12,7 @@ const stylisticPlus = defineConfig([
 	},
 	{
 		name: '@chronoverse/stylisticPlus/rules',
-		files: [
-			...FILE_PATTERNS.javascript,
-			...FILE_PATTERNS.typescript,
-		],
+		files: [...FILE_PATTERNS.javascript, ...FILE_PATTERNS.typescript],
 		rules: { ...plus },
 	},
 ]);

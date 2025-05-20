@@ -1,16 +1,13 @@
 import { chmod, mkdir, readFile, writeFile } from 'node:fs/promises';
-import { dirname, join } from 'node:path';
+import path from 'node:path';
 import process from 'node:process';
 import { fileURLToPath } from 'node:url';
 import * as esbuild from 'esbuild';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const rootDirectory = join(__dirname, '..');
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const rootDirectory = path.join(__dirname, '..');
 
-const entryPoints = [
-	'src/index.js',
-	'src/cli.js',
-];
+const entryPoints = ['src/index.js', 'src/cli.js'];
 
 const outdir = 'dist';
 
@@ -60,18 +57,15 @@ const buildSelf = async () => {
 	console.log('📦 Building @chronoverse-shared/builder...');
 
 	try {
-		await ensureDirectory(join(rootDirectory, outdir));
+		await ensureDirectory(path.join(rootDirectory, outdir));
 
 		const result = await esbuild.build({
 			bundle: true,
-			entryPoints: entryPoints.map(entry => join(rootDirectory, entry)),
-			external: [
-				'esbuild',
-				'node:*',
-			],
+			entryPoints: entryPoints.map(entry => path.join(rootDirectory, entry)),
+			external: ['esbuild', 'node:*'],
 			format: 'esm',
 			metafile: true,
-			outdir: join(rootDirectory, outdir),
+			outdir: path.join(rootDirectory, outdir),
 			platform: 'node',
 			sourcemap: false,
 			target: 'esnext',
@@ -80,7 +74,7 @@ const buildSelf = async () => {
 		console.log('✅ Build completed successfully!');
 
 		// Handle CLI file
-		const cliFilePath = join(rootDirectory, outdir, 'cli.js');
+		const cliFilePath = path.join(rootDirectory, outdir, 'cli.js');
 		await addShebang(cliFilePath);
 		await makeExecutable(cliFilePath);
 
@@ -91,6 +85,7 @@ const buildSelf = async () => {
 		console.log('🎉 Build complete!');
 	} catch (error) {
 		console.error('❌ Build failed:', error);
+		// eslint-disable-next-line unicorn/no-process-exit
 		process.exit(1);
 	}
 };
@@ -103,6 +98,7 @@ const main = async () => {
 		await buildSelf();
 	} catch (error) {
 		console.error('❌ Unexpected error:', error);
+		// eslint-disable-next-line unicorn/no-process-exit
 		process.exit(1);
 	}
 };

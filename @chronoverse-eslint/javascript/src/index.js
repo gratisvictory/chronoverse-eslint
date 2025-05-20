@@ -62,4 +62,8 @@ const javascript = defineConfig([
 	},
 ]);
 
-export { javascript };
+const CHRONOVERSE_JAVASCRIPT = {
+	javascript,
+};
+
+export { CHRONOVERSE_JAVASCRIPT };

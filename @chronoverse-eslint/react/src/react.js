@@ -20,10 +20,7 @@ const react = defineConfig([
 	},
 	{
 		name: '@chronoverse/react/rules',
-		files: [
-			...FILE_PATTERNS.javascript,
-			...FILE_PATTERNS.typescript,
-		],
+		files: [...FILE_PATTERNS.javascript, ...FILE_PATTERNS.typescript],
 		rules: {
 			...reactPlugin.configs.flat.recommended.rules,
 			...reactRules,

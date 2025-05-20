@@ -10,10 +10,7 @@ const bestPractice = {
 	/**
 	 * Enforce return statements in array method callbacks (e.g., map, filter).
 	 */
-	'array-callback-return': [
-		'error',
-		{ allowImplicit: true },
-	],
+	'array-callback-return': ['error', { allowImplicit: true }],
 
 	/**
 	 * Treat `var` as block-scoped (discouraged, prefer `let`/`const`).
@@ -38,18 +35,12 @@ const bestPractice = {
 	/**
 	 * Require curly braces for multi-line blocks.
 	 */
-	curly: [
-		'error',
-		'multi-line',
-	],
+	curly: ['error', 'multi-line'],
 
 	/**
 	 * Require a `default` case in `switch` statements.
 	 */
-	'default-case': [
-		'error',
-		{ commentPattern: '^no default$' },
-	],
+	'default-case': ['error', { commentPattern: '^no default$' }],
 
 	/**
 	 * Require `default` clause to be last in `switch`.
@@ -69,18 +60,12 @@ const bestPractice = {
 	/**
 	 * Prefer dot notation when accessing object properties.
 	 */
-	'dot-notation': [
-		'error',
-		{ allowKeywords: true },
-	],
+	'dot-notation': ['error', { allowKeywords: true }],
 
 	/**
 	 * Require strict equality operators (`===`, `!==`).
 	 */
-	eqeqeq: [
-		'error',
-		'always',
-	],
+	eqeqeq: ['error', 'always'],
 
 	/**
 	 * Group getters/setters in class/object declarations.
@@ -95,10 +80,7 @@ const bestPractice = {
 	/**
 	 * Limit number of classes per file.
 	 */
-	'max-classes-per-file': [
-		'error',
-		1,
-	],
+	'max-classes-per-file': ['error', 1],
 
 	/**
 	 * Disallow `alert`, `confirm`, `prompt`.
@@ -128,10 +110,7 @@ const bestPractice = {
 	/**
 	 * Disallow `else` after `return`.
 	 */
-	'no-else-return': [
-		'error',
-		{ allowElseIf: false },
-	],
+	'no-else-return': ['error', { allowElseIf: false }],
 
 	/**
 	 * Disallow empty functions (except arrow, methods, etc.).
@@ -185,10 +164,7 @@ const bestPractice = {
 	/**
 	 * Disallow fallthrough in `switch` statements.
 	 */
-	'no-fallthrough': [
-		'error',
-		{ commentPattern: '.*intentional fallthrough.*' },
-	],
+	'no-fallthrough': ['error', { commentPattern: '.*intentional fallthrough.*' }],
 
 	/**
 	 * @deprecated — handled by Prettier.
@@ -198,10 +174,7 @@ const bestPractice = {
 	/**
 	 * Disallow global reassignments (e.g., `undefined = 123`).
 	 */
-	'no-global-assign': [
-		'error',
-		{ exceptions: [] },
-	],
+	'no-global-assign': ['error', { exceptions: [] }],
 
 	/**
 	 * Disallow implicit type coercion (e.g., `+foo`, `!!bar`).
@@ -209,9 +182,7 @@ const bestPractice = {
 	'no-implicit-coercion': [
 		'error',
 		{
-			allow: [
-				'!!',
-			],
+			allow: ['!!'],
 		},
 	],
 
@@ -238,10 +209,7 @@ const bestPractice = {
 	/**
 	 * Disallow labels except in loops/switches.
 	 */
-	'no-labels': [
-		'error',
-		{ allowLoop: false, allowSwitch: false },
-	],
+	'no-labels': ['error', { allowLoop: false, allowSwitch: false }],
 
 	/**
 	 * Disallow unnecessary nested blocks.
@@ -256,10 +224,7 @@ const bestPractice = {
 	/**
 	 * Disable rule enforcing no magic numbers.
 	 */
-	'no-magic-numbers': [
-		'off',
-		{ enforceConst: true, ignoreArrayIndexes: true },
-	],
+	'no-magic-numbers': ['off', { enforceConst: true, ignoreArrayIndexes: true }],
 
 	/**
 	 * @deprecated — handled by Prettier.
@@ -348,18 +313,12 @@ const bestPractice = {
 	 * Disallow certain object properties (e.g., `assert.equal`).
 	 * @see RULE_OPTIONS.bestPracticesNoRestrictedProperties
 	 */
-	'no-restricted-properties': [
-		'error',
-		...RULE_OPTIONS.bestPracticesNoRestrictedProperties,
-	],
+	'no-restricted-properties': ['error', ...RULE_OPTIONS.bestPracticesNoRestrictedProperties],
 
 	/**
 	 * Disallow assignment in return statements.
 	 */
-	'no-return-assign': [
-		'error',
-		'always',
-	],
+	'no-return-assign': ['error', 'always'],
 
 	/**
 	 * @deprecated — often incorrect in async functions.
@@ -374,10 +333,7 @@ const bestPractice = {
 	/**
 	 * Disallow self-assignment.
 	 */
-	'no-self-assign': [
-		'error',
-		{ props: true },
-	],
+	'no-self-assign': ['error', { props: true }],
 
 	/**
 	 * Disallow self-comparisons (`a === a`).
@@ -479,18 +435,12 @@ const bestPractice = {
 	/**
 	 * Require `Error` objects in Promise rejections.
 	 */
-	'prefer-promise-reject-errors': [
-		'error',
-		{ allowEmptyReject: true },
-	],
+	'prefer-promise-reject-errors': ['error', { allowEmptyReject: true }],
 
 	/**
 	 * Prefer regex literals over `RegExp` constructor.
 	 */
-	'prefer-regex-literals': [
-		'error',
-		{ disallowRedundantWrapping: true },
-	],
+	'prefer-regex-literals': ['error', { disallowRedundantWrapping: true }],
 
 	/**
 	 * Require radix argument in `parseInt()`.

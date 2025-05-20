@@ -7,10 +7,7 @@ const typescript = {
 	/**
 	 * Disallow or enforce spaces inside of blocks after opening block and before closing block
 	 */
-	'@stylistic/ts/block-spacing': [
-		'error',
-		'always',
-	],
+	'@stylistic/ts/block-spacing': ['error', 'always'],
 
 	/**
 	 * Enforce consistent brace style for blocks
@@ -41,18 +38,12 @@ const typescript = {
 	/**
 	 * Enforce consistent spacing before and after commas
 	 */
-	'@stylistic/ts/comma-spacing': [
-		'error',
-		{ after: true, before: false },
-	],
+	'@stylistic/ts/comma-spacing': ['error', { after: true, before: false }],
 
 	/**
 	 * Require or disallow spacing between function identifiers and their invocations
 	 */
-	'@stylistic/ts/function-call-spacing': [
-		'error',
-		'never',
-	],
+	'@stylistic/ts/function-call-spacing': ['error', 'never'],
 
 	/**
 	 * Enforce consistent indentation
@@ -62,10 +53,7 @@ const typescript = {
 	/**
 	 * Enforce consistent spacing between property names and type annotations in types and interfaces
 	 */
-	'@stylistic/ts/key-spacing': [
-		'error',
-		{ afterColon: true, beforeColon: false },
-	],
+	'@stylistic/ts/key-spacing': ['error', { afterColon: true, beforeColon: false }],
 
 	/**
 	 * Enforce consistent spacing before and after keywords.
@@ -138,10 +126,7 @@ const typescript = {
 	/**
 	 * Enforce consistent spacing inside braces
 	 */
-	'@stylistic/ts/object-curly-spacing': [
-		'error',
-		'always',
-	],
+	'@stylistic/ts/object-curly-spacing': ['error', 'always'],
 
 	/**
 	 * Enforce placing object properties on separate lines
@@ -170,26 +155,17 @@ const typescript = {
 	/**
 	 * Enforce the consistent use of either backticks, double, or single quotes
 	 */
-	'@stylistic/ts/quotes': [
-		'error',
-		'single',
-	],
+	'@stylistic/ts/quotes': ['error', 'single'],
 
 	/**
 	 * Require or disallow semicolons instead of ASI
 	 */
-	'@stylistic/ts/semi': [
-		'error',
-		'always',
-	],
+	'@stylistic/ts/semi': ['error', 'always'],
 
 	/**
 	 * Enforce consistent spacing before and after semicolons
 	 */
-	'@stylistic/ts/semi-spacing': [
-		'error',
-		{ after: true, before: false },
-	],
+	'@stylistic/ts/semi-spacing': ['error', { after: true, before: false }],
 
 	/**
 	 * Enforce consistent spacing before blocks

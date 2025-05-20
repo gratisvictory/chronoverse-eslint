@@ -14,9 +14,7 @@ const disables = defineConfig([
 	},
 	{
 		name: '@chronoverse/disables/nextjs',
-		files: [
-			'{src/app,app}/**/{page,layout,not-found,error,loading}.{jsx,tsx}',
-		],
+		files: ['{src/app,app}/**/{page,layout,not-found,error,loading}.{jsx,tsx}'],
 		rules: {
 			'react/react-in-jsx-scope': 'off',
 		},
@@ -30,4 +28,8 @@ const disables = defineConfig([
 	},
 ]);
 
-export { disables };
+const CHRONOVERSE_DISABLES = {
+	disables,
+};
+
+export { CHRONOVERSE_DISABLES };

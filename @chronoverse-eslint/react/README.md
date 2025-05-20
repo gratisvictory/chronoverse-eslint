@@ -37,28 +37,21 @@ bun add -D @chronoverse-eslint/react eslint
 Add to your `eslint.config.js`:
 
 ```javascript
-import {
-  react,
-  jsxA11y,
-  reactHooks,
-  reactCompiler,
-  eslintReactJsx,
-  eslintReactTsx
-} from '@chronoverse-eslint/react';
+import { CHRONOVERSE_REACT } from '@chronoverse-eslint/react';
 
 export default [
   // Core React rules
-  ...react,
+  ...CHRONOVERSE_REACT.react,
   // Accessibility rules
-  ...jsxA11y,
+  ...CHRONOVERSE_REACT.jsxA11y,
   // React Hooks rules
-  ...reactHooks,
+  ...CHRONOVERSE_REACT.reactHooks,
   // React Compiler support
-  ...reactCompiler,
+  ...CHRONOVERSE_REACT.reactCompiler,
   // For React JavaScript projects
-  ...eslintReactJsx,
+  ...CHRONOVERSE_REACT.eslintReactJsx,
   // For React TypeScript projects
-  ...eslintReactTsx,
+  ...CHRONOVERSE_REACT.eslintReactTsx,
 ];
 ```
 
@@ -66,29 +59,22 @@ Or with `defineConfig`:
 
 ```javascript
 import { defineConfig } from 'eslint/config';
-import {
-  react,
-  jsxA11y,
-  reactHooks,
-  reactCompiler,
-  eslintReactJsx,
-  eslintReactTsx
-} from '@chronoverse-eslint/react';
+import { CHRONOVERSE_REACT } from '@chronoverse-eslint/react';
 
 export default defineConfig([
-  react,
-  jsxA11y,
-  reactHooks,
-  reactCompiler,
-  eslintReactJsx,
-  eslintReactTsx,
+  CHRONOVERSE_REACT.react,
+  CHRONOVERSE_REACT.jsxA11y,
+  CHRONOVERSE_REACT.reactHooks,
+  CHRONOVERSE_REACT.reactCompiler,
+  CHRONOVERSE_REACT.eslintReactJsx,
+  CHRONOVERSE_REACT.eslintReactTsx,
   // Your custom rules here
 ]);
 ```
 
 ## Requirements
 
-- ESLint >=9.26.0
+- ESLint >=9.27.0
 - React >=19.1.0
 - TypeScript >=5.8.3 (for TypeScript support)
 - Bun >=1.2.13

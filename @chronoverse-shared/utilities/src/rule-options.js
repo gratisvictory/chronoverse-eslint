@@ -1,5 +1,5 @@
 /**
- * @typedef {object} NoUnusedVarsOption
+ * @typedef {Object} NoUnusedVarsOption
  * @property {'all'} vars - Check all variables.
  * @property {string} varsIgnorePattern - Regex pattern to ignore certain variables.
  * @property {'after-used'} args - Check arguments after they are used.
@@ -9,13 +9,13 @@
 
 /**
  * Restricted global variable entry.
- * @typedef {object} RestrictedGlobal
+ * @typedef {Object} RestrictedGlobal
  * @property {string} name - The name of the restricted global variable.
  * @property {string} message - A message explaining why it's restricted and what to use instead.
  */
 
 /**
- * @typedef {object} RestrictedProperty
+ * @typedef {Object} RestrictedProperty
  * @property {string} [object] - Object name (e.g., "assert", "arguments", "window").
  * @property {string} property - Property name to restrict (e.g., "equal", "callee").
  * @property {string} message - Explanation or alternative suggestion.

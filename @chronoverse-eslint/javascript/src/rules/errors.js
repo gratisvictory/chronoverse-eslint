@@ -14,10 +14,7 @@ const errors = {
 	/**
 	 * Enforce return statements in getters.
 	 */
-	'getter-return': [
-		'error',
-		{ allowImplicit: true },
-	],
+	'getter-return': ['error', { allowImplicit: true }],
 
 	/**
 	 * Disallow `await` inside loops.
@@ -61,10 +58,7 @@ const errors = {
 	/**
 	 * Disallow assignments in conditional expressions.
 	 */
-	'no-cond-assign': [
-		'error',
-		'except-parens',
-	],
+	'no-cond-assign': ['error', 'except-parens'],
 
 	/**
 	 * Disallow comparisons to -0.
@@ -84,18 +78,12 @@ const errors = {
 	/**
 	 * Disallow negating the left operand of `in`.
 	 */
-	'no-unsafe-negation': [
-		'error',
-		{ enforceForOrderingRelations: true },
-	],
+	'no-unsafe-negation': ['error', { enforceForOrderingRelations: true }],
 
 	/**
 	 * Disallow unsafe usage of optional chaining (`?.`).
 	 */
-	'no-unsafe-optional-chaining': [
-		'error',
-		{ disallowArithmeticOperators: true },
-	],
+	'no-unsafe-optional-chaining': ['error', { disallowArithmeticOperators: true }],
 
 	/**
 	 * Enforce `isNaN(x)` or `Number.isNaN(x)` instead of `x === NaN`.
@@ -105,10 +93,7 @@ const errors = {
 	/**
 	 * Enforce valid `typeof` comparisons.
 	 */
-	'valid-typeof': [
-		'error',
-		{ requireStringLiterals: true },
-	],
+	'valid-typeof': ['error', { requireStringLiterals: true }],
 
 	/** Regex & Strings */
 
@@ -177,10 +162,7 @@ const errors = {
 	'no-console': [
 		'warn',
 		{
-			allow: [
-				'warn',
-				'error',
-			],
+			allow: ['warn', 'error'],
 		},
 	],
 
