@@ -14,7 +14,7 @@ jobs:
       - name: Build Tools
         run: bun run build
       - name: Build the Inspector
-        run: 'bun run lint:build:inspector'
+        run: 'bun run lint:inspector:deploy'
       - name: Deploy to GitHub Pages (for main branch)
         if: ${{ github.ref == 'refs/heads/main' }}
         uses: peaceiris/actions-gh-pages@v4
