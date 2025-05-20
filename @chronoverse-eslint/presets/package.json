@@ -1,6 +1,6 @@
 {
   "name": "@chronoverse-eslint/presets",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": false,
   "description": "Comprehensive collection of ESLint presets for modern JavaScript and TypeScript projects",
   "keywords": [
@@ -54,7 +54,7 @@
     "lint:inspector:clean": "rimraf .eslint-presets"
   },
   "dependencies": {
-    "@chronoverse-shared/utilities": "^3.0.1",
+    "@chronoverse-shared/utilities": "^3.1.1",
     "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
     "@eslint/css": "^0.8.1",
     "@eslint/json": "^0.12.0",
