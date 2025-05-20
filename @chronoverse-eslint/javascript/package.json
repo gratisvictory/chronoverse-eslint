@@ -1,6 +1,6 @@
 {
   "name": "@chronoverse-eslint/javascript",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "private": false,
   "description": "Modern ESLint configuration for JavaScript projects focused on best practices and performance optimization",
   "keywords": [
@@ -48,7 +48,7 @@
     "lint:inspector:clean": "rimraf .eslint-javascript"
   },
   "dependencies": {
-    "@chronoverse-shared/utilities": "^3.0.1",
+    "@chronoverse-shared/utilities": "^3.1.1",
     "eslint": "^9.27.0",
     "eslint-config-eslint": "^11.0.0"
   },

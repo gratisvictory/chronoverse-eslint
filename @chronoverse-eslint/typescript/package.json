@@ -1,6 +1,6 @@
 {
   "name": "@chronoverse-eslint/typescript",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "private": false,
   "description": "Comprehensive ESLint configuration for TypeScript projects focusing on type safety, code quality, and best practices",
   "keywords": [
@@ -50,7 +50,7 @@
     "lint:inspector:clean": "rimraf .eslint-typescript"
   },
   "dependencies": {
-    "@chronoverse-shared/utilities": "^3.0.1",
+    "@chronoverse-shared/utilities": "^3.1.1",
     "@susisu/eslint-plugin-safe-typescript": "^0.9.4",
     "@typescript-eslint/eslint-plugin": "^8.32.1",
     "eslint": "^9.27.0",
