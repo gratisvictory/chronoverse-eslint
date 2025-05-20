@@ -20,7 +20,7 @@ const disables = defineConfig([
 		},
 	},
 	{
-		name: '@chronoverse/disables/unicornX',
+		name: '@chronoverse/disables/unicorn',
 		files: FILE_PATTERNS.types,
 		rules: {
 			'unicorn-x/prevent-abbreviations': 'off',
