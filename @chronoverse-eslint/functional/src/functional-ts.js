@@ -1,27 +1,32 @@
-import { FILE_PATTERNS, getTsLanguageOptions, interopDefault } from '@chronoverse-shared/utilities';
-import { defineConfig } from 'eslint/config';
-import { typescript } from './rules/typescript.js';
+import { onlyTypescript } from '@chronoverse-shared/utilities/files';
+import typescriptEslint from 'typescript-eslint';
+import functional from 'eslint-plugin-functional';
 
-const functionalTs = await (async () => {
-	const tsOptions = await getTsLanguageOptions();
-	const functionalTsPlugin = await interopDefault(import('eslint-plugin-functional'));
-	return defineConfig([
-		{
-			name: '@chronoverse/functionalTs/setup',
-			languageOptions: {
-				parser: tsOptions.parser,
-				parserOptions: tsOptions.parserOptions,
-			},
-			plugins: {
-				functional: functionalTsPlugin,
+/** @type {import('eslint').Linter.Config} */
+const functionalTs = [
+	{
+		name: '@chronoverse-eslint/functional-ts/setup',
+		languageOptions: {
+			parser: typescriptEslint.parser,
+			parserOptions: {
+				projectService: true,
+				ecmaVersion: 'latest',
+				sourceType: 'module',
 			},
 		},
-		{
-			name: '@chronoverse/functionalTs/rules',
-			files: FILE_PATTERNS.onlyTypescript,
-			rules: { ...typescript },
+		plugins: {
+			functional,
 		},
-	]);
-})();
+	},
+	{
+		name: '@chronoverse-eslint/functional-ts/rules',
+		files: onlyTypescript,
+		rules: {
+			...functional.configs.externalTypeScriptRecommended.rules,
+			...functional.configs.recommended.rules,
+			...functional.configs.stylistic.rules,
+		},
+	},
+];
 
 export { functionalTs };

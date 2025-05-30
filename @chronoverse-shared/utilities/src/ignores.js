@@ -8,10 +8,10 @@ import { EXCLUDE_PATTERNS } from './constants.js';
  */
 const eslintIgnores = defineConfig([
 	/** Respect .gitignore files */
-	gitignore({ name: '@chronoverse/gitignore' }),
+	gitignore({ name: '@chronoverse-eslint/gitignore' }),
 
 	/** Custom project-level excludes (e.g., dist, .cache, etc.) */
-	globalIgnores(EXCLUDE_PATTERNS, '@chronoverse/ignores'),
+	globalIgnores(EXCLUDE_PATTERNS, '@chronoverse-eslint/ignores'),
 ]);
 
 export { eslintIgnores };

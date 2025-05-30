@@ -30,6 +30,30 @@
     ".": {
       "import": "./dist/index.js",
       "types": "./dist/@types/index.d.ts"
+    },
+    "./constants": {
+      "import": "./dist/constants.js",
+      "types": "./dist/@types/constants.d.ts"
+    },
+    "./disables": {
+      "import": "./dist/disables.js",
+      "types": "./dist/@types/disables.d.ts"
+    },
+    "./files": {
+      "import": "./dist/files.js",
+      "types": "./dist/@types/files.d.ts"
+    },
+    "./globals": {
+      "import": "./dist/globals.js",
+      "types": "./dist/@types/globals.d.ts"
+    },
+    "./ignores": {
+      "import": "./dist/ignores.js",
+      "types": "./dist/@types/ignores.d.ts"
+    },
+    "./rule-options": {
+      "import": "./dist/rule-options.js",
+      "types": "./dist/@types/rule-options.d.ts"
     }
   },
   "main": "./dist/index.js",

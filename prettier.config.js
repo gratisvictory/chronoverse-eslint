@@ -1,7 +1,7 @@
-import { FILE_PATTERNS } from '@chronoverse-shared/utilities';
+import { json, json5, jsonc } from '@chronoverse-shared/utilities/files';
 
 /** @type {import('prettier').Config} */
-const config = {
+const prettierConfig = {
 	plugins: [
 		'prettier-plugin-packagejson',
 		'prettier-plugin-sort-json',
@@ -26,7 +26,7 @@ const config = {
 	multilineArraysWrapThreshold: 3,
 	overrides: [
 		{
-			files: FILE_PATTERNS.json,
+			files: [...json, ...json5, ...jsonc],
 			options: {
 				tabWidth: 2,
 				useTabs: false,
@@ -35,4 +35,4 @@ const config = {
 	],
 };
 
-export default config;
+export default prettierConfig;

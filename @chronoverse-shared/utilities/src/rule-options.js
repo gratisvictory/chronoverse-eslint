@@ -308,7 +308,12 @@ const RESTRICTED_SYNTAX = [
 /**
  * Preset shared options for ESLint rules.
  */
-const RULE_OPTIONS = {
+export const {
+	bestPracticesNoRestrictedProperties,
+	stylisticNoRestrictedSyntax,
+	variablesNoRestrictedGlobals,
+	variablesNoUnusedVariables,
+} = {
 	bestPracticesNoRestrictedProperties: RESTRICTED_PROPERTIES,
 	stylisticNoRestrictedSyntax: RESTRICTED_SYNTAX,
 	/**
@@ -337,5 +342,3 @@ const RULE_OPTIONS = {
 		},
 	],
 };
-
-export { RULE_OPTIONS };

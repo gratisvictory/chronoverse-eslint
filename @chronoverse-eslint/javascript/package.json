@@ -30,6 +30,38 @@
     ".": {
       "import": "./dist/index.js",
       "types": "./dist/@types/index.d.ts"
+    },
+    "./config": {
+      "import": "./dist/config.js",
+      "types": "./dist/@types/config.d.ts"
+    },
+    "./best-practice": {
+      "import": "./dist/rules/best-practice.js",
+      "types": "./dist/@types/rules/best-practice.d.ts"
+    },
+    "./errors": {
+      "import": "./dist/rules/errors.js",
+      "types": "./dist/@types/rules/errors.d.ts"
+    },
+    "./es6": {
+      "import": "./dist/rules/es6.js",
+      "types": "./dist/@types/rules/es6.d.ts"
+    },
+    "./node": {
+      "import": "./dist/rules/node.js",
+      "types": "./dist/@types/rules/node.d.ts"
+    },
+    "./strict": {
+      "import": "./dist/rules/strict.js",
+      "types": "./dist/@types/rules/strict.d.ts"
+    },
+    "./stylistic": {
+      "import": "./dist/rules/stylistic.js",
+      "types": "./dist/@types/rules/stylistic.d.ts"
+    },
+    "./variables": {
+      "import": "./dist/rules/variables.js",
+      "types": "./dist/@types/rules/variables.d.ts"
     }
   },
   "main": "./dist/index.js",

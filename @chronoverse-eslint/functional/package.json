@@ -33,6 +33,14 @@
     ".": {
       "import": "./dist/index.js",
       "types": "./dist/@types/index.d.ts"
+    },
+    "./functional-js": {
+      "import": "./dist/functional-js.js",
+      "types": "./dist/@types/functional-js.d.ts"
+    },
+    "./functional-ts": {
+      "import": "./dist/functional-ts.js",
+      "types": "./dist/@types/functional-ts.d.ts"
     }
   },
   "main": "./dist/index.js",
@@ -47,10 +55,10 @@
     "clean": "rimraf node_modules",
     "clean:all": "rimraf dist node_modules",
     "lint:build:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.functional.js --outDir .eslint-functional && bunx serve .eslint-functional",
-    "lint:check": "eslint --cache --cache-location=node_modules/.cache/.eslintcache",
-    "lint:debug": "eslint --cache --cache-location=node_modules/.cache/.eslintcache --debug",
+    "lint:check": "eslint -c ./eslint.config.js --cache --cache-location=node_modules/.cache/.eslintcache",
+    "lint:debug": "eslint -c ./eslint.config.js --cache --cache-location=node_modules/.cache/.eslintcache --debug",
     "lint:dev:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest --config ./eslint.config.functional.js",
-    "lint:fix": "eslint --fix --cache --cache-location=node_modules/.cache/.eslintcache",
+    "lint:fix": "eslint -c ./eslint.config.js --fix --cache --cache-location=node_modules/.cache/.eslintcache",
     "lint:inspector:clean": "rimraf .eslint-functional"
   },
   "dependencies": {
@@ -61,7 +69,8 @@
   "devDependencies": {
     "@chronoverse-shared/builder": "workspace:^",
     "rimraf": "^6.0.1",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.33.0"
   },
   "peerDependencies": {
     "eslint": "^9.27.0"

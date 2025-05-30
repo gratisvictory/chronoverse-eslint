@@ -1,23 +1,24 @@
-import { FILE_PATTERNS, interopDefault } from '@chronoverse-shared/utilities';
-import { defineConfig } from 'eslint/config';
-import { javascript } from './rules/javascript.js';
+import { onlyJavascript } from '@chronoverse-shared/utilities/files';
+import functional from 'eslint-plugin-functional';
 
-const functionalJs = await (async () => {
-	const functionalJsPlugin = await interopDefault(import('eslint-plugin-functional'));
-
-	return defineConfig([
-		{
-			name: '@chronoverse/functionalJs/setup',
-			plugins: {
-				functional: functionalJsPlugin,
-			},
+/** @type {import('eslint').Linter.Config} */
+const functionalJs = [
+	{
+		name: '@chronoverse-eslint/functional-js/setup',
+		plugins: {
+			functional,
 		},
-		{
-			name: '@chronoverse/functionalJs/rules',
-			files: FILE_PATTERNS.onlyJavascript,
-			rules: { ...javascript },
+	},
+	{
+		name: '@chronoverse-eslint/functional-js/rules',
+		files: onlyJavascript,
+		rules: {
+			...functional.configs.externalVanillaRecommended.rules,
+			...functional.configs.recommended.rules,
+			...functional.configs.stylistic.rules,
+			...functional.configs.disableTypeChecked.rules,
 		},
-	]);
-})();
+	},
+];
 
 export { functionalJs };

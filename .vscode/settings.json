@@ -2,9 +2,5 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": false,
   "javascript.preferences.importModuleSpecifierEnding": "js",
-  "eslint.workingDirectories": [
-    {
-      "mode": "auto"
-    }
-  ]
+  "cSpell.enabled": false,
 }

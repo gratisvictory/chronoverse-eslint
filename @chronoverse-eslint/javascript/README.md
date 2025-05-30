@@ -35,10 +35,12 @@ Add to your ESLint configuration:
 
 ```javascript
 // eslint.config.js
-import { CHRONOVERSE_JAVASCRIPT } from '@chronoverse-eslint/javascript';
+import { javascript } from '@chronoverse-eslint/javascript';
+// or
+import { javascript } from '@chronoverse-eslint/javascript/config';
 
 const eslintConfig = [
-  ...CHRONOVERSE_JAVASCRIPT.javascript,
+  ...javascript,
   // Your custom rules here
 ];
 
@@ -48,14 +50,48 @@ export default eslintConfig
 Or with `defineConfig`:
 
 ```javascript
-import { defineConfig } from 'eslint/config';
-import { CHRONOVERSE_JAVASCRIPT } from '@chronoverse-eslint/javascript';
+import { javascript } from '@chronoverse-eslint/javascript';
+// or
+import { javascript } from '@chronoverse-eslint/javascript/config';
 
-export default defineConfig(CHRONOVERSE_JAVASCRIPT.javascript);
+import { defineConfig } from 'eslint/config';
+
+export default defineConfig(javascript);
 // or
 export default defineConfig([
-  CHRONOVERSE_JAVASCRIPT.javascript,
+  javascript,
   // Your custom rules here
+]);
+```
+
+Or only-rules:
+
+```javascript
+import { bestPractice } from '@chronoverse-eslint/javascript/best-practice';
+import { errors } from '@chronoverse-eslint/javascript/errors';
+import { es6 } from '@chronoverse-eslint/javascript/es6';
+import { node } from '@chronoverse-eslint/javascript/node';
+import { strict } from '@chronoverse-eslint/javascript/strict';
+import { stylistic } from '@chronoverse-eslint/javascript/stylistic';
+import { variables } from '@chronoverse-eslint/javascript/variables';
+// or
+import { bestPractice, errors, es6, node, strict, stylistic, variables } from '@chronoverse-eslint/javascript';
+
+import { defineConfig } from 'eslint/config';
+
+export default defineConfig([
+ {
+  name: 'your-config-name',
+  rules: {
+   ...bestPractice,
+   ...errors,
+   ...es6,
+   ...strict,
+   ...variables,
+   ...stylistic,
+   ...node,
+  },
+ }
 ]);
 ```
 

@@ -1,8 +1,8 @@
-import { CHRONOVERSE_FUNCTIONAL } from '@chronoverse-eslint/functional';
-import { CHRONOVERSE_JAVASCRIPT } from '@chronoverse-eslint/javascript';
+import { functionalJs, functionalTs } from '@chronoverse-eslint/functional';
+import { javascript } from '@chronoverse-eslint/javascript';
 import { CHRONOVERSE_PRESETS } from '@chronoverse-eslint/presets';
 import { CHRONOVERSE_REACT } from '@chronoverse-eslint/react';
-import { CHRONOVERSE_STYLISTIC } from '@chronoverse-eslint/stylistic';
+import { stylisticJs, stylisticJsx, stylisticTs, stylisticPlus } from '@chronoverse-eslint/stylistic';
 import { CHRONOVERSE_TYPESCRIPT } from '@chronoverse-eslint/typescript';
 import { CHRONOVERSE_DISABLES, eslintIgnores } from '@chronoverse-shared/utilities';
 import { defineConfig } from 'eslint/config';
@@ -29,10 +29,10 @@ const eslintConfig = defineConfig([
 	 * proper JSDoc documentation, functional programming paradigms,
 	 * and consistent code style.
 	 */
-	CHRONOVERSE_JAVASCRIPT.javascript,
+	javascript,
 	CHRONOVERSE_PRESETS.jsdoc,
-	CHRONOVERSE_FUNCTIONAL.functionalJs,
-	CHRONOVERSE_STYLISTIC.stylisticJs,
+	functionalJs,
+	stylisticJs,
 
 	/**
 	 * TypeScript Rules
@@ -42,8 +42,8 @@ const eslintConfig = defineConfig([
 	 * and consistent style.
 	 */
 	CHRONOVERSE_TYPESCRIPT.typescript,
-	CHRONOVERSE_FUNCTIONAL.functionalTs,
-	CHRONOVERSE_STYLISTIC.stylisticTs,
+	functionalTs,
+	stylisticTs,
 	/**
 	 * React Rules
 	 *
@@ -51,7 +51,7 @@ const eslintConfig = defineConfig([
 	 * hooks usage, accessibility, and Next.js best practices.
 	 */
 	CHRONOVERSE_REACT.react,
-	CHRONOVERSE_STYLISTIC.stylisticJsx,
+	stylisticJsx,
 	CHRONOVERSE_REACT.eslintReactJsx,
 	CHRONOVERSE_REACT.eslintReactTsx,
 	CHRONOVERSE_REACT.reactHooks,
@@ -65,7 +65,7 @@ const eslintConfig = defineConfig([
 	 * General purpose rules that apply across different file types
 	 * and frameworks to ensure code quality, security, and performance.
 	 */
-	CHRONOVERSE_STYLISTIC.stylisticPlus,
+	stylisticPlus,
 	CHRONOVERSE_PRESETS.comments,
 	CHRONOVERSE_PRESETS.dependency,
 	CHRONOVERSE_PRESETS.mutation,

@@ -1,12 +1,14 @@
-import { FILE_PATTERNS } from '@chronoverse-shared/utilities';
+import { javascript, json, json5, jsonc } from '@chronoverse-shared/utilities/files';
 
-const config = {
-	[FILE_PATTERNS.javascript]: [
+const jsonFiles = [...json, ...jsonc, ...json5];
+
+const lintStagedConfig = {
+	[javascript]: [
 		'prettier --write --log-level=warn',
 		'eslint --fix',
 	],
-	[FILE_PATTERNS.json]: ['prettier --write --log-level=warn'],
+	[jsonFiles]: ['prettier --write --log-level=warn'],
 	'*': () => 'bunx sherif@latest',
 };
 
-export default config;
+export default lintStagedConfig;
