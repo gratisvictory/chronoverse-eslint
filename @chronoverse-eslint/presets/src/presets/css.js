@@ -1,7 +1,6 @@
-import { FILE_PATTERNS } from '@chronoverse-shared/utilities';
+import { css as cssFiles } from '@chronoverse-shared/utilities/files';
 import eslintCss from '@eslint/css';
 import { tailwindSyntax } from '@eslint/css/syntax';
-import { defineConfig } from 'eslint/config';
 
 /**
  * CSS rules for ESLint.
@@ -10,52 +9,24 @@ import { defineConfig } from 'eslint/config';
  * Enforces styling best practices and prevents common CSS errors.
  * @see https://github.com/eslint/css
  */
-const css = defineConfig([
+/** @type {import('eslint').Linter.Config} */
+const css = [
 	{
-		name: '@chronoverse/css/setup',
+		name: '@chronoverse-eslint/css/setup',
 		plugins: {
 			css: eslintCss,
 		},
 	},
 	{
-		name: '@chronoverse/css/rules',
-		files: FILE_PATTERNS.css,
+		name: '@chronoverse-eslint/css/rules',
+		files: cssFiles,
 		language: 'css/css',
 		languageOptions: {
 			customSyntax: tailwindSyntax,
+			tolerant: true,
 		},
-		rules: {
-			/**
-			 * Disallow empty blocks
-			 */
-			'css/no-empty-blocks': 'error',
-
-			/**
-			 * Disallow duplicate import rules
-			 */
-			'css/no-duplicate-imports': 'error',
-
-			/**
-			 * Disallow !important flags
-			 */
-			'css/no-important': 'error',
-
-			/**
-			 * Disallow invalid at-rules
-			 */
-			'css/no-invalid-at-rules': 'error',
-
-			/**
-			 * Disallow invalid properties
-			 */
-			'css/no-invalid-properties': 'error',
-
-			/**
-			 * Enforce the use of baseline features
-			 */
-			'css/use-baseline': ['error', { available: 'widely' }],
-		},
+		rules: eslintCss.configs.recommended.rules,
 	},
-]);
+];
 
 export { css };

@@ -101,6 +101,7 @@ export const buildBundle = async (options = {}) => {
 			:	undefined;
 
 		if (watch && context) {
+			// eslint-disable-next-line better-mutation/no-mutating-methods
 			await context.watch();
 			console.log('👀 Watching for changes...');
 		} else {

@@ -1,4 +1,4 @@
-import { variablesNoUnusedVariables, variablesNoRestrictedGlobals } from '@chronoverse-shared/utilities/rule-options';
+import { variablesNoRestrictedGlobals, variablesNoUnusedVariables } from '@chronoverse-shared/utilities/rule-options';
 
 /**
  * ESLint rules related to variable declarations, shadowing, and usage.

@@ -1,7 +1,6 @@
-import { FILE_PATTERNS, getRulesByConfigName } from '@chronoverse-shared/utilities';
+import { getRulesByConfigName, javascript, typescript } from '@chronoverse-shared/utilities';
 import eslintConfigJsdoc from 'eslint-config-eslint';
 import jsdocPlugin from 'eslint-plugin-jsdoc';
-import { defineConfig } from 'eslint/config';
 
 const eslintConfigJsdocOverride = getRulesByConfigName('eslint-config-eslint/jsdoc', eslintConfigJsdoc);
 
@@ -42,9 +41,10 @@ const jsdocSettings = {
 	},
 };
 
-const jsdoc = defineConfig([
+/** @type {import('eslint').Linter.Config} */
+const jsdoc = [
 	{
-		name: '@chronoverse/jsdoc/setup',
+		name: '@chronoverse-eslint/jsdoc/setup',
 		plugins: {
 			jsdoc: jsdocPlugin,
 		},
@@ -53,20 +53,20 @@ const jsdoc = defineConfig([
 
 	/** JavaScript */
 	{
-		name: '@chronoverse/jsdoc/js-rules',
-		files: FILE_PATTERNS.javascript,
-		rules: jsdocPlugin.configs['flat/recommended-error'].rules,
+		name: '@chronoverse-eslint/jsdoc/js-rules',
+		files: javascript,
+		rules: jsdocPlugin.configs['flat/recommended'].rules,
 	},
 
 	/** TypeScript */
 	{
-		name: '@chronoverse/jsdoc/ts-rules',
-		files: FILE_PATTERNS.typescript,
+		name: '@chronoverse-eslint/jsdoc/ts-rules',
+		files: typescript,
 		rules: {
 			...jsdocPlugin.configs['flat/recommended-typescript'].rules,
 			...eslintConfigJsdocOverride,
 		},
 	},
-]);
+];
 
 export { jsdoc };

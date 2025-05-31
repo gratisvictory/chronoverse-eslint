@@ -69,18 +69,17 @@
     "clean:all": "rimraf dist node_modules"
   },
   "dependencies": {
-    "@typescript-eslint/parser": "^8.32.1",
     "eslint-config-flat-gitignore": "^2.1.0",
-    "globals": "^16.1.0"
+    "globals": "^16.2.0"
   },
   "devDependencies": {
     "@chronoverse-shared/builder": "workspace:^",
-    "eslint": "^9.27.0",
+    "eslint": "^9.28.0",
     "rimraf": "^6.0.1"
   },
-  "packageManager": "bun@1.2.13",
+  "packageManager": "bun@1.2.14",
   "engines": {
-    "bun": ">=1.2.13",
+    "bun": ">=1.2.14",
     "node": ">=23.11.0"
   },
   "publishConfig": {

@@ -7,14 +7,6 @@
 
 Comprehensive ESLint stylistic rules configuration for JavaScript, TypeScript, JSX and more.
 
-## Features
-
-- 🎨 Code formatting and style consistency
-- ⚡ Multiple stylistic rule sets...
-- 📏 JavaScript, TypeScript, JSX, and Plus style rules
-- 🧩 Easy integration with other Chronoverse ESLint configs
-- 🔧 Fully customizable preset configurations
-
 ## Installation
 
 ```bash
@@ -34,37 +26,63 @@ bun add -D @chronoverse-eslint/stylistic eslint
 Add to your ESLint configuration:
 
 ```javascript
-// eslint.config.js
-import { CHRONOVERSE_STYLISTIC } from '@chronoverse-eslint/stylistic';
+import { stylisticJs } from '@chronoverse-eslint/stylistic/stylistic-js';
+import { stylisticTs } from '@chronoverse-eslint/stylistic/stylistic-ts';
+import { stylisticJsx } from '@chronoverse-eslint/stylistic/stylistic-jsx';
+import { stylisticPlus } from '@chronoverse-eslint/stylistic/stylistic-plus';
 
-const eslintConfig = [
-  ...CHRONOVERSE_STYLISTIC.stylisticJs,
-  ...CHRONOVERSE_STYLISTIC.stylisticTs,
-  ...CHRONOVERSE_STYLISTIC.stylisticJsx,
-  ...CHRONOVERSE_STYLISTIC.stylisticPlus,
-  // Your custom rules here
+import { stylisticJs, stylisticTs, stylisticJsx, stylisticPlus } from '@chronoverse-eslint/stylistic';
+
+export default [
+	...stylisticJs,
+	...stylisticTs,
+	...stylisticJsx,
+	...stylisticPlus,
 ];
-
-export default eslintConfig;
 ```
 
 Or use `defineConfig` with all stylistic rules:
 
 ```javascript
+import { stylisticJs } from '@chronoverse-eslint/stylistic/stylistic-js';
+import { stylisticTs } from '@chronoverse-eslint/stylistic/stylistic-ts';
+import { stylisticJsx } from '@chronoverse-eslint/stylistic/stylistic-jsx';
+import { stylisticPlus } from '@chronoverse-eslint/stylistic/stylistic-plus';
+
+import { stylisticJs, stylisticTs, stylisticJsx, stylisticPlus } from '@chronoverse-eslint/stylistic';
+
 import { defineConfig } from 'eslint/config';
-import { CHRONOVERSE_STYLISTIC } from '@chronoverse-eslint/stylistic';
-import { eslintIgnores } from '@chronoverse-shared/utilities';
 
-const eslintConfig = defineConfig([
-  CHRONOVERSE_STYLISTIC.eslintIgnores,
-  CHRONOVERSE_STYLISTIC.stylisticJs,
-  CHRONOVERSE_STYLISTIC.stylisticPlus,
-  CHRONOVERSE_STYLISTIC.stylisticJsx,
-  CHRONOVERSE_STYLISTIC.stylisticTs,
-  // Your custom rules here
+export default defineConfig([
+	stylisticJs,
+	stylisticTs,
+	stylisticJsx,
+	stylisticPlus,
 ]);
+```
 
-export default eslintConfig;
+Or `only-rules`:
+
+```javascript
+import { javascript } from '@chronoverse-eslint/stylistic/javascript';
+import { jsx } from '@chronoverse-eslint/stylistic/jsx';
+import { plus } from '@chronoverse-eslint/stylistic/plus';
+import { typescript } from '@chronoverse-eslint/stylistic/typescript';
+
+import { javascript, jsx, plus, typescript } from '@chronoverse-eslint/stylistic';
+
+import { defineConfig } from 'eslint/config';
+
+export default defineConfig([
+	{
+		rules: {
+			...javascript,
+			...jsx,
+			...plus,
+			...typescript,
+		},
+	},
+]);
 ```
 
 ## Available Rule Sets
@@ -76,9 +94,10 @@ export default eslintConfig;
 
 ## Requirements
 
-- ESLint ≥ 9.27.0
+- ESLint ≥ 9.28.0
+- TypeScript >=5.8.3
 - Node.js ≥ 23.11.0
-- Bun ≥ 1.2.13
+- Bun ≥ 1.2.14
 
 ---
 

@@ -1,6 +1,6 @@
 import { onlyTypescript } from '@chronoverse-shared/utilities/files';
-import typescriptEslint from 'typescript-eslint';
 import functional from 'eslint-plugin-functional';
+import typescriptEslint from 'typescript-eslint';
 
 /** @type {import('eslint').Linter.Config} */
 const functionalTs = [
@@ -9,8 +9,8 @@ const functionalTs = [
 		languageOptions: {
 			parser: typescriptEslint.parser,
 			parserOptions: {
-				projectService: true,
 				ecmaVersion: 'latest',
+				projectService: true,
 				sourceType: 'module',
 			},
 		},

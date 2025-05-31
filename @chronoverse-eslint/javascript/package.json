@@ -75,26 +75,30 @@
     "build:cli": "bun run clean:all && bun run builder -e src/index.js",
     "clean": "rimraf node_modules",
     "clean:all": "rimraf dist node_modules",
+    "format:check": "prettier --check --config ../../prettier.config.js \"**/*.{js,json,json5,jsonc}\" --cache --cache-location=node_modules/.cache/.prettiercache",
+    "format:fix": "prettier --write --config ../../prettier.config.js \"**/*.{js,json,json5,jsonc}\" --cache --cache-location=node_modules/.cache/.prettiercache --log-level=warn",
     "lint:build:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.javascript.js --outDir .eslint-javascript && bunx serve .eslint-javascript",
+    "lint:check": "eslint -c ../../eslint.config.js --cache --cache-location=node_modules/.cache/.eslintcache",
     "lint:dev:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest --config ./eslint.config.javascript.js",
+    "lint:fix": "eslint -c ../../eslint.config.js --fix --cache --cache-location=node_modules/.cache/.eslintcache",
     "lint:inspector:clean": "rimraf .eslint-javascript"
   },
   "dependencies": {
     "@chronoverse-shared/utilities": "^3.1.1",
-    "eslint": "^9.27.0",
+    "eslint": "^9.28.0",
     "eslint-config-eslint": "^11.0.0"
   },
   "devDependencies": {
     "@chronoverse-shared/builder": "workspace:^",
-    "@eslint/js": "^9.27.0",
+    "@eslint/js": "^9.28.0",
     "rimraf": "^6.0.1"
   },
   "peerDependencies": {
-    "eslint": "^9.27.0"
+    "eslint": "^9.28.0"
   },
-  "packageManager": "bun@1.2.13",
+  "packageManager": "bun@1.2.14",
   "engines": {
-    "bun": ">=1.2.13",
+    "bun": ">=1.2.14",
     "node": ">=23.11.0"
   },
   "publishConfig": {

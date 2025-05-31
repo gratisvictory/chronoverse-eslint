@@ -54,30 +54,31 @@
     "build:cli": "bun run clean:all && bun run builder -e src/index.js -o dist",
     "clean": "rimraf node_modules",
     "clean:all": "rimraf dist node_modules",
+    "format:check": "prettier --check --config ../../prettier.config.js \"**/*.{js,json,json5,jsonc}\" --cache --cache-location=node_modules/.cache/.prettiercache",
+    "format:fix": "prettier --write --config ../../prettier.config.js \"**/*.{js,json,json5,jsonc}\" --cache --cache-location=node_modules/.cache/.prettiercache --log-level=warn",
     "lint:build:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.functional.js --outDir .eslint-functional && bunx serve .eslint-functional",
-    "lint:check": "eslint -c ./eslint.config.js --cache --cache-location=node_modules/.cache/.eslintcache",
-    "lint:debug": "eslint -c ./eslint.config.js --cache --cache-location=node_modules/.cache/.eslintcache --debug",
+    "lint:check": "eslint -c ../../eslint.config.js --cache --cache-location=node_modules/.cache/.eslintcache",
     "lint:dev:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest --config ./eslint.config.functional.js",
-    "lint:fix": "eslint -c ./eslint.config.js --fix --cache --cache-location=node_modules/.cache/.eslintcache",
+    "lint:fix": "eslint -c ../../eslint.config.js --fix --cache --cache-location=node_modules/.cache/.eslintcache",
     "lint:inspector:clean": "rimraf .eslint-functional"
   },
   "dependencies": {
     "@chronoverse-shared/utilities": "^3.1.1",
-    "eslint": "^9.27.0",
-    "eslint-plugin-functional": "^9.0.1"
+    "eslint": "^9.28.0",
+    "eslint-plugin-functional": "^9.0.1",
+    "typescript-eslint": "^8.33.0"
   },
   "devDependencies": {
     "@chronoverse-shared/builder": "workspace:^",
     "rimraf": "^6.0.1",
-    "typescript": "^5.8.3",
-    "typescript-eslint": "^8.33.0"
+    "typescript": "^5.8.3"
   },
   "peerDependencies": {
-    "eslint": "^9.27.0"
+    "eslint": "^9.28.0"
   },
-  "packageManager": "bun@1.2.13",
+  "packageManager": "bun@1.2.14",
   "engines": {
-    "bun": ">=1.2.13",
+    "bun": ">=1.2.14",
     "node": ">=23.11.0"
   },
   "publishConfig": {

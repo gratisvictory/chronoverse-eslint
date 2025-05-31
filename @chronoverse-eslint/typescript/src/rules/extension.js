@@ -1,4 +1,4 @@
-import { RULE_OPTIONS } from '@chronoverse-shared/utilities';
+import { variablesNoUnusedVariables } from '@chronoverse-shared/utilities/rule-options';
 
 /**
  * @type {import('eslint').Linter.Config['rules']}
@@ -20,7 +20,7 @@ const extension = {
 	/**
 	 * Disallow unused variables.
 	 */
-	'@typescript-eslint/no-unused-vars': ['error', ...RULE_OPTIONS.variablesNoUnusedVariables],
+	'@typescript-eslint/no-unused-vars': ['error', ...variablesNoUnusedVariables],
 	/**
 	 * Disallow unnecessary constructors.
 	 */

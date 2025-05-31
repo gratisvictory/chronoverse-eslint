@@ -1,7 +1,15 @@
 import { stylisticJs, stylisticPlus } from '@chronoverse-eslint/stylistic';
 import { javascript } from '@chronoverse-eslint/javascript/config';
 import { functionalJs } from '@chronoverse-eslint/functional/functional-js';
-// import { CHRONOVERSE_PRESETS } from '@chronoverse-eslint/presets';
+import { comments } from '@chronoverse-eslint/presets/comments';
+import { dependency } from '@chronoverse-eslint/presets/dependency';
+import { jsdoc } from '@chronoverse-eslint/presets/jsdoc';
+import { json } from '@chronoverse-eslint/presets/json';
+import { mutation } from '@chronoverse-eslint/presets/mutation';
+import { perfectionist } from '@chronoverse-eslint/presets/perfectionist';
+import { promise } from '@chronoverse-eslint/presets/promise';
+import { regexp } from '@chronoverse-eslint/presets/regexp';
+import { unicorn } from '@chronoverse-eslint/presets/unicorn';
 import { eslintIgnores, disables } from '@chronoverse-shared/utilities';
 import { defineConfig } from 'eslint/config';
 
@@ -11,23 +19,17 @@ const eslintConfig = defineConfig([
 	functionalJs,
 	stylisticJs,
 	stylisticPlus,
+	functionalJs,
+	comments,
+	dependency,
+	jsdoc,
+	json,
+	mutation,
+	perfectionist,
+	promise,
+	regexp,
+	unicorn,
 	disables,
-	// CHRONOVERSE_JAVASCRIPT.javascript,
-	// CHRONOVERSE_STYLISTIC.stylisticJs,
-	// CHRONOVERSE_STYLISTIC.stylisticPlus,
-	// CHRONOVERSE_FUNCTIONAL.functionalJs,
-	// CHRONOVERSE_PRESETS.comments,
-	// CHRONOVERSE_PRESETS.dependency,
-	// CHRONOVERSE_PRESETS.jsdoc,
-	// CHRONOVERSE_PRESETS.json,
-	// CHRONOVERSE_PRESETS.mutation,
-	// CHRONOVERSE_PRESETS.node,
-	// CHRONOVERSE_PRESETS.perfectionist,
-	// CHRONOVERSE_PRESETS.promise,
-	// CHRONOVERSE_PRESETS.regexp,
-	// CHRONOVERSE_PRESETS.unicorn,
-	// CHRONOVERSE_PRESETS.prettier,
-	// CHRONOVERSE_DISABLES.disables,
 	// {
 	// 	name: '@chronoverse/overrides',
 	// 	rules: {

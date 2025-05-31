@@ -1,4 +1,4 @@
-import { javascript, typescript, types } from './files.js';
+import { javascript, types, typescript } from './files.js';
 
 /** @type {import('eslint').Linter.Config} */
 const disables = [
@@ -10,9 +10,9 @@ const disables = [
 			...types,
 		],
 		rules: {
-			'@stylistic/js/object-curly-newline': 'off',
-			'@stylistic/js/max-len': 'off',
 			'@stylistic/js/indent': 'off',
+			'@stylistic/js/max-len': 'off',
+			'@stylistic/js/object-curly-newline': 'off',
 			'no-console': 'off',
 		},
 	},

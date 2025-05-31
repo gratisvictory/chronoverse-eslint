@@ -6,6 +6,7 @@
  * @returns {import('eslint').Linter.Config['rules']} The merged rules from matching configs
  */
 const getRulesByConfigName = (configName, configs) =>
+	// eslint-disable-next-line unicorn/no-array-reduce
 	configs.reduce((accumulator, config) => {
 		if (config.name === configName && config.rules) return { ...accumulator, ...config.rules };
 		return accumulator;

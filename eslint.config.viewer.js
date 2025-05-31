@@ -2,7 +2,7 @@ import { functionalJs, functionalTs } from '@chronoverse-eslint/functional';
 import { javascript } from '@chronoverse-eslint/javascript';
 import { CHRONOVERSE_PRESETS } from '@chronoverse-eslint/presets';
 import { CHRONOVERSE_REACT } from '@chronoverse-eslint/react';
-import { stylisticJs, stylisticJsx, stylisticTs, stylisticPlus } from '@chronoverse-eslint/stylistic';
+import { stylisticJs, stylisticJsx, stylisticPlus, stylisticTs } from '@chronoverse-eslint/stylistic';
 import { CHRONOVERSE_TYPESCRIPT } from '@chronoverse-eslint/typescript';
 import { CHRONOVERSE_DISABLES, eslintIgnores } from '@chronoverse-shared/utilities';
 import { defineConfig } from 'eslint/config';

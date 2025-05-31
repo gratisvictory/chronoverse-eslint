@@ -1,27 +1,27 @@
 export { EXCLUDE_PATTERNS } from './constants.js';
+export { disables } from './disables.js';
 export {
-	javascript,
-	typescript,
-	onlyJavascript,
-	onlyTypescript,
-	react,
+	config,
 	css,
-	sass,
-	less,
+	docs,
+	javascript,
 	json,
 	json5,
 	jsonc,
-	yaml,
+	less,
+	lockfiles,
 	markdown,
 	mdx,
-	config,
-	lockfiles,
+	onlyJavascript,
+	onlyTypescript,
+	react,
+	sass,
 	tests,
-	docs,
 	types,
+	typescript,
+	yaml,
 } from './files.js';
 export { sharedGlobals } from './globals.js';
-export { disables } from './disables.js';
 export { eslintIgnores } from './ignores.js';
 export {
 	bestPracticesNoRestrictedProperties,

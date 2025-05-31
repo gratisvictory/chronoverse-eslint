@@ -32,6 +32,38 @@
     ".": {
       "import": "./dist/index.js",
       "types": "./dist/@types/index.d.ts"
+    },
+    "./javascript": {
+      "import": "./dist/rules/javascript.js",
+      "types": "./dist/@types/rules/javascript.d.ts"
+    },
+    "./jsx": {
+      "import": "./dist/rules/jsx.js",
+      "types": "./dist/@types/rules/jsx.d.ts"
+    },
+    "./plus": {
+      "import": "./dist/rules/plus.js",
+      "types": "./dist/@types/rules/plus.d.ts"
+    },
+    "./typescript": {
+      "import": "./dist/rules/typescript.js",
+      "types": "./dist/@types/rules/typescript.d.ts"
+    },
+    "./stylistic-js": {
+      "import": "./dist/stylistic-js.js",
+      "types": "./dist/@types/stylistic-js.d.ts"
+    },
+    "./stylistic-jsx": {
+      "import": "./dist/stylistic-jsx.js",
+      "types": "./dist/@types/stylistic-jsx.d.ts"
+    },
+    "./stylistic-plus": {
+      "import": "./dist/stylistic-plus.js",
+      "types": "./dist/@types/stylistic-plus.d.ts"
+    },
+    "./stylistic-ts": {
+      "import": "./dist/stylistic-ts.js",
+      "types": "./dist/@types/stylistic-ts.d.ts"
     }
   },
   "main": "./dist/index.js",
@@ -45,34 +77,35 @@
     "build:cli": "bun run clean:all && bun run builder -e src/index.js -o dist",
     "clean": "rimraf node_modules",
     "clean:all": "rimraf dist node_modules",
+    "format:check": "prettier --check --config ../../prettier.config.js \"**/*.{js,json,json5,jsonc}\" --cache --cache-location=node_modules/.cache/.prettiercache",
+    "format:fix": "prettier --write --config ../../prettier.config.js \"**/*.{js,json,json5,jsonc}\" --cache --cache-location=node_modules/.cache/.prettiercache --log-level=warn",
     "lint:build:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.stylistic.js --outDir .eslint-stylistic && bunx serve .eslint-stylistic",
-    "lint:check": "eslint",
-    "lint:debug": "eslint --debug",
+    "lint:check": "eslint -c ../../eslint.config.js --cache --cache-location=node_modules/.cache/.eslintcache",
     "lint:dev:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest --config ./eslint.config.stylistic.js",
-    "lint:fix": "eslint --fix",
+    "lint:fix": "eslint -c ../../eslint.config.js --fix --cache --cache-location=node_modules/.cache/.eslintcache",
     "lint:inspector:clean": "rimraf .eslint-stylistic"
   },
   "dependencies": {
     "@chronoverse-shared/utilities": "^3.1.1",
-    "@stylistic/eslint-plugin-js": "^4.2.0",
-    "@stylistic/eslint-plugin-jsx": "^4.2.0",
-    "@stylistic/eslint-plugin-plus": "^4.2.0",
-    "@stylistic/eslint-plugin-ts": "^4.2.0",
-    "eslint": "^9.27.0"
+    "@stylistic/eslint-plugin-js": "^4.4.0",
+    "@stylistic/eslint-plugin-jsx": "^4.4.0",
+    "@stylistic/eslint-plugin-plus": "^4.4.0",
+    "@stylistic/eslint-plugin-ts": "^4.4.0",
+    "eslint": "^9.28.0",
+    "typescript-eslint": "^8.33.0"
   },
   "devDependencies": {
     "@chronoverse-shared/builder": "workspace:^",
     "rimraf": "^6.0.1",
-    "typescript": "^5.8.3",
-    "typescript-eslint": "^8.33.0"
-  },
-  "peerDependencies": {
-    "eslint": "^9.27.0",
     "typescript": "^5.8.3"
   },
-  "packageManager": "bun@1.2.13",
+  "peerDependencies": {
+    "eslint": "^9.28.0",
+    "typescript": "^5.8.3"
+  },
+  "packageManager": "bun@1.2.14",
   "engines": {
-    "bun": ">=1.2.13",
+    "bun": ">=1.2.14",
     "node": ">=23.11.0"
   },
   "publishConfig": {

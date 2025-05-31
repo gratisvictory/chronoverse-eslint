@@ -10,8 +10,8 @@ const stylisticTs = [
 		languageOptions: {
 			parser: typescriptEslint.parser,
 			parserOptions: {
-				projectService: true,
 				ecmaVersion: 'latest',
+				projectService: true,
 				sourceType: 'module',
 			},
 		},

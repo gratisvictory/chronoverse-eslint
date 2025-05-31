@@ -1,6 +1,5 @@
-import { FILE_PATTERNS } from '@chronoverse-shared/utilities';
+import { javascript, typescript } from '@chronoverse-shared/utilities/files';
 import pluginBetterMutation from 'eslint-plugin-better-mutation';
-import { defineConfig } from 'eslint/config';
 
 /**
  * Mutation control rules for ESLint.
@@ -9,16 +8,17 @@ import { defineConfig } from 'eslint/config';
  * Helps create more predictable and maintainable code by reducing side effects.
  * @see https://github.com/sloops77/eslint-plugin-better-mutation
  */
-const mutation = defineConfig([
+/** @type {import('eslint').Linter.Config} */
+const mutation = [
 	{
-		name: '@chronoverse/better-mutation/setup',
+		name: '@chronoverse-eslint/better-mutation/setup',
 		plugins: {
 			'better-mutation': pluginBetterMutation,
 		},
 	},
 	{
-		name: '@chronoverse/better-mutation/rules',
-		files: [...FILE_PATTERNS.javascript, ...FILE_PATTERNS.typescript],
+		name: '@chronoverse-eslint/better-mutation/rules',
+		files: [...javascript, ...typescript],
 		rules: {
 			/**
 			 * better-mutation/no-mutating-functions
@@ -36,6 +36,6 @@ const mutation = defineConfig([
 			'better-mutation/no-mutation': 'error',
 		},
 	},
-]);
+];
 
 export { mutation };

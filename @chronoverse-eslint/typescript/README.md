@@ -7,17 +7,6 @@
 
 Comprehensive ESLint configuration for TypeScript projects, focusing on type safety, code quality, and best practices.
 
-## Features
-
-- 🛡️ TypeScript type checking and safety
-- 🧩 Functional programming style
-- 📚 TSDoc documentation rules
-- ⚠️ Strict type checking
-- 🎨 Stylistic rules
-- 🔒 Safe TypeScript practices
-- 🔄 Modern TypeScript features
-- 📏 Code consistency rules
-
 ## Installation
 
 ```bash
@@ -37,37 +26,62 @@ bun add -D @chronoverse-eslint/typescript eslint
 Add to your `eslint.config.js`:
 
 ```javascript
-import { CHRONOVERSE_TYPESCRIPT } from '@chronoverse-eslint/typescript';
+import { typescript } from '@chronoverse-eslint/typescript';
+
+import { typescript } from '@chronoverse-eslint/typescript/config';
 
 const eslintConfig = [
-  // For TypeScript projects
-  ...CHRONOVERSE_TYPESCRIPT.typescript,
+	...typescript,
 ];
 
-export default eslintConfig;
+export default eslintConfig
 ```
 
 Or with `defineConfig`:
 
 ```javascript
+import { typescript } from '@chronoverse-eslint/typescript';
+
+import { typescript } from '@chronoverse-eslint/typescript/config';
+
 import { defineConfig } from 'eslint/config';
-import { CHRONOVERSE_TYPESCRIPT } from '@chronoverse-eslint/typescript';
 
-export default defineConfig(CHRONOVERSE_JAVASCRIPT.typescript);
-// or
-const eslintConfig = defineConfig([
-  // Your custom rules here
-  CHRONOVERSE_TYPESCRIPT.typescript,
+export default defineConfig(typescript);
+
+export default defineConfig([
+	typescript,
 ]);
+```
 
-export default eslintConfig;
+Or `only-rules`:
+
+```javascript
+import { consistent } from '@chronoverse-eslint/typescript/consistent';
+import { extension } from '@chronoverse-eslint/typescript/extension';
+import { safe } from '@chronoverse-eslint/typescript/safe';
+import { tsdoc } from '@chronoverse-eslint/typescript/tsdoc';
+
+import { consistent, extension, safe, tsdoc } from '@chronoverse-eslint/typescript';
+
+import { defineConfig } from 'eslint/config';
+
+export default defineConfig([
+	{
+		rules: {
+			...consistent,
+			...extension,
+			...safe,
+			...tsdoc,
+		},
+	},
+]);
 ```
 
 ## Requirements
 
-- ESLint >=9.27.0
+- ESLint >=9.28.0
 - TypeScript >=5.8.3
-- Bun >=1.2.13
+- Bun >=1.2.14
 - Node.js >=23.11.0
 
 ---

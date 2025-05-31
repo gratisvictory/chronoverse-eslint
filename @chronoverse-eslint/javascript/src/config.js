@@ -1,6 +1,6 @@
-import { javascript as jsFiles, getRulesByConfigName, sharedGlobals } from '@chronoverse-shared/utilities';
-import eslintConfigBase from 'eslint-config-eslint';
+import { getRulesByConfigName, javascript as jsFiles, sharedGlobals } from '@chronoverse-shared/utilities';
 import js from '@eslint/js';
+import eslintConfigBase from 'eslint-config-eslint';
 
 import { bestPractice } from './rules/best-practice.js';
 import { errors } from './rules/errors.js';

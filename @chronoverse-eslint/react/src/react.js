@@ -1,4 +1,5 @@
 import { FILE_PATTERNS } from '@chronoverse-shared/utilities';
+// eslint-disable-next-line depend/ban-dependencies
 import reactPlugin from 'eslint-plugin-react';
 import { defineConfig } from 'eslint/config';
 import { react as reactRules } from './rules/react.js';
