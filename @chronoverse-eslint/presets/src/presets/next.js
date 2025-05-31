@@ -1,6 +1,5 @@
-import { FILE_PATTERNS } from '@chronoverse-shared/utilities';
+import { javascript, typescript } from '@chronoverse-shared/utilities/files';
 import nextPlugin from '@next/eslint-plugin-next';
-import { defineConfig } from 'eslint/config';
 
 /**
  * Next.js rules for ESLint.
@@ -8,21 +7,22 @@ import { defineConfig } from 'eslint/config';
  * Includes core web vitals rules to help ensure good performance.
  * @see https://nextjs.org/docs/app/building-your-application/configuring/eslint
  */
-const next = defineConfig([
+/** @type {import('eslint').Linter.Config} */
+const next = [
 	{
-		name: '@chronoverse/next/setup',
+		name: '@chronoverse-eslint/next/setup',
 		plugins: {
 			'@next/next': nextPlugin,
 		},
 	},
 	{
-		name: '@chronoverse/next/rules',
-		files: [...FILE_PATTERNS.javascript, ...FILE_PATTERNS.typescript],
+		name: '@chronoverse-eslint/next/rules',
+		files: [...javascript, ...typescript],
 		rules: {
 			...nextPlugin.configs.recommended.rules,
 			...nextPlugin.configs['core-web-vitals'].rules,
 		},
 	},
-]);
+];
 
 export { next };

@@ -1,6 +1,5 @@
-import { FILE_PATTERNS } from '@chronoverse-shared/utilities';
+import { javascript, typescript } from '@chronoverse-shared/utilities/files';
 import pluginPromise from 'eslint-plugin-promise';
-import { defineConfig } from 'eslint/config';
 
 /**
  * Promise rules for ESLint.
@@ -8,21 +7,19 @@ import { defineConfig } from 'eslint/config';
  * Helps with common promise-related issues like proper error handling and promise chain structure.
  * @see https://github.com/eslint-community/eslint-plugin-promise
  */
-const promise = defineConfig([
+/** @type {import('eslint').Linter.Config} */
+const promise = [
 	{
-		name: '@chronoverse/promise/setup',
+		name: '@chronoverse-eslint/promise/setup',
 		plugins: {
 			promise: pluginPromise,
 		},
 	},
 	{
-		name: '@chronoverse/promise/rules',
-		files: [...FILE_PATTERNS.javascript, ...FILE_PATTERNS.typescript],
-		plugins: {
-			promise: pluginPromise,
-		},
+		name: '@chronoverse-eslint/promise/rules',
+		files: [...javascript, ...typescript],
 		rules: pluginPromise.configs['flat/recommended'].rules,
 	},
-]);
+];
 
 export { promise };

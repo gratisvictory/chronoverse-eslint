@@ -7,14 +7,6 @@
 
 Modern ESLint configuration for JavaScript projects focused on best practices and performance optimization.
 
-## Features
-
-- ✨ Modern JavaScript (ES2022+) support
-- ⚡ Performance-focused rules
-- 🌐 Browser and Node.js environments
-- 🧩 Functional programming style
-- 📚 Comprehensive best practices
-
 ## Installation
 
 ```bash
@@ -34,12 +26,12 @@ bun add -D @chronoverse-eslint/javascript eslint
 Add to your ESLint configuration:
 
 ```javascript
-// eslint.config.js
-import { CHRONOVERSE_JAVASCRIPT } from '@chronoverse-eslint/javascript';
+import { javascript } from '@chronoverse-eslint/javascript';
+
+import { javascript } from '@chronoverse-eslint/javascript/config';
 
 const eslintConfig = [
-  ...CHRONOVERSE_JAVASCRIPT.javascript,
-  // Your custom rules here
+	...javascript,
 ];
 
 export default eslintConfig
@@ -48,22 +40,54 @@ export default eslintConfig
 Or with `defineConfig`:
 
 ```javascript
-import { defineConfig } from 'eslint/config';
-import { CHRONOVERSE_JAVASCRIPT } from '@chronoverse-eslint/javascript';
+import { javascript } from '@chronoverse-eslint/javascript';
 
-export default defineConfig(CHRONOVERSE_JAVASCRIPT.javascript);
-// or
+import { javascript } from '@chronoverse-eslint/javascript/config';
+
+import { defineConfig } from 'eslint/config';
+
+export default defineConfig(javascript);
+
 export default defineConfig([
-  CHRONOVERSE_JAVASCRIPT.javascript,
-  // Your custom rules here
+	javascript,
+]);
+```
+
+Or `only-rules`:
+
+```javascript
+import { bestPractice } from '@chronoverse-eslint/javascript/best-practice';
+import { errors } from '@chronoverse-eslint/javascript/errors';
+import { es6 } from '@chronoverse-eslint/javascript/es6';
+import { node } from '@chronoverse-eslint/javascript/node';
+import { strict } from '@chronoverse-eslint/javascript/strict';
+import { stylistic } from '@chronoverse-eslint/javascript/stylistic';
+import { variables } from '@chronoverse-eslint/javascript/variables';
+
+import { bestPractice, errors, es6, node, strict, stylistic, variables } from '@chronoverse-eslint/javascript';
+
+import { defineConfig } from 'eslint/config';
+
+export default defineConfig([
+	{
+		rules: {
+			...bestPractice,
+			...errors,
+			...es6,
+			...node,
+			...strict,
+			...stylistic,
+			...variables,
+		},
+	},
 ]);
 ```
 
 ## Requirements
 
-- ESLint ≥ 9.27.0
+- ESLint ≥ 9.28.0
 - Node.js ≥ 23.11.0
-- Bun ≥ 1.2.13
+- Bun ≥ 1.2.14
 
 ---
 

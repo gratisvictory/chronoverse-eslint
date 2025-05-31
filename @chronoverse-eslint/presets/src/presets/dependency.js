@@ -1,6 +1,5 @@
-import { FILE_PATTERNS } from '@chronoverse-shared/utilities';
+import { javascript, typescript } from '@chronoverse-shared/utilities/files';
 import eslintDepend from 'eslint-plugin-depend';
-import { defineConfig } from 'eslint/config';
 
 /**
  * Dependency rules for ESLint.
@@ -9,16 +8,17 @@ import { defineConfig } from 'eslint/config';
  * Applies to all JavaScript, TypeScript, and type definition files.
  * @see https://github.com/es-tooling/eslint-plugin-depend
  */
-const dependency = defineConfig([
+/** @type {import('eslint').Linter.Config} */
+const dependency = [
 	{
-		name: '@chronoverse/dependency/setup',
+		name: '@chronoverse-eslint/dependency/setup',
 		plugins: {
 			depend: eslintDepend,
 		},
 	},
 	{
-		name: '@chronoverse/dependency/rules',
-		files: [...FILE_PATTERNS.javascript, ...FILE_PATTERNS.typescript],
+		name: '@chronoverse-eslint/dependency/rules',
+		files: [...javascript, ...typescript],
 		rules: {
 			/**
 			 * Bans a list of dependencies from being used
@@ -26,6 +26,6 @@ const dependency = defineConfig([
 			'depend/ban-dependencies': 'error',
 		},
 	},
-]);
+];
 
 export { dependency };

@@ -1,4 +1,4 @@
-import { RULE_OPTIONS } from '@chronoverse-shared/utilities';
+import { stylisticNoRestrictedSyntax } from '@chronoverse-shared/utilities/rule-options';
 
 const MAX_PARAMS = 5;
 
@@ -78,9 +78,9 @@ const stylistic = {
 
 	/**
 	 * Disallow confusing or discouraged syntax patterns.
-	 * @see RULE_OPTIONS.stylisticNoRestrictedSyntax
+	 * @see stylisticNoRestrictedSyntax
 	 */
-	'no-restricted-syntax': ['error', ...RULE_OPTIONS.stylisticNoRestrictedSyntax],
+	'no-restricted-syntax': ['error', ...stylisticNoRestrictedSyntax],
 
 	/**
 	 * Disallow dangling underscores in identifiers (e.g., `_foo`), except for Node globals.

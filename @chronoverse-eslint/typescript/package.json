@@ -32,6 +32,26 @@
     ".": {
       "import": "./dist/index.js",
       "types": "./dist/@types/index.d.ts"
+    },
+    "./config": {
+      "import": "./dist/config.js",
+      "types": "./dist/@types/config.d.ts"
+    },
+    "./consistent": {
+      "import": "./dist/rules/consistent.js",
+      "types": "./dist/@types/rules/consistent.d.ts"
+    },
+    "./tsdoc": {
+      "import": "./dist/rules/tsdoc.js",
+      "types": "./dist/@types/rules/tsdoc.d.ts"
+    },
+    "./extension": {
+      "import": "./dist/rules/extension.js",
+      "types": "./dist/@types/rules/extension.d.ts"
+    },
+    "./safe": {
+      "import": "./dist/rules/safe.js",
+      "types": "./dist/@types/rules/safe.d.ts"
     }
   },
   "main": "./dist/index.js",
@@ -45,16 +65,21 @@
     "build:cli": "bun run clean:all && bun run builder -e src/index.js",
     "clean": "rimraf node_modules",
     "clean:all": "rimraf dist node_modules",
+    "format:check": "prettier --check --config ../../prettier.config.js \"**/*.{js,json,json5,jsonc}\" --cache --cache-location=node_modules/.cache/.prettiercache",
+    "format:fix": "prettier --write --config ../../prettier.config.js \"**/*.{js,json,json5,jsonc}\" --cache --cache-location=node_modules/.cache/.prettiercache --log-level=warn",
     "lint:build:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.typescript.js --outDir .eslint-typescript && bunx serve .eslint-typescript",
+    "lint:check": "eslint -c ../../eslint.config.js --cache --cache-location=node_modules/.cache/.eslintcache",
     "lint:dev:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest --config ./eslint.config.typescript.js",
+    "lint:fix": "eslint -c ../../eslint.config.js --fix --cache --cache-location=node_modules/.cache/.eslintcache",
     "lint:inspector:clean": "rimraf .eslint-typescript"
   },
   "dependencies": {
     "@chronoverse-shared/utilities": "^3.1.1",
     "@susisu/eslint-plugin-safe-typescript": "^0.9.4",
-    "@typescript-eslint/eslint-plugin": "^8.32.1",
-    "eslint": "^9.27.0",
-    "eslint-plugin-tsdoc": "^0.4.0"
+    "@typescript-eslint/eslint-plugin": "^8.33.0",
+    "eslint": "^9.28.0",
+    "eslint-plugin-tsdoc": "^0.4.0",
+    "typescript-eslint": "^8.33.0"
   },
   "devDependencies": {
     "@chronoverse-shared/builder": "workspace:^",
@@ -62,12 +87,12 @@
     "typescript": "^5.8.3"
   },
   "peerDependencies": {
-    "eslint": "^9.27.0",
+    "eslint": "^9.28.0",
     "typescript": "^5.8.3"
   },
-  "packageManager": "bun@1.2.13",
+  "packageManager": "bun@1.2.14",
   "engines": {
-    "bun": ">=1.2.13",
+    "bun": ">=1.2.14",
     "node": ">=23.11.0"
   },
   "publishConfig": {

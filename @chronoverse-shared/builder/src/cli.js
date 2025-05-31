@@ -1,3 +1,5 @@
+// eslint-disable-next-line eslint-comments/disable-enable-pair
+/* eslint-disable unicorn/no-process-exit */
 import process from 'node:process';
 import { parseArgs as parseArguments } from 'node:util';
 import { build } from './index.js';

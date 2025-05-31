@@ -1,6 +1,5 @@
-import { FILE_PATTERNS } from '@chronoverse-shared/utilities';
+import { javascript, typescript } from '@chronoverse-shared/utilities/files';
 import eslintComments from '@eslint-community/eslint-plugin-eslint-comments';
-import { defineConfig } from 'eslint/config';
 
 /**
  * ESLint comments rules for ESLint.
@@ -9,16 +8,17 @@ import { defineConfig } from 'eslint/config';
  * Prevents redundant or incorrect usage of ESLint directives in code comments.
  * @see https://github.com/eslint-community/eslint-plugin-eslint-comments
  */
-const comments = defineConfig([
+/** @type {import('eslint').Linter.Config} */
+const comments = [
 	{
-		name: '@chronoverse/eslint-comments/setup',
+		name: '@chronoverse-eslint/eslint-comments/setup',
 		plugins: {
 			'eslint-comments': eslintComments,
 		},
 	},
 	{
-		name: '@chronoverse/eslint-comments/rules',
-		files: [...FILE_PATTERNS.javascript, ...FILE_PATTERNS.typescript],
+		name: '@chronoverse-eslint/eslint-comments/rules',
+		files: [...javascript, ...typescript],
 		rules: {
 			/**
 			 * Require a `eslint-enable` comment for every `eslint-disable` comment
@@ -46,6 +46,6 @@ const comments = defineConfig([
 			'eslint-comments/no-unused-enable': 'error',
 		},
 	},
-]);
+];
 
 export { comments };

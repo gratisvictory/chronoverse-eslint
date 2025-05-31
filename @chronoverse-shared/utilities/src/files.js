@@ -1,7 +1,27 @@
 /**
  * Common glob patterns for different file types in the project.
  */
-const FILE_PATTERNS = {
+export const {
+	config,
+	css,
+	docs,
+	javascript,
+	json,
+	json5,
+	jsonc,
+	less,
+	lockfiles,
+	markdown,
+	mdx,
+	onlyJavascript,
+	onlyTypescript,
+	react,
+	sass,
+	tests,
+	types,
+	typescript,
+	yaml,
+} = {
 	/** JavaScript files: .js, .mjs, .cjs, .jsx */
 	javascript: ['**/*.?([cm])js?(x)'],
 
@@ -47,13 +67,6 @@ const FILE_PATTERNS = {
 	/** Configuration files: .config.js/ts/json etc. */
 	config: ['**/*.config.@(js|ts|cjs|cts|mjs|mts|json)'],
 
-	/** Dotfiles (e.g., .eslintrc, .prettierrc, etc.) */
-	dotfiles: [
-		'**/.*rc',
-		'**/.*rc.*',
-		'**/.editorconfig',
-	],
-
 	/** Lockfiles for package managers */
 	lockfiles: [
 		'**/package-lock.json',
@@ -68,11 +81,6 @@ const FILE_PATTERNS = {
 	/** Markdown docs like README, CHANGELOG, etc. */
 	docs: ['**/{README,CHANGELOG,CONTRIBUTING}.md'],
 
-	/** Binary or minified files */
-	binaries: ['**/*.min.*', '**/*.map'],
-
 	/** Type declaration files */
 	types: ['**/*.d.ts'],
 };
-
-export { FILE_PATTERNS };

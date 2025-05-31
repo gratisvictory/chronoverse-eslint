@@ -1,6 +1,5 @@
-import { FILE_PATTERNS } from '@chronoverse-shared/utilities';
+import { javascript, typescript } from '@chronoverse-shared/utilities';
 import pluginSecurity from 'eslint-plugin-security';
-import { defineConfig } from 'eslint/config';
 
 /**
  * Security rules for ESLint.
@@ -8,18 +7,19 @@ import { defineConfig } from 'eslint/config';
  * Helps prevent common security issues like insecure random values, unsafe regex, and eval-related risks.
  * @see https://github.com/eslint-community/eslint-plugin-security
  */
-const security = defineConfig([
+/** @type {import('eslint').Linter.Config} */
+const security = [
 	{
-		name: '@chronoverse/security/setup',
+		name: '@chronoverse-eslint/security/setup',
 		plugins: {
 			security: pluginSecurity,
 		},
 	},
 	{
-		name: '@chronoverse/security/rules',
-		files: [...FILE_PATTERNS.javascript, ...FILE_PATTERNS.typescript],
+		name: '@chronoverse-eslint/security/rules',
+		files: [...javascript, ...typescript],
 		rules: pluginSecurity.configs.recommended.rules,
 	},
-]);
+];
 
 export { security };

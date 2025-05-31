@@ -1,4 +1,4 @@
-import { RULE_OPTIONS } from '@chronoverse-shared/utilities';
+import { bestPracticesNoRestrictedProperties } from '@chronoverse-shared/utilities/rule-options';
 
 /**
  * ESLint rules enforcing best practices in JS: control flow, safety, consistency, and code clarity.
@@ -311,9 +311,9 @@ const bestPractice = {
 
 	/**
 	 * Disallow certain object properties (e.g., `assert.equal`).
-	 * @see RULE_OPTIONS.bestPracticesNoRestrictedProperties
+	 * @see bestPracticesNoRestrictedProperties
 	 */
-	'no-restricted-properties': ['error', ...RULE_OPTIONS.bestPracticesNoRestrictedProperties],
+	'no-restricted-properties': ['error', ...bestPracticesNoRestrictedProperties],
 
 	/**
 	 * Disallow assignment in return statements.

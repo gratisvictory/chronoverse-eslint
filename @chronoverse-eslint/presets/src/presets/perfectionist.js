@@ -1,6 +1,5 @@
-import { FILE_PATTERNS } from '@chronoverse-shared/utilities';
+import { javascript, typescript } from '@chronoverse-shared/utilities/files';
 import eslintPerfectionistPlugin from 'eslint-plugin-perfectionist';
-import { defineConfig } from 'eslint/config';
 
 const p11tOptions = {
 	type: 'natural',
@@ -97,16 +96,17 @@ const p11tGroups = {
  * Customized with project-specific grouping rules for properties and imports.
  * @see https://github.com/azat-io/eslint-plugin-perfectionist
  */
-const perfectionist = defineConfig([
+/** @type {import('eslint').Linter.Config} */
+const perfectionist = [
 	{
-		name: '@chronoverse/perfectionist/setup',
+		name: '@chronoverse-eslint/perfectionist/setup',
 		plugins: {
 			perfectionist: eslintPerfectionistPlugin,
 		},
 	},
 	{
-		name: '@chronoverse/perfectionist/rules',
-		files: [...FILE_PATTERNS.javascript, ...FILE_PATTERNS.typescript],
+		name: '@chronoverse-eslint/perfectionist/rules',
+		files: [...javascript, ...typescript],
 		rules: {
 			...eslintPerfectionistPlugin.configs['recommended-natural'].rules,
 			'perfectionist/sort-array-includes': 'error',
@@ -153,6 +153,6 @@ const perfectionist = defineConfig([
 			'perfectionist/sort-variable-declarations': 'error',
 		},
 	},
-]);
+];
 
 export { perfectionist };

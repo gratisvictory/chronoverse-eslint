@@ -1,7 +1,10 @@
-import { CHRONOVERSE_JAVASCRIPT } from '@chronoverse-eslint/javascript';
-import { eslintIgnores } from '@chronoverse-shared/utilities';
+import { javascript } from '@chronoverse-eslint/javascript/config';
+import { eslintIgnores } from '@chronoverse-shared/utilities/ignores';
 import { defineConfig } from 'eslint/config';
 
-const eslintConfig = defineConfig([eslintIgnores, CHRONOVERSE_JAVASCRIPT.javascript]);
+const eslintConfigJavascript = defineConfig([
+	eslintIgnores,
+	javascript,
+]);
 
-export default eslintConfig;
+export default eslintConfigJavascript;

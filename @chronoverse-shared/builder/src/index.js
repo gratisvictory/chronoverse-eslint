@@ -76,7 +76,6 @@ export const buildTypes = async (tsconfigPath = './tsconfig.json') => {
 export const buildBundle = async (options = {}) => {
 	const {
 		entryPoints = ['src/index.js'],
-		external = [],
 		format = 'esm',
 		minify = true,
 		outdir = 'dist',
@@ -87,19 +86,10 @@ export const buildBundle = async (options = {}) => {
 	} = options;
 
 	try {
-		const packageJson = await getPackageJson();
-		const externalDeps = [
-			...Object.keys(packageJson.dependencies || {}),
-			...Object.keys(packageJson.peerDependencies || {}),
-			...external,
-		];
-
 		const context =
 			watch ?
 				await esbuild.context({
-					bundle: true,
 					entryPoints,
-					external: externalDeps,
 					format,
 					minify,
 					outdir,
@@ -108,7 +98,6 @@ export const buildBundle = async (options = {}) => {
 					target,
 					tsconfig: path.resolve(tsconfig),
 				})
-				// eslint-disable-next-line @stylistic/js/indent
 			:	undefined;
 
 		if (watch && context) {
@@ -117,9 +106,7 @@ export const buildBundle = async (options = {}) => {
 			console.log('👀 Watching for changes...');
 		} else {
 			await esbuild.build({
-				bundle: true,
 				entryPoints,
-				external: externalDeps,
 				format,
 				minify,
 				outdir,

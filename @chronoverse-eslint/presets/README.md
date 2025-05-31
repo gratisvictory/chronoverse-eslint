@@ -7,19 +7,6 @@
 
 Comprehensive collection of ESLint presets for modern JavaScript and TypeScript projects, providing a robust foundation for code quality and best practices.
 
-## Features
-
-- ✨ 15+ specialized ESLint presets
-- 🎯 Optimized for modern JavaScript/TypeScript
-- 🔒 Enhanced security rules
-- 📝 JSDoc documentation standards
-- 🎨 CSS and JSON linting
-- 🔄 Promise handling best practices
-- 🦄 Unicorn plugin integration
-- 🧩 Modular and composable presets
-- ⚡ Performance-focused configurations
-- 🔍 Comprehensive code quality checks
-
 ## Available Presets
 
 - **node** - Node.js specific rules
@@ -32,7 +19,6 @@ Comprehensive collection of ESLint presets for modern JavaScript and TypeScript 
 - **next** - Next.js specific rules
 - **perfectionist** - Code style perfection
 - **prettier** - Prettier integration
-- **prettierConfig** - Prettier disables list rules
 - **promise** - Promise handling best practices
 - **regexp** - Regular expression validation
 - **security** - Security-focused rules
@@ -57,14 +43,21 @@ bun add -D @chronoverse-eslint/presets eslint
 Add to your ESLint configuration:
 
 ```javascript
-// eslint.config.js
-import { CHRONOVERSE_PRESETS } from '@chronoverse-eslint/presets';
+import { comments } from '@chronoverse-eslint/presets/comments';
+import { css } from '@chronoverse-eslint/presets/css';
+import { dependency } from '@chronoverse-eslint/presets/dependency';
+import { jsdoc } from '@chronoverse-eslint/presets/jsdoc';
+import { json } from '@chronoverse-eslint/presets/json';
+...
+
+import { comments, css, ... } from '@chronoverse-eslint/presets';
 
 const eslintConfig = [
-  CHRONOVERSE_PRESETS.node,
-  CHRONOVERSE_PRESETS.prettier,
-  // Add other presets as needed
-  // Your custom rules here
+	comments,
+	css,
+	dependency,
+	jsdoc,
+	...
 ];
 
 export default eslintConfig;
@@ -73,14 +66,23 @@ export default eslintConfig;
 Or with `defineConfig`:
 
 ```javascript
+import { comments } from '@chronoverse-eslint/presets/comments';
+import { css } from '@chronoverse-eslint/presets/css';
+import { dependency } from '@chronoverse-eslint/presets/dependency';
+import { jsdoc } from '@chronoverse-eslint/presets/jsdoc';
+import { json } from '@chronoverse-eslint/presets/json';
+...
+
+import { comments, css, ... } from '@chronoverse-eslint/presets';
+
 import { defineConfig } from 'eslint/config';
-import { CHRONOVERSE_PRESETS } from '@chronoverse-eslint/presets';
 
 const eslintConfig = defineConfig([
-  CHRONOVERSE_PRESETS.node,
-  CHRONOVERSE_PRESETS.prettier,
-  // Add other presets as needed
-  // Your custom rules here
+	comments,
+	css,
+	dependency,
+	jsdoc,
+	...
 ]);
 
 export default eslintConfig;
@@ -88,9 +90,9 @@ export default eslintConfig;
 
 ## Requirements
 
-- ESLint ≥ 9.27.0
+- ESLint ≥ 9.28.0
 - Node.js ≥ 23.11.0
-- Bun ≥ 1.2.13
+- Bun ≥ 1.2.14
 
 ---
 

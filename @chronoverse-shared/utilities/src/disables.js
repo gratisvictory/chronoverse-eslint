@@ -1,35 +1,21 @@
-import { defineConfig } from 'eslint/config';
-import { FILE_PATTERNS } from './files.js';
+import { javascript, types, typescript } from './files.js';
 
-/**
- * ESLint disables configuration.
- */
-const disables = defineConfig([
+/** @type {import('eslint').Linter.Config} */
+const disables = [
 	{
-		name: '@chronoverse/disables/js',
-		files: FILE_PATTERNS.javascript,
+		name: '@chronoverse-eslint/disables/rules',
+		files: [
+			...javascript,
+			...typescript,
+			...types,
+		],
 		rules: {
-			'@typescript-eslint/explicit-function-return-type': 'off',
+			'@stylistic/js/indent': 'off',
+			'@stylistic/js/max-len': 'off',
+			'@stylistic/js/object-curly-newline': 'off',
+			'no-console': 'off',
 		},
 	},
-	{
-		name: '@chronoverse/disables/nextjs',
-		files: ['{src/app,app}/**/{page,layout,not-found,error,loading}.{jsx,tsx}'],
-		rules: {
-			'react/react-in-jsx-scope': 'off',
-		},
-	},
-	{
-		name: '@chronoverse/disables/unicorn',
-		files: FILE_PATTERNS.types,
-		rules: {
-			'unicorn-x/prevent-abbreviations': 'off',
-		},
-	},
-]);
+];
 
-const CHRONOVERSE_DISABLES = {
-	disables,
-};
-
-export { CHRONOVERSE_DISABLES };
+export { disables };
