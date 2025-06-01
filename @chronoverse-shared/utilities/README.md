@@ -2,21 +2,9 @@
 
 > Shared utilities and constants for [`@chronoverse-eslint`](https://github.com/gratisvictory/chronoverse-eslint) packages.
 
-[![npm version](https://img.shields.io/npm/v/@chronoverse-eslint/shared.svg)](https://www.npmjs.com/package/@chronoverse-eslint/shared)
-[![ESLint](https://img.shields.io/badge/ESLint-v9.26.0-4B32C3.svg)](https://eslint.org)
+[![npm version](https://img.shields.io/npm/v/@chronoverse-shared/utilities.svg)](https://www.npmjs.com/package/@chronoverse-shared/utilities)
+[![ESLint](https://img.shields.io/badge/ESLint-v9.28.0-4B32C3.svg)](https://eslint.org)
 [![License](https://img.shields.io/badge/license-MIT-4B32C3.svg)](LICENSE)
-
----
-
-## Features
-
-- 📁 Common file and exclude patterns
-- ⚙️ ESLint rule presets and options
-- 🔧 Rule transformation utilities
-- 🤝 Default globals for Flat Config
-- 📦 Type-safe utilities for ESLint configs
-
----
 
 ## Installation
 
@@ -36,51 +24,48 @@ bun add -D @chronoverse-shared/utilities eslint
 
 ```javascript
 import eslintConfigBase from 'eslint-config-eslint';
-import {
-  eslintIgnores,
-  EXCLUDE_PATTERNS,
-  FILE_PATTERNS,
-  RULE_OPTIONS,
-  sharedGlobals,
-  getRulesByConfigName,
-  disables,
-  // interopDefault,
-} from '@chronoverse-shared/utilities';
+import { variablesNoUnusedVariables, bestPracticesNoRestrictedProperties, stylisticNoRestrictedSyntax, variablesNoRestrictedGlobals } from '@chronoverse-shared/utilities/rule-options';
+import { disables } from '@chronoverse-shared/utilities/disables';
+import { sharedGlobals } from '@chronoverse-shared/utilities/globals';
+import { eslintIgnores } from '@chronoverse-shared/utilities/ignores';
+import { getRulesByConfigName } from '@chronoverse-shared/utilities/rules';
+import { javascript, typescript, ... } from '@chronoverse-shared/utilities/files';
+import { EXCLUDE_PATTERNS } from '@chronoverse-shared/utilities/constants';
+
 import { defineConfig } from 'eslint/config';
 
-export default defineConfig([
+const eslintConfig = defineConfig([
+	eslintIgnores,
 
-   eslintIgnores,
+	{
+		files: [...javascript, ...typescript],
+		ignores: EXCLUDE_PATTERNS,
+		languageOptions: {
+			globals: sharedGlobals,
+		},
+		rules: {
+			...getRulesByConfigName('eslint-config-eslint/js', eslintConfigBase),
 
-  {
-    files: FILE_PATTERNS.javascript,
-    ignores: EXCLUDE_PATTERNS,
-    languageOptions: {
-      globals: sharedGlobals
-    },
-    rules: {
+			'no-unused-vars': ['error', ...variablesNoUnusedVariables],
 
-      ...getRulesByConfigName('eslint-config-eslint/js', eslintConfigBase),
+			'no-restricted-properties': ['error', ...bestPracticesNoRestrictedProperties],
 
-      'no-unused-vars': ['error', ...RULE_OPTIONS.variablesNoUnusedVariables],
+			'no-restricted-syntax': ['error', ...stylisticNoRestrictedSyntax],
 
-      'no-restricted-properties': ['error', ...RULE_OPTIONS.bestPracticesNoRestrictedProperties],
+			'no-restricted-globals': ['error', ...variablesNoRestrictedGlobals],
+		},
+	},
 
-      'no-restricted-syntax': ['error', ...RULE_OPTIONS.stylisticNoRestrictedSyntax],
-
-      'no-restricted-globals': ['error', ...RULE_OPTIONS.variablesNoRestrictedGlobals],
-    }
-  }
-
-  disables,
-
+	disables,
 ]);
+
+export default eslintConfig;
 ```
 
 ### Requirements
 
-- ESLint >=9.27.0
-- Bun >=1.2.13
+- ESLint >=9.28.0
+- Bun >=1.2.14
 - Node.js >=23.11.0
 
 ---

@@ -1,21 +1,20 @@
-import { FILE_PATTERNS } from '@chronoverse-shared/utilities';
+import { react } from '@chronoverse-shared/utilities/files';
 import eslintStylisticJsx from '@stylistic/eslint-plugin-jsx';
-import { defineConfig } from 'eslint/config';
 import { jsx } from './rules/jsx.js';
 
-const stylisticJsx = defineConfig([
+/** @type {import('eslint').Linter.Config} */
+const stylisticJsx = [
 	{
-		name: '@chronoverse/stylisticJsx/setup',
-		files: [...FILE_PATTERNS.javascript, ...FILE_PATTERNS.typescript],
+		name: '@chronoverse-eslint/stylistic-jsx/setup',
 		plugins: {
 			'@stylistic/jsx': eslintStylisticJsx,
 		},
 	},
 	{
-		name: '@chronoverse/stylisticJsx/rules',
-		files: [...FILE_PATTERNS.javascript, ...FILE_PATTERNS.typescript],
+		name: '@chronoverse-eslint/stylistic-jsx/rules',
+		files: react,
 		rules: { ...jsx },
 	},
-]);
+];
 
 export { stylisticJsx };

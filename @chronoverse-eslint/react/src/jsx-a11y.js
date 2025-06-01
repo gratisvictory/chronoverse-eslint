@@ -1,23 +1,23 @@
-import { FILE_PATTERNS } from '@chronoverse-shared/utilities';
+import { javascript, typescript } from '@chronoverse-shared/utilities/files';
 import eslintJsxA11y from 'eslint-plugin-jsx-a11y';
-import { defineConfig } from 'eslint/config';
 import { a11y } from './rules/a11y.js';
 
-const jsxA11y = defineConfig([
+/** @type {import('eslint').Linter.Config} */
+const jsxA11y = [
 	{
-		name: '@chronoverse/jsx-a11y/setup',
+		name: '@chronoverse-eslint/jsx-a11y/setup',
 		plugins: {
 			'jsx-a11y': eslintJsxA11y,
 		},
 	},
 	{
-		name: '@chronoverse/jsx-a11y/rules',
-		files: [...FILE_PATTERNS.javascript, ...FILE_PATTERNS.typescript],
+		name: '@chronoverse-eslint/jsx-a11y/rules',
+		files: [...javascript, ...typescript],
 		rules: {
 			...eslintJsxA11y.flatConfigs.recommended.rules,
 			...a11y,
 		},
 	},
-]);
+];
 
 export { jsxA11y };

@@ -1,8 +1,6 @@
-import { FILE_PATTERNS } from '@chronoverse-shared/utilities';
-import { getRulesByConfigName } from '@chronoverse-shared/utilities';
+import { getRulesByConfigName, javascript, typescript } from '@chronoverse-shared/utilities';
 import eslintConfigUnicorn from 'eslint-config-eslint';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
-import { defineConfig } from 'eslint/config';
 
 /**
  * Unicorn-X rules for ESLint.
@@ -11,21 +9,22 @@ import { defineConfig } from 'eslint/config';
  * Custom configuration with many specific rule overrides for project requirements.
  * @see https://github.com/es-tooling/eslint-plugin-unicorn-x
  */
-const unicorn = defineConfig([
+/** @type {import('eslint').Linter.Config} */
+const unicorn = [
 	{
-		name: '@chronoverse/unicorn/setup',
+		name: '@chronoverse-eslint/unicorn/setup',
 		plugins: {
 			unicorn: eslintPluginUnicorn,
 		},
 	},
 	{
-		name: '@chronoverse/unicorn/rules',
-		files: [...FILE_PATTERNS.javascript, ...FILE_PATTERNS.typescript],
+		name: '@chronoverse-eslint/unicorn/rules',
+		files: [...javascript, ...typescript],
 		rules: {
 			...eslintPluginUnicorn.configs.recommended.rules,
 			...getRulesByConfigName('eslint-config-eslint/unicorn', eslintConfigUnicorn),
 		},
 	},
-]);
+];
 
 export { unicorn };

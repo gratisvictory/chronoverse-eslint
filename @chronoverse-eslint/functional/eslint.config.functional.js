@@ -1,11 +1,11 @@
-import { CHRONOVERSE_FUNCTIONAL } from '@chronoverse-eslint/functional';
-import { eslintIgnores } from '@chronoverse-shared/utilities';
+import { functionalJs, functionalTs } from '@chronoverse-eslint/functional';
+import { eslintIgnores } from '@chronoverse-shared/utilities/ignores';
 import { defineConfig } from 'eslint/config';
 
-const eslintConfig = defineConfig([
+const functionalEslintConfig = defineConfig([
 	eslintIgnores,
-	CHRONOVERSE_FUNCTIONAL.functionalJs,
-	CHRONOVERSE_FUNCTIONAL.functionalTs,
+	functionalJs,
+	functionalTs,
 ]);
 
-export default eslintConfig;
+export default functionalEslintConfig;

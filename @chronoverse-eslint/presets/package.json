@@ -1,6 +1,6 @@
 {
   "name": "@chronoverse-eslint/presets",
-  "version": "1.1.0",
+  "version": "4.0.0",
   "private": false,
   "description": "Comprehensive collection of ESLint presets for modern JavaScript and TypeScript projects",
   "keywords": [
@@ -36,6 +36,62 @@
     ".": {
       "import": "./dist/index.js",
       "types": "./dist/@types/index.d.ts"
+    },
+    "./comments": {
+      "import": "./dist/presets/comments.js",
+      "types": "./dist/@types/presets/comments.d.ts"
+    },
+    "./css": {
+      "import": "./dist/presets/css.js",
+      "types": "./dist/@types/presets/css.d.ts"
+    },
+    "./dependency": {
+      "import": "./dist/presets/dependency.js",
+      "types": "./dist/@types/presets/dependency.d.ts"
+    },
+    "./jsdoc": {
+      "import": "./dist/presets/jsdoc.js",
+      "types": "./dist/@types/presets/jsdoc.d.ts"
+    },
+    "./json": {
+      "import": "./dist/presets/json.js",
+      "types": "./dist/@types/presets/json.d.ts"
+    },
+    "./mutation": {
+      "import": "./dist/presets/mutation.js",
+      "types": "./dist/@types/presets/mutation.d.ts"
+    },
+    "./next": {
+      "import": "./dist/presets/next.js",
+      "types": "./dist/@types/presets/next.d.ts"
+    },
+    "./node": {
+      "import": "./dist/presets/node.js",
+      "types": "./dist/@types/presets/node.d.ts"
+    },
+    "./perfectionist": {
+      "import": "./dist/presets/perfectionist.js",
+      "types": "./dist/@types/presets/perfectionist.d.ts"
+    },
+    "./prettier": {
+      "import": "./dist/presets/prettier.js",
+      "types": "./dist/@types/presets/prettier.d.ts"
+    },
+    "./promise": {
+      "import": "./dist/presets/promise.js",
+      "types": "./dist/@types/presets/promise.d.ts"
+    },
+    "./regexp": {
+      "import": "./dist/presets/regexp.js",
+      "types": "./dist/@types/presets/regexp.d.ts"
+    },
+    "./security": {
+      "import": "./dist/presets/security.js",
+      "types": "./dist/@types/presets/security.d.ts"
+    },
+    "./unicorn": {
+      "import": "./dist/presets/unicorn.js",
+      "types": "./dist/@types/presets/unicorn.d.ts"
     }
   },
   "main": "./dist/index.js",
@@ -49,25 +105,29 @@
     "build:cli": "bun run clean:all && bun run builder -e src/index.js -o dist",
     "clean": "rimraf node_modules",
     "clean:all": "rimraf dist node_modules",
+    "format:check": "prettier --check --config ../../prettier.config.js \"**/*.{js,json,json5,jsonc}\" --cache --cache-location=node_modules/.cache/.prettiercache",
+    "format:fix": "prettier --write --config ../../prettier.config.js \"**/*.{js,json,json5,jsonc}\" --cache --cache-location=node_modules/.cache/.prettiercache --log-level=warn",
     "lint:build:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.presets.js --outDir .eslint-presets && bunx serve .eslint-presets",
+    "lint:check": "eslint -c ../../eslint.config.js --cache --cache-location=node_modules/.cache/.eslintcache",
     "lint:dev:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest --config ./eslint.config.presets.js",
+    "lint:fix": "eslint -c ../../eslint.config.js --fix --cache --cache-location=node_modules/.cache/.eslintcache",
     "lint:inspector:clean": "rimraf .eslint-presets"
   },
   "dependencies": {
-    "@chronoverse-shared/utilities": "^3.1.1",
+    "@chronoverse-shared/utilities": "^4.0.0",
     "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
     "@eslint/css": "^0.8.1",
     "@eslint/json": "^0.12.0",
-    "@next/eslint-plugin-next": "^15.3.2",
-    "eslint": "^9.27.0",
+    "@next/eslint-plugin-next": "^15.3.3",
+    "eslint": "^9.28.0",
     "eslint-config-eslint": "^11.0.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-better-mutation": "^2.1.0",
     "eslint-plugin-depend": "^1.2.0",
-    "eslint-plugin-jsdoc": "^50.6.17",
+    "eslint-plugin-jsdoc": "^50.7.0",
     "eslint-plugin-n": "^17.18.0",
     "eslint-plugin-perfectionist": "^4.13.0",
-    "eslint-plugin-prettier": "^5.4.0",
+    "eslint-plugin-prettier": "^5.4.1",
     "eslint-plugin-promise": "^7.2.1",
     "eslint-plugin-regexp": "^2.7.0",
     "eslint-plugin-security": "^3.0.1",
@@ -78,11 +138,11 @@
     "rimraf": "^6.0.1"
   },
   "peerDependencies": {
-    "eslint": "^9.27.0"
+    "eslint": "^9.28.0"
   },
-  "packageManager": "bun@1.2.13",
+  "packageManager": "bun@1.2.14",
   "engines": {
-    "bun": ">=1.2.13",
+    "bun": ">=1.2.14",
     "node": ">=23.11.0"
   },
   "publishConfig": {

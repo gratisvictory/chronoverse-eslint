@@ -1,4 +1,4 @@
-import { RULE_OPTIONS } from '@chronoverse-shared/utilities';
+import { variablesNoRestrictedGlobals, variablesNoUnusedVariables } from '@chronoverse-shared/utilities/rule-options';
 
 /**
  * ESLint rules related to variable declarations, shadowing, and usage.
@@ -28,9 +28,9 @@ const variables = {
 
 	/**
 	 * Disallow specific confusing or unsafe global variables.
-	 * @see RULE_OPTIONS.variablesNoRestrictedGlobals
+	 * @see variablesNoRestrictedGlobals
 	 */
-	'no-restricted-globals': ['error', ...RULE_OPTIONS.variablesNoRestrictedGlobals],
+	'no-restricted-globals': ['error', ...variablesNoRestrictedGlobals],
 
 	/**
 	 * Disallow variable declarations from shadowing variables in outer scope.
@@ -59,9 +59,9 @@ const variables = {
 
 	/**
 	 * Disallow unused variables.
-	 * @see RULE_OPTIONS.variablesNoUnusedVariables
+	 * @see variablesNoUnusedVariables
 	 */
-	'no-unused-vars': ['error', ...RULE_OPTIONS.variablesNoUnusedVariables],
+	'no-unused-vars': ['error', ...variablesNoUnusedVariables],
 
 	/**
 	 * Disallow use of variables before they are defined.

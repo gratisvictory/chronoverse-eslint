@@ -1,8 +1,7 @@
-import { FILE_PATTERNS } from '@chronoverse-shared/utilities';
 import { getRulesByConfigName } from '@chronoverse-shared/utilities';
+import { javascript, typescript } from '@chronoverse-shared/utilities/files';
 import eslintConfigNode from 'eslint-config-eslint';
 import nodePlugin from 'eslint-plugin-n';
-import { defineConfig } from 'eslint/config';
 
 /**
  * Node.js rules for ESLint.
@@ -11,22 +10,23 @@ import { defineConfig } from 'eslint/config';
  * Combines recommended rules from eslint-plugin-n and eslint-config-eslint.
  * @see https://github.com/eslint-community/eslint-plugin-n
  */
-const node = defineConfig([
+/** @type {import('eslint').Linter.Config} */
+const node = [
 	{
-		name: '@chronoverse/node/setup',
+		name: '@chronoverse-eslint/node/setup',
 		plugins: {
 			n: nodePlugin,
 		},
 	},
 	{
-		name: '@chronoverse/node/rules',
-		files: [...FILE_PATTERNS.javascript, ...FILE_PATTERNS.typescript],
+		name: '@chronoverse-eslint/node/rules',
+		files: [...javascript, ...typescript],
 		rules: {
 			...nodePlugin.configs['flat/recommended'].rules,
 			...getRulesByConfigName('eslint-config-eslint/cjs', eslintConfigNode),
 			...getRulesByConfigName('eslint-config-eslint/mjs', eslintConfigNode),
 		},
 	},
-]);
+];
 
 export { node };

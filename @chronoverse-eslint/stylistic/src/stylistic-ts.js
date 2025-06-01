@@ -1,27 +1,29 @@
-import { FILE_PATTERNS, getTsLanguageOptions } from '@chronoverse-shared/utilities';
+import { typescript as typescriptFiles } from '@chronoverse-shared/utilities/files';
 import eslintStylisticTs from '@stylistic/eslint-plugin-ts';
-import { defineConfig } from 'eslint/config';
+import typescriptEslint from 'typescript-eslint';
 import { typescript } from './rules/typescript.js';
 
-const stylisticTs = await (async () => {
-	const tsOptions = await getTsLanguageOptions();
-	return defineConfig([
-		{
-			name: '@chronoverse/stylisticTs/setup',
-			languageOptions: {
-				parser: tsOptions.parser,
-				parserOptions: tsOptions.parserOptions,
-			},
-			plugins: {
-				'@stylistic/ts': eslintStylisticTs,
+/** @type {import('eslint').Linter.Config} */
+const stylisticTs = [
+	{
+		name: '@chronoverse-eslint/stylistic-ts/setup',
+		languageOptions: {
+			parser: typescriptEslint.parser,
+			parserOptions: {
+				ecmaVersion: 'latest',
+				projectService: true,
+				sourceType: 'module',
 			},
 		},
-		{
-			name: '@chronoverse/stylisticTs/rules',
-			files: [...FILE_PATTERNS.typescript, ...FILE_PATTERNS.types],
-			rules: { ...typescript },
+		plugins: {
+			'@stylistic/ts': eslintStylisticTs,
 		},
-	]);
-})();
+	},
+	{
+		name: '@chronoverse-eslint/stylistic-ts/rules',
+		files: typescriptFiles,
+		rules: { ...typescript },
+	},
+];
 
 export { stylisticTs };

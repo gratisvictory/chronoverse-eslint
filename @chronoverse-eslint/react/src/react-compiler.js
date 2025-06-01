@@ -1,21 +1,21 @@
-import { FILE_PATTERNS } from '@chronoverse-shared/utilities';
+import { javascript, typescript } from '@chronoverse-shared/utilities/files';
 import eslintReactCompiler from 'eslint-plugin-react-compiler';
-import { defineConfig } from 'eslint/config';
 
-const reactCompiler = defineConfig([
+/** @type {import('eslint').Linter.Config} */
+const reactCompiler = [
 	{
-		name: '@chronoverse/react-compiler/setup',
+		name: '@chronoverse-eslint/react-compiler/setup',
 		plugins: {
 			'react-compiler': eslintReactCompiler,
 		},
 	},
 	{
-		name: '@chronoverse/react-compiler/rules',
-		files: [...FILE_PATTERNS.javascript, ...FILE_PATTERNS.typescript],
+		name: '@chronoverse-eslint/react-compiler/rules',
+		files: [...javascript, ...typescript],
 		rules: {
 			...eslintReactCompiler.configs.recommended.rules,
 		},
 	},
-]);
+];
 
 export { reactCompiler };

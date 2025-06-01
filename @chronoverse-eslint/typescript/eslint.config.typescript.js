@@ -1,7 +1,10 @@
-import { CHRONOVERSE_TYPESCRIPT } from '@chronoverse-eslint/typescript';
-import { eslintIgnores } from '@chronoverse-shared/utilities';
+import { typescript } from '@chronoverse-eslint/typescript/typescript-base';
+import { eslintIgnores } from '@chronoverse-shared/utilities/ignores';
 import { defineConfig } from 'eslint/config';
 
-const eslintConfig = defineConfig([eslintIgnores, CHRONOVERSE_TYPESCRIPT.typescript]);
+const eslintConfigTypescript = defineConfig([
+	eslintIgnores,
+	typescript,
+]);
 
-export default eslintConfig;
+export default eslintConfigTypescript;

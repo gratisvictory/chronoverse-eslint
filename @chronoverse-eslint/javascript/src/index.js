@@ -1,69 +1,8 @@
-import { FILE_PATTERNS, getRulesByConfigName, sharedGlobals } from '@chronoverse-shared/utilities';
-import js from '@eslint/js';
-import eslintConfigBase from 'eslint-config-eslint';
-import { defineConfig } from 'eslint/config';
-
-import { bestPractice } from './rules/best-practice.js';
-import { errors } from './rules/errors.js';
-import { es6 } from './rules/es6.js';
-import { node } from './rules/node.js';
-import { strict } from './rules/strict.js';
-import { stylistic } from './rules/stylistic.js';
-import { variables } from './rules/variables.js';
-
-/**
- * Chronoverse base JavaScript ESLint config.
- * Combines multiple rule sets for best practices, modern JS, stylistic consistency, and safety.
- */
-const javascript = defineConfig([
-	/** Base setup */
-	{
-		name: '@chronoverse/javascript/setup',
-		languageOptions: {
-			ecmaVersion: 'latest',
-			globals: sharedGlobals,
-			parserOptions: {
-				ecmaFeatures: {
-					jsx: true,
-				},
-				ecmaVersion: 'latest',
-				sourceType: 'module',
-			},
-			sourceType: 'module',
-		},
-		linterOptions: {
-			reportUnusedDisableDirectives: 'error',
-			reportUnusedInlineConfigs: 'error',
-		},
-	},
-
-	/** Rules for JavaScript files */
-	{
-		name: '@chronoverse/javascript/rules',
-		files: FILE_PATTERNS.javascript,
-		plugins: {
-			js,
-		},
-		rules: {
-			/** Rules recommended */
-			...js.configs.recommended.rules,
-			/** Rules from eslint-config-eslint's base config */
-			...getRulesByConfigName('eslint-config-eslint/js', eslintConfigBase),
-
-			/** Custom rule sets */
-			...bestPractice,
-			...errors,
-			...es6,
-			...strict,
-			...variables,
-			...stylistic,
-			...node,
-		},
-	},
-]);
-
-const CHRONOVERSE_JAVASCRIPT = {
-	javascript,
-};
-
-export { CHRONOVERSE_JAVASCRIPT };
+export { javascript } from './javascript-base.js';
+export { bestPractice } from './rules/best-practice.js';
+export { errors } from './rules/errors.js';
+export { es6 } from './rules/es6.js';
+export { node } from './rules/node.js';
+export { strict } from './rules/strict.js';
+export { stylistic } from './rules/stylistic.js';
+export { variables } from './rules/variables.js';

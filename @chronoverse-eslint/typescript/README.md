@@ -1,22 +1,10 @@
 # @chronoverse-eslint/typescript
 
 [![npm version](https://img.shields.io/npm/v/@chronoverse-eslint/typescript.svg)](https://www.npmjs.com/package/@chronoverse-eslint/typescript)
-[![ESLint](https://img.shields.io/badge/ESLint-v9.26.0-4B32C3.svg)](https://eslint.org)
+[![ESLint](https://img.shields.io/badge/ESLint-v9.28.0-4B32C3.svg)](https://eslint.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-v5.8.3-3178C6.svg)](https://www.typescriptlang.org)
 [![License](https://img.shields.io/badge/license-MIT-4B32C3.svg)](LICENSE)
-
-Comprehensive ESLint configuration for TypeScript projects, focusing on type safety, code quality, and best practices.
-
-## Features
-
-- 🛡️ TypeScript type checking and safety
-- 🧩 Functional programming style
-- 📚 TSDoc documentation rules
-- ⚠️ Strict type checking
-- 🎨 Stylistic rules
-- 🔒 Safe TypeScript practices
-- 🔄 Modern TypeScript features
-- 📏 Code consistency rules
+[![Demo](https://img.shields.io/badge/🛠️-Config%20Inspector-4B32C3)](https://gratisvictory.github.io/chronoverse-eslint)
 
 ## Installation
 
@@ -37,27 +25,58 @@ bun add -D @chronoverse-eslint/typescript eslint
 Add to your `eslint.config.js`:
 
 ```javascript
-import { CHRONOVERSE_TYPESCRIPT } from '@chronoverse-eslint/typescript';
+import { typescript } from '@chronoverse-eslint/typescript';
+
+import { typescript } from '@chronoverse-eslint/typescript/typescript-base';
 
 const eslintConfig = [
-  // For TypeScript projects
-  ...CHRONOVERSE_TYPESCRIPT.typescript,
+	...typescript,
 ];
 
-export default eslintConfig;
+export default eslintConfig
 ```
 
 Or with `defineConfig`:
 
 ```javascript
-import { defineConfig } from 'eslint/config';
-import { CHRONOVERSE_TYPESCRIPT } from '@chronoverse-eslint/typescript';
+import { typescript } from '@chronoverse-eslint/typescript';
 
-export default defineConfig(CHRONOVERSE_JAVASCRIPT.typescript);
-// or
+import { typescript } from '@chronoverse-eslint/typescript/typescript-base';
+
+import { defineConfig } from 'eslint/config';
+
+const eslintConfig = defineConfig(typescript);
+
+export default eslintConfig;
+
 const eslintConfig = defineConfig([
-  // Your custom rules here
-  CHRONOVERSE_TYPESCRIPT.typescript,
+	typescript,
+]);
+
+export default eslintConfig;
+```
+
+Or `only-rules`:
+
+```javascript
+import { consistent } from '@chronoverse-eslint/typescript/consistent';
+import { extension } from '@chronoverse-eslint/typescript/extension';
+import { safe } from '@chronoverse-eslint/typescript/safe';
+import { tsdoc } from '@chronoverse-eslint/typescript/tsdoc';
+
+import { consistent, extension, safe, tsdoc } from '@chronoverse-eslint/typescript';
+
+import { defineConfig } from 'eslint/config';
+
+const eslintConfig = defineConfig([
+	{
+		rules: {
+			...consistent,
+			...extension,
+			...safe,
+			...tsdoc,
+		},
+	},
 ]);
 
 export default eslintConfig;
@@ -65,9 +84,9 @@ export default eslintConfig;
 
 ## Requirements
 
-- ESLint >=9.27.0
+- ESLint >=9.28.0
 - TypeScript >=5.8.3
-- Bun >=1.2.13
+- Bun >=1.2.14
 - Node.js >=23.11.0
 
 ---

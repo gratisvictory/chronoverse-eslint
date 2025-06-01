@@ -1,3 +1,5 @@
+// eslint-disable-next-line eslint-comments/disable-enable-pair
+/* eslint-disable unicorn/no-process-exit */
 import { chmod, mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
@@ -85,7 +87,6 @@ const buildSelf = async () => {
 		console.log('🎉 Build complete!');
 	} catch (error) {
 		console.error('❌ Build failed:', error);
-		// eslint-disable-next-line unicorn/no-process-exit
 		process.exit(1);
 	}
 };
@@ -98,7 +99,6 @@ const main = async () => {
 		await buildSelf();
 	} catch (error) {
 		console.error('❌ Unexpected error:', error);
-		// eslint-disable-next-line unicorn/no-process-exit
 		process.exit(1);
 	}
 };

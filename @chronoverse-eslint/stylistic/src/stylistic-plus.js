@@ -1,20 +1,20 @@
-import { FILE_PATTERNS } from '@chronoverse-shared/utilities';
+import { javascript, typescript } from '@chronoverse-shared/utilities/files';
 import eslintStylisticPlus from '@stylistic/eslint-plugin-plus';
-import { defineConfig } from 'eslint/config';
 import { plus } from './rules/plus.js';
 
-const stylisticPlus = defineConfig([
+/** @type {import('eslint').Linter.Config} */
+const stylisticPlus = [
 	{
-		name: '@chronoverse/stylisticPlus/setup',
+		name: '@chronoverse-eslint/stylistic-plus/setup',
 		plugins: {
 			'@stylistic/plus': eslintStylisticPlus,
 		},
 	},
 	{
-		name: '@chronoverse/stylisticPlus/rules',
-		files: [...FILE_PATTERNS.javascript, ...FILE_PATTERNS.typescript],
+		name: '@chronoverse-eslint/stylistic-plus/rules',
+		files: [...javascript, ...typescript],
 		rules: { ...plus },
 	},
-]);
+];
 
 export { stylisticPlus };

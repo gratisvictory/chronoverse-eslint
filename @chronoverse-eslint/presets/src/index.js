@@ -1,34 +1,14 @@
-import { comments } from './presets/comments.js';
-import { css } from './presets/css.js';
-import { dependency } from './presets/dependency.js';
-import { jsdoc } from './presets/jsdoc.js';
-import { json } from './presets/json.js';
-import { mutation } from './presets/mutation.js';
-import { next } from './presets/next.js';
-import { node } from './presets/node.js';
-import { perfectionist } from './presets/perfectionist.js';
-import { prettier, prettierConfig } from './presets/prettier.js';
-import { promise } from './presets/promise.js';
-import { regexp } from './presets/regexp.js';
-import { security } from './presets/security.js';
-import { unicorn } from './presets/unicorn.js';
-
-const CHRONOVERSE_PRESETS = {
-	node,
-	comments,
-	css,
-	dependency,
-	jsdoc,
-	json,
-	mutation,
-	next,
-	perfectionist,
-	prettier,
-	prettierConfig,
-	promise,
-	regexp,
-	security,
-	unicorn,
-};
-
-export { CHRONOVERSE_PRESETS };
+export { comments } from './presets/comments.js';
+export { css } from './presets/css.js';
+export { dependency } from './presets/dependency.js';
+export { jsdoc } from './presets/jsdoc.js';
+export { json } from './presets/json.js';
+export { mutation } from './presets/mutation.js';
+export { next } from './presets/next.js';
+export { node } from './presets/node.js';
+export { perfectionist } from './presets/perfectionist.js';
+export { prettier } from './presets/prettier.js';
+export { promise } from './presets/promise.js';
+export { regexp } from './presets/regexp.js';
+export { security } from './presets/security.js';
+export { unicorn } from './presets/unicorn.js';

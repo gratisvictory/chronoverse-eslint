@@ -1,21 +1,21 @@
-import { FILE_PATTERNS } from '@chronoverse-shared/utilities';
+import { javascript, typescript } from '@chronoverse-shared/utilities/files';
 import eslintReactHooks from 'eslint-plugin-react-hooks';
-import { defineConfig } from 'eslint/config';
 
-const reactHooks = defineConfig([
+/** @type {import('eslint').Linter.Config} */
+const reactHooks = [
 	{
-		name: '@chronoverse/react-hooks/setup',
+		name: '@chronoverse-eslint/react-hooks/setup',
 		plugins: {
 			'react-hooks': eslintReactHooks,
 		},
 	},
 	{
-		name: '@chronoverse/react-hooks/rules',
-		files: [...FILE_PATTERNS.javascript, ...FILE_PATTERNS.typescript],
+		name: '@chronoverse-eslint/react-hooks/rules',
+		files: [...javascript, ...typescript],
 		rules: {
 			...eslintReactHooks.configs['recommended-latest'].rules,
 		},
 	},
-]);
+];
 
 export { reactHooks };

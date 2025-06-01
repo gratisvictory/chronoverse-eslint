@@ -1,6 +1,5 @@
-import { FILE_PATTERNS } from '@chronoverse-shared/utilities';
+import { javascript, typescript } from '@chronoverse-shared/utilities/files';
 import * as regexpPlugin from 'eslint-plugin-regexp';
-import { defineConfig } from 'eslint/config';
 
 /**
  * Regular expression rules for ESLint.
@@ -8,18 +7,19 @@ import { defineConfig } from 'eslint/config';
  * Helps prevent common regex pitfalls and performance issues.
  * @see https://github.com/ota-meshi/eslint-plugin-regexp
  */
-const regexp = defineConfig([
+/** @type {import('eslint').Linter.Config} */
+const regexp = [
 	{
-		name: '@chronoverse/regexp/setup',
+		name: '@chronoverse-eslint/regexp/setup',
 		plugins: {
 			regexp: regexpPlugin,
 		},
 	},
 	{
-		name: '@chronoverse/regexp/rules',
-		files: [...FILE_PATTERNS.javascript, ...FILE_PATTERNS.typescript],
+		name: '@chronoverse-eslint/regexp/rules',
+		files: [...javascript, ...typescript],
 		rules: regexpPlugin.configs['flat/recommended'].rules,
 	},
-]);
+];
 
 export { regexp };
