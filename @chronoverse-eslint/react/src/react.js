@@ -1,12 +1,12 @@
-import { FILE_PATTERNS } from '@chronoverse-shared/utilities';
+import { javascript, typescript } from '@chronoverse-shared/utilities';
 // eslint-disable-next-line depend/ban-dependencies
 import reactPlugin from 'eslint-plugin-react';
-import { defineConfig } from 'eslint/config';
-import { react as reactRules } from './rules/react.js';
+import { reactRules } from './rules/react.js';
 
-const react = defineConfig([
+/** @type {import('eslint').Linter.Config} */
+const react = [
 	{
-		name: '@chronoverse/react/setup',
+		name: '@chronoverse-eslint/react/setup',
 		languageOptions: {
 			parserOptions: {
 				ecmaFeatures: {
@@ -17,15 +17,20 @@ const react = defineConfig([
 		plugins: {
 			react: reactPlugin,
 		},
+		settings: {
+			react: {
+				version: 'detect',
+			},
+		},
 	},
 	{
-		name: '@chronoverse/react/rules',
-		files: [...FILE_PATTERNS.javascript, ...FILE_PATTERNS.typescript],
+		name: '@chronoverse-eslint/react/rules',
+		files: [...javascript, ...typescript],
 		rules: {
 			...reactPlugin.configs.flat.recommended.rules,
 			...reactRules,
 		},
 	},
-]);
+];
 
 export { react };

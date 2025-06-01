@@ -1,24 +1,28 @@
-import { FILE_PATTERNS, getTsLanguageOptions } from '@chronoverse-shared/utilities';
+import { typescript } from '@chronoverse-shared/utilities/files';
 import eslintReactPlugin from '@eslint-react/eslint-plugin';
-import { defineConfig } from 'eslint/config';
+import typescriptEslint from 'typescript-eslint';
 
-const eslintReactTsx = await (async () => {
-	const tsOptions = await getTsLanguageOptions();
-
-	return defineConfig([
-		{
-			name: '@chronoverse/@eslint-react-tsx/setup',
-			languageOptions: {
-				parser: tsOptions.parser,
-				parserOptions: tsOptions.parserOptions,
+/** @type {import('eslint').Linter.Config} */
+const eslintReactTsx = [
+	{
+		name: '@chronoverse-eslint/eslint-react-tsx/setup',
+		languageOptions: {
+			parser: typescriptEslint.parser,
+			parserOptions: {
+				ecmaVersion: 'latest',
+				projectService: true,
+				sourceType: 'module',
 			},
 		},
-		{
-			name: '@chronoverse/@eslint-react-tsx/rules',
-			extends: [eslintReactPlugin.configs['recommended-typescript']],
-			files: FILE_PATTERNS.typescript,
-		},
-	]);
-})();
+	},
+	{
+		name: '@chronoverse-eslint/eslint-react-tsx/rules',
+		extends: [
+			eslintReactPlugin.configs['recommended-typescript'],
+			eslintReactPlugin.configs['recommended-type-checked'],
+		],
+		files: typescript,
+	},
+];
 
 export { eslintReactTsx };

@@ -6,17 +6,6 @@
 
 Modern ESLint configuration for functional programming best practices, enforcing immutability and side-effect free patterns.
 
-## Features
-
-- 🧩 Functional programming patterns
-- 🛡️ Immutable data structures
-- 🔍 Pure function enforcement
-- ⚠️ Side-effect detection
-- 🔄 No mutations rules
-- 🚫 No loops or statements
-- ✅ Expression-based coding
-- 🔒 No object mutations
-
 ## Installation
 
 ```bash
@@ -38,14 +27,12 @@ Add to your `eslint.config.js`:
 ```javascript
 import { functionalJs } from '@chronoverse-eslint/functional/functional-js';
 import { functionalTs } from '@chronoverse-eslint/functional/functional-ts';
-// or
+
 import { functionalJs, functionalTs } from '@chronoverse-eslint/functional';
 
 export default [
-  // For JavaScript projects
-  ...functionalJs,
-  // For TypeScript projects
-  ...functionalTs,
+	...functionalJs,
+	...functionalTs,
 ];
 ```
 
@@ -54,22 +41,21 @@ Or with `defineConfig`:
 ```javascript
 import { functionalJs } from '@chronoverse-eslint/functional/functional-js';
 import { functionalTs } from '@chronoverse-eslint/functional/functional-ts';
-// or
+
 import { functionalJs, functionalTs } from '@chronoverse-eslint/functional';
 
 import { defineConfig } from 'eslint/config';
 
 export default defineConfig([
-  // Your custom rules here
-  functionalJs,
-  functionalTs,
+	functionalJs,
+	functionalTs,
 ]);
 ```
 
 ## Requirements
 
-- ESLint >=9.27.0
-- Bun >=1.2.13
+- ESLint >=9.28.0
+- Bun >=1.2.14
 - Node.js >=23.11.0
 
 ---

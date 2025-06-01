@@ -1,13 +1,15 @@
+import { eslintReactJsx, eslintReactTsx, jsxA11y, react, reactCompiler, reactHooks } from '@chronoverse-eslint/react';
 import { eslintIgnores } from '@chronoverse-shared/utilities';
 import { defineConfig } from 'eslint/config';
-import { CHRONOVERSE_REACT } from './src/index.js';
 
-export default defineConfig([
+const eslintConfigReact = defineConfig([
 	eslintIgnores,
-	CHRONOVERSE_REACT.jsxA11y,
-	CHRONOVERSE_REACT.reactHooks,
-	CHRONOVERSE_REACT.reactCompiler,
-	CHRONOVERSE_REACT.eslintReactJsx,
-	CHRONOVERSE_REACT.eslintReactTsx,
-	CHRONOVERSE_REACT.react,
+	jsxA11y,
+	reactHooks,
+	reactCompiler,
+	eslintReactJsx,
+	eslintReactTsx,
+	react,
 ]);
+
+export default eslintConfigReact;

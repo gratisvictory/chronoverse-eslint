@@ -35,6 +35,38 @@
     ".": {
       "import": "./dist/index.js",
       "types": "./dist/@types/index.d.ts"
+    },
+    "./react-rules": {
+      "import": "./dist/rules/react.js",
+      "types": "./dist/@types/rules/react.d.ts"
+    },
+    "./a11y-rules": {
+      "import": "./dist/rules/a11y.js",
+      "types": "./dist/@types/rules/a11y.d.ts"
+    },
+    "./eslint-react-jsx": {
+      "import": "./dist/eslint-react-jsx.js",
+      "types": "./dist/@types/eslint-react-jsx.d.ts"
+    },
+    "./eslint-react-tsx": {
+      "import": "./dist/eslint-react-tsx.js",
+      "types": "./dist/@types/eslint-react-tsx.d.ts"
+    },
+    "./jsx-a11y": {
+      "import": "./dist/jsx-a11y.js",
+      "types": "./dist/@types/jsx-a11y.d.ts"
+    },
+    "./react-compiler": {
+      "import": "./dist/react-compiler.js",
+      "types": "./dist/@types/react-compiler.d.ts"
+    },
+    "./react-hooks": {
+      "import": "./dist/react-hooks.js",
+      "types": "./dist/@types/react-hooks.d.ts"
+    },
+    "./react": {
+      "import": "./dist/react.js",
+      "types": "./dist/@types/react.d.ts"
     }
   },
   "main": "./dist/index.js",
@@ -50,7 +82,7 @@
     "clean:all": "rimraf dist node_modules",
     "format:check": "prettier --check --config ../../prettier.config.js \"**/*.{js,json,json5,jsonc}\" --cache --cache-location=node_modules/.cache/.prettiercache",
     "format:fix": "prettier --write --config ../../prettier.config.js \"**/*.{js,json,json5,jsonc}\" --cache --cache-location=node_modules/.cache/.prettiercache --log-level=warn",
-    "lint:build:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.react.js --outDir .eslint-functional && bunx serve .eslint-react",
+    "lint:build:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.react.js --outDir .eslint-react && bunx serve .eslint-react",
     "lint:check": "eslint -c ../../eslint.config.js --cache --cache-location=node_modules/.cache/.eslintcache",
     "lint:dev:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest --config ./eslint.config.react.js",
     "lint:fix": "eslint -c ../../eslint.config.js --fix --cache --cache-location=node_modules/.cache/.eslintcache",
@@ -63,7 +95,8 @@
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-compiler": "^19.1.0-rc.1-rc-af1b7da-20250421",
-    "eslint-plugin-react-hooks": "^6.0.0"
+    "eslint-plugin-react-hooks": "^6.0.0",
+    "typescript-eslint": "^8.33.0"
   },
   "devDependencies": {
     "@chronoverse-shared/builder": "workspace:^",
@@ -72,7 +105,7 @@
     "typescript": "^5.8.3"
   },
   "peerDependencies": {
-    "eslint": "^9.27.0",
+    "eslint": "^9.28.0",
     "typescript": "^5.8.3"
   },
   "packageManager": "bun@1.2.14",

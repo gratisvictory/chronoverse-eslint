@@ -1,13 +1,13 @@
-import { CHRONOVERSE_STYLISTIC } from '@chronoverse-eslint/stylistic';
-import { eslintIgnores } from '@chronoverse-shared/utilities';
+import { stylisticJs, stylisticJsx, stylisticPlus, stylisticTs } from '@chronoverse-eslint/stylistic';
+import { eslintIgnores } from '@chronoverse-shared/utilities/ignores';
 import { defineConfig } from 'eslint/config';
 
-const eslintConfig = defineConfig([
+const eslintConfigStylistic = defineConfig([
 	eslintIgnores,
-	CHRONOVERSE_STYLISTIC.stylisticJs,
-	CHRONOVERSE_STYLISTIC.stylisticPlus,
-	CHRONOVERSE_STYLISTIC.stylisticJsx,
-	CHRONOVERSE_STYLISTIC.stylisticTs,
+	stylisticJs,
+	stylisticPlus,
+	stylisticJsx,
+	stylisticTs,
 ]);
 
-export default eslintConfig;
+export default eslintConfigStylistic;

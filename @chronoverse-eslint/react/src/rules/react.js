@@ -2,7 +2,7 @@
  * @see https://github.com/jsx-eslint/eslint-plugin-react
  * @type {import('eslint').Linter.Config['rules']}
  */
-const react = {
+const reactRules = {
 	/**
 	 * Enforce using `onChange` or `readonly` attribute when `checked` is used
 	 */
@@ -728,4 +728,4 @@ const react = {
 	'react/jsx-props-no-spread-multi': 'off',
 };
 
-export { react };
+export { reactRules };

@@ -12,7 +12,7 @@ import { promise } from '@chronoverse-eslint/presets/promise';
 import { regexp } from '@chronoverse-eslint/presets/regexp';
 import { security } from '@chronoverse-eslint/presets/security';
 import { unicorn } from '@chronoverse-eslint/presets/unicorn';
-import { eslintIgnores } from '@chronoverse-shared/utilities';
+import { eslintIgnores } from '@chronoverse-shared/utilities/ignores';
 import { defineConfig } from 'eslint/config';
 
 const eslintConfigPresets = defineConfig([
