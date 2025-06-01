@@ -5,8 +5,7 @@
   "type": "module",
   "workspaces": [
     "@chronoverse-eslint/*",
-    "@chronoverse-shared/*",
-    "@chronoverse-prettier/*"
+    "@chronoverse-shared/*"
   ],
   "scripts": {
     "build": "lerna run build",

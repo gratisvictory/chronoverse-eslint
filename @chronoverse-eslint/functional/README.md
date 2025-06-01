@@ -1,10 +1,9 @@
 # @chronoverse-eslint/functional
 
 [![npm version](https://img.shields.io/npm/v/@chronoverse-eslint/functional.svg)](https://www.npmjs.com/package/@chronoverse-eslint/functional)
-[![ESLint](https://img.shields.io/badge/ESLint-v9.26.0-4B32C3.svg)](https://eslint.org)
+[![ESLint](https://img.shields.io/badge/ESLint-v9.28.0-4B32C3.svg)](https://eslint.org)
 [![License](https://img.shields.io/badge/license-MIT-4B32C3.svg)](LICENSE)
-
-Modern ESLint configuration for functional programming best practices, enforcing immutability and side-effect free patterns.
+[![Demo](https://img.shields.io/badge/🛠️-Config%20Inspector-4B32C3)](https://gratisvictory.github.io/chronoverse-eslint)
 
 ## Installation
 
@@ -30,10 +29,12 @@ import { functionalTs } from '@chronoverse-eslint/functional/functional-ts';
 
 import { functionalJs, functionalTs } from '@chronoverse-eslint/functional';
 
-export default [
+const eslintConfig = [
 	...functionalJs,
 	...functionalTs,
 ];
+
+export default eslintConfig;
 ```
 
 Or with `defineConfig`:
@@ -46,10 +47,12 @@ import { functionalJs, functionalTs } from '@chronoverse-eslint/functional';
 
 import { defineConfig } from 'eslint/config';
 
-export default defineConfig([
+const eslintConfig = defineConfig([
 	functionalJs,
 	functionalTs,
 ]);
+
+export default eslintConfig;
 ```
 
 ## Requirements

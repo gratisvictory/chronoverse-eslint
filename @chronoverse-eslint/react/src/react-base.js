@@ -4,9 +4,9 @@ import reactPlugin from 'eslint-plugin-react';
 import { reactRules } from './rules/react.js';
 
 /** @type {import('eslint').Linter.Config} */
-const react = [
+const reactBase = [
 	{
-		name: '@chronoverse-eslint/react/setup',
+		name: '@chronoverse-eslint/react-base/setup',
 		languageOptions: {
 			parserOptions: {
 				ecmaFeatures: {
@@ -24,7 +24,7 @@ const react = [
 		},
 	},
 	{
-		name: '@chronoverse-eslint/react/rules',
+		name: '@chronoverse-eslint/react-base/rules',
 		files: [...javascript, ...typescript],
 		rules: {
 			...reactPlugin.configs.flat.recommended.rules,
@@ -33,4 +33,4 @@ const react = [
 	},
 ];
 
-export { react };
+export { reactBase };

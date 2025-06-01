@@ -1,6 +1,6 @@
 {
   "name": "@chronoverse-eslint/javascript",
-  "version": "3.1.0",
+  "version": "4.0.0",
   "private": false,
   "description": "Modern ESLint configuration for JavaScript projects focused on best practices and performance optimization",
   "keywords": [
@@ -31,9 +31,9 @@
       "import": "./dist/index.js",
       "types": "./dist/@types/index.d.ts"
     },
-    "./config": {
-      "import": "./dist/config.js",
-      "types": "./dist/@types/config.d.ts"
+    "./javascript-base": {
+      "import": "./dist/javascript-base.js",
+      "types": "./dist/@types/javascript-base.d.ts"
     },
     "./best-practice": {
       "import": "./dist/rules/best-practice.js",
@@ -84,7 +84,7 @@
     "lint:inspector:clean": "rimraf .eslint-javascript"
   },
   "dependencies": {
-    "@chronoverse-shared/utilities": "^3.1.1",
+    "@chronoverse-shared/utilities": "^4.0.0",
     "eslint": "^9.28.0",
     "eslint-config-eslint": "^11.0.0"
   },

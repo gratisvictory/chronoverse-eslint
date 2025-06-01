@@ -1,4 +1,4 @@
-import { javascript } from '@chronoverse-eslint/javascript/config';
+import { javascript } from '@chronoverse-eslint/javascript/javascript-base';
 import { eslintIgnores } from '@chronoverse-shared/utilities/ignores';
 import { defineConfig } from 'eslint/config';
 

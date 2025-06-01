@@ -1,10 +1,42 @@
-import { functionalJs, functionalTs } from '@chronoverse-eslint/functional';
-import { javascript } from '@chronoverse-eslint/javascript';
-import { CHRONOVERSE_PRESETS } from '@chronoverse-eslint/presets';
-import { CHRONOVERSE_REACT } from '@chronoverse-eslint/react';
-import { stylisticJs, stylisticJsx, stylisticPlus, stylisticTs } from '@chronoverse-eslint/stylistic';
-import { CHRONOVERSE_TYPESCRIPT } from '@chronoverse-eslint/typescript';
-import { CHRONOVERSE_DISABLES, eslintIgnores } from '@chronoverse-shared/utilities';
+// eslint-disable-next-line eslint-comments/disable-enable-pair
+/* eslint-disable perfectionist/sort-imports */
+/** Functional */
+import { functionalJs } from '@chronoverse-eslint/functional/functional-js';
+import { functionalTs } from '@chronoverse-eslint/functional/functional-ts';
+/** Javascript */
+import { javascript } from '@chronoverse-eslint/javascript/javascript-base';
+/** Presets */
+import { comments } from '@chronoverse-eslint/presets/comments';
+import { css } from '@chronoverse-eslint/presets/css';
+import { dependency } from '@chronoverse-eslint/presets/dependency';
+import { jsdoc } from '@chronoverse-eslint/presets/jsdoc';
+import { json } from '@chronoverse-eslint/presets/json';
+import { mutation } from '@chronoverse-eslint/presets/mutation';
+import { next } from '@chronoverse-eslint/presets/next';
+import { node } from '@chronoverse-eslint/presets/node';
+import { perfectionist } from '@chronoverse-eslint/presets/perfectionist';
+import { prettier } from '@chronoverse-eslint/presets/prettier';
+import { promise } from '@chronoverse-eslint/presets/promise';
+import { regexp } from '@chronoverse-eslint/presets/regexp';
+import { security } from '@chronoverse-eslint/presets/security';
+import { unicorn } from '@chronoverse-eslint/presets/unicorn';
+/** React */
+import { reactBase } from '@chronoverse-eslint/react/react-base';
+import { reactCompiler } from '@chronoverse-eslint/react/react-compiler';
+import { reactHooks } from '@chronoverse-eslint/react/react-hooks';
+import { eslintReactJsx } from '@chronoverse-eslint/react/eslint-react-jsx';
+import { eslintReactTsx } from '@chronoverse-eslint/react/eslint-react-tsx';
+import { jsxA11y } from '@chronoverse-eslint/react/jsx-a11y';
+/** Stylistic */
+import { stylisticJs } from '@chronoverse-eslint/stylistic/stylistic-js';
+import { stylisticJsx } from '@chronoverse-eslint/stylistic/stylistic-jsx';
+import { stylisticPlus } from '@chronoverse-eslint/stylistic/stylistic-plus';
+import { stylisticTs } from '@chronoverse-eslint/stylistic/stylistic-ts';
+/** Typescript */
+import { typescript } from '@chronoverse-eslint/typescript/typescript-base';
+/** Utilities */
+import { eslintIgnores } from '@chronoverse-shared/utilities';
+
 import { defineConfig } from 'eslint/config';
 
 /**
@@ -30,7 +62,7 @@ const eslintConfig = defineConfig([
 	 * and consistent code style.
 	 */
 	javascript,
-	CHRONOVERSE_PRESETS.jsdoc,
+	jsdoc,
 	functionalJs,
 	stylisticJs,
 
@@ -41,7 +73,7 @@ const eslintConfig = defineConfig([
 	 * strong typing, proper documentation, functional patterns,
 	 * and consistent style.
 	 */
-	CHRONOVERSE_TYPESCRIPT.typescript,
+	typescript,
 	functionalTs,
 	stylisticTs,
 	/**
@@ -50,14 +82,14 @@ const eslintConfig = defineConfig([
 	 * Rules specific to React development including JSX/TSX syntax,
 	 * hooks usage, accessibility, and Next.js best practices.
 	 */
-	CHRONOVERSE_REACT.react,
+	reactBase,
 	stylisticJsx,
-	CHRONOVERSE_REACT.eslintReactJsx,
-	CHRONOVERSE_REACT.eslintReactTsx,
-	CHRONOVERSE_REACT.reactHooks,
-	CHRONOVERSE_REACT.reactCompiler,
-	CHRONOVERSE_REACT.jsxA11y,
-	CHRONOVERSE_PRESETS.next,
+	eslintReactJsx,
+	eslintReactTsx,
+	reactHooks,
+	reactCompiler,
+	jsxA11y,
+	next,
 
 	/**
 	 * Shared Rules
@@ -66,23 +98,21 @@ const eslintConfig = defineConfig([
 	 * and frameworks to ensure code quality, security, and performance.
 	 */
 	stylisticPlus,
-	CHRONOVERSE_PRESETS.comments,
-	CHRONOVERSE_PRESETS.dependency,
-	CHRONOVERSE_PRESETS.mutation,
-	CHRONOVERSE_PRESETS.node,
-	CHRONOVERSE_PRESETS.perfectionist,
-	CHRONOVERSE_PRESETS.promise,
-	CHRONOVERSE_PRESETS.regexp,
-	CHRONOVERSE_PRESETS.security,
-	CHRONOVERSE_PRESETS.unicorn,
-	CHRONOVERSE_PRESETS.css,
-	CHRONOVERSE_PRESETS.json,
+	comments,
+	dependency,
+	mutation,
+	node,
+	perfectionist,
+	promise,
+	regexp,
+	security,
+	unicorn,
+	css,
+	json,
 	/**
 	 * Disables and Prettier Rules on last position
 	 */
-	CHRONOVERSE_PRESETS.prettier,
-	CHRONOVERSE_PRESETS.prettierConfig,
-	CHRONOVERSE_DISABLES.disables,
+	prettier,
 ]);
 
 export default eslintConfig;

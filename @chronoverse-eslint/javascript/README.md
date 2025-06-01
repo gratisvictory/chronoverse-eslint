@@ -1,11 +1,9 @@
 # @chronoverse-eslint/javascript
 
 [![npm](https://img.shields.io/npm/v/@chronoverse-eslint/javascript.svg)](https://www.npmjs.com/package/@chronoverse-eslint/javascript)
-[![ESLint](https://img.shields.io/badge/ESLint-v9.26.0-4B32C3.svg)](https://eslint.org)
+[![ESLint](https://img.shields.io/badge/ESLint-v9.28.0-4B32C3.svg)](https://eslint.org)
 [![License](https://img.shields.io/badge/license-MIT-4B32C3.svg)](LICENSE)
 [![Demo](https://img.shields.io/badge/🛠️-Config%20Inspector-4B32C3)](https://gratisvictory.github.io/chronoverse-eslint)
-
-Modern ESLint configuration for JavaScript projects focused on best practices and performance optimization.
 
 ## Installation
 
@@ -28,7 +26,7 @@ Add to your ESLint configuration:
 ```javascript
 import { javascript } from '@chronoverse-eslint/javascript';
 
-import { javascript } from '@chronoverse-eslint/javascript/config';
+import { javascript } from '@chronoverse-eslint/javascript/javascript-base';
 
 const eslintConfig = [
 	...javascript,
@@ -42,15 +40,19 @@ Or with `defineConfig`:
 ```javascript
 import { javascript } from '@chronoverse-eslint/javascript';
 
-import { javascript } from '@chronoverse-eslint/javascript/config';
+import { javascript } from '@chronoverse-eslint/javascript/javascript-base';
 
 import { defineConfig } from 'eslint/config';
 
-export default defineConfig(javascript);
+const eslintConfig = defineConfig(javascript);
 
-export default defineConfig([
+export default eslintConfig;
+
+const eslintConfig = defineConfig([
 	javascript,
 ]);
+
+export default eslintConfig;
 ```
 
 Or `only-rules`:
@@ -68,7 +70,7 @@ import { bestPractice, errors, es6, node, strict, stylistic, variables } from '@
 
 import { defineConfig } from 'eslint/config';
 
-export default defineConfig([
+const eslintConfig = defineConfig([
 	{
 		rules: {
 			...bestPractice,
@@ -81,6 +83,8 @@ export default defineConfig([
 		},
 	},
 ]);
+
+export default eslintConfig;
 ```
 
 ## Requirements

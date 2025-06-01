@@ -51,18 +51,18 @@
     "postinstall": "bun scripts/postinstall.js"
   },
   "dependencies": {
-    "esbuild": "^0.25.4"
+    "esbuild": "^0.25.5"
   },
   "devDependencies": {
-    "@types/node": "^22.15.19",
+    "@types/node": "^22.15.29",
     "rimraf": "^6.0.1"
   },
   "peerDependencies": {
     "esbuild": "^0.25.3"
   },
-  "packageManager": "bun@1.2.13",
+  "packageManager": "bun@1.2.14",
   "engines": {
-    "bun": ">=1.2.13",
+    "bun": ">=1.2.14",
     "node": ">=23.11.0"
   }
 }

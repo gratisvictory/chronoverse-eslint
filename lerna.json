@@ -2,8 +2,7 @@
   "$schema": "node_modules/lerna/schemas/lerna-schema.json",
   "packages": [
     "@chronoverse-eslint/*",
-    "@chronoverse-shared/*",
-    "@chronoverse-prettier/*"
+    "@chronoverse-shared/*"
   ],
   "useNx": true,
   "version": "independent"

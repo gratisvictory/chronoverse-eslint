@@ -1,4 +1,4 @@
-export { javascript } from './config.js';
+export { javascript } from './javascript-base.js';
 export { bestPractice } from './rules/best-practice.js';
 export { errors } from './rules/errors.js';
 export { es6 } from './rules/es6.js';

@@ -1,22 +1,10 @@
 # @chronoverse-eslint/react
 
 [![npm version](https://img.shields.io/npm/v/@chronoverse-eslint/react.svg)](https://www.npmjs.com/package/@chronoverse-eslint/react)
-[![ESLint](https://img.shields.io/badge/ESLint-v9.26.0-4B32C3.svg)](https://eslint.org)
+[![ESLint](https://img.shields.io/badge/ESLint-v9.28.0-4B32C3.svg)](https://eslint.org)
 [![React](https://img.shields.io/badge/React-v19.1.0-61DAFB.svg)](https://reactjs.org)
 [![License](https://img.shields.io/badge/license-MIT-4B32C3.svg)](LICENSE)
-
-Comprehensive ESLint configuration for React projects, supporting both JavaScript and TypeScript, with a focus on best practices, accessibility, and performance.
-
-## Features
-
-- ✨ React and React Hooks best practices
-- ♿ Accessibility (a11y) rules
-- 🚀 React Compiler integration
-- 📝 TypeScript support
-- 🔄 Modern JavaScript features
-- 🌐 Browser and Service Worker globals
-- 🧩 JSX syntax support
-- ⚡ Performance optimization rules
+[![Demo](https://img.shields.io/badge/🛠️-Config%20Inspector-4B32C3)](https://gratisvictory.github.io/chronoverse-eslint)
 
 ## Installation
 
@@ -37,47 +25,81 @@ bun add -D @chronoverse-eslint/react eslint
 Add to your `eslint.config.js`:
 
 ```javascript
-import { CHRONOVERSE_REACT } from '@chronoverse-eslint/react';
+import { eslintReactJsx } from '@chronoverse-eslint/react/eslint-react-jsx';
+import { eslintReactTsx } from '@chronoverse-eslint/react/eslint-react-tsx';
+import { jsxA11y } from '@chronoverse-eslint/react/jsx-a11y';
+import { reactBase } from '@chronoverse-eslint/react/react-base';
+import { reactCompiler } from '@chronoverse-eslint/react/react-compiler';
+import { reactHooks } from '@chronoverse-eslint/react/react-hooks';
 
-export default [
-  // Core React rules
-  ...CHRONOVERSE_REACT.react,
-  // Accessibility rules
-  ...CHRONOVERSE_REACT.jsxA11y,
-  // React Hooks rules
-  ...CHRONOVERSE_REACT.reactHooks,
-  // React Compiler support
-  ...CHRONOVERSE_REACT.reactCompiler,
-  // For React JavaScript projects
-  ...CHRONOVERSE_REACT.eslintReactJsx,
-  // For React TypeScript projects
-  ...CHRONOVERSE_REACT.eslintReactTsx,
+import { eslintReactJsx, eslintReactTsx, jsxA11y, reactBase, reactCompiler, reactHooks } from '@chronoverse-eslint/react';
+
+const eslintConfig = [
+	...reactBase,
+	...jsxA11y,
+	...reactHooks,
+	...reactCompiler,
+	...eslintReactJsx,
+	...eslintReactTsx,
 ];
+
+export default eslintConfig;
 ```
 
 Or with `defineConfig`:
 
 ```javascript
-import { defineConfig } from 'eslint/config';
-import { CHRONOVERSE_REACT } from '@chronoverse-eslint/react';
+import { eslintReactJsx } from '@chronoverse-eslint/react/eslint-react-jsx';
+import { eslintReactTsx } from '@chronoverse-eslint/react/eslint-react-tsx';
+import { jsxA11y } from '@chronoverse-eslint/react/jsx-a11y';
+import { reactBase } from '@chronoverse-eslint/react/react-base';
+import { reactCompiler } from '@chronoverse-eslint/react/react-compiler';
+import { reactHooks } from '@chronoverse-eslint/react/react-hooks';
 
-export default defineConfig([
-  CHRONOVERSE_REACT.react,
-  CHRONOVERSE_REACT.jsxA11y,
-  CHRONOVERSE_REACT.reactHooks,
-  CHRONOVERSE_REACT.reactCompiler,
-  CHRONOVERSE_REACT.eslintReactJsx,
-  CHRONOVERSE_REACT.eslintReactTsx,
-  // Your custom rules here
+import { eslintReactJsx, eslintReactTsx, jsxA11y, reactBase, reactCompiler, reactHooks } from '@chronoverse-eslint/react';
+
+import { defineConfig } from 'eslint/config';
+
+const eslintConfig = defineConfig([
+	reactBase,
+	jsxA11y,
+	reactHooks,
+	reactCompiler,
+	eslintReactJsx,
+	eslintReactTsx,
 ]);
+
+export default eslintConfig;
+```
+
+Or `only-rules`:
+
+```javascript
+import { reactRules } from '@chronoverse-eslint/react/react-rules';
+import { a11y } from '@chronoverse-eslint/react/a11y-rules';
+
+import { reactRules, a11y } from '@chronoverse-eslint/react';
+
+import { defineConfig } from 'eslint/config';
+
+const eslintConfig = defineConfig([
+	{
+		rules: {
+			...reactRules,
+			...a11y,
+		},
+	},
+]);
+
+export default eslintConfig;
 ```
 
 ## Requirements
 
-- ESLint >=9.27.0
+- ESLint >=9.28.0
 - React >=19.1.0
 - TypeScript >=5.8.3 (for TypeScript support)
-- Bun >=1.2.13
+- Bun >=1.2.14
 - Node.js >=23.11.0
 
 ---

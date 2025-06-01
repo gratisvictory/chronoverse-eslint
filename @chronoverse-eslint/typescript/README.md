@@ -1,11 +1,10 @@
 # @chronoverse-eslint/typescript
 
 [![npm version](https://img.shields.io/npm/v/@chronoverse-eslint/typescript.svg)](https://www.npmjs.com/package/@chronoverse-eslint/typescript)
-[![ESLint](https://img.shields.io/badge/ESLint-v9.26.0-4B32C3.svg)](https://eslint.org)
+[![ESLint](https://img.shields.io/badge/ESLint-v9.28.0-4B32C3.svg)](https://eslint.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-v5.8.3-3178C6.svg)](https://www.typescriptlang.org)
 [![License](https://img.shields.io/badge/license-MIT-4B32C3.svg)](LICENSE)
-
-Comprehensive ESLint configuration for TypeScript projects, focusing on type safety, code quality, and best practices.
+[![Demo](https://img.shields.io/badge/🛠️-Config%20Inspector-4B32C3)](https://gratisvictory.github.io/chronoverse-eslint)
 
 ## Installation
 
@@ -28,7 +27,7 @@ Add to your `eslint.config.js`:
 ```javascript
 import { typescript } from '@chronoverse-eslint/typescript';
 
-import { typescript } from '@chronoverse-eslint/typescript/config';
+import { typescript } from '@chronoverse-eslint/typescript/typescript-base';
 
 const eslintConfig = [
 	...typescript,
@@ -42,15 +41,19 @@ Or with `defineConfig`:
 ```javascript
 import { typescript } from '@chronoverse-eslint/typescript';
 
-import { typescript } from '@chronoverse-eslint/typescript/config';
+import { typescript } from '@chronoverse-eslint/typescript/typescript-base';
 
 import { defineConfig } from 'eslint/config';
 
-export default defineConfig(typescript);
+const eslintConfig = defineConfig(typescript);
 
-export default defineConfig([
+export default eslintConfig;
+
+const eslintConfig = defineConfig([
 	typescript,
 ]);
+
+export default eslintConfig;
 ```
 
 Or `only-rules`:
@@ -65,7 +68,7 @@ import { consistent, extension, safe, tsdoc } from '@chronoverse-eslint/typescri
 
 import { defineConfig } from 'eslint/config';
 
-export default defineConfig([
+const eslintConfig = defineConfig([
 	{
 		rules: {
 			...consistent,
@@ -75,6 +78,8 @@ export default defineConfig([
 		},
 	},
 ]);
+
+export default eslintConfig;
 ```
 
 ## Requirements

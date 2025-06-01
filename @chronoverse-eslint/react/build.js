@@ -8,7 +8,7 @@ await build({
 		'./src/jsx-a11y.js',
 		'./src/react-compiler.js',
 		'./src/react-hooks.js',
-		'./src/react.js',
+		'./src/react-base.js',
 		'./src/index.js',
 	],
 });

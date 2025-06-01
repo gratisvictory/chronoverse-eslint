@@ -5,7 +5,7 @@ await build({
 		'./src/rules/extension.js',
 		'./src/rules/safe.js',
 		'./src/rules/tsdoc.js',
-		'./src/config.js',
+		'./src/typescript-base.js',
 		'./src/index.js',
 	],
 });

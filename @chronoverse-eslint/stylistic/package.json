@@ -1,6 +1,6 @@
 {
   "name": "@chronoverse-eslint/stylistic",
-  "version": "3.1.0",
+  "version": "4.0.0",
   "private": false,
   "description": "Comprehensive ESLint stylistic rules configuration for JavaScript, TypeScript, JSX and more",
   "keywords": [
@@ -86,7 +86,7 @@
     "lint:inspector:clean": "rimraf .eslint-stylistic"
   },
   "dependencies": {
-    "@chronoverse-shared/utilities": "^3.1.1",
+    "@chronoverse-shared/utilities": "^4.0.0",
     "@stylistic/eslint-plugin-js": "^4.4.0",
     "@stylistic/eslint-plugin-jsx": "^4.4.0",
     "@stylistic/eslint-plugin-plus": "^4.4.0",

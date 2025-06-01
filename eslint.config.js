@@ -1,5 +1,5 @@
 import { stylisticJs, stylisticPlus } from '@chronoverse-eslint/stylistic';
-import { javascript } from '@chronoverse-eslint/javascript/config';
+import { javascript } from '@chronoverse-eslint/javascript/javascript-base';
 import { functionalJs } from '@chronoverse-eslint/functional/functional-js';
 import { comments } from '@chronoverse-eslint/presets/comments';
 import { dependency } from '@chronoverse-eslint/presets/dependency';
@@ -19,7 +19,6 @@ const eslintConfig = defineConfig([
 	functionalJs,
 	stylisticJs,
 	stylisticPlus,
-	functionalJs,
 	comments,
 	dependency,
 	jsdoc,
@@ -30,15 +29,6 @@ const eslintConfig = defineConfig([
 	regexp,
 	unicorn,
 	disables,
-	// {
-	// 	name: '@chronoverse/overrides',
-	// 	rules: {
-	// 		'@stylistic/js/object-curly-newline': 'off',
-	// 		'n/no-process-exit': 'warn',
-	// 		'unicorn/no-process-exit': 'warn',
-	// 		'@stylistic/js/max-len': 'warn',
-	// 	},
-	// },
 ]);
 
 export default eslintConfig;

@@ -8,7 +8,7 @@ await build({
 		'./src/rules/strict.js',
 		'./src/rules/stylistic.js',
 		'./src/rules/variables.js',
-		'./src/config.js',
+		'./src/javascript-base.js',
 		'./src/index.js',
 	],
 });

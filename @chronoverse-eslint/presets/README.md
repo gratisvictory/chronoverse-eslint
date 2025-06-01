@@ -1,11 +1,9 @@
 # @chronoverse-eslint/presets
 
 [![npm](https://img.shields.io/npm/v/@chronoverse-eslint/presets.svg)](https://www.npmjs.com/package/@chronoverse-eslint/presets)
-[![ESLint](https://img.shields.io/badge/ESLint-v9.27.0-4B32C3.svg)](https://eslint.org)
+[![ESLint](https://img.shields.io/badge/ESLint-v9.28.0-4B32C3.svg)](https://eslint.org)
 [![License](https://img.shields.io/badge/license-MIT-4B32C3.svg)](LICENSE)
 [![Demo](https://img.shields.io/badge/🛠️-Config%20Inspector-4B32C3)](https://gratisvictory.github.io/chronoverse-eslint)
-
-Comprehensive collection of ESLint presets for modern JavaScript and TypeScript projects, providing a robust foundation for code quality and best practices.
 
 ## Available Presets
 

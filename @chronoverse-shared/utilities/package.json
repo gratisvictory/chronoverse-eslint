@@ -1,6 +1,6 @@
 {
   "name": "@chronoverse-shared/utilities",
-  "version": "3.1.1",
+  "version": "4.0.0",
   "private": false,
   "description": "Shared constants and utilities for @chronoverse-eslint packages.",
   "keywords": [
