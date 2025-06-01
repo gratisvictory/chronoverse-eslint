@@ -40,7 +40,7 @@
       "index": 3
     },
     {
-      "name": "@chronoverse/gitignore",
+      "name": "@chronoverse-eslint/gitignore",
       "ignores": [
         "**/node_modules",
         "**/out",
@@ -73,7 +73,7 @@
       "index": 4
     },
     {
-      "name": "@chronoverse/ignores",
+      "name": "@chronoverse-eslint/ignores",
       "ignores": [
         "**/node_modules/**",
         "**/{dist,build}/**",
@@ -109,7 +109,7 @@
       "index": 5
     },
     {
-      "name": "@chronoverse/javascript/setup",
+      "name": "@chronoverse-eslint/javascript/setup",
       "languageOptions": {
         "ecmaVersion": "latest",
         "globals": {
@@ -1395,7 +1395,7 @@
       "index": 6
     },
     {
-      "name": "@chronoverse/javascript/rules",
+      "name": "@chronoverse-eslint/javascript/rules",
       "files": [
         "**/*.?([cm])js?(x)"
       ],
@@ -2271,7 +2271,7 @@
       "index": 7
     },
     {
-      "name": "@chronoverse/jsdoc/setup",
+      "name": "@chronoverse-eslint/jsdoc/setup",
       "plugins": {
         "jsdoc": {}
       },
@@ -2314,73 +2314,73 @@
       "index": 8
     },
     {
-      "name": "@chronoverse/jsdoc/js-rules",
+      "name": "@chronoverse-eslint/jsdoc/js-rules",
       "files": [
         "**/*.?([cm])js?(x)"
       ],
       "rules": {
-        "jsdoc/check-access": "error",
-        "jsdoc/check-alignment": "error",
+        "jsdoc/check-access": "warn",
+        "jsdoc/check-alignment": "warn",
         "jsdoc/check-examples": "off",
         "jsdoc/check-indentation": "off",
         "jsdoc/check-line-alignment": "off",
-        "jsdoc/check-param-names": "error",
-        "jsdoc/check-property-names": "error",
+        "jsdoc/check-param-names": "warn",
+        "jsdoc/check-property-names": "warn",
         "jsdoc/check-syntax": "off",
-        "jsdoc/check-tag-names": "error",
+        "jsdoc/check-tag-names": "warn",
         "jsdoc/check-template-names": "off",
-        "jsdoc/check-types": "error",
-        "jsdoc/check-values": "error",
+        "jsdoc/check-types": "warn",
+        "jsdoc/check-values": "warn",
         "jsdoc/convert-to-jsdoc-comments": "off",
-        "jsdoc/empty-tags": "error",
-        "jsdoc/implements-on-classes": "error",
+        "jsdoc/empty-tags": "warn",
+        "jsdoc/implements-on-classes": "warn",
         "jsdoc/imports-as-dependencies": "off",
         "jsdoc/informative-docs": "off",
         "jsdoc/lines-before-block": "off",
         "jsdoc/match-description": "off",
         "jsdoc/match-name": "off",
-        "jsdoc/multiline-blocks": "error",
+        "jsdoc/multiline-blocks": "warn",
         "jsdoc/no-bad-blocks": "off",
         "jsdoc/no-blank-block-descriptions": "off",
         "jsdoc/no-blank-blocks": "off",
-        "jsdoc/no-defaults": "error",
+        "jsdoc/no-defaults": "warn",
         "jsdoc/no-missing-syntax": "off",
-        "jsdoc/no-multi-asterisks": "error",
+        "jsdoc/no-multi-asterisks": "warn",
         "jsdoc/no-restricted-syntax": "off",
         "jsdoc/no-types": "off",
-        "jsdoc/no-undefined-types": "error",
+        "jsdoc/no-undefined-types": "warn",
         "jsdoc/require-asterisk-prefix": "off",
         "jsdoc/require-description": "off",
         "jsdoc/require-description-complete-sentence": "off",
         "jsdoc/require-example": "off",
         "jsdoc/require-file-overview": "off",
         "jsdoc/require-hyphen-before-param-description": "off",
-        "jsdoc/require-jsdoc": "error",
-        "jsdoc/require-param": "error",
-        "jsdoc/require-param-description": "error",
-        "jsdoc/require-param-name": "error",
-        "jsdoc/require-param-type": "error",
-        "jsdoc/require-property": "error",
-        "jsdoc/require-property-description": "error",
-        "jsdoc/require-property-name": "error",
-        "jsdoc/require-property-type": "error",
-        "jsdoc/require-returns": "error",
-        "jsdoc/require-returns-check": "error",
-        "jsdoc/require-returns-description": "error",
-        "jsdoc/require-returns-type": "error",
+        "jsdoc/require-jsdoc": "warn",
+        "jsdoc/require-param": "warn",
+        "jsdoc/require-param-description": "warn",
+        "jsdoc/require-param-name": "warn",
+        "jsdoc/require-param-type": "warn",
+        "jsdoc/require-property": "warn",
+        "jsdoc/require-property-description": "warn",
+        "jsdoc/require-property-name": "warn",
+        "jsdoc/require-property-type": "warn",
+        "jsdoc/require-returns": "warn",
+        "jsdoc/require-returns-check": "warn",
+        "jsdoc/require-returns-description": "warn",
+        "jsdoc/require-returns-type": "warn",
         "jsdoc/require-template": "off",
         "jsdoc/require-throws": "off",
-        "jsdoc/require-yields": "error",
-        "jsdoc/require-yields-check": "error",
+        "jsdoc/require-yields": "warn",
+        "jsdoc/require-yields-check": "warn",
         "jsdoc/sort-tags": "off",
-        "jsdoc/tag-lines": "error",
+        "jsdoc/tag-lines": "warn",
         "jsdoc/text-escaping": "off",
-        "jsdoc/valid-types": "error"
+        "jsdoc/valid-types": "warn"
       },
       "index": 9
     },
     {
-      "name": "@chronoverse/jsdoc/ts-rules",
+      "name": "@chronoverse-eslint/jsdoc/ts-rules",
       "files": [
         "**/*.?([cm])ts?(x)"
       ],
@@ -2491,34 +2491,27 @@
       "index": 10
     },
     {
-      "name": "@chronoverse/functionalJs/setup",
+      "name": "@chronoverse-eslint/functional-js/setup",
       "plugins": {
         "functional": {}
       },
       "index": 11
     },
     {
-      "name": "@chronoverse/functionalJs/rules",
+      "name": "@chronoverse-eslint/functional-js/rules",
       "files": [
         "**/*.?([cm])js"
       ],
       "rules": {
+        "prefer-const": "error",
+        "no-param-reassign": "error",
+        "no-var": "error",
         "functional/functional-parameters": "off",
         "functional/immutable-data": "off",
+        "functional/no-classes": "error",
+        "functional/no-class-inheritance": "error",
         "functional/no-conditional-statements": "off",
         "functional/no-expression-statements": "off",
-        "functional/no-mixed-types": "off",
-        "functional/no-return-void": "off",
-        "functional/no-throw-statements": "off",
-        "functional/prefer-immutable-types": "off",
-        "functional/prefer-property-signatures": "off",
-        "functional/prefer-readonly-type": "off",
-        "functional/prefer-tacit": "off",
-        "functional/readonly-type": "off",
-        "functional/type-declaration-immutability": "off",
-        "functional/no-class-inheritance": [
-          "error"
-        ],
         "functional/no-let": [
           "error",
           {
@@ -2526,20 +2519,34 @@
           }
         ],
         "functional/no-loop-statements": "error",
+        "functional/no-mixed-types": "off",
+        "functional/no-return-void": "off",
         "functional/no-this-expressions": "off",
-        "functional/no-try-statements": "off"
+        "functional/no-throw-statements": [
+          "error",
+          {
+            "allowToRejectPromises": true
+          }
+        ],
+        "functional/no-try-statements": "off",
+        "functional/prefer-immutable-types": "off",
+        "functional/type-declaration-immutability": "off",
+        "functional/prefer-property-signatures": "off",
+        "functional/prefer-tacit": "off",
+        "functional/readonly-type": "off",
+        "functional/prefer-readonly-type": "off"
       },
       "index": 12
     },
     {
-      "name": "@chronoverse/stylisticJs/setup",
+      "name": "@chronoverse-eslint/stylistic-js/setup",
       "plugins": {
         "@stylistic/js": {}
       },
       "index": 13
     },
     {
-      "name": "@chronoverse/stylisticJs/rules",
+      "name": "@chronoverse-eslint/stylistic-js/rules",
       "files": [
         "**/*.?([cm])js?(x)"
       ],
@@ -3024,13 +3031,10 @@
       "index": 14
     },
     {
-      "name": "@chronoverse/typescript/setup",
+      "name": "@chronoverse-eslint/typescript/setup",
       "languageOptions": {
         "parser": "typescript-eslint/parser",
         "parserOptions": {
-          "ecmaFeatures": {
-            "jsx": true
-          },
           "ecmaVersion": "latest",
           "projectService": true,
           "sourceType": "module"
@@ -3044,7 +3048,7 @@
       "index": 15
     },
     {
-      "name": "@chronoverse/typescript/rules",
+      "name": "@chronoverse-eslint/typescript/rules",
       "files": [
         "**/*.?([cm])ts?(x)"
       ],
@@ -3207,13 +3211,10 @@
       "index": 16
     },
     {
-      "name": "@chronoverse/functionalTs/setup",
+      "name": "@chronoverse-eslint/functional-ts/setup",
       "languageOptions": {
         "parser": "typescript-eslint/parser",
         "parserOptions": {
-          "ecmaFeatures": {
-            "jsx": true
-          },
           "ecmaVersion": "latest",
           "projectService": true,
           "sourceType": "module"
@@ -3225,39 +3226,42 @@
       "index": 17
     },
     {
-      "name": "@chronoverse/functionalTs/rules",
+      "name": "@chronoverse-eslint/functional-ts/rules",
       "files": [
         "**/*.?([cm])ts"
       ],
       "rules": {
+        "prefer-const": "error",
+        "no-param-reassign": "error",
+        "no-var": "error",
+        "@typescript-eslint/prefer-readonly": "error",
+        "@typescript-eslint/switch-exhaustiveness-check": "error",
         "functional/functional-parameters": [
           "error",
           {
             "enforceParameterCount": false,
             "overrides": [
               {
-                "options": {
-                  "enforceParameterCount": {
-                    "count": "atLeastOne",
-                    "ignoreGettersAndSetters": true,
-                    "ignoreIIFE": true,
-                    "ignoreLambdaExpression": true
-                  }
-                },
                 "specifiers": [
                   {
                     "from": "file"
                   }
-                ]
+                ],
+                "options": {
+                  "enforceParameterCount": {
+                    "count": "atLeastOne",
+                    "ignoreLambdaExpression": true,
+                    "ignoreIIFE": true,
+                    "ignoreGettersAndSetters": true
+                  }
+                }
               }
             ]
           }
         ],
         "functional/immutable-data": "error",
         "functional/no-classes": "error",
-        "functional/no-class-inheritance": [
-          "error"
-        ],
+        "functional/no-class-inheritance": "error",
         "functional/no-conditional-statements": [
           "error",
           {
@@ -3288,12 +3292,6 @@
             "enforcement": "None",
             "overrides": [
               {
-                "options": {
-                  "ignoreInferredTypes": true,
-                  "parameters": {
-                    "enforcement": "ReadonlyShallow"
-                  }
-                },
                 "specifiers": [
                   {
                     "from": "lib"
@@ -3301,17 +3299,23 @@
                   {
                     "from": "package"
                   }
-                ]
+                ],
+                "options": {
+                  "ignoreInferredTypes": true,
+                  "parameters": {
+                    "enforcement": "ReadonlyShallow"
+                  }
+                }
               },
               {
+                "specifiers": {
+                  "from": "file"
+                },
                 "options": {
                   "ignoreInferredTypes": true,
                   "parameters": {
                     "enforcement": "ReadonlyDeep"
                   }
-                },
-                "specifiers": {
-                  "from": "file"
                 }
               }
             ]
@@ -3322,25 +3326,25 @@
           {
             "rules": [
               {
-                "comparator": 1,
                 "identifiers": [
                   "^I?Immutable.+"
                 ],
-                "immutability": 5
+                "immutability": 5,
+                "comparator": 1
               },
               {
-                "comparator": 1,
                 "identifiers": [
                   "^I?ReadonlyDeep.+"
                 ],
-                "immutability": 4
+                "immutability": 4,
+                "comparator": 1
               },
               {
-                "comparator": 1,
                 "identifiers": [
                   "^I?Readonly.+"
                 ],
                 "immutability": 3,
+                "comparator": 1,
                 "suggestions": [
                   {
                     "pattern": "^(Array|Map|Set)<(.+)>$",
@@ -3353,11 +3357,11 @@
                 ]
               },
               {
-                "comparator": -1,
                 "identifiers": [
                   "^I?Mutable.+"
                 ],
                 "immutability": 2,
+                "comparator": -1,
                 "suggestions": [
                   {
                     "pattern": "^Readonly(Array|Map|Set)<(.+)>$",
@@ -3379,13 +3383,10 @@
       "index": 18
     },
     {
-      "name": "@chronoverse/stylisticTs/setup",
+      "name": "@chronoverse-eslint/stylistic-ts/setup",
       "languageOptions": {
         "parser": "typescript-eslint/parser",
         "parserOptions": {
-          "ecmaFeatures": {
-            "jsx": true
-          },
           "ecmaVersion": "latest",
           "projectService": true,
           "sourceType": "module"
@@ -3397,10 +3398,9 @@
       "index": 19
     },
     {
-      "name": "@chronoverse/stylisticTs/rules",
+      "name": "@chronoverse-eslint/stylistic-ts/rules",
       "files": [
-        "**/*.?([cm])ts?(x)",
-        "**/*.d.ts"
+        "**/*.?([cm])ts?(x)"
       ],
       "rules": {
         "@stylistic/ts/block-spacing": [
@@ -3568,7 +3568,7 @@
       "index": 20
     },
     {
-      "name": "@chronoverse/react/setup",
+      "name": "@chronoverse-eslint/react-base/setup",
       "languageOptions": {
         "parserOptions": {
           "ecmaFeatures": {
@@ -3579,10 +3579,15 @@
       "plugins": {
         "react": {}
       },
+      "settings": {
+        "react": {
+          "version": "detect"
+        }
+      },
       "index": 21
     },
     {
-      "name": "@chronoverse/react/rules",
+      "name": "@chronoverse-eslint/react-base/rules",
       "files": [
         "**/*.?([cm])js?(x)",
         "**/*.?([cm])ts?(x)"
@@ -4024,21 +4029,16 @@
       "index": 22
     },
     {
-      "name": "@chronoverse/stylisticJsx/setup",
-      "files": [
-        "**/*.?([cm])js?(x)",
-        "**/*.?([cm])ts?(x)"
-      ],
+      "name": "@chronoverse-eslint/stylistic-jsx/setup",
       "plugins": {
         "@stylistic/jsx": {}
       },
       "index": 23
     },
     {
-      "name": "@chronoverse/stylisticJsx/rules",
+      "name": "@chronoverse-eslint/stylistic-jsx/rules",
       "files": [
-        "**/*.?([cm])js?(x)",
-        "**/*.?([cm])ts?(x)"
+        "**/*.{jsx,tsx}"
       ],
       "rules": {
         "@stylistic/jsx/jsx-child-element-spacing": "off",
@@ -4137,7 +4137,7 @@
       "index": 24
     },
     {
-      "name": "@chronoverse/@eslint-react-jsx/setup",
+      "name": "@chronoverse-eslint/eslint-react-jsx/setup",
       "languageOptions": {
         "parserOptions": {
           "ecmaFeatures": {
@@ -4148,7 +4148,7 @@
       "index": 25
     },
     {
-      "name": "@chronoverse/@eslint-react-jsx/rules > @eslint-react/recommended",
+      "name": "@chronoverse-eslint/eslint-react-jsx/rules > @eslint-react/recommended",
       "plugins": {
         "@eslint-react": {},
         "@eslint-react/dom": {},
@@ -4248,20 +4248,17 @@
       "index": 26
     },
     {
-      "name": "@chronoverse/@eslint-react-jsx/rules",
+      "name": "@chronoverse-eslint/eslint-react-jsx/rules",
       "files": [
         "**/*.?([cm])js?(x)"
       ],
       "index": 27
     },
     {
-      "name": "@chronoverse/@eslint-react-tsx/setup",
+      "name": "@chronoverse-eslint/eslint-react-tsx/setup",
       "languageOptions": {
         "parser": "typescript-eslint/parser",
         "parserOptions": {
-          "ecmaFeatures": {
-            "jsx": true
-          },
           "ecmaVersion": "latest",
           "projectService": true,
           "sourceType": "module"
@@ -4270,7 +4267,7 @@
       "index": 28
     },
     {
-      "name": "@chronoverse/@eslint-react-tsx/rules > @eslint-react/recommended-typescript",
+      "name": "@chronoverse-eslint/eslint-react-tsx/rules > @eslint-react/recommended-typescript",
       "plugins": {
         "@eslint-react": {},
         "@eslint-react/dom": {},
@@ -4371,21 +4368,123 @@
       "index": 29
     },
     {
-      "name": "@chronoverse/@eslint-react-tsx/rules",
+      "name": "@chronoverse-eslint/eslint-react-tsx/rules > @eslint-react/recommended-type-checked",
+      "plugins": {
+        "@eslint-react": {},
+        "@eslint-react/dom": {},
+        "@eslint-react/web-api": {},
+        "@eslint-react/debug": {},
+        "@eslint-react/hooks-extra": {},
+        "@eslint-react/naming-convention": {}
+      },
+      "rules": {
+        "@eslint-react/jsx-key-before-spread": "warn",
+        "@eslint-react/jsx-no-duplicate-props": "off",
+        "@eslint-react/jsx-uses-react": "off",
+        "@eslint-react/jsx-uses-vars": "off",
+        "@eslint-react/no-access-state-in-setstate": "error",
+        "@eslint-react/no-array-index-key": "warn",
+        "@eslint-react/no-children-count": "warn",
+        "@eslint-react/no-children-for-each": "warn",
+        "@eslint-react/no-children-map": "warn",
+        "@eslint-react/no-children-only": "warn",
+        "@eslint-react/no-children-to-array": "warn",
+        "@eslint-react/no-clone-element": "warn",
+        "@eslint-react/no-comment-textnodes": "warn",
+        "@eslint-react/no-component-will-mount": "error",
+        "@eslint-react/no-component-will-receive-props": "error",
+        "@eslint-react/no-component-will-update": "error",
+        "@eslint-react/no-context-provider": "warn",
+        "@eslint-react/no-create-ref": "error",
+        "@eslint-react/no-default-props": "error",
+        "@eslint-react/no-direct-mutation-state": "error",
+        "@eslint-react/no-duplicate-key": "warn",
+        "@eslint-react/no-forward-ref": "warn",
+        "@eslint-react/no-implicit-key": "warn",
+        "@eslint-react/no-missing-key": "error",
+        "@eslint-react/no-misused-capture-owner-stack": "error",
+        "@eslint-react/no-nested-component-definitions": "error",
+        "@eslint-react/no-nested-lazy-component-declarations": "warn",
+        "@eslint-react/no-prop-types": "error",
+        "@eslint-react/no-redundant-should-component-update": "error",
+        "@eslint-react/no-set-state-in-component-did-mount": "warn",
+        "@eslint-react/no-set-state-in-component-did-update": "warn",
+        "@eslint-react/no-set-state-in-component-will-update": "warn",
+        "@eslint-react/no-string-refs": "error",
+        "@eslint-react/no-unsafe-component-will-mount": "warn",
+        "@eslint-react/no-unsafe-component-will-receive-props": "warn",
+        "@eslint-react/no-unsafe-component-will-update": "warn",
+        "@eslint-react/no-unstable-context-value": "warn",
+        "@eslint-react/no-unstable-default-props": "warn",
+        "@eslint-react/no-unused-class-component-members": "warn",
+        "@eslint-react/no-unused-state": "warn",
+        "@eslint-react/no-use-context": "warn",
+        "@eslint-react/no-useless-forward-ref": "warn",
+        "@eslint-react/dom/no-dangerously-set-innerhtml": "warn",
+        "@eslint-react/dom/no-dangerously-set-innerhtml-with-children": "error",
+        "@eslint-react/dom/no-find-dom-node": "error",
+        "@eslint-react/dom/no-flush-sync": "error",
+        "@eslint-react/dom/no-hydrate": "error",
+        "@eslint-react/dom/no-missing-button-type": "warn",
+        "@eslint-react/dom/no-missing-iframe-sandbox": "warn",
+        "@eslint-react/dom/no-namespace": "error",
+        "@eslint-react/dom/no-render": "error",
+        "@eslint-react/dom/no-render-return-value": "error",
+        "@eslint-react/dom/no-script-url": "warn",
+        "@eslint-react/dom/no-unsafe-iframe-sandbox": "warn",
+        "@eslint-react/dom/no-unsafe-target-blank": "warn",
+        "@eslint-react/dom/no-use-form-state": "error",
+        "@eslint-react/dom/no-void-elements-with-children": "error",
+        "@eslint-react/web-api/no-leaked-event-listener": "warn",
+        "@eslint-react/web-api/no-leaked-interval": "warn",
+        "@eslint-react/web-api/no-leaked-resize-observer": "warn",
+        "@eslint-react/web-api/no-leaked-timeout": "warn",
+        "@eslint-react/hooks-extra/no-direct-set-state-in-use-effect": "warn",
+        "@eslint-react/hooks-extra/no-unnecessary-use-prefix": "warn",
+        "@eslint-react/hooks-extra/prefer-use-state-lazy-initialization": "warn",
+        "@eslint-react/naming-convention/context-name": "warn",
+        "@eslint-react/dom/no-unknown-property": "off",
+        "@eslint-react/no-leaked-conditional-rendering": "warn"
+      },
+      "settings": {
+        "react-x": {
+          "version": "detect",
+          "importSource": "react",
+          "strict": true,
+          "skipImportCheck": true,
+          "polymorphicPropName": "as",
+          "additionalComponents": [],
+          "additionalHooks": {
+            "useEffect": [
+              "useIsomorphicLayoutEffect"
+            ],
+            "useLayoutEffect": [
+              "useIsomorphicLayoutEffect"
+            ]
+          }
+        }
+      },
       "files": [
         "**/*.?([cm])ts?(x)"
       ],
       "index": 30
     },
     {
-      "name": "@chronoverse/react-hooks/setup",
-      "plugins": {
-        "react-hooks": {}
-      },
+      "name": "@chronoverse-eslint/eslint-react-tsx/rules",
+      "files": [
+        "**/*.?([cm])ts?(x)"
+      ],
       "index": 31
     },
     {
-      "name": "@chronoverse/react-hooks/rules",
+      "name": "@chronoverse-eslint/react-hooks/setup",
+      "plugins": {
+        "react-hooks": {}
+      },
+      "index": 32
+    },
+    {
+      "name": "@chronoverse-eslint/react-hooks/rules",
       "files": [
         "**/*.?([cm])js?(x)",
         "**/*.?([cm])ts?(x)"
@@ -4394,17 +4493,17 @@
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn"
       },
-      "index": 32
-    },
-    {
-      "name": "@chronoverse/react-compiler/setup",
-      "plugins": {
-        "react-compiler": {}
-      },
       "index": 33
     },
     {
-      "name": "@chronoverse/react-compiler/rules",
+      "name": "@chronoverse-eslint/react-compiler/setup",
+      "plugins": {
+        "react-compiler": {}
+      },
+      "index": 34
+    },
+    {
+      "name": "@chronoverse-eslint/react-compiler/rules",
       "files": [
         "**/*.?([cm])js?(x)",
         "**/*.?([cm])ts?(x)"
@@ -4412,17 +4511,17 @@
       "rules": {
         "react-compiler/react-compiler": "error"
       },
-      "index": 34
-    },
-    {
-      "name": "@chronoverse/jsx-a11y/setup",
-      "plugins": {
-        "jsx-a11y": {}
-      },
       "index": 35
     },
     {
-      "name": "@chronoverse/jsx-a11y/rules",
+      "name": "@chronoverse-eslint/jsx-a11y/setup",
+      "plugins": {
+        "jsx-a11y": {}
+      },
+      "index": 36
+    },
+    {
+      "name": "@chronoverse-eslint/jsx-a11y/rules",
       "files": [
         "**/*.?([cm])js?(x)",
         "**/*.?([cm])ts?(x)"
@@ -4673,17 +4772,17 @@
         "jsx-a11y/no-aria-hidden-on-focusable": "off",
         "jsx-a11y/prefer-tag-over-role": "off"
       },
-      "index": 36
-    },
-    {
-      "name": "@chronoverse/next/setup",
-      "plugins": {
-        "@next/next": {}
-      },
       "index": 37
     },
     {
-      "name": "@chronoverse/next/rules",
+      "name": "@chronoverse-eslint/next/setup",
+      "plugins": {
+        "@next/next": {}
+      },
+      "index": 38
+    },
+    {
+      "name": "@chronoverse-eslint/next/rules",
       "files": [
         "**/*.?([cm])js?(x)",
         "**/*.?([cm])ts?(x)"
@@ -4711,17 +4810,17 @@
         "@next/next/no-head-import-in-document": "error",
         "@next/next/no-script-component-in-head": "error"
       },
-      "index": 38
-    },
-    {
-      "name": "@chronoverse/stylisticPlus/setup",
-      "plugins": {
-        "@stylistic/plus": {}
-      },
       "index": 39
     },
     {
-      "name": "@chronoverse/stylisticPlus/rules",
+      "name": "@chronoverse-eslint/stylistic-plus/setup",
+      "plugins": {
+        "@stylistic/plus": {}
+      },
+      "index": 40
+    },
+    {
+      "name": "@chronoverse-eslint/stylistic-plus/rules",
       "files": [
         "**/*.?([cm])js?(x)",
         "**/*.?([cm])ts?(x)"
@@ -4738,17 +4837,17 @@
         "@stylistic/plus/type-generic-spacing": "error",
         "@stylistic/plus/type-named-tuple-spacing": "error"
       },
-      "index": 40
-    },
-    {
-      "name": "@chronoverse/eslint-comments/setup",
-      "plugins": {
-        "eslint-comments": {}
-      },
       "index": 41
     },
     {
-      "name": "@chronoverse/eslint-comments/rules",
+      "name": "@chronoverse-eslint/eslint-comments/setup",
+      "plugins": {
+        "eslint-comments": {}
+      },
+      "index": 42
+    },
+    {
+      "name": "@chronoverse-eslint/eslint-comments/rules",
       "files": [
         "**/*.?([cm])js?(x)",
         "**/*.?([cm])ts?(x)"
@@ -4760,17 +4859,17 @@
         "eslint-comments/no-unlimited-disable": "error",
         "eslint-comments/no-unused-enable": "error"
       },
-      "index": 42
-    },
-    {
-      "name": "@chronoverse/dependency/setup",
-      "plugins": {
-        "depend": {}
-      },
       "index": 43
     },
     {
-      "name": "@chronoverse/dependency/rules",
+      "name": "@chronoverse-eslint/dependency/setup",
+      "plugins": {
+        "depend": {}
+      },
+      "index": 44
+    },
+    {
+      "name": "@chronoverse-eslint/dependency/rules",
       "files": [
         "**/*.?([cm])js?(x)",
         "**/*.?([cm])ts?(x)"
@@ -4778,17 +4877,17 @@
       "rules": {
         "depend/ban-dependencies": "error"
       },
-      "index": 44
-    },
-    {
-      "name": "@chronoverse/better-mutation/setup",
-      "plugins": {
-        "better-mutation": {}
-      },
       "index": 45
     },
     {
-      "name": "@chronoverse/better-mutation/rules",
+      "name": "@chronoverse-eslint/better-mutation/setup",
+      "plugins": {
+        "better-mutation": {}
+      },
+      "index": 46
+    },
+    {
+      "name": "@chronoverse-eslint/better-mutation/rules",
       "files": [
         "**/*.?([cm])js?(x)",
         "**/*.?([cm])ts?(x)"
@@ -4798,17 +4897,17 @@
         "better-mutation/no-mutating-methods": "error",
         "better-mutation/no-mutation": "error"
       },
-      "index": 46
-    },
-    {
-      "name": "@chronoverse/node/setup",
-      "plugins": {
-        "n": {}
-      },
       "index": 47
     },
     {
-      "name": "@chronoverse/node/rules",
+      "name": "@chronoverse-eslint/node/setup",
+      "plugins": {
+        "n": {}
+      },
+      "index": 48
+    },
+    {
+      "name": "@chronoverse-eslint/node/rules",
       "files": [
         "**/*.?([cm])js?(x)",
         "**/*.?([cm])ts?(x)"
@@ -4853,17 +4952,17 @@
         "n/no-new-require": "error",
         "n/no-path-concat": "error"
       },
-      "index": 48
-    },
-    {
-      "name": "@chronoverse/perfectionist/setup",
-      "plugins": {
-        "perfectionist": {}
-      },
       "index": 49
     },
     {
-      "name": "@chronoverse/perfectionist/rules",
+      "name": "@chronoverse-eslint/perfectionist/setup",
+      "plugins": {
+        "perfectionist": {}
+      },
+      "index": 50
+    },
+    {
+      "name": "@chronoverse-eslint/perfectionist/rules",
       "files": [
         "**/*.?([cm])js?(x)",
         "**/*.?([cm])ts?(x)"
@@ -5232,24 +5331,21 @@
         "perfectionist/sort-sets": "error",
         "perfectionist/sort-maps": "error"
       },
-      "index": 50
-    },
-    {
-      "name": "@chronoverse/promise/setup",
-      "plugins": {
-        "promise": {}
-      },
       "index": 51
     },
     {
-      "name": "@chronoverse/promise/rules",
+      "name": "@chronoverse-eslint/promise/setup",
+      "plugins": {
+        "promise": {}
+      },
+      "index": 52
+    },
+    {
+      "name": "@chronoverse-eslint/promise/rules",
       "files": [
         "**/*.?([cm])js?(x)",
         "**/*.?([cm])ts?(x)"
       ],
-      "plugins": {
-        "promise": {}
-      },
       "rules": {
         "promise/always-return": "error",
         "promise/no-return-wrap": "error",
@@ -5264,17 +5360,17 @@
         "promise/no-return-in-finally": "warn",
         "promise/valid-params": "warn"
       },
-      "index": 52
-    },
-    {
-      "name": "@chronoverse/regexp/setup",
-      "plugins": {
-        "regexp": {}
-      },
       "index": 53
     },
     {
-      "name": "@chronoverse/regexp/rules",
+      "name": "@chronoverse-eslint/regexp/setup",
+      "plugins": {
+        "regexp": {}
+      },
+      "index": 54
+    },
+    {
+      "name": "@chronoverse-eslint/regexp/rules",
       "files": [
         "**/*.?([cm])js?(x)",
         "**/*.?([cm])ts?(x)"
@@ -5348,17 +5444,17 @@
         "regexp/strict": "error",
         "regexp/use-ignore-case": "error"
       },
-      "index": 54
-    },
-    {
-      "name": "@chronoverse/security/setup",
-      "plugins": {
-        "security": {}
-      },
       "index": 55
     },
     {
-      "name": "@chronoverse/security/rules",
+      "name": "@chronoverse-eslint/security/setup",
+      "plugins": {
+        "security": {}
+      },
+      "index": 56
+    },
+    {
+      "name": "@chronoverse-eslint/security/rules",
       "files": [
         "**/*.?([cm])js?(x)",
         "**/*.?([cm])ts?(x)"
@@ -5379,17 +5475,17 @@
         "security/detect-unsafe-regex": "warn",
         "security/detect-bidi-characters": "warn"
       },
-      "index": 56
-    },
-    {
-      "name": "@chronoverse/unicorn/setup",
-      "plugins": {
-        "unicorn": {}
-      },
       "index": 57
     },
     {
-      "name": "@chronoverse/unicorn/rules",
+      "name": "@chronoverse-eslint/unicorn/setup",
+      "plugins": {
+        "unicorn": {}
+      },
+      "index": 58
+    },
+    {
+      "name": "@chronoverse-eslint/unicorn/rules",
       "files": [
         "**/*.?([cm])js?(x)",
         "**/*.?([cm])ts?(x)"
@@ -5528,17 +5624,17 @@
         "unicorn/text-encoding-identifier-case": "error",
         "unicorn/throw-new-error": "error"
       },
-      "index": 58
-    },
-    {
-      "name": "@chronoverse/css/setup",
-      "plugins": {
-        "css": {}
-      },
       "index": 59
     },
     {
-      "name": "@chronoverse/css/rules",
+      "name": "@chronoverse-eslint/css/setup",
+      "plugins": {
+        "css": {}
+      },
+      "index": 60
+    },
+    {
+      "name": "@chronoverse-eslint/css/rules",
       "files": [
         "**/*.css"
       ],
@@ -5556,7 +5652,8 @@
               "prelude": "<string>"
             }
           }
-        }
+        },
+        "tolerant": true
       },
       "rules": {
         "css/no-empty-blocks": "error",
@@ -5564,24 +5661,19 @@
         "css/no-important": "error",
         "css/no-invalid-at-rules": "error",
         "css/no-invalid-properties": "error",
-        "css/use-baseline": [
-          "error",
-          {
-            "available": "widely"
-          }
-        ]
-      },
-      "index": 60
-    },
-    {
-      "name": "@chronoverse/json/setup",
-      "plugins": {
-        "json": {}
+        "css/use-baseline": "warn"
       },
       "index": 61
     },
     {
-      "name": "@chronoverse/json/rules",
+      "name": "@chronoverse-eslint/json/setup",
+      "plugins": {
+        "json": {}
+      },
+      "index": 62
+    },
+    {
+      "name": "@chronoverse-eslint/json/rules",
       "files": [
         "**/*.json"
       ],
@@ -5595,10 +5687,10 @@
         "json/no-unsafe-values": "error",
         "json/no-unnormalized-keys": "error"
       },
-      "index": 62
+      "index": 63
     },
     {
-      "name": "@chronoverse/jsonc/rules",
+      "name": "@chronoverse-eslint/jsonc/rules",
       "files": [
         "**/*.jsonc"
       ],
@@ -5612,10 +5704,10 @@
         "json/no-unsafe-values": "error",
         "json/no-unnormalized-keys": "error"
       },
-      "index": 63
+      "index": 64
     },
     {
-      "name": "@chronoverse/json5/rules",
+      "name": "@chronoverse-eslint/json5/rules",
       "files": [
         "**/*.json5"
       ],
@@ -5626,30 +5718,23 @@
         "json/no-unsafe-values": "error",
         "json/no-unnormalized-keys": "error"
       },
-      "index": 64
-    },
-    {
-      "name": "@chronoverse/prettier/setup",
-      "plugins": {
-        "prettier": {}
-      },
       "index": 65
     },
     {
-      "name": "@chronoverse/prettier/rules",
-      "files": [
-        "**/*.?([cm])js?(x)",
-        "**/*.?([cm])ts?(x)",
-        "**/*.d.ts"
-      ],
-      "rules": {
-        "prettier/prettier": "error"
+      "name": "@chronoverse-eslint/prettier/setup",
+      "plugins": {
+        "prettier": {}
       },
       "index": 66
     },
     {
-      "name": "@chronoverse/prettier-config/disables/rules",
+      "name": "@chronoverse-eslint/prettier/rules",
+      "files": [
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])ts?(x)"
+      ],
       "rules": {
+        "prettier/prettier": "error",
         "curly": 0,
         "no-unexpected-multiline": 0,
         "@stylistic/lines-around-comment": 0,
@@ -6010,36 +6095,6 @@
         "react/jsx-space-before-closing": "off"
       },
       "index": 67
-    },
-    {
-      "name": "@chronoverse/disables/js",
-      "files": [
-        "**/*.?([cm])js?(x)"
-      ],
-      "rules": {
-        "@typescript-eslint/explicit-function-return-type": "off"
-      },
-      "index": 68
-    },
-    {
-      "name": "@chronoverse/disables/nextjs",
-      "files": [
-        "{src/app,app}/**/{page,layout,not-found,error,loading}.{jsx,tsx}"
-      ],
-      "rules": {
-        "react/react-in-jsx-scope": "off"
-      },
-      "index": 69
-    },
-    {
-      "name": "@chronoverse/disables/unicorn",
-      "files": [
-        "**/*.d.ts"
-      ],
-      "rules": {
-        "unicorn-x/prevent-abbreviations": "off"
-      },
-      "index": 70
     }
   ],
   "rules": {
@@ -6793,11 +6848,17 @@
       "plugin": "eslint"
     },
     "func-style": {
+      "dialects": [
+        "javascript",
+        "typescript"
+      ],
+      "language": "javascript",
       "type": "suggestion",
       "defaultOptions": [
         "expression",
         {
           "allowArrowFunctions": false,
+          "allowTypeAnnotation": false,
           "overrides": {}
         }
       ],
@@ -8723,6 +8784,11 @@
     },
     "no-magic-numbers": {
       "type": "suggestion",
+      "dialects": [
+        "typescript",
+        "javascript"
+      ],
+      "language": "javascript",
       "docs": {
         "description": "Disallow magic numbers",
         "recommended": false,
@@ -9507,12 +9573,19 @@
     },
     "no-shadow": {
       "type": "suggestion",
+      "dialects": [
+        "typescript",
+        "javascript"
+      ],
+      "language": "javascript",
       "defaultOptions": [
         {
           "allow": [],
           "builtinGlobals": false,
           "hoist": "functions",
-          "ignoreOnInitialization": false
+          "ignoreOnInitialization": false,
+          "ignoreTypeValueShadow": true,
+          "ignoreFunctionTypeParameterNameValueShadow": true
         }
       ],
       "docs": {
@@ -9960,7 +10033,10 @@
           "classes": true,
           "functions": true,
           "variables": true,
-          "allowNamedExports": false
+          "allowNamedExports": false,
+          "enums": true,
+          "typedefs": true,
+          "ignoreTypeReferences": true
         }
       ],
       "name": "no-use-before-define",
@@ -10473,6 +10549,11 @@
     },
     "prefer-arrow-callback": {
       "type": "suggestion",
+      "dialects": [
+        "javascript",
+        "typescript"
+      ],
+      "language": "javascript",
       "defaultOptions": [
         {
           "allowNamedFunctions": false,
@@ -11559,11 +11640,11 @@
       "plugin": "jsdoc"
     },
     "jsdoc/convert-to-jsdoc-comments": {
-      "fixable": "code",
       "docs": {
         "description": "Converts non-JSDoc comments preceding or following nodes into JSDoc ones",
         "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/convert-to-jsdoc-comments.md#repos-sticky-header"
       },
+      "fixable": "code",
       "type": "suggestion",
       "name": "jsdoc/convert-to-jsdoc-comments",
       "plugin": "jsdoc"
@@ -11606,11 +11687,11 @@
       "plugin": "jsdoc"
     },
     "jsdoc/lines-before-block": {
-      "fixable": "code",
       "docs": {
         "description": "Enforces minimum number of newlines before JSDoc comment blocks",
         "url": "https://github.com/gajus/eslint-plugin-jsdoc/blob/main/docs/rules/lines-before-block.md#repos-sticky-header"
       },
+      "fixable": "code",
       "type": "suggestion",
       "name": "jsdoc/lines-before-block",
       "plugin": "jsdoc"
@@ -14565,6 +14646,10 @@
     },
     "@typescript-eslint/typedef": {
       "type": "suggestion",
+      "deprecated": {
+        "deprecatedSince": "8.33.0",
+        "message": "This is an old rule that is no longer recommended for use."
+      },
       "docs": {
         "description": "Require type annotations in certain places",
         "url": "https://typescript-eslint.io/rules/typedef"
@@ -21861,7 +21946,7 @@
         "**/*.json"
       ],
       "configs": [
-        62
+        63
       ]
     },
     {
@@ -21878,26 +21963,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -21914,26 +21996,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -21942,7 +22021,7 @@
         "**/*.json"
       ],
       "configs": [
-        62
+        63
       ]
     },
     {
@@ -21951,7 +22030,7 @@
         "**/*.json"
       ],
       "configs": [
-        62
+        63
       ]
     },
     {
@@ -21968,26 +22047,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -22004,26 +22080,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -22040,134 +22113,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
-      ]
-    },
-    {
-      "filepath": "@chronoverse-eslint/functional/src/rules/disables.js",
-      "globs": [
-        "**/*.js",
-        "**/*.?([cm])js?(x)",
-        "**/*.?([cm])js"
-      ],
-      "configs": [
-        2,
-        7,
-        9,
-        12,
-        14,
-        22,
-        23,
-        24,
-        26,
-        27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
-      ]
-    },
-    {
-      "filepath": "@chronoverse-eslint/functional/src/rules/javascript.js",
-      "globs": [
-        "**/*.js",
-        "**/*.?([cm])js?(x)",
-        "**/*.?([cm])js"
-      ],
-      "configs": [
-        2,
-        7,
-        9,
-        12,
-        14,
-        22,
-        23,
-        24,
-        26,
-        27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
-      ]
-    },
-    {
-      "filepath": "@chronoverse-eslint/functional/src/rules/typescript.js",
-      "globs": [
-        "**/*.js",
-        "**/*.?([cm])js?(x)",
-        "**/*.?([cm])js"
-      ],
-      "configs": [
-        2,
-        7,
-        9,
-        12,
-        14,
-        22,
-        23,
-        24,
-        26,
-        27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -22176,7 +22138,7 @@
         "**/*.json"
       ],
       "configs": [
-        62
+        63
       ]
     },
     {
@@ -22193,26 +22155,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -22229,26 +22188,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -22257,7 +22213,7 @@
         "**/*.json"
       ],
       "configs": [
-        62
+        63
       ]
     },
     {
@@ -22266,7 +22222,7 @@
         "**/*.json"
       ],
       "configs": [
-        62
+        63
       ]
     },
     {
@@ -22283,26 +22239,56 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
+      ]
+    },
+    {
+      "filepath": "@chronoverse-eslint/javascript/src/javascript-base.js",
+      "globs": [
+        "**/*.js",
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
+      ],
+      "configs": [
+        2,
+        7,
+        9,
+        12,
+        14,
+        22,
+        26,
+        27,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -22319,26 +22305,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -22355,26 +22338,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -22391,26 +22371,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -22427,26 +22404,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -22463,26 +22437,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -22499,26 +22470,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -22535,26 +22503,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -22563,7 +22528,7 @@
         "**/*.json"
       ],
       "configs": [
-        62
+        63
       ]
     },
     {
@@ -22580,26 +22545,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -22616,26 +22578,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -22644,7 +22603,7 @@
         "**/*.json"
       ],
       "configs": [
-        62
+        63
       ]
     },
     {
@@ -22653,7 +22612,7 @@
         "**/*.json"
       ],
       "configs": [
-        62
+        63
       ]
     },
     {
@@ -22670,26 +22629,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -22706,26 +22662,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -22742,26 +22695,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -22778,26 +22728,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -22814,26 +22761,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -22850,26 +22794,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -22886,26 +22827,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -22922,26 +22860,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -22958,26 +22893,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -22994,26 +22926,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -23030,26 +22959,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -23066,26 +22992,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -23102,26 +23025,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -23138,26 +23058,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -23174,26 +23091,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -23202,7 +23116,7 @@
         "**/*.json"
       ],
       "configs": [
-        62
+        63
       ]
     },
     {
@@ -23219,26 +23133,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -23255,26 +23166,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -23283,7 +23191,7 @@
         "**/*.json"
       ],
       "configs": [
-        62
+        63
       ]
     },
     {
@@ -23292,7 +23200,7 @@
         "**/*.json"
       ],
       "configs": [
-        62
+        63
       ]
     },
     {
@@ -23309,26 +23217,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -23345,26 +23250,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -23381,26 +23283,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -23417,26 +23316,56 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
+      ]
+    },
+    {
+      "filepath": "@chronoverse-eslint/react/src/react-base.js",
+      "globs": [
+        "**/*.js",
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
+      ],
+      "configs": [
+        2,
+        7,
+        9,
+        12,
+        14,
+        22,
+        26,
+        27,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -23453,26 +23382,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -23489,62 +23415,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
-      ]
-    },
-    {
-      "filepath": "@chronoverse-eslint/react/src/react.js",
-      "globs": [
-        "**/*.js",
-        "**/*.?([cm])js?(x)",
-        "**/*.?([cm])js"
-      ],
-      "configs": [
-        2,
-        7,
-        9,
-        12,
-        14,
-        22,
-        23,
-        24,
-        26,
-        27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -23561,26 +23448,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -23597,26 +23481,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -23625,7 +23506,7 @@
         "**/*.json"
       ],
       "configs": [
-        62
+        63
       ]
     },
     {
@@ -23642,26 +23523,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -23678,26 +23556,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -23706,7 +23581,7 @@
         "**/*.json"
       ],
       "configs": [
-        62
+        63
       ]
     },
     {
@@ -23715,7 +23590,7 @@
         "**/*.json"
       ],
       "configs": [
-        62
+        63
       ]
     },
     {
@@ -23732,26 +23607,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -23768,26 +23640,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -23804,26 +23673,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -23840,26 +23706,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -23876,26 +23739,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -23912,26 +23772,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -23948,26 +23805,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -23984,26 +23838,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -24020,26 +23871,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -24048,7 +23896,7 @@
         "**/*.json"
       ],
       "configs": [
-        62
+        63
       ]
     },
     {
@@ -24065,26 +23913,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -24101,26 +23946,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -24129,7 +23971,7 @@
         "**/*.json"
       ],
       "configs": [
-        62
+        63
       ]
     },
     {
@@ -24138,7 +23980,7 @@
         "**/*.json"
       ],
       "configs": [
-        62
+        63
       ]
     },
     {
@@ -24155,26 +23997,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -24191,26 +24030,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -24227,26 +24063,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -24263,26 +24096,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -24299,26 +24129,56 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
+      ]
+    },
+    {
+      "filepath": "@chronoverse-eslint/typescript/src/typescript-base.js",
+      "globs": [
+        "**/*.js",
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
+      ],
+      "configs": [
+        2,
+        7,
+        9,
+        12,
+        14,
+        22,
+        26,
+        27,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -24327,7 +24187,7 @@
         "**/*.json"
       ],
       "configs": [
-        62
+        63
       ]
     },
     {
@@ -24336,7 +24196,7 @@
         "**/*.json"
       ],
       "configs": [
-        62
+        63
       ]
     },
     {
@@ -24345,7 +24205,7 @@
         "**/*.json"
       ],
       "configs": [
-        62
+        63
       ]
     },
     {
@@ -24362,26 +24222,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -24398,26 +24255,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -24434,26 +24288,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -24470,26 +24321,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -24498,7 +24346,7 @@
         "**/*.json"
       ],
       "configs": [
-        62
+        63
       ]
     },
     {
@@ -24515,26 +24363,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -24543,7 +24388,7 @@
         "**/*.json"
       ],
       "configs": [
-        62
+        63
       ]
     },
     {
@@ -24552,7 +24397,7 @@
         "**/*.json"
       ],
       "configs": [
-        62
+        63
       ]
     },
     {
@@ -24569,26 +24414,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -24605,26 +24447,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -24641,62 +24480,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
-      ]
-    },
-    {
-      "filepath": "@chronoverse-shared/utilities/src/get-ts.js",
-      "globs": [
-        "**/*.js",
-        "**/*.?([cm])js?(x)",
-        "**/*.?([cm])js"
-      ],
-      "configs": [
-        2,
-        7,
-        9,
-        12,
-        14,
-        22,
-        23,
-        24,
-        26,
-        27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -24713,26 +24513,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -24749,26 +24546,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -24785,62 +24579,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
-      ]
-    },
-    {
-      "filepath": "@chronoverse-shared/utilities/src/modules.js",
-      "globs": [
-        "**/*.js",
-        "**/*.?([cm])js?(x)",
-        "**/*.?([cm])js"
-      ],
-      "configs": [
-        2,
-        7,
-        9,
-        12,
-        14,
-        22,
-        23,
-        24,
-        26,
-        27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -24857,26 +24612,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -24893,26 +24645,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -24921,7 +24670,7 @@
         "**/*.json"
       ],
       "configs": [
-        62
+        63
       ]
     },
     {
@@ -24938,26 +24687,23 @@
         12,
         14,
         22,
-        23,
-        24,
         26,
         27,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        66,
-        68
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        57,
+        59,
+        67
       ]
     },
     {
@@ -24966,7 +24712,7 @@
         "**/*.json"
       ],
       "configs": [
-        62
+        63
       ]
     },
     {
@@ -24975,7 +24721,7 @@
         "**/*.json"
       ],
       "configs": [
-        62
+        63
       ]
     },
     {
@@ -24984,7 +24730,7 @@
         "**/*.json"
       ],
       "configs": [
-        62
+        63
       ]
     },
     {
@@ -24993,12 +24739,12 @@
         "**/*.json"
       ],
       "configs": [
-        62
+        63
       ]
     }
   ],
   "meta": {
-    "lastUpdate": 1747762907966,
+    "lastUpdate": 1748801400234,
     "basePath": "",
     "configPath": ""
   }
