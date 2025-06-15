@@ -1,6 +1,6 @@
 import { javascript as javascriptFiles, typescript as typescriptFiles } from '@chronoverse-shared/utilities/files';
 import eslintStylisticPlugin from '@stylistic/eslint-plugin';
-import { allRules } from './rules/all-rules';
+import { allRules } from './rules/all-rules.js';
 
 const stylisticFiles = [...javascriptFiles, ...typescriptFiles];
 
