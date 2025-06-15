@@ -1,16 +1,16 @@
-import { bracketsRules } from './brackets-rules';
-import { commasRules } from './commas-rules';
-import { commentsRules } from './comments-rules';
-import { disallowRules } from './disallow-rules';
-import { indentRules } from './indent-rules';
-import { jsxRules } from './jsx-rules';
-import { lineBreaksRules } from './line-breaks-rules';
-import { miscRules } from './misc-rules';
-import { operatorsRules } from './operators-rules';
-import { quotesRules } from './quotes-rules';
-import { semisRules } from './semis-rules';
-import { spacingRules } from './spacing-rules';
-import { typesRules } from './types-rules';
+import { bracketsRules } from './brackets-rules.js';
+import { commasRules } from './commas-rules.js';
+import { commentsRules } from './comments-rules.js';
+import { disallowRules } from './disallow-rules.js';
+import { indentRules } from './indent-rules.js';
+import { jsxRules } from './jsx-rules.js';
+import { lineBreaksRules } from './line-breaks-rules.js';
+import { miscRules } from './misc-rules.js';
+import { operatorsRules } from './operators-rules.js';
+import { quotesRules } from './quotes-rules.js';
+import { semisRules } from './semis-rules.js';
+import { spacingRules } from './spacing-rules.js';
+import { typesRules } from './types-rules.js';
 
 /**
  * All stylistic rules for ESLint, migrated from eslint core.

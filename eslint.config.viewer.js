@@ -28,10 +28,7 @@ import { eslintReactJsx } from '@chronoverse-eslint/react/eslint-react-jsx';
 import { eslintReactTsx } from '@chronoverse-eslint/react/eslint-react-tsx';
 import { jsxA11y } from '@chronoverse-eslint/react/jsx-a11y';
 /** Stylistic */
-import { stylisticJs } from '@chronoverse-eslint/stylistic/stylistic-js';
-import { stylisticJsx } from '@chronoverse-eslint/stylistic/stylistic-jsx';
-import { stylisticPlus } from '@chronoverse-eslint/stylistic/stylistic-plus';
-import { stylisticTs } from '@chronoverse-eslint/stylistic/stylistic-ts';
+import { stylistic } from '@chronoverse-eslint/stylistic/stylistic-base';
 /** Typescript */
 import { typescript } from '@chronoverse-eslint/typescript/typescript-base';
 /** Utilities */
@@ -64,7 +61,7 @@ const eslintConfig = defineConfig([
 	javascript,
 	jsdoc,
 	functionalJs,
-	stylisticJs,
+	stylistic,
 
 	/**
 	 * TypeScript Rules
@@ -75,7 +72,6 @@ const eslintConfig = defineConfig([
 	 */
 	typescript,
 	functionalTs,
-	stylisticTs,
 	/**
 	 * React Rules
 	 *
@@ -83,7 +79,6 @@ const eslintConfig = defineConfig([
 	 * hooks usage, accessibility, and Next.js best practices.
 	 */
 	reactBase,
-	stylisticJsx,
 	eslintReactJsx,
 	eslintReactTsx,
 	reactHooks,
@@ -97,7 +92,6 @@ const eslintConfig = defineConfig([
 	 * General purpose rules that apply across different file types
 	 * and frameworks to ensure code quality, security, and performance.
 	 */
-	stylisticPlus,
 	comments,
 	dependency,
 	mutation,
