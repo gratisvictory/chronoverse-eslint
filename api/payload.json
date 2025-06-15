@@ -2539,117 +2539,350 @@
       "index": 12
     },
     {
-      "name": "@chronoverse-eslint/stylistic-js/setup",
+      "name": "@chronoverse-eslint/stylistic/setup",
       "plugins": {
-        "@stylistic/js": {}
+        "@stylistic": {}
       },
       "index": 13
     },
     {
-      "name": "@chronoverse-eslint/stylistic-js/rules",
+      "name": "@chronoverse-eslint/stylistic/rules",
       "files": [
-        "**/*.?([cm])js?(x)"
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])ts?(x)"
       ],
       "rules": {
-        "@stylistic/js/array-bracket-newline": [
-          "error",
-          {
-            "minItems": 3,
-            "multiline": true
-          }
-        ],
-        "@stylistic/js/array-bracket-spacing": [
+        "@stylistic/array-bracket-spacing": [
           "error",
           "never"
         ],
-        "@stylistic/js/array-element-newline": "off",
-        "@stylistic/js/arrow-parens": [
-          "error",
-          "as-needed"
-        ],
-        "@stylistic/js/arrow-spacing": [
+        "@stylistic/arrow-spacing": [
           "error",
           {
             "after": true,
             "before": true
           }
         ],
-        "@stylistic/js/block-spacing": [
+        "@stylistic/block-spacing": [
           "error",
           "always"
         ],
-        "@stylistic/js/brace-style": [
-          "error",
-          "1tbs",
-          {
-            "allowSingleLine": true
-          }
-        ],
-        "@stylistic/js/comma-dangle": [
-          "error",
-          {
-            "arrays": "always-multiline",
-            "exports": "always-multiline",
-            "functions": "always-multiline",
-            "imports": "always-multiline",
-            "objects": "always-multiline"
-          }
-        ],
-        "@stylistic/js/comma-spacing": [
+        "@stylistic/comma-spacing": [
           "error",
           {
             "after": true,
             "before": false
           }
         ],
-        "@stylistic/js/comma-style": [
-          "error",
-          "last",
-          {
-            "exceptions": {
-              "ArrayExpression": false,
-              "ArrayPattern": false,
-              "ArrowFunctionExpression": false,
-              "CallExpression": false,
-              "FunctionDeclaration": false,
-              "FunctionExpression": false,
-              "ImportDeclaration": false,
-              "NewExpression": false,
-              "ObjectExpression": false,
-              "ObjectPattern": false,
-              "VariableDeclaration": false
-            }
-          }
-        ],
-        "@stylistic/js/computed-property-spacing": [
+        "@stylistic/computed-property-spacing": [
           "error",
           "never"
         ],
-        "@stylistic/js/dot-location": [
-          "error",
-          "property"
-        ],
-        "@stylistic/js/eol-last": [
-          "error",
-          "always"
-        ],
-        "@stylistic/js/function-call-spacing": [
+        "@stylistic/function-call-spacing": [
           "error",
           "never"
         ],
-        "@stylistic/js/function-paren-newline": [
-          "error",
-          "multiline-arguments"
-        ],
-        "@stylistic/js/generator-star-spacing": [
+        "@stylistic/generator-star-spacing": [
           "error",
           {
             "after": false,
             "before": true
           }
         ],
-        "@stylistic/js/implicit-arrow-linebreak": "off",
-        "@stylistic/js/indent": [
+        "@stylistic/jsx-child-element-spacing": "off",
+        "@stylistic/jsx-curly-spacing": [
+          "error",
+          "never",
+          {
+            "allowMultiline": true
+          }
+        ],
+        "@stylistic/jsx-equals-spacing": [
+          "error",
+          "never"
+        ],
+        "@stylistic/jsx-props-no-multi-spaces": "error",
+        "@stylistic/jsx-tag-spacing": [
+          "error",
+          {
+            "afterOpening": "never",
+            "beforeClosing": "never",
+            "beforeSelfClosing": "always",
+            "closingSlash": "never"
+          }
+        ],
+        "@stylistic/key-spacing": [
+          "error",
+          {
+            "afterColon": true,
+            "beforeColon": false
+          }
+        ],
+        "@stylistic/keyword-spacing": [
+          "error",
+          {
+            "after": true,
+            "before": true,
+            "overrides": {
+              "case": {
+                "after": true
+              },
+              "return": {
+                "after": true
+              },
+              "throw": {
+                "after": true
+              }
+            }
+          }
+        ],
+        "@stylistic/no-mixed-spaces-and-tabs": "error",
+        "@stylistic/no-multi-spaces": "error",
+        "@stylistic/no-trailing-spaces": [
+          "error",
+          {
+            "ignoreComments": false,
+            "skipBlankLines": false
+          }
+        ],
+        "@stylistic/no-whitespace-before-property": "error",
+        "@stylistic/object-curly-spacing": [
+          "error",
+          "always"
+        ],
+        "@stylistic/rest-spread-spacing": [
+          "error",
+          "never"
+        ],
+        "@stylistic/semi-spacing": [
+          "error",
+          {
+            "after": true,
+            "before": false
+          }
+        ],
+        "@stylistic/space-before-blocks": "error",
+        "@stylistic/space-before-function-paren": [
+          "error",
+          {
+            "anonymous": "always",
+            "asyncArrow": "always",
+            "named": "never"
+          }
+        ],
+        "@stylistic/space-in-parens": [
+          "error",
+          "never"
+        ],
+        "@stylistic/space-infix-ops": "error",
+        "@stylistic/space-unary-ops": [
+          "error",
+          {
+            "nonwords": false,
+            "overrides": {},
+            "words": true
+          }
+        ],
+        "@stylistic/spaced-comment": [
+          "error",
+          "always",
+          {
+            "block": {
+              "balanced": true,
+              "exceptions": [
+                "-",
+                "+"
+              ],
+              "markers": [
+                "=",
+                "!",
+                ":",
+                "::"
+              ]
+            },
+            "line": {
+              "exceptions": [
+                "-",
+                "+"
+              ],
+              "markers": [
+                "=",
+                "!",
+                "/"
+              ]
+            }
+          }
+        ],
+        "@stylistic/switch-colon-spacing": [
+          "error",
+          {
+            "after": true,
+            "before": false
+          }
+        ],
+        "@stylistic/template-curly-spacing": "error",
+        "@stylistic/template-tag-spacing": [
+          "error",
+          "never"
+        ],
+        "@stylistic/type-annotation-spacing": "error",
+        "@stylistic/type-generic-spacing": "error",
+        "@stylistic/type-named-tuple-spacing": "error",
+        "@stylistic/yield-star-spacing": [
+          "error",
+          "after"
+        ],
+        "@stylistic/array-bracket-newline": [
+          "error",
+          {
+            "minItems": 3,
+            "multiline": true
+          }
+        ],
+        "@stylistic/array-element-newline": "off",
+        "@stylistic/curly-newline": [
+          "error",
+          "always"
+        ],
+        "@stylistic/eol-last": [
+          "error",
+          "always"
+        ],
+        "@stylistic/function-call-argument-newline": [
+          "error",
+          "consistent"
+        ],
+        "@stylistic/function-paren-newline": [
+          "error",
+          "multiline-arguments"
+        ],
+        "@stylistic/implicit-arrow-linebreak": "off",
+        "@stylistic/jsx-curly-newline": [
+          "error",
+          {
+            "multiline": "consistent",
+            "singleline": "consistent"
+          }
+        ],
+        "@stylistic/jsx-first-prop-new-line": [
+          "error",
+          "multiline-multiprop"
+        ],
+        "@stylistic/jsx-function-call-newline": [
+          "error",
+          "always"
+        ],
+        "@stylistic/jsx-newline": "off",
+        "@stylistic/jsx-wrap-multilines": [
+          "error",
+          {
+            "arrow": "parens-new-line",
+            "assignment": "parens-new-line",
+            "condition": "parens-new-line",
+            "declaration": "parens-new-line",
+            "logical": "parens-new-line",
+            "prop": "parens-new-line",
+            "return": "parens-new-line"
+          }
+        ],
+        "@stylistic/linebreak-style": [
+          "error",
+          "unix"
+        ],
+        "@stylistic/lines-around-comment": "off",
+        "@stylistic/lines-between-class-members": [
+          "error",
+          "always",
+          {
+            "exceptAfterSingleLine": false
+          }
+        ],
+        "@stylistic/multiline-comment-style": [
+          "off",
+          "starred-block"
+        ],
+        "@stylistic/multiline-ternary": [
+          "off",
+          "never"
+        ],
+        "@stylistic/newline-per-chained-call": [
+          "error",
+          {
+            "ignoreChainWithDepth": 4
+          }
+        ],
+        "@stylistic/object-curly-newline": [
+          "error",
+          {
+            "ExportDeclaration": {
+              "consistent": true,
+              "minProperties": 4,
+              "multiline": true
+            },
+            "ImportDeclaration": {
+              "consistent": true,
+              "minProperties": 4,
+              "multiline": true
+            },
+            "ObjectExpression": {
+              "consistent": true,
+              "minProperties": 4,
+              "multiline": true
+            },
+            "ObjectPattern": {
+              "consistent": true,
+              "minProperties": 4,
+              "multiline": true
+            }
+          }
+        ],
+        "@stylistic/object-property-newline": [
+          "error",
+          {
+            "allowAllPropertiesOnSameLine": true
+          }
+        ],
+        "@stylistic/operator-linebreak": "off",
+        "@stylistic/padding-line-between-statements": "off",
+        "@stylistic/arrow-parens": [
+          "error",
+          "as-needed"
+        ],
+        "@stylistic/brace-style": [
+          "error",
+          "1tbs",
+          {
+            "allowSingleLine": true
+          }
+        ],
+        "@stylistic/jsx-closing-bracket-location": [
+          "error",
+          "line-aligned"
+        ],
+        "@stylistic/jsx-curly-brace-presence": [
+          "error",
+          {
+            "children": "never",
+            "props": "never"
+          }
+        ],
+        "@stylistic/new-parens": "error",
+        "@stylistic/no-extra-parens": [
+          "error",
+          "all",
+          {
+            "ignoreJSX": "multi-line"
+          }
+        ],
+        "@stylistic/wrap-iife": [
+          "error",
+          "outside",
+          {
+            "functionPrototypeMethods": false
+          }
+        ],
+        "@stylistic/wrap-regex": "off",
+        "@stylistic/indent": [
           "error",
           "tab",
           {
@@ -2692,104 +2925,77 @@
             "VariableDeclarator": 1
           }
         ],
-        "@stylistic/js/jsx-quotes": [
+        "@stylistic/indent-binary-ops": [
+          "error",
+          "tab"
+        ],
+        "@stylistic/jsx-indent-props": [
+          "error",
+          "tab"
+        ],
+        "@stylistic/quote-props": [
+          "error",
+          "as-needed",
+          {
+            "keywords": false,
+            "numbers": false,
+            "unnecessary": true
+          }
+        ],
+        "@stylistic/quotes": [
+          "error",
+          "single",
+          {
+            "avoidEscape": true
+          }
+        ],
+        "@stylistic/jsx-quotes": [
           "error",
           "prefer-single"
         ],
-        "@stylistic/js/key-spacing": [
+        "@stylistic/comma-dangle": [
           "error",
           {
-            "afterColon": true,
-            "beforeColon": false
+            "arrays": "always-multiline",
+            "exports": "always-multiline",
+            "functions": "always-multiline",
+            "imports": "always-multiline",
+            "objects": "always-multiline"
           }
         ],
-        "@stylistic/js/keyword-spacing": [
+        "@stylistic/comma-style": [
           "error",
+          "last",
           {
-            "after": true,
-            "before": true,
-            "overrides": {
-              "case": {
-                "after": true
-              },
-              "return": {
-                "after": true
-              },
-              "throw": {
-                "after": true
-              }
+            "exceptions": {
+              "ArrayExpression": false,
+              "ArrayPattern": false,
+              "ArrowFunctionExpression": false,
+              "CallExpression": false,
+              "FunctionDeclaration": false,
+              "FunctionExpression": false,
+              "ImportDeclaration": false,
+              "NewExpression": false,
+              "ObjectExpression": false,
+              "ObjectPattern": false,
+              "VariableDeclaration": false
             }
           }
         ],
-        "@stylistic/js/line-comment-position": [
-          "off",
-          {
-            "applyDefaultPatterns": true,
-            "ignorePattern": "",
-            "position": "above"
-          }
-        ],
-        "@stylistic/js/linebreak-style": [
+        "@stylistic/no-extra-semi": "error",
+        "@stylistic/semi": [
           "error",
-          "unix"
+          "always"
         ],
-        "@stylistic/js/lines-around-comment": "off",
-        "@stylistic/js/lines-between-class-members": [
+        "@stylistic/semi-style": [
           "error",
-          "always",
-          {
-            "exceptAfterSingleLine": false
-          }
+          "last"
         ],
-        "@stylistic/js/max-len": [
+        "@stylistic/dot-location": [
           "error",
-          120,
-          4,
-          {
-            "ignoreComments": false,
-            "ignoreRegExpLiterals": true,
-            "ignoreStrings": true,
-            "ignoreTemplateLiterals": true,
-            "ignoreUrls": true
-          }
+          "property"
         ],
-        "@stylistic/js/max-statements-per-line": [
-          "off",
-          {
-            "max": 1
-          }
-        ],
-        "@stylistic/js/multiline-comment-style": [
-          "off",
-          "starred-block"
-        ],
-        "@stylistic/js/multiline-ternary": [
-          "off",
-          "never"
-        ],
-        "@stylistic/js/new-parens": "error",
-        "@stylistic/js/newline-per-chained-call": [
-          "error",
-          {
-            "ignoreChainWithDepth": 4
-          }
-        ],
-        "@stylistic/js/no-confusing-arrow": [
-          "error",
-          {
-            "onlyOneSimpleParam": true
-          }
-        ],
-        "@stylistic/js/no-extra-parens": [
-          "error",
-          "all",
-          {
-            "ignoreJSX": "multi-line"
-          }
-        ],
-        "@stylistic/js/no-extra-semi": "error",
-        "@stylistic/js/no-floating-decimal": "error",
-        "@stylistic/js/no-mixed-operators": [
+        "@stylistic/no-mixed-operators": [
           "error",
           {
             "allowSamePrecedence": false,
@@ -2838,9 +3044,49 @@
             ]
           }
         ],
-        "@stylistic/js/no-mixed-spaces-and-tabs": "error",
-        "@stylistic/js/no-multi-spaces": "error",
-        "@stylistic/js/no-multiple-empty-lines": [
+        "@stylistic/line-comment-position": [
+          "off",
+          {
+            "applyDefaultPatterns": true,
+            "ignorePattern": "",
+            "position": "above"
+          }
+        ],
+        "@stylistic/jsx-closing-tag-location": "error",
+        "@stylistic/jsx-indent": [
+          "off",
+          "tab"
+        ],
+        "@stylistic/jsx-max-props-per-line": [
+          "error",
+          {
+            "maximum": 1,
+            "when": "multiline"
+          }
+        ],
+        "@stylistic/jsx-one-expression-per-line": [
+          "error",
+          {
+            "allow": "single-child"
+          }
+        ],
+        "@stylistic/jsx-pascal-case": [
+          "error",
+          {
+            "allowAllCaps": true,
+            "ignore": []
+          }
+        ],
+        "@stylistic/jsx-self-closing-comp": "error",
+        "@stylistic/jsx-sort-props": "off",
+        "@stylistic/no-confusing-arrow": [
+          "error",
+          {
+            "onlyOneSimpleParam": true
+          }
+        ],
+        "@stylistic/no-floating-decimal": "error",
+        "@stylistic/no-multiple-empty-lines": [
           "error",
           {
             "max": 1,
@@ -2848,63 +3094,50 @@
             "maxEOF": 0
           }
         ],
-        "@stylistic/js/no-tabs": "off",
-        "@stylistic/js/no-trailing-spaces": [
+        "@stylistic/no-tabs": "off",
+        "@stylistic/max-len": [
           "error",
+          120,
+          4,
           {
             "ignoreComments": false,
-            "skipBlankLines": false
+            "ignoreRegExpLiterals": true,
+            "ignoreStrings": true,
+            "ignoreTemplateLiterals": true,
+            "ignoreUrls": true
           }
         ],
-        "@stylistic/js/no-whitespace-before-property": "error",
-        "@stylistic/js/nonblock-statement-body-position": [
+        "@stylistic/max-statements-per-line": [
+          "off",
+          {
+            "max": 1
+          }
+        ],
+        "@stylistic/member-delimiter-style": [
+          "error",
+          {
+            "multiline": {
+              "delimiter": "semi",
+              "requireLast": true
+            },
+            "singleline": {
+              "delimiter": "semi",
+              "requireLast": true
+            }
+          }
+        ],
+        "@stylistic/nonblock-statement-body-position": [
           "error",
           "beside",
           {
             "overrides": {}
           }
         ],
-        "@stylistic/js/object-curly-newline": [
-          "error",
-          {
-            "ExportDeclaration": {
-              "consistent": true,
-              "minProperties": 4,
-              "multiline": true
-            },
-            "ImportDeclaration": {
-              "consistent": true,
-              "minProperties": 4,
-              "multiline": true
-            },
-            "ObjectExpression": {
-              "consistent": true,
-              "minProperties": 4,
-              "multiline": true
-            },
-            "ObjectPattern": {
-              "consistent": true,
-              "minProperties": 4,
-              "multiline": true
-            }
-          }
-        ],
-        "@stylistic/js/object-curly-spacing": [
+        "@stylistic/one-var-declaration-per-line": [
           "error",
           "always"
         ],
-        "@stylistic/js/object-property-newline": [
-          "error",
-          {
-            "allowAllPropertiesOnSameLine": true
-          }
-        ],
-        "@stylistic/js/one-var-declaration-per-line": [
-          "error",
-          "always"
-        ],
-        "@stylistic/js/operator-linebreak": "off",
-        "@stylistic/js/padded-blocks": [
+        "@stylistic/padded-blocks": [
           "error",
           {
             "blocks": "never",
@@ -2914,118 +3147,6 @@
           {
             "allowSingleLineBlocks": true
           }
-        ],
-        "@stylistic/js/padding-line-between-statements": "off",
-        "@stylistic/js/quote-props": [
-          "error",
-          "as-needed",
-          {
-            "keywords": false,
-            "numbers": false,
-            "unnecessary": true
-          }
-        ],
-        "@stylistic/js/quotes": [
-          "error",
-          "single",
-          {
-            "avoidEscape": true
-          }
-        ],
-        "@stylistic/js/rest-spread-spacing": [
-          "error",
-          "never"
-        ],
-        "@stylistic/js/semi": [
-          "error",
-          "always"
-        ],
-        "@stylistic/js/semi-spacing": [
-          "error",
-          {
-            "after": true,
-            "before": false
-          }
-        ],
-        "@stylistic/js/semi-style": [
-          "error",
-          "last"
-        ],
-        "@stylistic/js/space-before-blocks": "error",
-        "@stylistic/js/space-before-function-paren": [
-          "error",
-          {
-            "anonymous": "always",
-            "asyncArrow": "always",
-            "named": "never"
-          }
-        ],
-        "@stylistic/js/space-in-parens": [
-          "error",
-          "never"
-        ],
-        "@stylistic/js/space-infix-ops": "error",
-        "@stylistic/js/space-unary-ops": [
-          "error",
-          {
-            "nonwords": false,
-            "overrides": {},
-            "words": true
-          }
-        ],
-        "@stylistic/js/spaced-comment": [
-          "error",
-          "always",
-          {
-            "block": {
-              "balanced": true,
-              "exceptions": [
-                "-",
-                "+"
-              ],
-              "markers": [
-                "=",
-                "!",
-                ":",
-                "::"
-              ]
-            },
-            "line": {
-              "exceptions": [
-                "-",
-                "+"
-              ],
-              "markers": [
-                "=",
-                "!",
-                "/"
-              ]
-            }
-          }
-        ],
-        "@stylistic/js/switch-colon-spacing": [
-          "error",
-          {
-            "after": true,
-            "before": false
-          }
-        ],
-        "@stylistic/js/template-curly-spacing": "error",
-        "@stylistic/js/template-tag-spacing": [
-          "error",
-          "never"
-        ],
-        "@stylistic/js/wrap-iife": [
-          "error",
-          "outside",
-          {
-            "functionPrototypeMethods": false
-          }
-        ],
-        "@stylistic/js/wrap-regex": "off",
-        "@stylistic/js/yield-star-spacing": [
-          "error",
-          "after"
         ]
       },
       "index": 14
@@ -3383,191 +3504,6 @@
       "index": 18
     },
     {
-      "name": "@chronoverse-eslint/stylistic-ts/setup",
-      "languageOptions": {
-        "parser": "typescript-eslint/parser",
-        "parserOptions": {
-          "ecmaVersion": "latest",
-          "projectService": true,
-          "sourceType": "module"
-        }
-      },
-      "plugins": {
-        "@stylistic/ts": {}
-      },
-      "index": 19
-    },
-    {
-      "name": "@chronoverse-eslint/stylistic-ts/rules",
-      "files": [
-        "**/*.?([cm])ts?(x)"
-      ],
-      "rules": {
-        "@stylistic/ts/block-spacing": [
-          "error",
-          "always"
-        ],
-        "@stylistic/ts/brace-style": [
-          "error",
-          "1tbs",
-          {
-            "allowSingleLine": true
-          }
-        ],
-        "@stylistic/ts/comma-dangle": [
-          "error",
-          {
-            "arrays": "always-multiline",
-            "enums": "always-multiline",
-            "exports": "always-multiline",
-            "functions": "always-multiline",
-            "generics": "always-multiline",
-            "imports": "always-multiline",
-            "objects": "always-multiline",
-            "tuples": "always-multiline"
-          }
-        ],
-        "@stylistic/ts/comma-spacing": [
-          "error",
-          {
-            "after": true,
-            "before": false
-          }
-        ],
-        "@stylistic/ts/function-call-spacing": [
-          "error",
-          "never"
-        ],
-        "@stylistic/ts/indent": "off",
-        "@stylistic/ts/key-spacing": [
-          "error",
-          {
-            "afterColon": true,
-            "beforeColon": false
-          }
-        ],
-        "@stylistic/ts/keyword-spacing": [
-          "error",
-          {
-            "after": true,
-            "before": true,
-            "overrides": {
-              "case": {
-                "after": true
-              },
-              "return": {
-                "after": true
-              },
-              "throw": {
-                "after": true
-              }
-            }
-          }
-        ],
-        "@stylistic/ts/lines-around-comment": "off",
-        "@stylistic/ts/lines-between-class-members": [
-          "error",
-          "always",
-          {
-            "exceptAfterSingleLine": false
-          }
-        ],
-        "@stylistic/ts/member-delimiter-style": [
-          "error",
-          {
-            "multiline": {
-              "delimiter": "semi",
-              "requireLast": true
-            },
-            "singleline": {
-              "delimiter": "semi",
-              "requireLast": true
-            }
-          }
-        ],
-        "@stylistic/ts/no-extra-parens": [
-          "error",
-          "all",
-          {
-            "ignoreJSX": "multi-line"
-          }
-        ],
-        "@stylistic/ts/no-extra-semi": "error",
-        "@stylistic/ts/object-curly-newline": [
-          "error",
-          {
-            "ExportDeclaration": {
-              "consistent": true,
-              "minProperties": 4,
-              "multiline": true
-            },
-            "ImportDeclaration": {
-              "consistent": true,
-              "minProperties": 4,
-              "multiline": true
-            },
-            "ObjectExpression": {
-              "consistent": true,
-              "minProperties": 4,
-              "multiline": true
-            },
-            "ObjectPattern": {
-              "consistent": true,
-              "minProperties": 4,
-              "multiline": true
-            }
-          }
-        ],
-        "@stylistic/ts/object-curly-spacing": [
-          "error",
-          "always"
-        ],
-        "@stylistic/ts/object-property-newline": [
-          "error",
-          {
-            "allowAllPropertiesOnSameLine": true
-          }
-        ],
-        "@stylistic/ts/padding-line-between-statements": "off",
-        "@stylistic/ts/quote-props": [
-          "error",
-          "as-needed",
-          {
-            "keywords": false,
-            "numbers": false,
-            "unnecessary": true
-          }
-        ],
-        "@stylistic/ts/quotes": [
-          "error",
-          "single"
-        ],
-        "@stylistic/ts/semi": [
-          "error",
-          "always"
-        ],
-        "@stylistic/ts/semi-spacing": [
-          "error",
-          {
-            "after": true,
-            "before": false
-          }
-        ],
-        "@stylistic/ts/space-before-blocks": "error",
-        "@stylistic/ts/space-before-function-paren": [
-          "error",
-          {
-            "anonymous": "always",
-            "asyncArrow": "always",
-            "named": "never"
-          }
-        ],
-        "@stylistic/ts/space-infix-ops": "error",
-        "@stylistic/ts/type-annotation-spacing": "error"
-      },
-      "index": 20
-    },
-    {
       "name": "@chronoverse-eslint/react-base/setup",
       "languageOptions": {
         "parserOptions": {
@@ -3584,7 +3520,7 @@
           "version": "detect"
         }
       },
-      "index": 21
+      "index": 19
     },
     {
       "name": "@chronoverse-eslint/react-base/rules",
@@ -4026,115 +3962,7 @@
         "react/forward-ref-uses-ref": "off",
         "react/jsx-props-no-spread-multi": "off"
       },
-      "index": 22
-    },
-    {
-      "name": "@chronoverse-eslint/stylistic-jsx/setup",
-      "plugins": {
-        "@stylistic/jsx": {}
-      },
-      "index": 23
-    },
-    {
-      "name": "@chronoverse-eslint/stylistic-jsx/rules",
-      "files": [
-        "**/*.{jsx,tsx}"
-      ],
-      "rules": {
-        "@stylistic/jsx/jsx-child-element-spacing": "off",
-        "@stylistic/jsx/jsx-closing-bracket-location": [
-          "error",
-          "line-aligned"
-        ],
-        "@stylistic/jsx/jsx-closing-tag-location": "error",
-        "@stylistic/jsx/jsx-curly-brace-presence": [
-          "error",
-          {
-            "children": "never",
-            "props": "never"
-          }
-        ],
-        "@stylistic/jsx/jsx-curly-newline": [
-          "error",
-          {
-            "multiline": "consistent",
-            "singleline": "consistent"
-          }
-        ],
-        "@stylistic/jsx/jsx-curly-spacing": [
-          "error",
-          "never",
-          {
-            "allowMultiline": true
-          }
-        ],
-        "@stylistic/jsx/jsx-equals-spacing": [
-          "error",
-          "never"
-        ],
-        "@stylistic/jsx/jsx-first-prop-new-line": [
-          "error",
-          "multiline-multiprop"
-        ],
-        "@stylistic/jsx/jsx-function-call-newline": [
-          "error",
-          "always"
-        ],
-        "@stylistic/jsx/jsx-indent": [
-          "off",
-          "tab"
-        ],
-        "@stylistic/jsx/jsx-indent-props": [
-          "error",
-          "tab"
-        ],
-        "@stylistic/jsx/jsx-max-props-per-line": [
-          "error",
-          {
-            "maximum": 1,
-            "when": "multiline"
-          }
-        ],
-        "@stylistic/jsx/jsx-newline": "off",
-        "@stylistic/jsx/jsx-one-expression-per-line": [
-          "error",
-          {
-            "allow": "single-child"
-          }
-        ],
-        "@stylistic/jsx/jsx-pascal-case": [
-          "error",
-          {
-            "allowAllCaps": true,
-            "ignore": []
-          }
-        ],
-        "@stylistic/jsx/jsx-props-no-multi-spaces": "error",
-        "@stylistic/jsx/jsx-self-closing-comp": "error",
-        "@stylistic/jsx/jsx-sort-props": "off",
-        "@stylistic/jsx/jsx-tag-spacing": [
-          "error",
-          {
-            "afterOpening": "never",
-            "beforeClosing": "never",
-            "beforeSelfClosing": "always",
-            "closingSlash": "never"
-          }
-        ],
-        "@stylistic/jsx/jsx-wrap-multilines": [
-          "error",
-          {
-            "arrow": "parens-new-line",
-            "assignment": "parens-new-line",
-            "condition": "parens-new-line",
-            "declaration": "parens-new-line",
-            "logical": "parens-new-line",
-            "prop": "parens-new-line",
-            "return": "parens-new-line"
-          }
-        ]
-      },
-      "index": 24
+      "index": 20
     },
     {
       "name": "@chronoverse-eslint/eslint-react-jsx/setup",
@@ -4145,7 +3973,7 @@
           }
         }
       },
-      "index": 25
+      "index": 21
     },
     {
       "name": "@chronoverse-eslint/eslint-react-jsx/rules > @eslint-react/recommended",
@@ -4245,14 +4073,14 @@
       "files": [
         "**/*.?([cm])js?(x)"
       ],
-      "index": 26
+      "index": 22
     },
     {
       "name": "@chronoverse-eslint/eslint-react-jsx/rules",
       "files": [
         "**/*.?([cm])js?(x)"
       ],
-      "index": 27
+      "index": 23
     },
     {
       "name": "@chronoverse-eslint/eslint-react-tsx/setup",
@@ -4264,7 +4092,7 @@
           "sourceType": "module"
         }
       },
-      "index": 28
+      "index": 24
     },
     {
       "name": "@chronoverse-eslint/eslint-react-tsx/rules > @eslint-react/recommended-typescript",
@@ -4365,7 +4193,7 @@
       "files": [
         "**/*.?([cm])ts?(x)"
       ],
-      "index": 29
+      "index": 25
     },
     {
       "name": "@chronoverse-eslint/eslint-react-tsx/rules > @eslint-react/recommended-type-checked",
@@ -4467,21 +4295,21 @@
       "files": [
         "**/*.?([cm])ts?(x)"
       ],
-      "index": 30
+      "index": 26
     },
     {
       "name": "@chronoverse-eslint/eslint-react-tsx/rules",
       "files": [
         "**/*.?([cm])ts?(x)"
       ],
-      "index": 31
+      "index": 27
     },
     {
       "name": "@chronoverse-eslint/react-hooks/setup",
       "plugins": {
         "react-hooks": {}
       },
-      "index": 32
+      "index": 28
     },
     {
       "name": "@chronoverse-eslint/react-hooks/rules",
@@ -4493,14 +4321,14 @@
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn"
       },
-      "index": 33
+      "index": 29
     },
     {
       "name": "@chronoverse-eslint/react-compiler/setup",
       "plugins": {
         "react-compiler": {}
       },
-      "index": 34
+      "index": 30
     },
     {
       "name": "@chronoverse-eslint/react-compiler/rules",
@@ -4511,14 +4339,14 @@
       "rules": {
         "react-compiler/react-compiler": "error"
       },
-      "index": 35
+      "index": 31
     },
     {
       "name": "@chronoverse-eslint/jsx-a11y/setup",
       "plugins": {
         "jsx-a11y": {}
       },
-      "index": 36
+      "index": 32
     },
     {
       "name": "@chronoverse-eslint/jsx-a11y/rules",
@@ -4772,14 +4600,14 @@
         "jsx-a11y/no-aria-hidden-on-focusable": "off",
         "jsx-a11y/prefer-tag-over-role": "off"
       },
-      "index": 37
+      "index": 33
     },
     {
       "name": "@chronoverse-eslint/next/setup",
       "plugins": {
         "@next/next": {}
       },
-      "index": 38
+      "index": 34
     },
     {
       "name": "@chronoverse-eslint/next/rules",
@@ -4810,41 +4638,14 @@
         "@next/next/no-head-import-in-document": "error",
         "@next/next/no-script-component-in-head": "error"
       },
-      "index": 39
-    },
-    {
-      "name": "@chronoverse-eslint/stylistic-plus/setup",
-      "plugins": {
-        "@stylistic/plus": {}
-      },
-      "index": 40
-    },
-    {
-      "name": "@chronoverse-eslint/stylistic-plus/rules",
-      "files": [
-        "**/*.?([cm])js?(x)",
-        "**/*.?([cm])ts?(x)"
-      ],
-      "rules": {
-        "@stylistic/plus/curly-newline": [
-          "error",
-          "always"
-        ],
-        "@stylistic/plus/indent-binary-ops": [
-          "error",
-          "tab"
-        ],
-        "@stylistic/plus/type-generic-spacing": "error",
-        "@stylistic/plus/type-named-tuple-spacing": "error"
-      },
-      "index": 41
+      "index": 35
     },
     {
       "name": "@chronoverse-eslint/eslint-comments/setup",
       "plugins": {
         "eslint-comments": {}
       },
-      "index": 42
+      "index": 36
     },
     {
       "name": "@chronoverse-eslint/eslint-comments/rules",
@@ -4859,14 +4660,14 @@
         "eslint-comments/no-unlimited-disable": "error",
         "eslint-comments/no-unused-enable": "error"
       },
-      "index": 43
+      "index": 37
     },
     {
       "name": "@chronoverse-eslint/dependency/setup",
       "plugins": {
         "depend": {}
       },
-      "index": 44
+      "index": 38
     },
     {
       "name": "@chronoverse-eslint/dependency/rules",
@@ -4877,14 +4678,14 @@
       "rules": {
         "depend/ban-dependencies": "error"
       },
-      "index": 45
+      "index": 39
     },
     {
       "name": "@chronoverse-eslint/better-mutation/setup",
       "plugins": {
         "better-mutation": {}
       },
-      "index": 46
+      "index": 40
     },
     {
       "name": "@chronoverse-eslint/better-mutation/rules",
@@ -4897,14 +4698,14 @@
         "better-mutation/no-mutating-methods": "error",
         "better-mutation/no-mutation": "error"
       },
-      "index": 47
+      "index": 41
     },
     {
       "name": "@chronoverse-eslint/node/setup",
       "plugins": {
         "n": {}
       },
-      "index": 48
+      "index": 42
     },
     {
       "name": "@chronoverse-eslint/node/rules",
@@ -4952,14 +4753,14 @@
         "n/no-new-require": "error",
         "n/no-path-concat": "error"
       },
-      "index": 49
+      "index": 43
     },
     {
       "name": "@chronoverse-eslint/perfectionist/setup",
       "plugins": {
         "perfectionist": {}
       },
-      "index": 50
+      "index": 44
     },
     {
       "name": "@chronoverse-eslint/perfectionist/rules",
@@ -5331,14 +5132,14 @@
         "perfectionist/sort-sets": "error",
         "perfectionist/sort-maps": "error"
       },
-      "index": 51
+      "index": 45
     },
     {
       "name": "@chronoverse-eslint/promise/setup",
       "plugins": {
         "promise": {}
       },
-      "index": 52
+      "index": 46
     },
     {
       "name": "@chronoverse-eslint/promise/rules",
@@ -5360,14 +5161,14 @@
         "promise/no-return-in-finally": "warn",
         "promise/valid-params": "warn"
       },
-      "index": 53
+      "index": 47
     },
     {
       "name": "@chronoverse-eslint/regexp/setup",
       "plugins": {
         "regexp": {}
       },
-      "index": 54
+      "index": 48
     },
     {
       "name": "@chronoverse-eslint/regexp/rules",
@@ -5444,14 +5245,14 @@
         "regexp/strict": "error",
         "regexp/use-ignore-case": "error"
       },
-      "index": 55
+      "index": 49
     },
     {
       "name": "@chronoverse-eslint/security/setup",
       "plugins": {
         "security": {}
       },
-      "index": 56
+      "index": 50
     },
     {
       "name": "@chronoverse-eslint/security/rules",
@@ -5475,14 +5276,14 @@
         "security/detect-unsafe-regex": "warn",
         "security/detect-bidi-characters": "warn"
       },
-      "index": 57
+      "index": 51
     },
     {
       "name": "@chronoverse-eslint/unicorn/setup",
       "plugins": {
         "unicorn": {}
       },
-      "index": 58
+      "index": 52
     },
     {
       "name": "@chronoverse-eslint/unicorn/rules",
@@ -5624,14 +5425,14 @@
         "unicorn/text-encoding-identifier-case": "error",
         "unicorn/throw-new-error": "error"
       },
-      "index": 59
+      "index": 53
     },
     {
       "name": "@chronoverse-eslint/css/setup",
       "plugins": {
         "css": {}
       },
-      "index": 60
+      "index": 54
     },
     {
       "name": "@chronoverse-eslint/css/rules",
@@ -5663,14 +5464,14 @@
         "css/no-invalid-properties": "error",
         "css/use-baseline": "warn"
       },
-      "index": 61
+      "index": 55
     },
     {
       "name": "@chronoverse-eslint/json/setup",
       "plugins": {
         "json": {}
       },
-      "index": 62
+      "index": 56
     },
     {
       "name": "@chronoverse-eslint/json/rules",
@@ -5687,7 +5488,7 @@
         "json/no-unsafe-values": "error",
         "json/no-unnormalized-keys": "error"
       },
-      "index": 63
+      "index": 57
     },
     {
       "name": "@chronoverse-eslint/jsonc/rules",
@@ -5704,7 +5505,7 @@
         "json/no-unsafe-values": "error",
         "json/no-unnormalized-keys": "error"
       },
-      "index": 64
+      "index": 58
     },
     {
       "name": "@chronoverse-eslint/json5/rules",
@@ -5718,14 +5519,14 @@
         "json/no-unsafe-values": "error",
         "json/no-unnormalized-keys": "error"
       },
-      "index": 65
+      "index": 59
     },
     {
       "name": "@chronoverse-eslint/prettier/setup",
       "plugins": {
         "prettier": {}
       },
-      "index": 66
+      "index": 60
     },
     {
       "name": "@chronoverse-eslint/prettier/rules",
@@ -6094,7 +5895,7 @@
         "yield-star-spacing": "off",
         "react/jsx-space-before-closing": "off"
       },
-      "index": 67
+      "index": 61
     }
   ],
   "rules": {
@@ -12344,699 +12145,959 @@
       "name": "functional/type-declaration-immutability",
       "plugin": "functional"
     },
-    "@stylistic/js/array-bracket-newline": {
+    "@stylistic/array-bracket-newline": {
       "type": "layout",
       "docs": {
         "description": "Enforce linebreaks after opening and before closing array brackets",
         "url": "https://eslint.style/rules/js/array-bracket-newline"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/array-bracket-newline",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/array-bracket-newline",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/array-bracket-spacing": {
+    "@stylistic/array-bracket-spacing": {
       "type": "layout",
       "docs": {
         "description": "Enforce consistent spacing inside array brackets",
         "url": "https://eslint.style/rules/js/array-bracket-spacing"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/array-bracket-spacing",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/array-bracket-spacing",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/array-element-newline": {
+    "@stylistic/array-element-newline": {
       "type": "layout",
       "docs": {
         "description": "Enforce line breaks after each array element",
         "url": "https://eslint.style/rules/js/array-element-newline"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/array-element-newline",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/array-element-newline",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/arrow-parens": {
+    "@stylistic/arrow-parens": {
       "type": "layout",
       "docs": {
         "description": "Require parentheses around arrow function arguments",
         "url": "https://eslint.style/rules/js/arrow-parens"
       },
       "fixable": "code",
-      "name": "@stylistic/js/arrow-parens",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/arrow-parens",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/arrow-spacing": {
+    "@stylistic/arrow-spacing": {
       "type": "layout",
       "docs": {
         "description": "Enforce consistent spacing before and after the arrow in arrow functions",
         "url": "https://eslint.style/rules/js/arrow-spacing"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/arrow-spacing",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/arrow-spacing",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/block-spacing": {
+    "@stylistic/block-spacing": {
       "type": "layout",
       "docs": {
         "description": "Disallow or enforce spaces inside of blocks after opening block and before closing block",
-        "url": "https://eslint.style/rules/js/block-spacing"
+        "url": "https://eslint.style/rules/ts/block-spacing"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/block-spacing",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/block-spacing",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/brace-style": {
+    "@stylistic/brace-style": {
       "type": "layout",
       "docs": {
         "description": "Enforce consistent brace style for blocks",
-        "url": "https://eslint.style/rules/js/brace-style"
+        "url": "https://eslint.style/rules/ts/brace-style"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/brace-style",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/brace-style",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/comma-dangle": {
+    "@stylistic/comma-dangle": {
       "type": "layout",
       "docs": {
         "description": "Require or disallow trailing commas",
-        "url": "https://eslint.style/rules/js/comma-dangle"
+        "url": "https://eslint.style/rules/ts/comma-dangle"
       },
       "fixable": "code",
-      "name": "@stylistic/js/comma-dangle",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/comma-dangle",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/comma-spacing": {
+    "@stylistic/comma-spacing": {
       "type": "layout",
       "docs": {
         "description": "Enforce consistent spacing before and after commas",
-        "url": "https://eslint.style/rules/js/comma-spacing"
+        "url": "https://eslint.style/rules/ts/comma-spacing"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/comma-spacing",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/comma-spacing",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/comma-style": {
+    "@stylistic/comma-style": {
       "type": "layout",
       "docs": {
         "description": "Enforce consistent comma style",
         "url": "https://eslint.style/rules/js/comma-style"
       },
       "fixable": "code",
-      "name": "@stylistic/js/comma-style",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/comma-style",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/computed-property-spacing": {
+    "@stylistic/computed-property-spacing": {
       "type": "layout",
       "docs": {
         "description": "Enforce consistent spacing inside computed property brackets",
         "url": "https://eslint.style/rules/js/computed-property-spacing"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/computed-property-spacing",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/computed-property-spacing",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/dot-location": {
+    "@stylistic/curly-newline": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce consistent line breaks after opening and before closing braces",
+        "url": "https://eslint.style/rules/plus/curly-newline"
+      },
+      "fixable": "whitespace",
+      "name": "@stylistic/curly-newline",
+      "plugin": "@stylistic"
+    },
+    "@stylistic/dot-location": {
       "type": "layout",
       "docs": {
         "description": "Enforce consistent newlines before and after dots",
         "url": "https://eslint.style/rules/js/dot-location"
       },
       "fixable": "code",
-      "name": "@stylistic/js/dot-location",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/dot-location",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/eol-last": {
+    "@stylistic/eol-last": {
       "type": "layout",
       "docs": {
         "description": "Require or disallow newline at the end of files",
         "url": "https://eslint.style/rules/js/eol-last"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/eol-last",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/eol-last",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/func-call-spacing": {
+    "@stylistic/func-call-spacing": {
       "type": "layout",
       "docs": {
         "description": "Require or disallow spacing between function identifiers and their invocations",
-        "url": "https://eslint.style/rules/js/function-call-spacing"
+        "url": "https://eslint.style/rules/ts/function-call-spacing"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/func-call-spacing",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/func-call-spacing",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/function-call-argument-newline": {
+    "@stylistic/function-call-argument-newline": {
       "type": "layout",
       "docs": {
         "description": "Enforce line breaks between arguments of a function call",
         "url": "https://eslint.style/rules/js/function-call-argument-newline"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/function-call-argument-newline",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/function-call-argument-newline",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/function-call-spacing": {
+    "@stylistic/function-call-spacing": {
       "type": "layout",
       "docs": {
         "description": "Require or disallow spacing between function identifiers and their invocations",
-        "url": "https://eslint.style/rules/js/function-call-spacing"
+        "url": "https://eslint.style/rules/ts/function-call-spacing"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/function-call-spacing",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/function-call-spacing",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/function-paren-newline": {
+    "@stylistic/function-paren-newline": {
       "type": "layout",
       "docs": {
         "description": "Enforce consistent line breaks inside function parentheses",
         "url": "https://eslint.style/rules/js/function-paren-newline"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/function-paren-newline",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/function-paren-newline",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/generator-star-spacing": {
+    "@stylistic/generator-star-spacing": {
       "type": "layout",
       "docs": {
         "description": "Enforce consistent spacing around `*` operators in generator functions",
         "url": "https://eslint.style/rules/js/generator-star-spacing"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/generator-star-spacing",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/generator-star-spacing",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/implicit-arrow-linebreak": {
+    "@stylistic/implicit-arrow-linebreak": {
       "type": "layout",
       "docs": {
         "description": "Enforce the location of arrow function bodies",
         "url": "https://eslint.style/rules/js/implicit-arrow-linebreak"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/implicit-arrow-linebreak",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/implicit-arrow-linebreak",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/indent": {
+    "@stylistic/indent": {
       "type": "layout",
       "docs": {
         "description": "Enforce consistent indentation",
-        "url": "https://eslint.style/rules/js/indent"
+        "url": "https://eslint.style/rules/ts/indent"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/indent",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/indent",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/jsx-quotes": {
+    "@stylistic/indent-binary-ops": {
+      "type": "layout",
+      "docs": {
+        "description": "Indentation for binary operators",
+        "url": "https://eslint.style/rules/plus/indent-binary-ops"
+      },
+      "fixable": "whitespace",
+      "name": "@stylistic/indent-binary-ops",
+      "plugin": "@stylistic"
+    },
+    "@stylistic/jsx-child-element-spacing": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce or disallow spaces inside of curly braces in JSX attributes and expressions",
+        "url": "https://eslint.style/rules/jsx/jsx-child-element-spacing"
+      },
+      "name": "@stylistic/jsx-child-element-spacing",
+      "plugin": "@stylistic"
+    },
+    "@stylistic/jsx-closing-bracket-location": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce closing bracket location in JSX",
+        "url": "https://eslint.style/rules/jsx/jsx-closing-bracket-location"
+      },
+      "fixable": "code",
+      "name": "@stylistic/jsx-closing-bracket-location",
+      "plugin": "@stylistic"
+    },
+    "@stylistic/jsx-closing-tag-location": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce closing tag location for multiline JSX",
+        "url": "https://eslint.style/rules/jsx/jsx-closing-tag-location"
+      },
+      "fixable": "whitespace",
+      "name": "@stylistic/jsx-closing-tag-location",
+      "plugin": "@stylistic"
+    },
+    "@stylistic/jsx-curly-brace-presence": {
+      "type": "layout",
+      "docs": {
+        "description": "Disallow unnecessary JSX expressions when literals alone are sufficient or enforce JSX expressions on literals in JSX children or attributes",
+        "url": "https://eslint.style/rules/jsx/jsx-curly-brace-presence"
+      },
+      "fixable": "code",
+      "name": "@stylistic/jsx-curly-brace-presence",
+      "plugin": "@stylistic"
+    },
+    "@stylistic/jsx-curly-newline": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce consistent linebreaks in curly braces in JSX attributes and expressions",
+        "url": "https://eslint.style/rules/jsx/jsx-curly-newline"
+      },
+      "fixable": "whitespace",
+      "name": "@stylistic/jsx-curly-newline",
+      "plugin": "@stylistic"
+    },
+    "@stylistic/jsx-curly-spacing": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce or disallow spaces inside of curly braces in JSX attributes and expressions",
+        "url": "https://eslint.style/rules/jsx/jsx-curly-spacing"
+      },
+      "fixable": "code",
+      "name": "@stylistic/jsx-curly-spacing",
+      "plugin": "@stylistic"
+    },
+    "@stylistic/jsx-equals-spacing": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce or disallow spaces around equal signs in JSX attributes",
+        "url": "https://eslint.style/rules/jsx/jsx-equals-spacing"
+      },
+      "fixable": "code",
+      "name": "@stylistic/jsx-equals-spacing",
+      "plugin": "@stylistic"
+    },
+    "@stylistic/jsx-first-prop-new-line": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce proper position of the first property in JSX",
+        "url": "https://eslint.style/rules/jsx/jsx-first-prop-new-line"
+      },
+      "fixable": "code",
+      "name": "@stylistic/jsx-first-prop-new-line",
+      "plugin": "@stylistic"
+    },
+    "@stylistic/jsx-function-call-newline": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce line breaks before and after JSX elements when they are used as arguments to a function.",
+        "url": "https://eslint.style/rules/jsx/jsx-function-call-newline"
+      },
+      "fixable": "whitespace",
+      "name": "@stylistic/jsx-function-call-newline",
+      "plugin": "@stylistic"
+    },
+    "@stylistic/jsx-indent": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce JSX indentation. Deprecated, use `indent` rule instead.",
+        "url": "https://eslint.style/rules/jsx/jsx-indent"
+      },
+      "deprecated": true,
+      "fixable": "whitespace",
+      "name": "@stylistic/jsx-indent",
+      "plugin": "@stylistic"
+    },
+    "@stylistic/jsx-indent-props": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce props indentation in JSX",
+        "url": "https://eslint.style/rules/jsx/jsx-indent-props"
+      },
+      "fixable": "code",
+      "name": "@stylistic/jsx-indent-props",
+      "plugin": "@stylistic"
+    },
+    "@stylistic/jsx-max-props-per-line": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce maximum of props on a single line in JSX",
+        "url": "https://eslint.style/rules/jsx/jsx-max-props-per-line"
+      },
+      "fixable": "code",
+      "name": "@stylistic/jsx-max-props-per-line",
+      "plugin": "@stylistic"
+    },
+    "@stylistic/jsx-newline": {
+      "type": "layout",
+      "docs": {
+        "description": "Require or prevent a new line after jsx elements and expressions.",
+        "url": "https://eslint.style/rules/jsx/jsx-newline"
+      },
+      "fixable": "code",
+      "name": "@stylistic/jsx-newline",
+      "plugin": "@stylistic"
+    },
+    "@stylistic/jsx-one-expression-per-line": {
+      "type": "layout",
+      "docs": {
+        "description": "Require one JSX element per line",
+        "url": "https://eslint.style/rules/jsx/jsx-one-expression-per-line"
+      },
+      "fixable": "whitespace",
+      "name": "@stylistic/jsx-one-expression-per-line",
+      "plugin": "@stylistic"
+    },
+    "@stylistic/jsx-pascal-case": {
+      "type": "suggestion",
+      "docs": {
+        "description": "Enforce PascalCase for user-defined JSX components",
+        "url": "https://eslint.style/rules/jsx/jsx-pascal-case"
+      },
+      "name": "@stylistic/jsx-pascal-case",
+      "plugin": "@stylistic"
+    },
+    "@stylistic/jsx-props-no-multi-spaces": {
+      "type": "layout",
+      "docs": {
+        "description": "Disallow multiple spaces between inline JSX props",
+        "url": "https://eslint.style/rules/jsx/jsx-props-no-multi-spaces"
+      },
+      "fixable": "code",
+      "name": "@stylistic/jsx-props-no-multi-spaces",
+      "plugin": "@stylistic"
+    },
+    "@stylistic/jsx-quotes": {
       "type": "layout",
       "docs": {
         "description": "Enforce the consistent use of either double or single quotes in JSX attributes",
         "url": "https://eslint.style/rules/js/jsx-quotes"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/jsx-quotes",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/jsx-quotes",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/key-spacing": {
+    "@stylistic/jsx-self-closing-comp": {
       "type": "layout",
       "docs": {
-        "description": "Enforce consistent spacing between keys and values in object literal properties",
-        "url": "https://eslint.style/rules/js/key-spacing"
+        "description": "Disallow extra closing tags for components without children",
+        "url": "https://eslint.style/rules/jsx/jsx-self-closing-comp"
+      },
+      "fixable": "code",
+      "name": "@stylistic/jsx-self-closing-comp",
+      "plugin": "@stylistic"
+    },
+    "@stylistic/jsx-sort-props": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce props alphabetical sorting",
+        "url": "https://eslint.style/rules/jsx/jsx-sort-props"
+      },
+      "fixable": "code",
+      "name": "@stylistic/jsx-sort-props",
+      "plugin": "@stylistic"
+    },
+    "@stylistic/jsx-tag-spacing": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce whitespace in and around the JSX opening and closing brackets",
+        "url": "https://eslint.style/rules/jsx/jsx-tag-spacing"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/key-spacing",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/jsx-tag-spacing",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/keyword-spacing": {
+    "@stylistic/jsx-wrap-multilines": {
+      "type": "layout",
+      "docs": {
+        "description": "Disallow missing parentheses around multiline JSX",
+        "url": "https://eslint.style/rules/jsx/jsx-wrap-multilines"
+      },
+      "fixable": "code",
+      "name": "@stylistic/jsx-wrap-multilines",
+      "plugin": "@stylistic"
+    },
+    "@stylistic/key-spacing": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforce consistent spacing between property names and type annotations in types and interfaces",
+        "url": "https://eslint.style/rules/ts/key-spacing"
+      },
+      "fixable": "whitespace",
+      "name": "@stylistic/key-spacing",
+      "plugin": "@stylistic"
+    },
+    "@stylistic/keyword-spacing": {
       "type": "layout",
       "docs": {
         "description": "Enforce consistent spacing before and after keywords",
-        "url": "https://eslint.style/rules/js/keyword-spacing"
+        "url": "https://eslint.style/rules/ts/keyword-spacing"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/keyword-spacing",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/keyword-spacing",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/line-comment-position": {
+    "@stylistic/line-comment-position": {
       "type": "layout",
       "docs": {
         "description": "Enforce position of line comments",
         "url": "https://eslint.style/rules/js/line-comment-position"
       },
-      "name": "@stylistic/js/line-comment-position",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/line-comment-position",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/linebreak-style": {
+    "@stylistic/linebreak-style": {
       "type": "layout",
       "docs": {
         "description": "Enforce consistent linebreak style",
         "url": "https://eslint.style/rules/js/linebreak-style"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/linebreak-style",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/linebreak-style",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/lines-around-comment": {
+    "@stylistic/lines-around-comment": {
       "type": "layout",
       "docs": {
         "description": "Require empty lines around comments",
-        "url": "https://eslint.style/rules/js/lines-around-comment"
+        "url": "https://eslint.style/rules/ts/lines-around-comment"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/lines-around-comment",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/lines-around-comment",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/lines-between-class-members": {
+    "@stylistic/lines-between-class-members": {
       "type": "layout",
       "docs": {
         "description": "Require or disallow an empty line between class members",
-        "url": "https://eslint.style/rules/js/lines-between-class-members"
+        "url": "https://eslint.style/rules/ts/lines-between-class-members"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/lines-between-class-members",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/lines-between-class-members",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/max-len": {
+    "@stylistic/max-len": {
       "type": "layout",
       "docs": {
         "description": "Enforce a maximum line length",
         "url": "https://eslint.style/rules/js/max-len"
       },
-      "name": "@stylistic/js/max-len",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/max-len",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/max-statements-per-line": {
+    "@stylistic/max-statements-per-line": {
       "type": "layout",
       "docs": {
         "description": "Enforce a maximum number of statements allowed per line",
         "url": "https://eslint.style/rules/js/max-statements-per-line"
       },
-      "name": "@stylistic/js/max-statements-per-line",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/max-statements-per-line",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/multiline-comment-style": {
+    "@stylistic/member-delimiter-style": {
+      "type": "layout",
+      "docs": {
+        "description": "Require a specific member delimiter style for interfaces and type literals",
+        "url": "https://eslint.style/rules/ts/member-delimiter-style"
+      },
+      "fixable": "whitespace",
+      "name": "@stylistic/member-delimiter-style",
+      "plugin": "@stylistic"
+    },
+    "@stylistic/multiline-comment-style": {
       "type": "suggestion",
       "docs": {
         "description": "Enforce a particular style for multiline comments",
         "url": "https://eslint.style/rules/js/multiline-comment-style"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/multiline-comment-style",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/multiline-comment-style",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/multiline-ternary": {
+    "@stylistic/multiline-ternary": {
       "type": "layout",
       "docs": {
         "description": "Enforce newlines between operands of ternary expressions",
         "url": "https://eslint.style/rules/js/multiline-ternary"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/multiline-ternary",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/multiline-ternary",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/new-parens": {
+    "@stylistic/new-parens": {
       "type": "layout",
       "docs": {
         "description": "Enforce or disallow parentheses when invoking a constructor with no arguments",
         "url": "https://eslint.style/rules/js/new-parens"
       },
       "fixable": "code",
-      "name": "@stylistic/js/new-parens",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/new-parens",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/newline-per-chained-call": {
+    "@stylistic/newline-per-chained-call": {
       "type": "layout",
       "docs": {
         "description": "Require a newline after each call in a method chain",
         "url": "https://eslint.style/rules/js/newline-per-chained-call"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/newline-per-chained-call",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/newline-per-chained-call",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/no-confusing-arrow": {
+    "@stylistic/no-confusing-arrow": {
       "type": "layout",
       "docs": {
         "description": "Disallow arrow functions where they could be confused with comparisons",
         "url": "https://eslint.style/rules/js/no-confusing-arrow"
       },
       "fixable": "code",
-      "name": "@stylistic/js/no-confusing-arrow",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/no-confusing-arrow",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/no-extra-parens": {
+    "@stylistic/no-extra-parens": {
       "type": "layout",
       "docs": {
         "description": "Disallow unnecessary parentheses",
-        "url": "https://eslint.style/rules/js/no-extra-parens"
+        "url": "https://eslint.style/rules/ts/no-extra-parens"
       },
       "fixable": "code",
-      "name": "@stylistic/js/no-extra-parens",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/no-extra-parens",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/no-extra-semi": {
+    "@stylistic/no-extra-semi": {
       "type": "layout",
       "docs": {
         "description": "Disallow unnecessary semicolons",
-        "url": "https://eslint.style/rules/js/no-extra-semi"
+        "url": "https://eslint.style/rules/ts/no-extra-semi"
       },
       "fixable": "code",
-      "name": "@stylistic/js/no-extra-semi",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/no-extra-semi",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/no-floating-decimal": {
+    "@stylistic/no-floating-decimal": {
       "type": "layout",
       "docs": {
         "description": "Disallow leading or trailing decimal points in numeric literals",
         "url": "https://eslint.style/rules/js/no-floating-decimal"
       },
       "fixable": "code",
-      "name": "@stylistic/js/no-floating-decimal",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/no-floating-decimal",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/no-mixed-operators": {
+    "@stylistic/no-mixed-operators": {
       "type": "layout",
       "docs": {
         "description": "Disallow mixed binary operators",
         "url": "https://eslint.style/rules/js/no-mixed-operators"
       },
-      "name": "@stylistic/js/no-mixed-operators",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/no-mixed-operators",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/no-mixed-spaces-and-tabs": {
+    "@stylistic/no-mixed-spaces-and-tabs": {
       "type": "layout",
       "docs": {
         "description": "Disallow mixed spaces and tabs for indentation",
         "url": "https://eslint.style/rules/js/no-mixed-spaces-and-tabs"
       },
-      "name": "@stylistic/js/no-mixed-spaces-and-tabs",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/no-mixed-spaces-and-tabs",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/no-multi-spaces": {
+    "@stylistic/no-multi-spaces": {
       "type": "layout",
       "docs": {
         "description": "Disallow multiple spaces",
         "url": "https://eslint.style/rules/js/no-multi-spaces"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/no-multi-spaces",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/no-multi-spaces",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/no-multiple-empty-lines": {
+    "@stylistic/no-multiple-empty-lines": {
       "type": "layout",
       "docs": {
         "description": "Disallow multiple empty lines",
         "url": "https://eslint.style/rules/js/no-multiple-empty-lines"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/no-multiple-empty-lines",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/no-multiple-empty-lines",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/no-tabs": {
+    "@stylistic/no-tabs": {
       "type": "layout",
       "docs": {
         "description": "Disallow all tabs",
         "url": "https://eslint.style/rules/js/no-tabs"
       },
-      "name": "@stylistic/js/no-tabs",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/no-tabs",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/no-trailing-spaces": {
+    "@stylistic/no-trailing-spaces": {
       "type": "layout",
       "docs": {
         "description": "Disallow trailing whitespace at the end of lines",
         "url": "https://eslint.style/rules/js/no-trailing-spaces"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/no-trailing-spaces",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/no-trailing-spaces",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/no-whitespace-before-property": {
+    "@stylistic/no-whitespace-before-property": {
       "type": "layout",
       "docs": {
         "description": "Disallow whitespace before properties",
         "url": "https://eslint.style/rules/js/no-whitespace-before-property"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/no-whitespace-before-property",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/no-whitespace-before-property",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/nonblock-statement-body-position": {
+    "@stylistic/nonblock-statement-body-position": {
       "type": "layout",
       "docs": {
         "description": "Enforce the location of single-line statements",
         "url": "https://eslint.style/rules/js/nonblock-statement-body-position"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/nonblock-statement-body-position",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/nonblock-statement-body-position",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/object-curly-newline": {
+    "@stylistic/object-curly-newline": {
       "type": "layout",
       "docs": {
         "description": "Enforce consistent line breaks after opening and before closing braces",
-        "url": "https://eslint.style/rules/js/object-curly-newline"
+        "url": "https://eslint.style/rules/ts/object-curly-newline"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/object-curly-newline",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/object-curly-newline",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/object-curly-spacing": {
+    "@stylistic/object-curly-spacing": {
       "type": "layout",
       "docs": {
         "description": "Enforce consistent spacing inside braces",
-        "url": "https://eslint.style/rules/js/object-curly-spacing"
+        "url": "https://eslint.style/rules/ts/object-curly-spacing"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/object-curly-spacing",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/object-curly-spacing",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/object-property-newline": {
+    "@stylistic/object-property-newline": {
       "type": "layout",
       "docs": {
         "description": "Enforce placing object properties on separate lines",
-        "url": "https://eslint.style/rules/js/object-property-newline"
+        "url": "https://eslint.style/rules/ts/object-property-newline"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/object-property-newline",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/object-property-newline",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/one-var-declaration-per-line": {
+    "@stylistic/one-var-declaration-per-line": {
       "type": "layout",
       "docs": {
         "description": "Require or disallow newlines around variable declarations",
         "url": "https://eslint.style/rules/js/one-var-declaration-per-line"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/one-var-declaration-per-line",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/one-var-declaration-per-line",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/operator-linebreak": {
+    "@stylistic/operator-linebreak": {
       "type": "layout",
       "docs": {
         "description": "Enforce consistent linebreak style for operators",
         "url": "https://eslint.style/rules/js/operator-linebreak"
       },
       "fixable": "code",
-      "name": "@stylistic/js/operator-linebreak",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/operator-linebreak",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/padded-blocks": {
+    "@stylistic/padded-blocks": {
       "type": "layout",
       "docs": {
         "description": "Require or disallow padding within blocks",
         "url": "https://eslint.style/rules/js/padded-blocks"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/padded-blocks",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/padded-blocks",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/padding-line-between-statements": {
+    "@stylistic/padding-line-between-statements": {
       "type": "layout",
       "docs": {
         "description": "Require or disallow padding lines between statements",
-        "url": "https://eslint.style/rules/js/padding-line-between-statements"
+        "url": "https://eslint.style/rules/ts/padding-line-between-statements"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/padding-line-between-statements",
-      "plugin": "@stylistic/js"
+      "hasSuggestions": false,
+      "name": "@stylistic/padding-line-between-statements",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/quote-props": {
+    "@stylistic/quote-props": {
       "type": "layout",
       "docs": {
-        "description": "Require quotes around object literal property names",
-        "url": "https://eslint.style/rules/js/quote-props"
+        "description": "Require quotes around object literal, type literal, interfaces and enums property names",
+        "url": "https://eslint.style/rules/ts/quote-props"
       },
       "fixable": "code",
-      "name": "@stylistic/js/quote-props",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/quote-props",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/quotes": {
+    "@stylistic/quotes": {
       "type": "layout",
       "docs": {
         "description": "Enforce the consistent use of either backticks, double, or single quotes",
-        "url": "https://eslint.style/rules/js/quotes"
+        "url": "https://eslint.style/rules/ts/quotes"
       },
       "fixable": "code",
-      "name": "@stylistic/js/quotes",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/quotes",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/rest-spread-spacing": {
+    "@stylistic/rest-spread-spacing": {
       "type": "layout",
       "docs": {
         "description": "Enforce spacing between rest and spread operators and their expressions",
         "url": "https://eslint.style/rules/js/rest-spread-spacing"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/rest-spread-spacing",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/rest-spread-spacing",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/semi": {
+    "@stylistic/semi": {
       "type": "layout",
       "docs": {
         "description": "Require or disallow semicolons instead of ASI",
-        "url": "https://eslint.style/rules/js/semi"
+        "url": "https://eslint.style/rules/ts/semi"
       },
       "fixable": "code",
-      "name": "@stylistic/js/semi",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/semi",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/semi-spacing": {
+    "@stylistic/semi-spacing": {
       "type": "layout",
       "docs": {
         "description": "Enforce consistent spacing before and after semicolons",
-        "url": "https://eslint.style/rules/js/semi-spacing"
+        "url": "https://eslint.style/rules/ts/semi-spacing"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/semi-spacing",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/semi-spacing",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/semi-style": {
+    "@stylistic/semi-style": {
       "type": "layout",
       "docs": {
         "description": "Enforce location of semicolons",
         "url": "https://eslint.style/rules/js/semi-style"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/semi-style",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/semi-style",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/space-before-blocks": {
+    "@stylistic/space-before-blocks": {
       "type": "layout",
       "docs": {
         "description": "Enforce consistent spacing before blocks",
-        "url": "https://eslint.style/rules/js/space-before-blocks"
+        "url": "https://eslint.style/rules/ts/space-before-blocks"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/space-before-blocks",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/space-before-blocks",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/space-before-function-paren": {
+    "@stylistic/space-before-function-paren": {
       "type": "layout",
       "docs": {
-        "description": "Enforce consistent spacing before `function` definition opening parenthesis",
-        "url": "https://eslint.style/rules/js/space-before-function-paren"
+        "description": "Enforce consistent spacing before function parenthesis",
+        "url": "https://eslint.style/rules/ts/space-before-function-paren"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/space-before-function-paren",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/space-before-function-paren",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/space-in-parens": {
+    "@stylistic/space-in-parens": {
       "type": "layout",
       "docs": {
         "description": "Enforce consistent spacing inside parentheses",
         "url": "https://eslint.style/rules/js/space-in-parens"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/space-in-parens",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/space-in-parens",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/space-infix-ops": {
+    "@stylistic/space-infix-ops": {
       "type": "layout",
       "docs": {
         "description": "Require spacing around infix operators",
-        "url": "https://eslint.style/rules/js/space-infix-ops"
+        "url": "https://eslint.style/rules/ts/space-infix-ops"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/space-infix-ops",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/space-infix-ops",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/space-unary-ops": {
+    "@stylistic/space-unary-ops": {
       "type": "layout",
       "docs": {
         "description": "Enforce consistent spacing before or after unary operators",
         "url": "https://eslint.style/rules/js/space-unary-ops"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/space-unary-ops",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/space-unary-ops",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/spaced-comment": {
+    "@stylistic/spaced-comment": {
       "type": "layout",
       "docs": {
         "description": "Enforce consistent spacing after the `//` or `/*` in a comment",
         "url": "https://eslint.style/rules/js/spaced-comment"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/spaced-comment",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/spaced-comment",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/switch-colon-spacing": {
+    "@stylistic/switch-colon-spacing": {
       "type": "layout",
       "docs": {
         "description": "Enforce spacing around colons of switch statements",
         "url": "https://eslint.style/rules/js/switch-colon-spacing"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/switch-colon-spacing",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/switch-colon-spacing",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/template-curly-spacing": {
+    "@stylistic/template-curly-spacing": {
       "type": "layout",
       "docs": {
         "description": "Require or disallow spacing around embedded expressions of template strings",
         "url": "https://eslint.style/rules/js/template-curly-spacing"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/template-curly-spacing",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/template-curly-spacing",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/template-tag-spacing": {
+    "@stylistic/template-tag-spacing": {
       "type": "layout",
       "docs": {
         "description": "Require or disallow spacing between template tags and their literals",
         "url": "https://eslint.style/rules/js/template-tag-spacing"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/template-tag-spacing",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/template-tag-spacing",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/wrap-iife": {
+    "@stylistic/type-annotation-spacing": {
+      "type": "layout",
+      "docs": {
+        "description": "Require consistent spacing around type annotations",
+        "url": "https://eslint.style/rules/ts/type-annotation-spacing"
+      },
+      "fixable": "whitespace",
+      "name": "@stylistic/type-annotation-spacing",
+      "plugin": "@stylistic"
+    },
+    "@stylistic/type-generic-spacing": {
+      "type": "layout",
+      "docs": {
+        "description": "Enforces consistent spacing inside TypeScript type generics",
+        "url": "https://eslint.style/rules/plus/type-generic-spacing"
+      },
+      "fixable": "whitespace",
+      "name": "@stylistic/type-generic-spacing",
+      "plugin": "@stylistic"
+    },
+    "@stylistic/type-named-tuple-spacing": {
+      "type": "layout",
+      "docs": {
+        "description": "Expect space before the type declaration in the named tuple",
+        "url": "https://eslint.style/rules/plus/type-named-tuple-spacing"
+      },
+      "fixable": "whitespace",
+      "name": "@stylistic/type-named-tuple-spacing",
+      "plugin": "@stylistic"
+    },
+    "@stylistic/wrap-iife": {
       "type": "layout",
       "docs": {
         "description": "Require parentheses around immediate `function` invocations",
         "url": "https://eslint.style/rules/js/wrap-iife"
       },
       "fixable": "code",
-      "name": "@stylistic/js/wrap-iife",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/wrap-iife",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/wrap-regex": {
+    "@stylistic/wrap-regex": {
       "type": "layout",
       "docs": {
         "description": "Require parenthesis around regex literals",
         "url": "https://eslint.style/rules/js/wrap-regex"
       },
       "fixable": "code",
-      "name": "@stylistic/js/wrap-regex",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/wrap-regex",
+      "plugin": "@stylistic"
     },
-    "@stylistic/js/yield-star-spacing": {
+    "@stylistic/yield-star-spacing": {
       "type": "layout",
       "docs": {
         "description": "Require or disallow spacing around the `*` in `yield*` expressions",
         "url": "https://eslint.style/rules/js/yield-star-spacing"
       },
       "fixable": "whitespace",
-      "name": "@stylistic/js/yield-star-spacing",
-      "plugin": "@stylistic/js"
+      "name": "@stylistic/yield-star-spacing",
+      "plugin": "@stylistic"
     },
     "@susisu/safe-typescript/no-object-assign": {
       "type": "suggestion",
@@ -14701,267 +14762,6 @@
       "name": "tsdoc/syntax",
       "plugin": "tsdoc"
     },
-    "@stylistic/ts/block-spacing": {
-      "type": "layout",
-      "docs": {
-        "description": "Disallow or enforce spaces inside of blocks after opening block and before closing block",
-        "url": "https://eslint.style/rules/ts/block-spacing"
-      },
-      "fixable": "whitespace",
-      "name": "@stylistic/ts/block-spacing",
-      "plugin": "@stylistic/ts"
-    },
-    "@stylistic/ts/brace-style": {
-      "type": "layout",
-      "docs": {
-        "description": "Enforce consistent brace style for blocks",
-        "url": "https://eslint.style/rules/ts/brace-style"
-      },
-      "fixable": "whitespace",
-      "name": "@stylistic/ts/brace-style",
-      "plugin": "@stylistic/ts"
-    },
-    "@stylistic/ts/comma-dangle": {
-      "type": "layout",
-      "docs": {
-        "description": "Require or disallow trailing commas",
-        "url": "https://eslint.style/rules/ts/comma-dangle"
-      },
-      "fixable": "code",
-      "name": "@stylistic/ts/comma-dangle",
-      "plugin": "@stylistic/ts"
-    },
-    "@stylistic/ts/comma-spacing": {
-      "type": "layout",
-      "docs": {
-        "description": "Enforce consistent spacing before and after commas",
-        "url": "https://eslint.style/rules/ts/comma-spacing"
-      },
-      "fixable": "whitespace",
-      "name": "@stylistic/ts/comma-spacing",
-      "plugin": "@stylistic/ts"
-    },
-    "@stylistic/ts/func-call-spacing": {
-      "type": "layout",
-      "docs": {
-        "description": "Require or disallow spacing between function identifiers and their invocations",
-        "url": "https://eslint.style/rules/ts/function-call-spacing"
-      },
-      "fixable": "whitespace",
-      "name": "@stylistic/ts/func-call-spacing",
-      "plugin": "@stylistic/ts"
-    },
-    "@stylistic/ts/function-call-spacing": {
-      "type": "layout",
-      "docs": {
-        "description": "Require or disallow spacing between function identifiers and their invocations",
-        "url": "https://eslint.style/rules/ts/function-call-spacing"
-      },
-      "fixable": "whitespace",
-      "name": "@stylistic/ts/function-call-spacing",
-      "plugin": "@stylistic/ts"
-    },
-    "@stylistic/ts/indent": {
-      "type": "layout",
-      "docs": {
-        "description": "Enforce consistent indentation",
-        "url": "https://eslint.style/rules/ts/indent"
-      },
-      "fixable": "whitespace",
-      "name": "@stylistic/ts/indent",
-      "plugin": "@stylistic/ts"
-    },
-    "@stylistic/ts/key-spacing": {
-      "type": "layout",
-      "docs": {
-        "description": "Enforce consistent spacing between property names and type annotations in types and interfaces",
-        "url": "https://eslint.style/rules/ts/key-spacing"
-      },
-      "fixable": "whitespace",
-      "name": "@stylistic/ts/key-spacing",
-      "plugin": "@stylistic/ts"
-    },
-    "@stylistic/ts/keyword-spacing": {
-      "type": "layout",
-      "docs": {
-        "description": "Enforce consistent spacing before and after keywords",
-        "url": "https://eslint.style/rules/ts/keyword-spacing"
-      },
-      "fixable": "whitespace",
-      "name": "@stylistic/ts/keyword-spacing",
-      "plugin": "@stylistic/ts"
-    },
-    "@stylistic/ts/lines-around-comment": {
-      "type": "layout",
-      "docs": {
-        "description": "Require empty lines around comments",
-        "url": "https://eslint.style/rules/ts/lines-around-comment"
-      },
-      "fixable": "whitespace",
-      "name": "@stylistic/ts/lines-around-comment",
-      "plugin": "@stylistic/ts"
-    },
-    "@stylistic/ts/lines-between-class-members": {
-      "type": "layout",
-      "docs": {
-        "description": "Require or disallow an empty line between class members",
-        "url": "https://eslint.style/rules/ts/lines-between-class-members"
-      },
-      "fixable": "whitespace",
-      "name": "@stylistic/ts/lines-between-class-members",
-      "plugin": "@stylistic/ts"
-    },
-    "@stylistic/ts/member-delimiter-style": {
-      "type": "layout",
-      "docs": {
-        "description": "Require a specific member delimiter style for interfaces and type literals",
-        "url": "https://eslint.style/rules/ts/member-delimiter-style"
-      },
-      "fixable": "whitespace",
-      "name": "@stylistic/ts/member-delimiter-style",
-      "plugin": "@stylistic/ts"
-    },
-    "@stylistic/ts/no-extra-parens": {
-      "type": "layout",
-      "docs": {
-        "description": "Disallow unnecessary parentheses",
-        "url": "https://eslint.style/rules/ts/no-extra-parens"
-      },
-      "fixable": "code",
-      "name": "@stylistic/ts/no-extra-parens",
-      "plugin": "@stylistic/ts"
-    },
-    "@stylistic/ts/no-extra-semi": {
-      "type": "layout",
-      "docs": {
-        "description": "Disallow unnecessary semicolons",
-        "url": "https://eslint.style/rules/ts/no-extra-semi"
-      },
-      "fixable": "code",
-      "name": "@stylistic/ts/no-extra-semi",
-      "plugin": "@stylistic/ts"
-    },
-    "@stylistic/ts/object-curly-newline": {
-      "type": "layout",
-      "docs": {
-        "description": "Enforce consistent line breaks after opening and before closing braces",
-        "url": "https://eslint.style/rules/ts/object-curly-newline"
-      },
-      "fixable": "whitespace",
-      "name": "@stylistic/ts/object-curly-newline",
-      "plugin": "@stylistic/ts"
-    },
-    "@stylistic/ts/object-curly-spacing": {
-      "type": "layout",
-      "docs": {
-        "description": "Enforce consistent spacing inside braces",
-        "url": "https://eslint.style/rules/ts/object-curly-spacing"
-      },
-      "fixable": "whitespace",
-      "name": "@stylistic/ts/object-curly-spacing",
-      "plugin": "@stylistic/ts"
-    },
-    "@stylistic/ts/object-property-newline": {
-      "type": "layout",
-      "docs": {
-        "description": "Enforce placing object properties on separate lines",
-        "url": "https://eslint.style/rules/ts/object-property-newline"
-      },
-      "fixable": "whitespace",
-      "name": "@stylistic/ts/object-property-newline",
-      "plugin": "@stylistic/ts"
-    },
-    "@stylistic/ts/padding-line-between-statements": {
-      "type": "layout",
-      "docs": {
-        "description": "Require or disallow padding lines between statements",
-        "url": "https://eslint.style/rules/ts/padding-line-between-statements"
-      },
-      "fixable": "whitespace",
-      "hasSuggestions": false,
-      "name": "@stylistic/ts/padding-line-between-statements",
-      "plugin": "@stylistic/ts"
-    },
-    "@stylistic/ts/quote-props": {
-      "type": "layout",
-      "docs": {
-        "description": "Require quotes around object literal, type literal, interfaces and enums property names",
-        "url": "https://eslint.style/rules/ts/quote-props"
-      },
-      "fixable": "code",
-      "name": "@stylistic/ts/quote-props",
-      "plugin": "@stylistic/ts"
-    },
-    "@stylistic/ts/quotes": {
-      "type": "layout",
-      "docs": {
-        "description": "Enforce the consistent use of either backticks, double, or single quotes",
-        "url": "https://eslint.style/rules/ts/quotes"
-      },
-      "fixable": "code",
-      "name": "@stylistic/ts/quotes",
-      "plugin": "@stylistic/ts"
-    },
-    "@stylistic/ts/semi": {
-      "type": "layout",
-      "docs": {
-        "description": "Require or disallow semicolons instead of ASI",
-        "url": "https://eslint.style/rules/ts/semi"
-      },
-      "fixable": "code",
-      "name": "@stylistic/ts/semi",
-      "plugin": "@stylistic/ts"
-    },
-    "@stylistic/ts/semi-spacing": {
-      "type": "layout",
-      "docs": {
-        "description": "Enforce consistent spacing before and after semicolons",
-        "url": "https://eslint.style/rules/ts/semi-spacing"
-      },
-      "fixable": "whitespace",
-      "name": "@stylistic/ts/semi-spacing",
-      "plugin": "@stylistic/ts"
-    },
-    "@stylistic/ts/space-before-blocks": {
-      "type": "layout",
-      "docs": {
-        "description": "Enforce consistent spacing before blocks",
-        "url": "https://eslint.style/rules/ts/space-before-blocks"
-      },
-      "fixable": "whitespace",
-      "name": "@stylistic/ts/space-before-blocks",
-      "plugin": "@stylistic/ts"
-    },
-    "@stylistic/ts/space-before-function-paren": {
-      "type": "layout",
-      "docs": {
-        "description": "Enforce consistent spacing before function parenthesis",
-        "url": "https://eslint.style/rules/ts/space-before-function-paren"
-      },
-      "fixable": "whitespace",
-      "name": "@stylistic/ts/space-before-function-paren",
-      "plugin": "@stylistic/ts"
-    },
-    "@stylistic/ts/space-infix-ops": {
-      "type": "layout",
-      "docs": {
-        "description": "Require spacing around infix operators",
-        "url": "https://eslint.style/rules/ts/space-infix-ops"
-      },
-      "fixable": "whitespace",
-      "name": "@stylistic/ts/space-infix-ops",
-      "plugin": "@stylistic/ts"
-    },
-    "@stylistic/ts/type-annotation-spacing": {
-      "type": "layout",
-      "docs": {
-        "description": "Require consistent spacing around type annotations",
-        "url": "https://eslint.style/rules/ts/type-annotation-spacing"
-      },
-      "fixable": "whitespace",
-      "name": "@stylistic/ts/type-annotation-spacing",
-      "plugin": "@stylistic/ts"
-    },
     "react/boolean-prop-naming": {
       "docs": {
         "category": "Stylistic Issues",
@@ -16036,205 +15836,6 @@
       },
       "name": "react/void-dom-elements-no-children",
       "plugin": "react"
-    },
-    "@stylistic/jsx/jsx-child-element-spacing": {
-      "type": "layout",
-      "docs": {
-        "description": "Enforce or disallow spaces inside of curly braces in JSX attributes and expressions",
-        "url": "https://eslint.style/rules/jsx/jsx-child-element-spacing"
-      },
-      "name": "@stylistic/jsx/jsx-child-element-spacing",
-      "plugin": "@stylistic/jsx"
-    },
-    "@stylistic/jsx/jsx-closing-bracket-location": {
-      "type": "layout",
-      "docs": {
-        "description": "Enforce closing bracket location in JSX",
-        "url": "https://eslint.style/rules/jsx/jsx-closing-bracket-location"
-      },
-      "fixable": "code",
-      "name": "@stylistic/jsx/jsx-closing-bracket-location",
-      "plugin": "@stylistic/jsx"
-    },
-    "@stylistic/jsx/jsx-closing-tag-location": {
-      "type": "layout",
-      "docs": {
-        "description": "Enforce closing tag location for multiline JSX",
-        "url": "https://eslint.style/rules/jsx/jsx-closing-tag-location"
-      },
-      "fixable": "whitespace",
-      "name": "@stylistic/jsx/jsx-closing-tag-location",
-      "plugin": "@stylistic/jsx"
-    },
-    "@stylistic/jsx/jsx-curly-brace-presence": {
-      "type": "layout",
-      "docs": {
-        "description": "Disallow unnecessary JSX expressions when literals alone are sufficient or enforce JSX expressions on literals in JSX children or attributes",
-        "url": "https://eslint.style/rules/jsx/jsx-curly-brace-presence"
-      },
-      "fixable": "code",
-      "name": "@stylistic/jsx/jsx-curly-brace-presence",
-      "plugin": "@stylistic/jsx"
-    },
-    "@stylistic/jsx/jsx-curly-newline": {
-      "type": "layout",
-      "docs": {
-        "description": "Enforce consistent linebreaks in curly braces in JSX attributes and expressions",
-        "url": "https://eslint.style/rules/jsx/jsx-curly-newline"
-      },
-      "fixable": "whitespace",
-      "name": "@stylistic/jsx/jsx-curly-newline",
-      "plugin": "@stylistic/jsx"
-    },
-    "@stylistic/jsx/jsx-curly-spacing": {
-      "type": "layout",
-      "docs": {
-        "description": "Enforce or disallow spaces inside of curly braces in JSX attributes and expressions",
-        "url": "https://eslint.style/rules/jsx/jsx-curly-spacing"
-      },
-      "fixable": "code",
-      "name": "@stylistic/jsx/jsx-curly-spacing",
-      "plugin": "@stylistic/jsx"
-    },
-    "@stylistic/jsx/jsx-equals-spacing": {
-      "type": "layout",
-      "docs": {
-        "description": "Enforce or disallow spaces around equal signs in JSX attributes",
-        "url": "https://eslint.style/rules/jsx/jsx-equals-spacing"
-      },
-      "fixable": "code",
-      "name": "@stylistic/jsx/jsx-equals-spacing",
-      "plugin": "@stylistic/jsx"
-    },
-    "@stylistic/jsx/jsx-first-prop-new-line": {
-      "type": "layout",
-      "docs": {
-        "description": "Enforce proper position of the first property in JSX",
-        "url": "https://eslint.style/rules/jsx/jsx-first-prop-new-line"
-      },
-      "fixable": "code",
-      "name": "@stylistic/jsx/jsx-first-prop-new-line",
-      "plugin": "@stylistic/jsx"
-    },
-    "@stylistic/jsx/jsx-function-call-newline": {
-      "type": "layout",
-      "docs": {
-        "description": "Enforce line breaks before and after JSX elements when they are used as arguments to a function.",
-        "url": "https://eslint.style/rules/jsx/jsx-function-call-newline"
-      },
-      "fixable": "whitespace",
-      "name": "@stylistic/jsx/jsx-function-call-newline",
-      "plugin": "@stylistic/jsx"
-    },
-    "@stylistic/jsx/jsx-indent": {
-      "type": "layout",
-      "docs": {
-        "description": "Enforce JSX indentation. Deprecated, use `indent` rule instead.",
-        "url": "https://eslint.style/rules/jsx/jsx-indent"
-      },
-      "deprecated": true,
-      "fixable": "whitespace",
-      "name": "@stylistic/jsx/jsx-indent",
-      "plugin": "@stylistic/jsx"
-    },
-    "@stylistic/jsx/jsx-indent-props": {
-      "type": "layout",
-      "docs": {
-        "description": "Enforce props indentation in JSX",
-        "url": "https://eslint.style/rules/jsx/jsx-indent-props"
-      },
-      "fixable": "code",
-      "name": "@stylistic/jsx/jsx-indent-props",
-      "plugin": "@stylistic/jsx"
-    },
-    "@stylistic/jsx/jsx-max-props-per-line": {
-      "type": "layout",
-      "docs": {
-        "description": "Enforce maximum of props on a single line in JSX",
-        "url": "https://eslint.style/rules/jsx/jsx-max-props-per-line"
-      },
-      "fixable": "code",
-      "name": "@stylistic/jsx/jsx-max-props-per-line",
-      "plugin": "@stylistic/jsx"
-    },
-    "@stylistic/jsx/jsx-newline": {
-      "type": "layout",
-      "docs": {
-        "description": "Require or prevent a new line after jsx elements and expressions.",
-        "url": "https://eslint.style/rules/jsx/jsx-newline"
-      },
-      "fixable": "code",
-      "name": "@stylistic/jsx/jsx-newline",
-      "plugin": "@stylistic/jsx"
-    },
-    "@stylistic/jsx/jsx-one-expression-per-line": {
-      "type": "layout",
-      "docs": {
-        "description": "Require one JSX element per line",
-        "url": "https://eslint.style/rules/jsx/jsx-one-expression-per-line"
-      },
-      "fixable": "whitespace",
-      "name": "@stylistic/jsx/jsx-one-expression-per-line",
-      "plugin": "@stylistic/jsx"
-    },
-    "@stylistic/jsx/jsx-pascal-case": {
-      "type": "suggestion",
-      "docs": {
-        "description": "Enforce PascalCase for user-defined JSX components",
-        "url": "https://eslint.style/rules/jsx/jsx-pascal-case"
-      },
-      "name": "@stylistic/jsx/jsx-pascal-case",
-      "plugin": "@stylistic/jsx"
-    },
-    "@stylistic/jsx/jsx-props-no-multi-spaces": {
-      "type": "layout",
-      "docs": {
-        "description": "Disallow multiple spaces between inline JSX props",
-        "url": "https://eslint.style/rules/jsx/jsx-props-no-multi-spaces"
-      },
-      "fixable": "code",
-      "name": "@stylistic/jsx/jsx-props-no-multi-spaces",
-      "plugin": "@stylistic/jsx"
-    },
-    "@stylistic/jsx/jsx-self-closing-comp": {
-      "type": "layout",
-      "docs": {
-        "description": "Disallow extra closing tags for components without children",
-        "url": "https://eslint.style/rules/jsx/jsx-self-closing-comp"
-      },
-      "fixable": "code",
-      "name": "@stylistic/jsx/jsx-self-closing-comp",
-      "plugin": "@stylistic/jsx"
-    },
-    "@stylistic/jsx/jsx-sort-props": {
-      "type": "layout",
-      "docs": {
-        "description": "Enforce props alphabetical sorting",
-        "url": "https://eslint.style/rules/jsx/jsx-sort-props"
-      },
-      "fixable": "code",
-      "name": "@stylistic/jsx/jsx-sort-props",
-      "plugin": "@stylistic/jsx"
-    },
-    "@stylistic/jsx/jsx-tag-spacing": {
-      "type": "layout",
-      "docs": {
-        "description": "Enforce whitespace in and around the JSX opening and closing brackets",
-        "url": "https://eslint.style/rules/jsx/jsx-tag-spacing"
-      },
-      "fixable": "whitespace",
-      "name": "@stylistic/jsx/jsx-tag-spacing",
-      "plugin": "@stylistic/jsx"
-    },
-    "@stylistic/jsx/jsx-wrap-multilines": {
-      "type": "layout",
-      "docs": {
-        "description": "Disallow missing parentheses around multiline JSX",
-        "url": "https://eslint.style/rules/jsx/jsx-wrap-multilines"
-      },
-      "fixable": "code",
-      "name": "@stylistic/jsx/jsx-wrap-multilines",
-      "plugin": "@stylistic/jsx"
     },
     "@eslint-react/avoid-shorthand-boolean": {
       "type": "problem",
@@ -17808,46 +17409,6 @@
       "type": "problem",
       "name": "@next/next/no-unwanted-polyfillio",
       "plugin": "@next/next"
-    },
-    "@stylistic/plus/curly-newline": {
-      "type": "layout",
-      "docs": {
-        "description": "Enforce consistent line breaks after opening and before closing braces",
-        "url": "https://eslint.style/rules/plus/curly-newline"
-      },
-      "fixable": "whitespace",
-      "name": "@stylistic/plus/curly-newline",
-      "plugin": "@stylistic/plus"
-    },
-    "@stylistic/plus/indent-binary-ops": {
-      "type": "layout",
-      "docs": {
-        "description": "Indentation for binary operators",
-        "url": "https://eslint.style/rules/plus/indent-binary-ops"
-      },
-      "fixable": "whitespace",
-      "name": "@stylistic/plus/indent-binary-ops",
-      "plugin": "@stylistic/plus"
-    },
-    "@stylistic/plus/type-generic-spacing": {
-      "type": "layout",
-      "docs": {
-        "description": "Enforces consistent spacing inside TypeScript type generics",
-        "url": "https://eslint.style/rules/plus/type-generic-spacing"
-      },
-      "fixable": "whitespace",
-      "name": "@stylistic/plus/type-generic-spacing",
-      "plugin": "@stylistic/plus"
-    },
-    "@stylistic/plus/type-named-tuple-spacing": {
-      "type": "layout",
-      "docs": {
-        "description": "Expect space before the type declaration in the named tuple",
-        "url": "https://eslint.style/rules/plus/type-named-tuple-spacing"
-      },
-      "fixable": "whitespace",
-      "name": "@stylistic/plus/type-named-tuple-spacing",
-      "plugin": "@stylistic/plus"
     },
     "eslint-comments/disable-enable-pair": {
       "docs": {
@@ -21946,7 +21507,7 @@
         "**/*.json"
       ],
       "configs": [
-        63
+        57
       ]
     },
     {
@@ -21962,9 +21523,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -21976,10 +21539,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -21995,9 +21555,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -22009,10 +21571,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -22021,7 +21580,7 @@
         "**/*.json"
       ],
       "configs": [
-        63
+        57
       ]
     },
     {
@@ -22030,7 +21589,7 @@
         "**/*.json"
       ],
       "configs": [
-        63
+        57
       ]
     },
     {
@@ -22046,9 +21605,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -22060,10 +21621,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -22079,9 +21637,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -22093,10 +21653,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -22112,9 +21669,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -22126,10 +21685,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -22138,7 +21694,7 @@
         "**/*.json"
       ],
       "configs": [
-        63
+        57
       ]
     },
     {
@@ -22154,9 +21710,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -22168,10 +21726,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -22187,9 +21742,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -22201,10 +21758,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -22213,7 +21767,7 @@
         "**/*.json"
       ],
       "configs": [
-        63
+        57
       ]
     },
     {
@@ -22222,7 +21776,7 @@
         "**/*.json"
       ],
       "configs": [
-        63
+        57
       ]
     },
     {
@@ -22238,9 +21792,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -22252,10 +21808,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -22271,9 +21824,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -22285,10 +21840,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -22304,9 +21856,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -22318,10 +21872,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -22337,9 +21888,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -22351,10 +21904,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -22370,9 +21920,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -22384,10 +21936,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -22403,9 +21952,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -22417,10 +21968,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -22436,9 +21984,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -22450,10 +22000,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -22469,9 +22016,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -22483,10 +22032,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -22502,9 +22048,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -22516,10 +22064,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -22528,7 +22073,7 @@
         "**/*.json"
       ],
       "configs": [
-        63
+        57
       ]
     },
     {
@@ -22544,9 +22089,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -22558,10 +22105,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -22577,9 +22121,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -22591,10 +22137,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -22603,7 +22146,7 @@
         "**/*.json"
       ],
       "configs": [
-        63
+        57
       ]
     },
     {
@@ -22612,7 +22155,7 @@
         "**/*.json"
       ],
       "configs": [
-        63
+        57
       ]
     },
     {
@@ -22628,9 +22171,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -22642,10 +22187,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -22661,9 +22203,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -22675,10 +22219,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -22694,9 +22235,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -22708,10 +22251,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -22727,9 +22267,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -22741,10 +22283,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -22760,9 +22299,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -22774,10 +22315,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -22793,9 +22331,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -22807,10 +22347,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -22826,9 +22363,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -22840,10 +22379,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -22859,9 +22395,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -22873,10 +22411,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -22892,9 +22427,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -22906,10 +22443,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -22925,9 +22459,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -22939,10 +22475,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -22958,9 +22491,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -22972,10 +22507,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -22991,9 +22523,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -23005,10 +22539,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -23024,9 +22555,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -23038,10 +22571,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -23057,9 +22587,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -23071,10 +22603,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -23090,9 +22619,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -23104,10 +22635,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -23116,7 +22644,7 @@
         "**/*.json"
       ],
       "configs": [
-        63
+        57
       ]
     },
     {
@@ -23132,9 +22660,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -23146,10 +22676,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -23165,9 +22692,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -23179,10 +22708,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -23191,7 +22717,7 @@
         "**/*.json"
       ],
       "configs": [
-        63
+        57
       ]
     },
     {
@@ -23200,7 +22726,7 @@
         "**/*.json"
       ],
       "configs": [
-        63
+        57
       ]
     },
     {
@@ -23216,9 +22742,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -23230,10 +22758,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -23249,9 +22774,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -23263,10 +22790,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -23282,9 +22806,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -23296,10 +22822,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -23315,9 +22838,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -23329,10 +22854,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -23348,9 +22870,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -23362,10 +22886,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -23381,9 +22902,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -23395,10 +22918,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -23414,9 +22934,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -23428,10 +22950,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -23447,9 +22966,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -23461,10 +22982,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -23480,9 +22998,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -23494,10 +23014,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -23506,7 +23023,7 @@
         "**/*.json"
       ],
       "configs": [
-        63
+        57
       ]
     },
     {
@@ -23522,9 +23039,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -23536,10 +23055,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -23555,9 +23071,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -23569,10 +23087,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -23581,7 +23096,7 @@
         "**/*.json"
       ],
       "configs": [
-        63
+        57
       ]
     },
     {
@@ -23590,7 +23105,7 @@
         "**/*.json"
       ],
       "configs": [
-        63
+        57
       ]
     },
     {
@@ -23606,9 +23121,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -23620,14 +23137,11 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
-      "filepath": "@chronoverse-eslint/stylistic/src/rules/javascript.js",
+      "filepath": "@chronoverse-eslint/stylistic/src/rules/all-rules.js",
       "globs": [
         "**/*.js",
         "**/*.?([cm])js?(x)",
@@ -23639,9 +23153,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -23653,14 +23169,11 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
-      "filepath": "@chronoverse-eslint/stylistic/src/rules/jsx.js",
+      "filepath": "@chronoverse-eslint/stylistic/src/rules/brackets-rules.js",
       "globs": [
         "**/*.js",
         "**/*.?([cm])js?(x)",
@@ -23672,9 +23185,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -23686,14 +23201,11 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
-      "filepath": "@chronoverse-eslint/stylistic/src/rules/plus.js",
+      "filepath": "@chronoverse-eslint/stylistic/src/rules/commas-rules.js",
       "globs": [
         "**/*.js",
         "**/*.?([cm])js?(x)",
@@ -23705,9 +23217,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -23719,14 +23233,11 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
-      "filepath": "@chronoverse-eslint/stylistic/src/rules/typescript.js",
+      "filepath": "@chronoverse-eslint/stylistic/src/rules/comments-rules.js",
       "globs": [
         "**/*.js",
         "**/*.?([cm])js?(x)",
@@ -23738,9 +23249,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -23752,14 +23265,11 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
-      "filepath": "@chronoverse-eslint/stylistic/src/stylistic-js.js",
+      "filepath": "@chronoverse-eslint/stylistic/src/rules/disallow-rules.js",
       "globs": [
         "**/*.js",
         "**/*.?([cm])js?(x)",
@@ -23771,9 +23281,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -23785,14 +23297,11 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
-      "filepath": "@chronoverse-eslint/stylistic/src/stylistic-jsx.js",
+      "filepath": "@chronoverse-eslint/stylistic/src/rules/indent-rules.js",
       "globs": [
         "**/*.js",
         "**/*.?([cm])js?(x)",
@@ -23804,9 +23313,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -23818,14 +23329,11 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
-      "filepath": "@chronoverse-eslint/stylistic/src/stylistic-plus.js",
+      "filepath": "@chronoverse-eslint/stylistic/src/rules/jsx-rules.js",
       "globs": [
         "**/*.js",
         "**/*.?([cm])js?(x)",
@@ -23837,9 +23345,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -23851,14 +23361,11 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
-      "filepath": "@chronoverse-eslint/stylistic/src/stylistic-ts.js",
+      "filepath": "@chronoverse-eslint/stylistic/src/rules/line-breaks-rules.js",
       "globs": [
         "**/*.js",
         "**/*.?([cm])js?(x)",
@@ -23870,9 +23377,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -23884,10 +23393,231 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
+      ]
+    },
+    {
+      "filepath": "@chronoverse-eslint/stylistic/src/rules/misc-rules.js",
+      "globs": [
+        "**/*.js",
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
+      ],
+      "configs": [
+        2,
+        7,
+        9,
+        12,
+        14,
+        20,
+        22,
+        23,
+        29,
+        31,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        61
+      ]
+    },
+    {
+      "filepath": "@chronoverse-eslint/stylistic/src/rules/operators-rules.js",
+      "globs": [
+        "**/*.js",
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
+      ],
+      "configs": [
+        2,
+        7,
+        9,
+        12,
+        14,
+        20,
+        22,
+        23,
+        29,
+        31,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        61
+      ]
+    },
+    {
+      "filepath": "@chronoverse-eslint/stylistic/src/rules/quotes-rules.js",
+      "globs": [
+        "**/*.js",
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
+      ],
+      "configs": [
+        2,
+        7,
+        9,
+        12,
+        14,
+        20,
+        22,
+        23,
+        29,
+        31,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        61
+      ]
+    },
+    {
+      "filepath": "@chronoverse-eslint/stylistic/src/rules/semis-rules.js",
+      "globs": [
+        "**/*.js",
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
+      ],
+      "configs": [
+        2,
+        7,
+        9,
+        12,
+        14,
+        20,
+        22,
+        23,
+        29,
+        31,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        61
+      ]
+    },
+    {
+      "filepath": "@chronoverse-eslint/stylistic/src/rules/spacing-rules.js",
+      "globs": [
+        "**/*.js",
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
+      ],
+      "configs": [
+        2,
+        7,
+        9,
+        12,
+        14,
+        20,
+        22,
+        23,
+        29,
+        31,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        61
+      ]
+    },
+    {
+      "filepath": "@chronoverse-eslint/stylistic/src/rules/types-rules.js",
+      "globs": [
+        "**/*.js",
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
+      ],
+      "configs": [
+        2,
+        7,
+        9,
+        12,
+        14,
+        20,
+        22,
+        23,
+        29,
+        31,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        61
+      ]
+    },
+    {
+      "filepath": "@chronoverse-eslint/stylistic/src/stylistic-base.js",
+      "globs": [
+        "**/*.js",
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
+      ],
+      "configs": [
+        2,
+        7,
+        9,
+        12,
+        14,
+        20,
+        22,
+        23,
+        29,
+        31,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        61
       ]
     },
     {
@@ -23896,7 +23626,7 @@
         "**/*.json"
       ],
       "configs": [
-        63
+        57
       ]
     },
     {
@@ -23912,9 +23642,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -23926,10 +23658,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -23945,9 +23674,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -23959,10 +23690,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -23971,7 +23699,7 @@
         "**/*.json"
       ],
       "configs": [
-        63
+        57
       ]
     },
     {
@@ -23980,7 +23708,7 @@
         "**/*.json"
       ],
       "configs": [
-        63
+        57
       ]
     },
     {
@@ -23996,9 +23724,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -24010,10 +23740,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -24029,9 +23756,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -24043,10 +23772,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -24062,9 +23788,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -24076,10 +23804,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -24095,9 +23820,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -24109,10 +23836,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -24128,9 +23852,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -24142,10 +23868,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -24161,9 +23884,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -24175,10 +23900,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -24187,7 +23909,7 @@
         "**/*.json"
       ],
       "configs": [
-        63
+        57
       ]
     },
     {
@@ -24196,7 +23918,7 @@
         "**/*.json"
       ],
       "configs": [
-        63
+        57
       ]
     },
     {
@@ -24205,7 +23927,7 @@
         "**/*.json"
       ],
       "configs": [
-        63
+        57
       ]
     },
     {
@@ -24221,9 +23943,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -24235,10 +23959,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -24254,9 +23975,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -24268,10 +23991,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -24287,9 +24007,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -24301,10 +24023,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -24320,9 +24039,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -24334,10 +24055,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -24346,7 +24064,7 @@
         "**/*.json"
       ],
       "configs": [
-        63
+        57
       ]
     },
     {
@@ -24362,9 +24080,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -24376,10 +24096,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -24388,7 +24105,7 @@
         "**/*.json"
       ],
       "configs": [
-        63
+        57
       ]
     },
     {
@@ -24397,7 +24114,7 @@
         "**/*.json"
       ],
       "configs": [
-        63
+        57
       ]
     },
     {
@@ -24413,9 +24130,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -24427,10 +24146,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -24446,9 +24162,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -24460,10 +24178,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -24479,9 +24194,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -24493,10 +24210,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -24512,9 +24226,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -24526,10 +24242,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -24545,9 +24258,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -24559,10 +24274,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -24578,9 +24290,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -24592,10 +24306,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -24611,9 +24322,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -24625,10 +24338,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -24644,9 +24354,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -24658,10 +24370,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -24670,7 +24379,7 @@
         "**/*.json"
       ],
       "configs": [
-        63
+        57
       ]
     },
     {
@@ -24686,9 +24395,11 @@
         9,
         12,
         14,
+        20,
         22,
-        26,
-        27,
+        23,
+        29,
+        31,
         33,
         35,
         37,
@@ -24700,10 +24411,7 @@
         49,
         51,
         53,
-        55,
-        57,
-        59,
-        67
+        61
       ]
     },
     {
@@ -24712,7 +24420,7 @@
         "**/*.json"
       ],
       "configs": [
-        63
+        57
       ]
     },
     {
@@ -24721,7 +24429,7 @@
         "**/*.json"
       ],
       "configs": [
-        63
+        57
       ]
     },
     {
@@ -24730,7 +24438,7 @@
         "**/*.json"
       ],
       "configs": [
-        63
+        57
       ]
     },
     {
@@ -24739,12 +24447,12 @@
         "**/*.json"
       ],
       "configs": [
-        63
+        57
       ]
     }
   ],
   "meta": {
-    "lastUpdate": 1748801400234,
+    "lastUpdate": 1750011383107,
     "basePath": "",
     "configPath": ""
   }
