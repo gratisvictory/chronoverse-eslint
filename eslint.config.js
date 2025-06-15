@@ -1,4 +1,4 @@
-import { stylisticJs, stylisticPlus } from '@chronoverse-eslint/stylistic';
+import { stylistic } from '@chronoverse-eslint/stylistic/stylistic-base';
 import { javascript } from '@chronoverse-eslint/javascript/javascript-base';
 import { functionalJs } from '@chronoverse-eslint/functional/functional-js';
 import { comments } from '@chronoverse-eslint/presets/comments';
@@ -17,8 +17,7 @@ const eslintConfig = defineConfig([
 	eslintIgnores,
 	javascript,
 	functionalJs,
-	stylisticJs,
-	stylisticPlus,
+	stylistic,
 	comments,
 	dependency,
 	jsdoc,

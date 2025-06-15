@@ -33,37 +33,65 @@
       "import": "./dist/index.js",
       "types": "./dist/@types/index.d.ts"
     },
-    "./javascript": {
-      "import": "./dist/rules/javascript.js",
-      "types": "./dist/@types/rules/javascript.d.ts"
+    "./stylistic-base": {
+      "import": "./dist/stylistic-base.js",
+      "types": "./dist/@types/stylistic-base.d.ts"
     },
-    "./jsx": {
-      "import": "./dist/rules/jsx.js",
-      "types": "./dist/@types/rules/jsx.d.ts"
+    "./spacing-rules": {
+      "import": "./dist/rules/spacing-rules.js",
+      "types": "./dist/@types/rules/spacing-rules.d.ts"
     },
-    "./plus": {
-      "import": "./dist/rules/plus.js",
-      "types": "./dist/@types/rules/plus.d.ts"
+    "./line-breaks-rules": {
+      "import": "./dist/rules/line-breaks-rules.js",
+      "types": "./dist/@types/rules/line-breaks-rules.d.ts"
     },
-    "./typescript": {
-      "import": "./dist/rules/typescript.js",
-      "types": "./dist/@types/rules/typescript.d.ts"
+    "./brackets-rules": {
+      "import": "./dist/rules/brackets-rules.js",
+      "types": "./dist/@types/rules/brackets-rules.d.ts"
     },
-    "./stylistic-js": {
-      "import": "./dist/stylistic-js.js",
-      "types": "./dist/@types/stylistic-js.d.ts"
+    "./indent-rules": {
+      "import": "./dist/rules/indent-rules.js",
+      "types": "./dist/@types/rules/indent-rules.d.ts"
     },
-    "./stylistic-jsx": {
-      "import": "./dist/stylistic-jsx.js",
-      "types": "./dist/@types/stylistic-jsx.d.ts"
+    "./quotes-rules": {
+      "import": "./dist/rules/quotes-rules.js",
+      "types": "./dist/@types/rules/quotes-rules.d.ts"
     },
-    "./stylistic-plus": {
-      "import": "./dist/stylistic-plus.js",
-      "types": "./dist/@types/stylistic-plus.d.ts"
+    "./commas-rules": {
+      "import": "./dist/rules/commas-rules.js",
+      "types": "./dist/@types/rules/commas-rules.d.ts"
     },
-    "./stylistic-ts": {
-      "import": "./dist/stylistic-ts.js",
-      "types": "./dist/@types/stylistic-ts.d.ts"
+    "./semis-rules": {
+      "import": "./dist/rules/semis-rules.js",
+      "types": "./dist/@types/rules/semis-rules.d.ts"
+    },
+    "./operators-rules": {
+      "import": "./dist/rules/operators-rules.js",
+      "types": "./dist/@types/rules/operators-rules.d.ts"
+    },
+    "./comments-rules": {
+      "import": "./dist/rules/comments-rules.js",
+      "types": "./dist/@types/rules/comments-rules.d.ts"
+    },
+    "./jsx-rules": {
+      "import": "./dist/rules/jsx-rules.js",
+      "types": "./dist/@types/rules/jsx-rules.d.ts"
+    },
+    "./types-rules": {
+      "import": "./dist/rules/types-rules.js",
+      "types": "./dist/@types/rules/types-rules.d.ts"
+    },
+    "./disallow-rules": {
+      "import": "./dist/rules/disallow-rules.js",
+      "types": "./dist/@types/rules/disallow-rules.d.ts"
+    },
+    "./misc-rules": {
+      "import": "./dist/rules/misc-rules.js",
+      "types": "./dist/@types/rules/misc-rules.d.ts"
+    },
+    "./all-rules": {
+      "import": "./dist/rules/all-rules.js",
+      "types": "./dist/@types/rules/all-rules.d.ts"
     }
   },
   "main": "./dist/index.js",
@@ -87,12 +115,8 @@
   },
   "dependencies": {
     "@chronoverse-shared/utilities": "^4.0.0",
-    "@stylistic/eslint-plugin-js": "^4.4.0",
-    "@stylistic/eslint-plugin-jsx": "^4.4.0",
-    "@stylistic/eslint-plugin-plus": "^4.4.0",
-    "@stylistic/eslint-plugin-ts": "^4.4.0",
-    "eslint": "^9.28.0",
-    "typescript-eslint": "^8.33.0"
+    "@stylistic/eslint-plugin": "^4.4.1",
+    "eslint": "^9.28.0"
   },
   "devDependencies": {
     "@chronoverse-shared/builder": "workspace:^",

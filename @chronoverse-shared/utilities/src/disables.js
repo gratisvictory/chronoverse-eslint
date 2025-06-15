@@ -1,4 +1,4 @@
-import { javascript, types, typescript } from './files.js';
+import { javascript, typescript } from './files.js';
 
 /** @type {import('eslint').Linter.Config} */
 const disables = [
@@ -7,12 +7,11 @@ const disables = [
 		files: [
 			...javascript,
 			...typescript,
-			...types,
 		],
 		rules: {
-			'@stylistic/js/indent': 'off',
-			'@stylistic/js/max-len': 'off',
-			'@stylistic/js/object-curly-newline': 'off',
+			'@stylistic/indent': 'off',
+			'@stylistic/max-len': 'off',
+			'@stylistic/object-curly-newline': 'off',
 			'no-console': 'off',
 		},
 	},
