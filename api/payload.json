@@ -2929,6 +2929,10 @@
           "error",
           "tab"
         ],
+        "@stylistic/jsx-indent": [
+          "off",
+          "tab"
+        ],
         "@stylistic/jsx-indent-props": [
           "error",
           "tab"
@@ -3053,10 +3057,6 @@
           }
         ],
         "@stylistic/jsx-closing-tag-location": "error",
-        "@stylistic/jsx-indent": [
-          "off",
-          "tab"
-        ],
         "@stylistic/jsx-max-props-per-line": [
           "error",
           {
@@ -3174,23 +3174,30 @@
         "**/*.?([cm])ts?(x)"
       ],
       "rules": {
-        "@typescript-eslint/ban-ts-comment": [
-          "error",
-          {
-            "minimumDescriptionLength": 10
-          }
-        ],
+        "@typescript-eslint/ban-ts-comment": "error",
         "no-array-constructor": "off",
         "@typescript-eslint/no-array-constructor": "error",
         "@typescript-eslint/no-duplicate-enum-values": "error",
         "@typescript-eslint/no-empty-object-type": "error",
-        "@typescript-eslint/no-explicit-any": "error",
+        "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/no-extra-non-null-assertion": "error",
         "@typescript-eslint/no-misused-new": "error",
-        "@typescript-eslint/no-namespace": "error",
+        "@typescript-eslint/no-namespace": [
+          "error",
+          {
+            "allowDeclarations": false,
+            "allowDefinitionFiles": false
+          }
+        ],
         "@typescript-eslint/no-non-null-asserted-optional-chain": "error",
         "@typescript-eslint/no-require-imports": "error",
-        "@typescript-eslint/no-this-alias": "error",
+        "@typescript-eslint/no-this-alias": [
+          "error",
+          {
+            "allowDestructuring": true,
+            "allowedNames": []
+          }
+        ],
         "@typescript-eslint/no-unnecessary-type-constraint": "error",
         "@typescript-eslint/no-unsafe-declaration-merging": "error",
         "@typescript-eslint/no-unsafe-function-type": "error",
@@ -3209,8 +3216,15 @@
         ],
         "@typescript-eslint/no-wrapper-object-types": "error",
         "@typescript-eslint/prefer-as-const": "error",
-        "@typescript-eslint/prefer-namespace-keyword": "error",
-        "@typescript-eslint/triple-slash-reference": "error",
+        "@typescript-eslint/prefer-namespace-keyword": "off",
+        "@typescript-eslint/triple-slash-reference": [
+          "error",
+          {
+            "lib": "never",
+            "path": "never",
+            "types": "never"
+          }
+        ],
         "@typescript-eslint/await-thenable": "error",
         "@typescript-eslint/no-array-delete": "error",
         "@typescript-eslint/no-base-to-string": "error",
@@ -3218,24 +3232,39 @@
         "@typescript-eslint/no-deprecated": "error",
         "@typescript-eslint/no-duplicate-type-constituents": "error",
         "@typescript-eslint/no-dynamic-delete": "error",
-        "@typescript-eslint/no-extraneous-class": "error",
-        "@typescript-eslint/no-floating-promises": "error",
+        "@typescript-eslint/no-extraneous-class": [
+          "error",
+          {
+            "allowConstructorOnly": false,
+            "allowEmpty": false,
+            "allowStaticOnly": false
+          }
+        ],
+        "@typescript-eslint/no-floating-promises": "off",
         "@typescript-eslint/no-for-in-array": "error",
         "no-implied-eval": "off",
         "@typescript-eslint/no-implied-eval": "error",
         "@typescript-eslint/no-invalid-void-type": "error",
         "@typescript-eslint/no-meaningless-void-operator": "error",
-        "@typescript-eslint/no-misused-promises": "error",
+        "@typescript-eslint/no-misused-promises": [
+          "error",
+          {
+            "checksConditionals": true,
+            "checksVoidReturn": true
+          }
+        ],
         "@typescript-eslint/no-misused-spread": "error",
         "@typescript-eslint/no-mixed-enums": "error",
         "@typescript-eslint/no-non-null-asserted-nullish-coalescing": "error",
-        "@typescript-eslint/no-non-null-assertion": "error",
+        "@typescript-eslint/no-non-null-assertion": "off",
         "@typescript-eslint/no-redundant-type-constituents": "error",
         "@typescript-eslint/no-unnecessary-boolean-literal-compare": "error",
-        "@typescript-eslint/no-unnecessary-condition": "error",
+        "@typescript-eslint/no-unnecessary-condition": [
+          "error"
+        ],
         "@typescript-eslint/no-unnecessary-template-expression": "error",
         "@typescript-eslint/no-unnecessary-type-arguments": "error",
-        "@typescript-eslint/no-unnecessary-type-assertion": "error",
+        "@typescript-eslint/no-unnecessary-type-assertion": "off",
         "@typescript-eslint/no-unnecessary-type-parameters": "error",
         "@typescript-eslint/no-unsafe-argument": "error",
         "@typescript-eslint/no-unsafe-assignment": "error",
@@ -3256,16 +3285,7 @@
         "@typescript-eslint/related-getter-setter-pairs": "error",
         "require-await": "off",
         "@typescript-eslint/require-await": "error",
-        "@typescript-eslint/restrict-plus-operands": [
-          "error",
-          {
-            "allowAny": false,
-            "allowBoolean": false,
-            "allowNullish": false,
-            "allowNumberAndString": false,
-            "allowRegExp": false
-          }
-        ],
+        "@typescript-eslint/restrict-plus-operands": "error",
         "@typescript-eslint/restrict-template-expressions": [
           "error",
           {
@@ -3282,16 +3302,33 @@
           "error",
           "error-handling-correctness-only"
         ],
-        "@typescript-eslint/unbound-method": "error",
+        "@typescript-eslint/unbound-method": [
+          "error",
+          {
+            "ignoreStatic": false
+          }
+        ],
         "@typescript-eslint/unified-signatures": "error",
         "@typescript-eslint/use-unknown-in-catch-callback-variable": "error",
         "@typescript-eslint/adjacent-overload-signatures": "error",
-        "@typescript-eslint/array-type": "error",
+        "@typescript-eslint/array-type": [
+          "error",
+          {
+            "default": "array",
+            "readonly": "generic"
+          }
+        ],
         "@typescript-eslint/ban-tslint-comment": "error",
         "@typescript-eslint/class-literal-property-style": "error",
         "@typescript-eslint/consistent-generic-constructors": "error",
         "@typescript-eslint/consistent-indexed-object-style": "error",
-        "@typescript-eslint/consistent-type-assertions": "error",
+        "@typescript-eslint/consistent-type-assertions": [
+          "error",
+          {
+            "assertionStyle": "as",
+            "objectLiteralTypeAssertions": "allow"
+          }
+        ],
         "@typescript-eslint/consistent-type-definitions": [
           "error",
           "interface"
@@ -3300,12 +3337,18 @@
         "@typescript-eslint/dot-notation": "error",
         "@typescript-eslint/no-confusing-non-null-assertion": "error",
         "no-empty-function": "off",
-        "@typescript-eslint/no-empty-function": "error",
-        "@typescript-eslint/no-inferrable-types": "error",
+        "@typescript-eslint/no-empty-function": "off",
+        "@typescript-eslint/no-inferrable-types": [
+          "error",
+          {
+            "ignoreParameters": false,
+            "ignoreProperties": false
+          }
+        ],
         "@typescript-eslint/non-nullable-type-assertion-style": "error",
         "@typescript-eslint/prefer-find": "error",
         "@typescript-eslint/prefer-for-of": "error",
-        "@typescript-eslint/prefer-function-type": "error",
+        "@typescript-eslint/prefer-function-type": "off",
         "@typescript-eslint/prefer-includes": "error",
         "@typescript-eslint/prefer-nullish-coalescing": "error",
         "@typescript-eslint/prefer-optional-chain": "error",
@@ -3322,12 +3365,114 @@
             "prefer": "type-imports"
           }
         ],
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/explicit-member-accessibility": "off",
+        "@typescript-eslint/interface-name-prefix": "off",
+        "@typescript-eslint/no-use-before-define": "off",
+        "@typescript-eslint/no-type-alias": "off",
+        "@typescript-eslint/no-parameter-properties": "off",
+        "@typescript-eslint/no-empty-interface": "off",
+        "@typescript-eslint/member-ordering": [
+          "error",
+          {
+            "default": [
+              "public-static-field",
+              "protected-static-field",
+              "private-static-field",
+              "public-static-method",
+              "protected-static-method",
+              "private-static-method",
+              "public-instance-field",
+              "protected-instance-field",
+              "private-instance-field",
+              "constructor",
+              "public-instance-method",
+              "protected-instance-method",
+              "private-instance-method"
+            ]
+          }
+        ],
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "format": [
+              "camelCase",
+              "PascalCase",
+              "UPPER_CASE"
+            ],
+            "leadingUnderscore": "allow",
+            "selector": "default",
+            "trailingUnderscore": "allow"
+          },
+          {
+            "filter": {
+              "match": true,
+              "regex": "^(__|UNSAFE_).+$"
+            },
+            "format": null,
+            "selector": "default"
+          },
+          {
+            "format": [
+              "PascalCase"
+            ],
+            "selector": "typeLike"
+          },
+          {
+            "format": [
+              "PascalCase"
+            ],
+            "prefix": [
+              "T"
+            ],
+            "selector": "typeParameter"
+          },
+          {
+            "custom": {
+              "match": false,
+              "regex": "^I[A-Z]"
+            },
+            "format": [
+              "PascalCase"
+            ],
+            "selector": "interface"
+          }
+        ],
+        "@typescript-eslint/promise-function-async": "off",
+        "@typescript-eslint/no-magic-numbers": "off",
+        "@typescript-eslint/require-array-sort-compare": "off",
+        "@typescript-eslint/strict-boolean-expressions": "off",
+        "@typescript-eslint/typedef": "off",
+        "@typescript-eslint/no-unnecessary-qualifier": "error",
+        "@typescript-eslint/prefer-readonly": [
+          "error",
+          {
+            "onlyInlineLambdas": false
+          }
+        ],
         "tsdoc/syntax": "error",
         "@susisu/safe-typescript/no-object-assign": "error",
         "@susisu/safe-typescript/no-type-assertion": "error",
         "@susisu/safe-typescript/no-unsafe-object-enum-method": "error",
         "@susisu/safe-typescript/no-unsafe-object-property-check": "error",
-        "@susisu/safe-typescript/no-unsafe-object-property-overwrite": "error"
+        "@susisu/safe-typescript/no-unsafe-object-property-overwrite": "error",
+        "no-undef": "off",
+        "no-shadow": "off",
+        "no-use-before-define": "off",
+        "no-magic-numbers": "off",
+        "camelcase": "off",
+        "no-dupe-args": "off",
+        "no-dupe-keys": "off",
+        "no-unreachable": "off",
+        "valid-typeof": "off",
+        "no-const-assign": "off",
+        "no-new-symbol": "off",
+        "no-this-before-super": "off",
+        "no-redeclare": "off",
+        "no-dupe-class-members": "off",
+        "strict": "off",
+        "array-callback-return": "off",
+        "getter-return": "off"
       },
       "index": 16
     },
@@ -5135,11 +5280,29 @@
       "index": 45
     },
     {
+      "name": "@chronoverse-eslint/prettier/setup",
+      "plugins": {
+        "prettier": {}
+      },
+      "index": 46
+    },
+    {
+      "name": "@chronoverse-eslint/prettier-plugin/rules",
+      "files": [
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])ts?(x)"
+      ],
+      "rules": {
+        "prettier/prettier": "error"
+      },
+      "index": 47
+    },
+    {
       "name": "@chronoverse-eslint/promise/setup",
       "plugins": {
         "promise": {}
       },
-      "index": 46
+      "index": 48
     },
     {
       "name": "@chronoverse-eslint/promise/rules",
@@ -5161,14 +5324,14 @@
         "promise/no-return-in-finally": "warn",
         "promise/valid-params": "warn"
       },
-      "index": 47
+      "index": 49
     },
     {
       "name": "@chronoverse-eslint/regexp/setup",
       "plugins": {
         "regexp": {}
       },
-      "index": 48
+      "index": 50
     },
     {
       "name": "@chronoverse-eslint/regexp/rules",
@@ -5245,14 +5408,14 @@
         "regexp/strict": "error",
         "regexp/use-ignore-case": "error"
       },
-      "index": 49
+      "index": 51
     },
     {
       "name": "@chronoverse-eslint/security/setup",
       "plugins": {
         "security": {}
       },
-      "index": 50
+      "index": 52
     },
     {
       "name": "@chronoverse-eslint/security/rules",
@@ -5276,14 +5439,14 @@
         "security/detect-unsafe-regex": "warn",
         "security/detect-bidi-characters": "warn"
       },
-      "index": 51
+      "index": 53
     },
     {
       "name": "@chronoverse-eslint/unicorn/setup",
       "plugins": {
         "unicorn": {}
       },
-      "index": 52
+      "index": 54
     },
     {
       "name": "@chronoverse-eslint/unicorn/rules",
@@ -5301,29 +5464,48 @@
         "unicorn/consistent-destructuring": "off",
         "unicorn/consistent-empty-array-spread": "error",
         "unicorn/consistent-existence-index-check": "error",
-        "unicorn/consistent-function-scoping": "error",
+        "unicorn/consistent-function-scoping": "warn",
         "unicorn/custom-error-definition": "off",
         "unicorn/empty-brace-spaces": "error",
         "unicorn/error-message": "error",
         "unicorn/escape-case": "error",
-        "unicorn/expiring-todo-comments": "error",
-        "unicorn/explicit-length-check": "error",
+        "unicorn/expiring-todo-comments": "warn",
+        "unicorn/explicit-length-check": [
+          "error",
+          {
+            "non-zero": "not-equal"
+          }
+        ],
         "unicorn/filename-case": "error",
-        "unicorn/import-style": "error",
+        "unicorn/import-style": [
+          "error",
+          {
+            "styles": {
+              "node:path": {
+                "named": true,
+                "namespace": true
+              },
+              "path": {
+                "named": true,
+                "namespace": true
+              }
+            }
+          }
+        ],
         "unicorn/new-for-builtins": "error",
         "unicorn/no-abusive-eslint-disable": "error",
         "unicorn/no-accessor-recursion": "error",
         "unicorn/no-anonymous-default-export": "error",
-        "unicorn/no-array-callback-reference": "error",
+        "unicorn/no-array-callback-reference": "warn",
         "unicorn/no-array-for-each": "error",
         "unicorn/no-array-method-this-argument": "error",
-        "unicorn/no-array-reduce": "error",
+        "unicorn/no-array-reduce": "off",
         "unicorn/no-await-expression-member": "error",
         "unicorn/no-await-in-promise-methods": "error",
         "unicorn/no-console-spaces": "error",
         "unicorn/no-document-cookie": "error",
         "unicorn/no-empty-file": "error",
-        "unicorn/no-for-loop": "error",
+        "unicorn/no-for-loop": "warn",
         "unicorn/no-hex-escape": "error",
         "unicorn/no-instanceof-builtins": "error",
         "unicorn/no-invalid-fetch-options": "error",
@@ -5337,9 +5519,9 @@
         "unicorn/no-nested-ternary": "error",
         "unicorn/no-new-array": "error",
         "unicorn/no-new-buffer": "error",
-        "unicorn/no-null": "error",
-        "unicorn/no-object-as-default-parameter": "error",
-        "unicorn/no-process-exit": "error",
+        "unicorn/no-null": "off",
+        "unicorn/no-object-as-default-parameter": "off",
+        "unicorn/no-process-exit": "warn",
         "unicorn/no-single-promise-in-promise-methods": "error",
         "unicorn/no-static-only-class": "error",
         "unicorn/no-thenable": "error",
@@ -5348,7 +5530,7 @@
         "unicorn/no-unnecessary-array-flat-depth": "error",
         "unicorn/no-unnecessary-array-splice-count": "error",
         "unicorn/no-unnecessary-await": "error",
-        "unicorn/no-unnecessary-polyfills": "error",
+        "unicorn/no-unnecessary-polyfills": "off",
         "unicorn/no-unnecessary-slice-end": "error",
         "unicorn/no-unreadable-array-destructuring": "error",
         "unicorn/no-unreadable-iife": "error",
@@ -5362,7 +5544,7 @@
         "unicorn/no-zero-fractions": "error",
         "unicorn/number-literal-case": "error",
         "unicorn/numeric-separators-style": "error",
-        "unicorn/prefer-add-event-listener": "error",
+        "unicorn/prefer-add-event-listener": "off",
         "unicorn/prefer-array-find": "error",
         "unicorn/prefer-array-flat-map": "error",
         "unicorn/prefer-array-flat": "error",
@@ -5372,24 +5554,29 @@
         "unicorn/prefer-blob-reading-methods": "error",
         "unicorn/prefer-code-point": "error",
         "unicorn/prefer-date-now": "error",
-        "unicorn/prefer-default-parameters": "error",
-        "unicorn/prefer-dom-node-append": "error",
-        "unicorn/prefer-dom-node-dataset": "error",
-        "unicorn/prefer-dom-node-remove": "error",
-        "unicorn/prefer-dom-node-text-content": "error",
+        "unicorn/prefer-default-parameters": "off",
+        "unicorn/prefer-dom-node-append": "off",
+        "unicorn/prefer-dom-node-dataset": "off",
+        "unicorn/prefer-dom-node-remove": "off",
+        "unicorn/prefer-dom-node-text-content": "off",
         "unicorn/prefer-event-target": "error",
-        "unicorn/prefer-export-from": "error",
+        "unicorn/prefer-export-from": [
+          "error",
+          {
+            "ignoreUsedVariables": true
+          }
+        ],
         "unicorn/prefer-global-this": "error",
         "unicorn/prefer-import-meta-properties": "off",
         "unicorn/prefer-includes": "error",
-        "unicorn/prefer-json-parse-buffer": "off",
+        "unicorn/prefer-json-parse-buffer": "error",
         "unicorn/prefer-keyboard-event-key": "error",
         "unicorn/prefer-logical-operator-over-ternary": "error",
         "unicorn/prefer-math-min-max": "error",
         "unicorn/prefer-math-trunc": "error",
-        "unicorn/prefer-modern-dom-apis": "error",
+        "unicorn/prefer-modern-dom-apis": "off",
         "unicorn/prefer-modern-math-apis": "error",
-        "unicorn/prefer-module": "error",
+        "unicorn/prefer-module": "off",
         "unicorn/prefer-native-coercion-functions": "error",
         "unicorn/prefer-negative-index": "error",
         "unicorn/prefer-node-protocol": "error",
@@ -5397,7 +5584,7 @@
         "unicorn/prefer-object-from-entries": "error",
         "unicorn/prefer-optional-catch-binding": "error",
         "unicorn/prefer-prototype-methods": "error",
-        "unicorn/prefer-query-selector": "error",
+        "unicorn/prefer-query-selector": "off",
         "unicorn/prefer-reflect-apply": "error",
         "unicorn/prefer-regexp-test": "error",
         "unicorn/prefer-set-has": "error",
@@ -5411,28 +5598,42 @@
         "unicorn/prefer-string-trim-start-end": "error",
         "unicorn/prefer-structured-clone": "error",
         "unicorn/prefer-switch": "error",
-        "unicorn/prefer-ternary": "error",
+        "unicorn/prefer-ternary": "off",
         "unicorn/prefer-top-level-await": "error",
         "unicorn/prefer-type-error": "error",
-        "unicorn/prevent-abbreviations": "error",
-        "unicorn/relative-url-style": "error",
+        "unicorn/prevent-abbreviations": [
+          "error",
+          {
+            "checkDefaultAndNamespaceImports": true,
+            "checkShorthandImports": true,
+            "checkShorthandProperties": true
+          }
+        ],
+        "unicorn/relative-url-style": [
+          "error",
+          "always"
+        ],
         "unicorn/require-array-join-separator": "error",
         "unicorn/require-number-to-fixed-digits-argument": "error",
         "unicorn/require-post-message-target-origin": "off",
         "unicorn/string-content": "off",
-        "unicorn/switch-case-braces": "error",
+        "unicorn/switch-case-braces": [
+          "error",
+          "avoid"
+        ],
         "unicorn/template-indent": "error",
         "unicorn/text-encoding-identifier-case": "error",
-        "unicorn/throw-new-error": "error"
+        "unicorn/throw-new-error": "error",
+        "unicorn/import-index": "off"
       },
-      "index": 53
+      "index": 55
     },
     {
       "name": "@chronoverse-eslint/css/setup",
       "plugins": {
         "css": {}
       },
-      "index": 54
+      "index": 56
     },
     {
       "name": "@chronoverse-eslint/css/rules",
@@ -5464,14 +5665,14 @@
         "css/no-invalid-properties": "error",
         "css/use-baseline": "warn"
       },
-      "index": 55
+      "index": 57
     },
     {
       "name": "@chronoverse-eslint/json/setup",
       "plugins": {
         "json": {}
       },
-      "index": 56
+      "index": 58
     },
     {
       "name": "@chronoverse-eslint/json/rules",
@@ -5488,7 +5689,7 @@
         "json/no-unsafe-values": "error",
         "json/no-unnormalized-keys": "error"
       },
-      "index": 57
+      "index": 59
     },
     {
       "name": "@chronoverse-eslint/jsonc/rules",
@@ -5505,7 +5706,7 @@
         "json/no-unsafe-values": "error",
         "json/no-unnormalized-keys": "error"
       },
-      "index": 58
+      "index": 60
     },
     {
       "name": "@chronoverse-eslint/json5/rules",
@@ -5519,23 +5720,15 @@
         "json/no-unsafe-values": "error",
         "json/no-unnormalized-keys": "error"
       },
-      "index": 59
+      "index": 61
     },
     {
-      "name": "@chronoverse-eslint/prettier/setup",
-      "plugins": {
-        "prettier": {}
-      },
-      "index": 60
-    },
-    {
-      "name": "@chronoverse-eslint/prettier/rules",
+      "name": "@chronoverse-eslint/prettier-config/rules",
       "files": [
         "**/*.?([cm])js?(x)",
         "**/*.?([cm])ts?(x)"
       ],
       "rules": {
-        "prettier/prettier": "error",
         "curly": 0,
         "no-unexpected-multiline": 0,
         "@stylistic/lines-around-comment": 0,
@@ -5895,7 +6088,7 @@
         "yield-star-spacing": "off",
         "react/jsx-space-before-closing": "off"
       },
-      "index": 61
+      "index": 62
     }
   ],
   "rules": {
@@ -18220,6 +18413,15 @@
       "name": "perfectionist/sort-maps",
       "plugin": "perfectionist"
     },
+    "prettier/prettier": {
+      "docs": {
+        "url": "https://github.com/prettier/eslint-plugin-prettier#options"
+      },
+      "type": "layout",
+      "fixable": "code",
+      "name": "prettier/prettier",
+      "plugin": "prettier"
+    },
     "promise/param-names": {
       "type": "suggestion",
       "docs": {
@@ -21489,15 +21691,6 @@
       },
       "name": "json/top-level-interop",
       "plugin": "json"
-    },
-    "prettier/prettier": {
-      "docs": {
-        "url": "https://github.com/prettier/eslint-plugin-prettier#options"
-      },
-      "type": "layout",
-      "fixable": "code",
-      "name": "prettier/prettier",
-      "plugin": "prettier"
     }
   },
   "files": [
@@ -21507,7 +21700,7 @@
         "**/*.json"
       ],
       "configs": [
-        57
+        59
       ]
     },
     {
@@ -21539,7 +21732,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -21571,7 +21765,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -21580,7 +21775,7 @@
         "**/*.json"
       ],
       "configs": [
-        57
+        59
       ]
     },
     {
@@ -21589,7 +21784,7 @@
         "**/*.json"
       ],
       "configs": [
-        57
+        59
       ]
     },
     {
@@ -21621,7 +21816,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -21653,7 +21849,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -21685,7 +21882,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -21694,7 +21892,7 @@
         "**/*.json"
       ],
       "configs": [
-        57
+        59
       ]
     },
     {
@@ -21726,7 +21924,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -21758,7 +21957,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -21767,7 +21967,7 @@
         "**/*.json"
       ],
       "configs": [
-        57
+        59
       ]
     },
     {
@@ -21776,7 +21976,7 @@
         "**/*.json"
       ],
       "configs": [
-        57
+        59
       ]
     },
     {
@@ -21808,7 +22008,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -21840,7 +22041,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -21872,7 +22074,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -21904,7 +22107,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -21936,7 +22140,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -21968,7 +22173,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -22000,7 +22206,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -22032,7 +22239,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -22064,7 +22272,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -22073,7 +22282,7 @@
         "**/*.json"
       ],
       "configs": [
-        57
+        59
       ]
     },
     {
@@ -22105,7 +22314,41 @@
         49,
         51,
         53,
-        61
+        55,
+        62
+      ]
+    },
+    {
+      "filepath": "@chronoverse-eslint/presets/eslint.config.presets-development.js",
+      "globs": [
+        "**/*.js",
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
+      ],
+      "configs": [
+        2,
+        7,
+        9,
+        12,
+        14,
+        20,
+        22,
+        23,
+        29,
+        31,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        62
       ]
     },
     {
@@ -22137,7 +22380,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -22146,7 +22390,7 @@
         "**/*.json"
       ],
       "configs": [
-        57
+        59
       ]
     },
     {
@@ -22155,7 +22399,7 @@
         "**/*.json"
       ],
       "configs": [
-        57
+        59
       ]
     },
     {
@@ -22187,7 +22431,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -22219,7 +22464,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -22251,7 +22497,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -22283,7 +22530,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -22315,7 +22563,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -22347,7 +22596,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -22379,7 +22629,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -22411,7 +22662,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -22443,7 +22695,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -22475,11 +22728,12 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
-      "filepath": "@chronoverse-eslint/presets/src/presets/prettier.js",
+      "filepath": "@chronoverse-eslint/presets/src/presets/prettier-config.js",
       "globs": [
         "**/*.js",
         "**/*.?([cm])js?(x)",
@@ -22507,7 +22761,74 @@
         49,
         51,
         53,
-        61
+        55,
+        62
+      ]
+    },
+    {
+      "filepath": "@chronoverse-eslint/presets/src/presets/prettier-plugin.js",
+      "globs": [
+        "**/*.js",
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
+      ],
+      "configs": [
+        2,
+        7,
+        9,
+        12,
+        14,
+        20,
+        22,
+        23,
+        29,
+        31,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        62
+      ]
+    },
+    {
+      "filepath": "@chronoverse-eslint/presets/src/presets/prettier-setup.js",
+      "globs": [
+        "**/*.js",
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
+      ],
+      "configs": [
+        2,
+        7,
+        9,
+        12,
+        14,
+        20,
+        22,
+        23,
+        29,
+        31,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        62
       ]
     },
     {
@@ -22539,7 +22860,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -22571,7 +22893,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -22603,7 +22926,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -22635,7 +22959,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -22644,7 +22969,7 @@
         "**/*.json"
       ],
       "configs": [
-        57
+        59
       ]
     },
     {
@@ -22676,7 +23001,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -22708,7 +23034,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -22717,7 +23044,7 @@
         "**/*.json"
       ],
       "configs": [
-        57
+        59
       ]
     },
     {
@@ -22726,7 +23053,7 @@
         "**/*.json"
       ],
       "configs": [
-        57
+        59
       ]
     },
     {
@@ -22758,7 +23085,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -22790,7 +23118,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -22822,7 +23151,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -22854,7 +23184,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -22886,7 +23217,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -22918,7 +23250,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -22950,7 +23283,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -22982,7 +23316,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -23014,7 +23349,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -23023,7 +23359,7 @@
         "**/*.json"
       ],
       "configs": [
-        57
+        59
       ]
     },
     {
@@ -23055,7 +23391,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -23087,7 +23424,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -23096,7 +23434,7 @@
         "**/*.json"
       ],
       "configs": [
-        57
+        59
       ]
     },
     {
@@ -23105,7 +23443,7 @@
         "**/*.json"
       ],
       "configs": [
-        57
+        59
       ]
     },
     {
@@ -23137,7 +23475,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -23169,7 +23508,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -23201,7 +23541,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -23233,7 +23574,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -23265,7 +23607,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -23297,7 +23640,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -23329,7 +23673,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -23361,7 +23706,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -23393,7 +23739,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -23425,7 +23772,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -23457,7 +23805,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -23489,7 +23838,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -23521,7 +23871,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -23553,7 +23904,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -23585,7 +23937,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -23617,7 +23970,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -23626,7 +23980,7 @@
         "**/*.json"
       ],
       "configs": [
-        57
+        59
       ]
     },
     {
@@ -23658,7 +24012,41 @@
         49,
         51,
         53,
-        61
+        55,
+        62
+      ]
+    },
+    {
+      "filepath": "@chronoverse-eslint/typescript/eslint.config.typescript-development.js",
+      "globs": [
+        "**/*.js",
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
+      ],
+      "configs": [
+        2,
+        7,
+        9,
+        12,
+        14,
+        20,
+        22,
+        23,
+        29,
+        31,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        62
       ]
     },
     {
@@ -23690,7 +24078,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -23699,7 +24088,7 @@
         "**/*.json"
       ],
       "configs": [
-        57
+        59
       ]
     },
     {
@@ -23708,7 +24097,7 @@
         "**/*.json"
       ],
       "configs": [
-        57
+        59
       ]
     },
     {
@@ -23740,11 +24129,12 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
-      "filepath": "@chronoverse-eslint/typescript/src/rules/consistent.js",
+      "filepath": "@chronoverse-eslint/typescript/src/rules/consistent-rules.js",
       "globs": [
         "**/*.js",
         "**/*.?([cm])js?(x)",
@@ -23772,11 +24162,12 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
-      "filepath": "@chronoverse-eslint/typescript/src/rules/extension.js",
+      "filepath": "@chronoverse-eslint/typescript/src/rules/disables-rules.js",
       "globs": [
         "**/*.js",
         "**/*.?([cm])js?(x)",
@@ -23804,11 +24195,12 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
-      "filepath": "@chronoverse-eslint/typescript/src/rules/safe.js",
+      "filepath": "@chronoverse-eslint/typescript/src/rules/extension-rules.js",
       "globs": [
         "**/*.js",
         "**/*.?([cm])js?(x)",
@@ -23836,11 +24228,12 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
-      "filepath": "@chronoverse-eslint/typescript/src/rules/tsdoc.js",
+      "filepath": "@chronoverse-eslint/typescript/src/rules/safe-rules.js",
       "globs": [
         "**/*.js",
         "**/*.?([cm])js?(x)",
@@ -23868,7 +24261,107 @@
         49,
         51,
         53,
-        61
+        55,
+        62
+      ]
+    },
+    {
+      "filepath": "@chronoverse-eslint/typescript/src/rules/tsdoc-rules.js",
+      "globs": [
+        "**/*.js",
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
+      ],
+      "configs": [
+        2,
+        7,
+        9,
+        12,
+        14,
+        20,
+        22,
+        23,
+        29,
+        31,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        62
+      ]
+    },
+    {
+      "filepath": "@chronoverse-eslint/typescript/src/rules/typescript-rules.js",
+      "globs": [
+        "**/*.js",
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
+      ],
+      "configs": [
+        2,
+        7,
+        9,
+        12,
+        14,
+        20,
+        22,
+        23,
+        29,
+        31,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        62
+      ]
+    },
+    {
+      "filepath": "@chronoverse-eslint/typescript/src/rules/typescript-type-check-rules.js",
+      "globs": [
+        "**/*.js",
+        "**/*.?([cm])js?(x)",
+        "**/*.?([cm])js"
+      ],
+      "configs": [
+        2,
+        7,
+        9,
+        12,
+        14,
+        20,
+        22,
+        23,
+        29,
+        31,
+        33,
+        35,
+        37,
+        39,
+        41,
+        43,
+        45,
+        47,
+        49,
+        51,
+        53,
+        55,
+        62
       ]
     },
     {
@@ -23900,7 +24393,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -23909,7 +24403,7 @@
         "**/*.json"
       ],
       "configs": [
-        57
+        59
       ]
     },
     {
@@ -23918,7 +24412,7 @@
         "**/*.json"
       ],
       "configs": [
-        57
+        59
       ]
     },
     {
@@ -23927,7 +24421,7 @@
         "**/*.json"
       ],
       "configs": [
-        57
+        59
       ]
     },
     {
@@ -23959,7 +24453,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -23991,7 +24486,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -24023,7 +24519,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -24055,7 +24552,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -24064,7 +24562,7 @@
         "**/*.json"
       ],
       "configs": [
-        57
+        59
       ]
     },
     {
@@ -24096,7 +24594,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -24105,7 +24604,7 @@
         "**/*.json"
       ],
       "configs": [
-        57
+        59
       ]
     },
     {
@@ -24114,7 +24613,7 @@
         "**/*.json"
       ],
       "configs": [
-        57
+        59
       ]
     },
     {
@@ -24146,11 +24645,12 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
-      "filepath": "@chronoverse-shared/utilities/src/disables.js",
+      "filepath": "@chronoverse-shared/utilities/src/disables-prettier-rules.js",
       "globs": [
         "**/*.js",
         "**/*.?([cm])js?(x)",
@@ -24178,7 +24678,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -24210,7 +24711,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -24242,7 +24744,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -24274,7 +24777,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -24306,7 +24810,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -24338,7 +24843,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -24370,7 +24876,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -24379,7 +24886,7 @@
         "**/*.json"
       ],
       "configs": [
-        57
+        59
       ]
     },
     {
@@ -24411,7 +24918,8 @@
         49,
         51,
         53,
-        61
+        55,
+        62
       ]
     },
     {
@@ -24420,7 +24928,7 @@
         "**/*.json"
       ],
       "configs": [
-        57
+        59
       ]
     },
     {
@@ -24429,7 +24937,7 @@
         "**/*.json"
       ],
       "configs": [
-        57
+        59
       ]
     },
     {
@@ -24438,7 +24946,7 @@
         "**/*.json"
       ],
       "configs": [
-        57
+        59
       ]
     },
     {
@@ -24447,12 +24955,12 @@
         "**/*.json"
       ],
       "configs": [
-        57
+        59
       ]
     }
   ],
   "meta": {
-    "lastUpdate": 1750011383107,
+    "lastUpdate": 1750102492006,
     "basePath": "",
     "configPath": ""
   }
