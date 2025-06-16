@@ -1,4 +1,9 @@
-import { json5, jsonc, json as jsonFiles, lockfiles } from '@chronoverse-shared/utilities/files';
+import {
+	json5 as json5Files,
+	jsonc as jsoncFiles,
+	json as jsonFiles,
+	lockfiles,
+} from '@chronoverse-shared/utilities/files';
 import eslintJson from '@eslint/json';
 
 /**
@@ -21,22 +26,28 @@ const json = [
 		files: jsonFiles,
 		ignores: lockfiles.slice(0, 1),
 		language: 'json/json',
-		rules: eslintJson.configs.recommended.rules,
+		rules: {
+			...eslintJson.configs.recommended.rules,
+		},
 	},
 	{
 		name: '@chronoverse-eslint/jsonc/rules',
-		files: jsonc,
+		files: jsoncFiles,
 		language: 'json/jsonc',
 		languageOptions: {
 			allowTrailingCommas: true,
 		},
-		rules: eslintJson.configs.recommended.rules,
+		rules: {
+			...eslintJson.configs.recommended.rules,
+		},
 	},
 	{
 		name: '@chronoverse-eslint/json5/rules',
-		files: json5,
+		files: json5Files,
 		language: 'json/json5',
-		rules: eslintJson.configs.recommended.rules,
+		rules: {
+			...eslintJson.configs.recommended.rules,
+		},
 	},
 ];
 

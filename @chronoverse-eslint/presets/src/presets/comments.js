@@ -1,5 +1,7 @@
-import { javascript, typescript } from '@chronoverse-shared/utilities/files';
+import { javascript as javascriptFiles, typescript as typescriptFiles } from '@chronoverse-shared/utilities/files';
 import eslintComments from '@eslint-community/eslint-plugin-eslint-comments';
+
+const commentsFiles = [...javascriptFiles, ...typescriptFiles];
 
 /**
  * ESLint comments rules for ESLint.
@@ -18,7 +20,7 @@ const comments = [
 	},
 	{
 		name: '@chronoverse-eslint/eslint-comments/rules',
-		files: [...javascript, ...typescript],
+		files: commentsFiles,
 		rules: {
 			/**
 			 * Require a `eslint-enable` comment for every `eslint-disable` comment

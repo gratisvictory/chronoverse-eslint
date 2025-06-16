@@ -73,9 +73,17 @@
       "import": "./dist/presets/perfectionist.js",
       "types": "./dist/@types/presets/perfectionist.d.ts"
     },
-    "./prettier": {
-      "import": "./dist/presets/prettier.js",
+    "./prettier-config": {
+      "import": "./dist/presets/prettier-config.js",
       "types": "./dist/@types/presets/prettier.d.ts"
+    },
+    "./prettier-plugin": {
+      "import": "./dist/presets/prettier-plugin.js",
+      "types": "./dist/@types/presets/prettier.d.ts"
+    },
+    "./prettier-setup": {
+      "import": "./dist/presets/prettier-setup.js",
+      "types": "./dist/@types/presets/prettier-setup.d.ts"
     },
     "./promise": {
       "import": "./dist/presets/promise.js",
@@ -102,16 +110,18 @@
   "scripts": {
     "build": "bun run clean:all && bun build.js",
     "build:clean": "rimraf dist",
-    "build:cli": "bun run clean:all && bun run builder -e src/index.js -o dist",
     "clean": "rimraf node_modules",
-    "clean:all": "rimraf dist node_modules",
-    "format:check": "prettier --check --config ../../prettier.config.js \"**/*.{js,json,json5,jsonc}\" --cache --cache-location=node_modules/.cache/.prettiercache",
-    "format:fix": "prettier --write --config ../../prettier.config.js \"**/*.{js,json,json5,jsonc}\" --cache --cache-location=node_modules/.cache/.prettiercache --log-level=warn",
-    "lint:build:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.presets.js --outDir .eslint-presets && bunx serve .eslint-presets",
-    "lint:check": "eslint -c ../../eslint.config.js --cache --cache-location=node_modules/.cache/.eslintcache",
-    "lint:dev:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest --config ./eslint.config.presets.js",
-    "lint:fix": "eslint -c ../../eslint.config.js --fix --cache --cache-location=node_modules/.cache/.eslintcache",
-    "lint:inspector:clean": "rimraf .eslint-presets"
+    "clean:all": "rimraf dist node_modules .eslint-presets",
+    "format:check": "prettier --check --config ../../prettier.config.js \"**/*.{js,json}\"",
+    "format:check:cache": "prettier --check --config ../../prettier.config.js \"**/*.{js,json}\" --cache --cache-location=node_modules/.cache/.prettiercache",
+    "format:fix": "prettier --write --config ../../prettier.config.js \"**/*.{js,json}\" --log-level=warn",
+    "format:fix:cache": "prettier --write --config ../../prettier.config.js \"**/*.{js,json}\" --cache --cache-location=node_modules/.cache/.prettiercache --log-level=warn",
+    "lint:build:inspector": "rimraf .eslint-presets && bunx @eslint/config-inspector@latest build --config ./eslint.config.presets.js --outDir .eslint-presets && bunx serve .eslint-presets",
+    "lint:check": "eslint -c ../../eslint.config.js",
+    "lint:check:cache": "eslint -c ../../eslint.config.js --cache --cache-location=node_modules/.cache/.eslintcache",
+    "lint:dev:inspector": "bunx @eslint/config-inspector@latest --config ./eslint.config.presets-development.js",
+    "lint:fix": "eslint -c ../../eslint.config.js --fix",
+    "lint:fix:cache": "eslint -c ../../eslint.config.js --fix --cache --cache-location=node_modules/.cache/.eslintcache"
   },
   "dependencies": {
     "@chronoverse-shared/utilities": "^4.0.0",

@@ -1,5 +1,7 @@
-import { javascript, typescript } from '@chronoverse-shared/utilities/files';
+import { javascript as javascriptFiles, typescript as typescriptFiles } from '@chronoverse-shared/utilities/files';
 import * as regexpPlugin from 'eslint-plugin-regexp';
+
+const regexpFiles = [...javascriptFiles, ...typescriptFiles];
 
 /**
  * Regular expression rules for ESLint.
@@ -17,8 +19,10 @@ const regexp = [
 	},
 	{
 		name: '@chronoverse-eslint/regexp/rules',
-		files: [...javascript, ...typescript],
-		rules: regexpPlugin.configs['flat/recommended'].rules,
+		files: regexpFiles,
+		rules: {
+			...regexpPlugin.configs['flat/recommended'].rules,
+		},
 	},
 ];
 

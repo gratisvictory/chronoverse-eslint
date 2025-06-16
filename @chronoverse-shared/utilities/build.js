@@ -5,7 +5,7 @@ await build({
 		'./src/files.js',
 		'./src/globals.js',
 		'./src/ignores.js',
-		'./src/disables.js',
+		'./src/disables-prettier-rules.js',
 		'./src/index.js',
 		'./src/rule-options.js',
 		'./src/rules.js',

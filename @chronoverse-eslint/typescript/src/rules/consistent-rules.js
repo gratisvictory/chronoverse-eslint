@@ -1,7 +1,7 @@
 /**
  * @type {import('eslint').Linter.Config['rules']}
  */
-const consistent = {
+const consistentRules = {
 	'@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
 	'@typescript-eslint/consistent-type-imports': [
 		'error',
@@ -13,4 +13,4 @@ const consistent = {
 	],
 };
 
-export { consistent };
+export { consistentRules };

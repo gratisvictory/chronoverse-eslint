@@ -56,10 +56,10 @@ Examples:
 
 	const entryPoints = values.entry || [];
 
-	if (positionals.length > 0) {
+	if (positionals.length !== 0) {
 		const newEntryPoints = [...entryPoints, ...positionals];
 		options.entryPoints = newEntryPoints;
-	} else if (entryPoints.length > 0) {
+	} else if (entryPoints.length !== 0) {
 		options.entryPoints = entryPoints;
 	}
 

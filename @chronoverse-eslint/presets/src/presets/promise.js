@@ -1,5 +1,7 @@
-import { javascript, typescript } from '@chronoverse-shared/utilities/files';
+import { javascript as javascriptFiles, typescript as typescriptFiles } from '@chronoverse-shared/utilities/files';
 import pluginPromise from 'eslint-plugin-promise';
+
+const promiseFiles = [...javascriptFiles, ...typescriptFiles];
 
 /**
  * Promise rules for ESLint.
@@ -17,8 +19,10 @@ const promise = [
 	},
 	{
 		name: '@chronoverse-eslint/promise/rules',
-		files: [...javascript, ...typescript],
-		rules: pluginPromise.configs['flat/recommended'].rules,
+		files: promiseFiles,
+		rules: {
+			...pluginPromise.configs['flat/recommended'].rules,
+		},
 	},
 ];
 

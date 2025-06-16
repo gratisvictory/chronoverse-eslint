@@ -3,7 +3,7 @@ import { variablesNoUnusedVariables } from '@chronoverse-shared/utilities/rule-o
 /**
  * @type {import('eslint').Linter.Config['rules']}
  */
-const extension = {
+const extensionRules = {
 	/**
 	 * Require default parameters to be last.
 	 */
@@ -27,4 +27,4 @@ const extension = {
 	'@typescript-eslint/no-useless-constructor': 'error',
 };
 
-export { extension };
+export { extensionRules };

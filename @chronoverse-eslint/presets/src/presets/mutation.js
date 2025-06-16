@@ -1,5 +1,7 @@
-import { javascript, typescript } from '@chronoverse-shared/utilities/files';
+import { javascript as javascriptFiles, typescript as typescriptFiles } from '@chronoverse-shared/utilities/files';
 import pluginBetterMutation from 'eslint-plugin-better-mutation';
+
+const mutationFiles = [...javascriptFiles, ...typescriptFiles];
 
 /**
  * Mutation control rules for ESLint.
@@ -18,7 +20,7 @@ const mutation = [
 	},
 	{
 		name: '@chronoverse-eslint/better-mutation/rules',
-		files: [...javascript, ...typescript],
+		files: mutationFiles,
 		rules: {
 			/**
 			 * better-mutation/no-mutating-functions

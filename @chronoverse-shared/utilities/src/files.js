@@ -4,7 +4,7 @@
 export const {
 	config,
 	css,
-	docs,
+	documentation,
 	javascript,
 	json,
 	json5,
@@ -78,8 +78,8 @@ export const {
 	/** Test files (unit, integration, etc.) */
 	tests: ['**/*.{test,spec}.{js,ts,jsx,tsx}', '**/__tests__/**'],
 
-	/** Markdown docs like README, CHANGELOG, etc. */
-	docs: ['**/{README,CHANGELOG,CONTRIBUTING}.md'],
+	/** Markdown documentation like README, CHANGELOG, etc. */
+	documentation: ['**/{README,CHANGELOG,CONTRIBUTING}.md'],
 
 	/** Type declaration files */
 	types: ['**/*.d.ts'],

@@ -1,4 +1,4 @@
-import { onlyTypescript } from '@chronoverse-shared/utilities/files';
+import { onlyTypescript as onlyTypescriptFiles } from '@chronoverse-shared/utilities/files';
 import functional from 'eslint-plugin-functional';
 import typescriptEslint from 'typescript-eslint';
 
@@ -20,7 +20,7 @@ const functionalTs = [
 	},
 	{
 		name: '@chronoverse-eslint/functional-ts/rules',
-		files: onlyTypescript,
+		files: onlyTypescriptFiles,
 		rules: {
 			...functional.configs.externalTypeScriptRecommended.rules,
 			...functional.configs.recommended.rules,

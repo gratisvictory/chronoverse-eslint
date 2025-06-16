@@ -1,9 +1,9 @@
 export { EXCLUDE_PATTERNS } from './constants.js';
-export { disables } from './disables.js';
+export { disablesPrettierRules } from './disables-prettier-rules.js';
 export {
 	config,
 	css,
-	docs,
+	documentation,
 	javascript,
 	json,
 	json5,

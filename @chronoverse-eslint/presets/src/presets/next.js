@@ -1,5 +1,7 @@
-import { javascript, typescript } from '@chronoverse-shared/utilities/files';
+import { javascript as javascriptFiles, typescript as typescriptFiles } from '@chronoverse-shared/utilities/files';
 import nextPlugin from '@next/eslint-plugin-next';
+
+const nextFiles = [...javascriptFiles, ...typescriptFiles];
 
 /**
  * Next.js rules for ESLint.
@@ -17,7 +19,7 @@ const next = [
 	},
 	{
 		name: '@chronoverse-eslint/next/rules',
-		files: [...javascript, ...typescript],
+		files: nextFiles,
 		rules: {
 			...nextPlugin.configs.recommended.rules,
 			...nextPlugin.configs['core-web-vitals'].rules,

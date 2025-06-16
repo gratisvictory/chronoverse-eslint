@@ -1,5 +1,7 @@
-import { javascript, typescript } from '@chronoverse-shared/utilities/files';
+import { javascript as javascriptFiles, typescript as typescriptFiles } from '@chronoverse-shared/utilities/files';
 import eslintPerfectionistPlugin from 'eslint-plugin-perfectionist';
+
+const perfectionistFiles = [...javascriptFiles, ...typescriptFiles];
 
 const p11tOptions = {
 	type: 'natural',
@@ -106,7 +108,7 @@ const perfectionist = [
 	},
 	{
 		name: '@chronoverse-eslint/perfectionist/rules',
-		files: [...javascript, ...typescript],
+		files: perfectionistFiles,
 		rules: {
 			...eslintPerfectionistPlugin.configs['recommended-natural'].rules,
 			'perfectionist/sort-array-includes': 'error',

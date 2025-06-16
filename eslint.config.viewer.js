@@ -15,7 +15,8 @@ import { mutation } from '@chronoverse-eslint/presets/mutation';
 import { next } from '@chronoverse-eslint/presets/next';
 import { node } from '@chronoverse-eslint/presets/node';
 import { perfectionist } from '@chronoverse-eslint/presets/perfectionist';
-import { prettier } from '@chronoverse-eslint/presets/prettier';
+import { prettierPlugin } from '@chronoverse-eslint/presets/prettier-plugin';
+import { prettierConfig } from '@chronoverse-eslint/presets/prettier-config';
 import { promise } from '@chronoverse-eslint/presets/promise';
 import { regexp } from '@chronoverse-eslint/presets/regexp';
 import { security } from '@chronoverse-eslint/presets/security';
@@ -97,6 +98,7 @@ const eslintConfig = defineConfig([
 	mutation,
 	node,
 	perfectionist,
+	prettierPlugin,
 	promise,
 	regexp,
 	security,
@@ -106,7 +108,7 @@ const eslintConfig = defineConfig([
 	/**
 	 * Disables and Prettier Rules on last position
 	 */
-	prettier,
+	prettierConfig,
 ]);
 
 export default eslintConfig;

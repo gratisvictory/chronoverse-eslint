@@ -1,5 +1,7 @@
-import { javascript, typescript } from '@chronoverse-shared/utilities/files';
+import { javascript as javascriptFiles, typescript as typescriptFiles } from '@chronoverse-shared/utilities/files';
 import eslintDepend from 'eslint-plugin-depend';
+
+const dependFiles = [...javascriptFiles, ...typescriptFiles];
 
 /**
  * Dependency rules for ESLint.
@@ -18,7 +20,7 @@ const dependency = [
 	},
 	{
 		name: '@chronoverse-eslint/dependency/rules',
-		files: [...javascript, ...typescript],
+		files: dependFiles,
 		rules: {
 			/**
 			 * Bans a list of dependencies from being used

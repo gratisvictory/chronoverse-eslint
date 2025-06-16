@@ -1,5 +1,7 @@
-import { javascript, typescript } from '@chronoverse-shared/utilities';
+import { javascript as javascriptFiles, typescript as typescriptFiles } from '@chronoverse-shared/utilities/files';
 import pluginSecurity from 'eslint-plugin-security';
+
+const securityFiles = [...javascriptFiles, ...typescriptFiles];
 
 /**
  * Security rules for ESLint.
@@ -17,8 +19,10 @@ const security = [
 	},
 	{
 		name: '@chronoverse-eslint/security/rules',
-		files: [...javascript, ...typescript],
-		rules: pluginSecurity.configs.recommended.rules,
+		files: securityFiles,
+		rules: {
+			...pluginSecurity.configs.recommended.rules,
+		},
 	},
 ];
 

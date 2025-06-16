@@ -1,7 +1,12 @@
-import { getRulesByConfigName } from '@chronoverse-shared/utilities';
-import { javascript, typescript } from '@chronoverse-shared/utilities/files';
+import {
+	getRulesByConfigName,
+	javascript as javascriptFiles,
+	typescript as typescriptFiles,
+} from '@chronoverse-shared/utilities';
 import eslintConfigNode from 'eslint-config-eslint';
 import nodePlugin from 'eslint-plugin-n';
+
+const nodeFiles = [...javascriptFiles, ...typescriptFiles];
 
 /**
  * Node.js rules for ESLint.
@@ -20,7 +25,7 @@ const node = [
 	},
 	{
 		name: '@chronoverse-eslint/node/rules',
-		files: [...javascript, ...typescript],
+		files: nodeFiles,
 		rules: {
 			...nodePlugin.configs['flat/recommended'].rules,
 			...getRulesByConfigName('eslint-config-eslint/cjs', eslintConfigNode),

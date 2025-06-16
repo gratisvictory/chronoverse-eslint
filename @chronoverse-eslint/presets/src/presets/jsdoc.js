@@ -1,4 +1,8 @@
-import { getRulesByConfigName, javascript, typescript } from '@chronoverse-shared/utilities';
+import {
+	getRulesByConfigName,
+	javascript as javascriptFiles,
+	typescript as typescriptFiles,
+} from '@chronoverse-shared/utilities';
 import eslintConfigJsdoc from 'eslint-config-eslint';
 import jsdocPlugin from 'eslint-plugin-jsdoc';
 
@@ -54,14 +58,14 @@ const jsdoc = [
 	/** JavaScript */
 	{
 		name: '@chronoverse-eslint/jsdoc/js-rules',
-		files: javascript,
+		files: javascriptFiles,
 		rules: jsdocPlugin.configs['flat/recommended'].rules,
 	},
 
 	/** TypeScript */
 	{
 		name: '@chronoverse-eslint/jsdoc/ts-rules',
-		files: typescript,
+		files: typescriptFiles,
 		rules: {
 			...jsdocPlugin.configs['flat/recommended-typescript'].rules,
 			...eslintConfigJsdocOverride,

@@ -1,11 +1,12 @@
 /**
+ * @see https://github.com/microsoft/tsdoc/tree/main/eslint-plugin
  * @type {import('eslint').Linter.Config['rules']}
  */
-const tsdoc = {
+const tsdocRules = {
 	/**
 	 * Require TSDoc comments conform to the TSDoc specification.
 	 */
 	'tsdoc/syntax': 'error',
 };
 
-export { tsdoc };
+export { tsdocRules };

@@ -7,7 +7,8 @@ import { mutation } from '@chronoverse-eslint/presets/mutation';
 import { next } from '@chronoverse-eslint/presets/next';
 import { node } from '@chronoverse-eslint/presets/node';
 import { perfectionist } from '@chronoverse-eslint/presets/perfectionist';
-import { prettier } from '@chronoverse-eslint/presets/prettier';
+import { prettierConfig } from '@chronoverse-eslint/presets/prettier-config';
+import { prettierPlugin } from '@chronoverse-eslint/presets/prettier-plugin';
 import { promise } from '@chronoverse-eslint/presets/promise';
 import { regexp } from '@chronoverse-eslint/presets/regexp';
 import { security } from '@chronoverse-eslint/presets/security';
@@ -15,7 +16,7 @@ import { unicorn } from '@chronoverse-eslint/presets/unicorn';
 import { eslintIgnores } from '@chronoverse-shared/utilities/ignores';
 import { defineConfig } from 'eslint/config';
 
-const eslintConfigPresets = defineConfig([
+export default defineConfig([
 	eslintIgnores,
 	comments,
 	css,
@@ -26,11 +27,10 @@ const eslintConfigPresets = defineConfig([
 	next,
 	node,
 	perfectionist,
+	prettierPlugin,
 	promise,
 	regexp,
 	security,
 	unicorn,
-	prettier,
+	prettierConfig,
 ]);
-
-export default eslintConfigPresets;

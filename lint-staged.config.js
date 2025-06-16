@@ -1,9 +1,7 @@
-const lintStagedConfig = {
-	'**/*.{js,json,json5,jsonc}': [
+export default {
+	'**/*.{js,json}': [
 		'bun run format:fix',
 		'bun run lint:fix',
 	],
 	'*': () => 'bunx sherif@latest',
 };
-
-export default lintStagedConfig;

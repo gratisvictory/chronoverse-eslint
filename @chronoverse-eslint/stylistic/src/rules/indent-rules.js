@@ -57,6 +57,12 @@ const indentRules = {
 	'@stylistic/indent-binary-ops': ['error', 'tab'],
 
 	/**
+	 * Enforce JSX indentation. Deprecated, use `indent` rule instead.
+	 * @deprecated
+	 */
+	'@stylistic/jsx-indent': ['off', 'tab'],
+
+	/**
 	 * Enforce props indentation in JSX.
 	 */
 	'@stylistic/jsx-indent-props': ['error', 'tab'],

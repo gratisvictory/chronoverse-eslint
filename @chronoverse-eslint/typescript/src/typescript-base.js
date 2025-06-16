@@ -4,10 +4,13 @@ import tsRules from '@typescript-eslint/eslint-plugin';
 import eslintTsdoc from 'eslint-plugin-tsdoc';
 import typescriptEslint from 'typescript-eslint';
 
-import { consistent } from './rules/consistent.js';
-import { extension } from './rules/extension.js';
-import { tsSafe } from './rules/safe.js';
-import { tsdoc } from './rules/tsdoc.js';
+import { consistentRules } from './rules/consistent-rules.js';
+import { disablesRules } from './rules/disables-rules.js';
+import { extensionRules } from './rules/extension-rules.js';
+import { tsSafeRules } from './rules/safe-rules.js';
+import { tsdocRules } from './rules/tsdoc-rules.js';
+import { typescriptRules } from './rules/typescript-rules.js';
+import { typescriptTypeCheckRules } from './rules/typescript-type-check-rules.js';
 
 /** @type {import('eslint').Linter.Config} */
 const typescript = [
@@ -34,10 +37,13 @@ const typescript = [
 			...tsRules.configs.recommended.rules,
 			...tsRules.configs['strict-type-checked'].rules,
 			...tsRules.configs['stylistic-type-checked'].rules,
-			...extension,
-			...consistent,
-			...tsdoc,
-			...tsSafe,
+			...extensionRules,
+			...consistentRules,
+			...typescriptRules,
+			...typescriptTypeCheckRules,
+			...tsdocRules,
+			...tsSafeRules,
+			...disablesRules,
 		},
 	},
 ];

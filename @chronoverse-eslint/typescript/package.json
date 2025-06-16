@@ -37,21 +37,33 @@
       "import": "./dist/typescript-base.js",
       "types": "./dist/@types/typescript-base.d.ts"
     },
-    "./consistent": {
-      "import": "./dist/rules/consistent.js",
-      "types": "./dist/@types/rules/consistent.d.ts"
+    "./consistent-rules": {
+      "import": "./dist/rules/consistent-rules.js",
+      "types": "./dist/@types/rules/consistent-rules.d.ts"
     },
-    "./tsdoc": {
-      "import": "./dist/rules/tsdoc.js",
-      "types": "./dist/@types/rules/tsdoc.d.ts"
+    "./tsdoc-rules": {
+      "import": "./dist/rules/tsdoc-rules.js",
+      "types": "./dist/@types/rules/tsdoc-rules.d.ts"
     },
-    "./extension": {
-      "import": "./dist/rules/extension.js",
-      "types": "./dist/@types/rules/extension.d.ts"
+    "./extension-rules": {
+      "import": "./dist/rules/extension-rules.js",
+      "types": "./dist/@types/rules/extension-rules.d.ts"
     },
-    "./safe": {
-      "import": "./dist/rules/safe.js",
-      "types": "./dist/@types/rules/safe.d.ts"
+    "./safe-rules": {
+      "import": "./dist/rules/safe-rules.js",
+      "types": "./dist/@types/rules/safe-rules.d.ts"
+    },
+    "./typescript-rules": {
+      "import": "./dist/rules/typescript-rules.js",
+      "types": "./dist/@types/rules/typescript-rules.d.ts"
+    },
+    "./typescript-type-check-rules": {
+      "import": "./dist/rules/typescript-type-check-rules.js",
+      "types": "./dist/@types/rules/typescript-type-check-rules.d.ts"
+    },
+    "./disables-rules": {
+      "import": "./dist/rules/disables-rules.js",
+      "types": "./dist/@types/rules/disables-rules.d.ts"
     }
   },
   "main": "./dist/index.js",
@@ -62,16 +74,18 @@
   "scripts": {
     "build": "bun run clean:all && bun build.js",
     "build:clean": "rimraf dist",
-    "build:cli": "bun run clean:all && bun run builder -e src/index.js",
     "clean": "rimraf node_modules",
-    "clean:all": "rimraf dist node_modules",
-    "format:check": "prettier --check --config ../../prettier.config.js \"**/*.{js,json,json5,jsonc}\" --cache --cache-location=node_modules/.cache/.prettiercache",
-    "format:fix": "prettier --write --config ../../prettier.config.js \"**/*.{js,json,json5,jsonc}\" --cache --cache-location=node_modules/.cache/.prettiercache --log-level=warn",
-    "lint:build:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.typescript.js --outDir .eslint-typescript && bunx serve .eslint-typescript",
-    "lint:check": "eslint -c ../../eslint.config.js --cache --cache-location=node_modules/.cache/.eslintcache",
-    "lint:dev:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest --config ./eslint.config.typescript.js",
-    "lint:fix": "eslint -c ../../eslint.config.js --fix --cache --cache-location=node_modules/.cache/.eslintcache",
-    "lint:inspector:clean": "rimraf .eslint-typescript"
+    "clean:all": "rimraf dist node_modules .eslint-typescript",
+    "format:check": "prettier --check --config ../../prettier.config.js \"**/*.{js,json}\"",
+    "format:check:cache": "prettier --check --config ../../prettier.config.js \"**/*.{js,json}\" --cache --cache-location=node_modules/.cache/.prettiercache",
+    "format:fix": "prettier --write --config ../../prettier.config.js \"**/*.{js,json}\" --log-level=warn",
+    "format:fix:cache": "prettier --write --config ../../prettier.config.js \"**/*.{js,json}\" --cache --cache-location=node_modules/.cache/.prettiercache --log-level=warn",
+    "lint:build:inspector": "rimraf .eslint-typescript && bunx @eslint/config-inspector@latest build --config ./eslint.config.typescript.js --outDir .eslint-typescript && bunx serve .eslint-typescript",
+    "lint:check": "eslint -c ../../eslint.config.js",
+    "lint:check:cache": "eslint -c ../../eslint.config.js --cache --cache-location=node_modules/.cache/.eslintcache",
+    "lint:dev:inspector": "bunx @eslint/config-inspector@latest --config ./eslint.config.typescript-development.js",
+    "lint:fix": "eslint -c ../../eslint.config.js --fix",
+    "lint:fix:cache": "eslint -c ../../eslint.config.js --fix --cache --cache-location=node_modules/.cache/.eslintcache"
   },
   "dependencies": {
     "@chronoverse-shared/utilities": "^4.0.0",

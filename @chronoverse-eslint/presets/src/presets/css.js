@@ -25,7 +25,9 @@ const css = [
 			customSyntax: tailwindSyntax,
 			tolerant: true,
 		},
-		rules: eslintCss.configs.recommended.rules,
+		rules: {
+			...eslintCss.configs.recommended.rules,
+		},
 	},
 ];
 
