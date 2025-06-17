@@ -1,6 +1,6 @@
 {
   "name": "@chronoverse-eslint/presets",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "private": false,
   "description": "Comprehensive collection of ESLint presets for modern JavaScript and TypeScript projects",
   "keywords": [
@@ -124,7 +124,7 @@
     "lint:fix:cache": "eslint -c ../../eslint.config.js --fix --cache --cache-location=node_modules/.cache/.eslintcache"
   },
   "dependencies": {
-    "@chronoverse-shared/utilities": "^4.0.0",
+    "@chronoverse-shared/utilities": "^4.1.0",
     "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
     "@eslint/css": "^0.9.0",
     "@eslint/json": "^0.12.0",

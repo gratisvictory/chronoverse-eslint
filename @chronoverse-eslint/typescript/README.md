@@ -69,8 +69,8 @@ const eslintConfig = defineConfig([
 			...extensionRules,
 			...tsSafeRules,
 			...tsdocRules,
-            ...typescriptRules,
-            ...typescriptTypeCheckRules,
+			...typescriptRules,
+			...typescriptTypeCheckRules,
 		},
 	},
 ]);
