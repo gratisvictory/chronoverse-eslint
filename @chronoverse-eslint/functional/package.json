@@ -1,6 +1,6 @@
 {
   "name": "@chronoverse-eslint/functional",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "private": false,
   "description": "Modern ESLint configuration for functional programming best practices, enforcing immutability and side-effect free patterns",
   "keywords": [
@@ -65,7 +65,7 @@
     "lint:fix:cache": "eslint -c ../../eslint.config.js --fix --cache --cache-location=node_modules/.cache/.eslintcache"
   },
   "dependencies": {
-    "@chronoverse-shared/utilities": "^4.0.0",
+    "@chronoverse-shared/utilities": "^4.1.0",
     "eslint": "^9.29.0",
     "eslint-plugin-functional": "^9.0.2",
     "typescript-eslint": "^8.34.1"

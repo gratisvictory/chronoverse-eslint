@@ -72,22 +72,20 @@ import { defineConfig } from 'eslint/config';
 const eslintConfig = defineConfig([
 	{
 		rules: {
-            // all rules
 			...allRules,
-            // rules separately
-	        ...spacingRules,
-	        ...lineBreaksRules,
-	        ...bracketsRules,
-	        ...indentRules,
-	        ...quotesRules,
-	        ...commasRules,
-	        ...semisRules,
-	        ...operatorsRules,
-	        ...commentsRules,
-	        ...jsxRules,
-	        ...typesRules,
-	        ...disallowRules,
-	        ...miscRules,
+			...spacingRules,
+			...lineBreaksRules,
+			...bracketsRules,
+			...indentRules,
+			...quotesRules,
+			...commasRules,
+			...semisRules,
+			...operatorsRules,
+			...commentsRules,
+			...jsxRules,
+			...typesRules,
+			...disallowRules,
+			...miscRules,
 		},
 	},
 ]);

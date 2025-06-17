@@ -1,6 +1,6 @@
 {
   "name": "@chronoverse-eslint/typescript",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "private": false,
   "description": "Comprehensive ESLint configuration for TypeScript projects focusing on type safety, code quality, and best practices",
   "keywords": [
@@ -88,7 +88,7 @@
     "lint:fix:cache": "eslint -c ../../eslint.config.js --fix --cache --cache-location=node_modules/.cache/.eslintcache"
   },
   "dependencies": {
-    "@chronoverse-shared/utilities": "^4.0.0",
+    "@chronoverse-shared/utilities": "^4.1.0",
     "@susisu/eslint-plugin-safe-typescript": "^0.10.0",
     "@typescript-eslint/eslint-plugin": "^8.34.1",
     "eslint": "^9.29.0",
