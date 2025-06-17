@@ -2,7 +2,7 @@
  * @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y
  * @type {import('eslint').Linter.Config['rules']}
  */
-const a11y = {
+const a11yRules = {
 	/**
 	 * Enforce emojis are wrapped in `<span>` and provide screen reader access.
 	 * @deprecated
@@ -368,4 +368,4 @@ const a11y = {
 	'jsx-a11y/prefer-tag-over-role': 'off',
 };
 
-export { a11y };
+export { a11yRules };

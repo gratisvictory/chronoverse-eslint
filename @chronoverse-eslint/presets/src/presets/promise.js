@@ -20,9 +20,7 @@ const promise = [
 	{
 		name: '@chronoverse-eslint/promise/rules',
 		files: promiseFiles,
-		rules: {
-			...pluginPromise.configs['flat/recommended'].rules,
-		},
+		rules: pluginPromise.configs['flat/recommended'].rules,
 	},
 ];
 

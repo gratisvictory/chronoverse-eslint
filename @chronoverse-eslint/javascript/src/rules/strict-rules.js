@@ -4,11 +4,11 @@
  * @see https://eslint.org/docs/latest/rules/strict
  * @type {import('eslint').Linter.Config['rules']}
  */
-const strict = {
+const strictRules = {
 	/**
 	 * Enforce or disallow strict mode.
 	 */
 	strict: ['error', 'never'],
 };
 
-export { strict };
+export { strictRules };

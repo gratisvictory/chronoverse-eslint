@@ -16,7 +16,7 @@ import { unicorn } from '@chronoverse-eslint/presets/unicorn';
 import { eslintIgnores } from '@chronoverse-shared/utilities/ignores';
 import { defineConfig } from 'eslint/config';
 
-export default defineConfig([
+const eslintConfigPresets = defineConfig([
 	eslintIgnores,
 	comments,
 	css,
@@ -34,3 +34,5 @@ export default defineConfig([
 	unicorn,
 	prettierConfig,
 ]);
+
+export default eslintConfigPresets;

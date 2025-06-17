@@ -16,7 +16,7 @@ import { regexp } from './src/presets/regexp';
 import { security } from './src/presets/security';
 import { unicorn } from './src/presets/unicorn';
 
-export default defineConfig([
+const eslintConfigPresetsDevelopment = defineConfig([
 	eslintIgnores,
 	comments,
 	css,
@@ -34,3 +34,5 @@ export default defineConfig([
 	unicorn,
 	prettierConfig,
 ]);
+
+export default eslintConfigPresetsDevelopment;

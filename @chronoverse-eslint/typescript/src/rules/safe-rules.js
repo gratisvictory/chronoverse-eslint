@@ -5,8 +5,9 @@
 const tsSafeRules = {
 	/**
 	 * Disallow the use of Object.assign()
+	 * @deprecated
 	 */
-	'@susisu/safe-typescript/no-object-assign': 'error',
+	'@susisu/safe-typescript/no-object-assign': 'off',
 	/**
 	 * Disallow type assertions
 	 */

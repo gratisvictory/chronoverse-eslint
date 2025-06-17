@@ -22,12 +22,14 @@ import { regexp } from '@chronoverse-eslint/presets/regexp';
 import { security } from '@chronoverse-eslint/presets/security';
 import { unicorn } from '@chronoverse-eslint/presets/unicorn';
 /** React */
+import { jsxA11y } from '@chronoverse-eslint/react/jsx-a11y';
 import { reactBase } from '@chronoverse-eslint/react/react-base';
 import { reactCompiler } from '@chronoverse-eslint/react/react-compiler';
 import { reactHooks } from '@chronoverse-eslint/react/react-hooks';
-import { eslintReactJsx } from '@chronoverse-eslint/react/eslint-react-jsx';
-import { eslintReactTsx } from '@chronoverse-eslint/react/eslint-react-tsx';
-import { jsxA11y } from '@chronoverse-eslint/react/jsx-a11y';
+import { reactJsx } from '@chronoverse-eslint/react/react-jsx';
+import { reactRefresh } from '@chronoverse-eslint/react/react-refresh';
+import { reactRefreshVite } from '@chronoverse-eslint/react/react-refresh-vite';
+import { reactTsx } from '@chronoverse-eslint/react/react-tsx';
 /** Stylistic */
 import { stylistic } from '@chronoverse-eslint/stylistic/stylistic-base';
 /** Typescript */
@@ -37,6 +39,46 @@ import { eslintIgnores } from '@chronoverse-shared/utilities';
 
 import { defineConfig } from 'eslint/config';
 
+const js = [...javascript];
+
+const react = [
+	...reactBase,
+	...reactCompiler,
+	...reactHooks,
+	...reactJsx,
+	...reactRefresh,
+	...reactRefreshVite,
+	...reactTsx,
+	...jsxA11y,
+];
+
+const ts = [...typescript];
+
+const presets = [
+	...comments,
+	...css,
+	...dependency,
+	...jsdoc,
+	...json,
+	...mutation,
+	...next,
+	...node,
+	...perfectionist,
+	...prettierPlugin,
+	...promise,
+	...regexp,
+	...security,
+	...unicorn,
+	...prettierConfig,
+];
+
+const functional = [
+	...functionalJs,
+	...functionalTs,
+];
+
+const style = [...stylistic];
+
 /**
  * ESLint Configuration for Chronoverse
  *
@@ -44,71 +86,13 @@ import { defineConfig } from 'eslint/config';
  * consistent code quality across the entire project.
  */
 const eslintConfig = defineConfig([
-	/**
-	 * File Ignores
-	 *
-	 * Patterns for files that should be excluded from linting.
-	 * Imported from shared utilities to maintain consistency.
-	 */
 	eslintIgnores,
-
-	/**
-	 * JavaScript Rules
-	 *
-	 * Core JavaScript linting rules to enforce best practices,
-	 * proper JSDoc documentation, functional programming paradigms,
-	 * and consistent code style.
-	 */
-	javascript,
-	jsdoc,
-	functionalJs,
-	stylistic,
-
-	/**
-	 * TypeScript Rules
-	 *
-	 * Type-aware linting rules for TypeScript that enforce
-	 * strong typing, proper documentation, functional patterns,
-	 * and consistent style.
-	 */
-	typescript,
-	functionalTs,
-	/**
-	 * React Rules
-	 *
-	 * Rules specific to React development including JSX/TSX syntax,
-	 * hooks usage, accessibility, and Next.js best practices.
-	 */
-	reactBase,
-	eslintReactJsx,
-	eslintReactTsx,
-	reactHooks,
-	reactCompiler,
-	jsxA11y,
-	next,
-
-	/**
-	 * Shared Rules
-	 *
-	 * General purpose rules that apply across different file types
-	 * and frameworks to ensure code quality, security, and performance.
-	 */
-	comments,
-	dependency,
-	mutation,
-	node,
-	perfectionist,
-	prettierPlugin,
-	promise,
-	regexp,
-	security,
-	unicorn,
-	css,
-	json,
-	/**
-	 * Disables and Prettier Rules on last position
-	 */
-	prettierConfig,
+	js,
+	style,
+	ts,
+	functional,
+	react,
+	presets,
 ]);
 
 export default eslintConfig;

@@ -1,5 +1,7 @@
-import { javascript, typescript } from '@chronoverse-shared/utilities/files';
+import { javascript as javascriptFiles, typescript as typescriptFiles } from '@chronoverse-shared/utilities/files';
 import eslintReactHooks from 'eslint-plugin-react-hooks';
+
+const reactHooksFiles = [...javascriptFiles, ...typescriptFiles];
 
 /** @type {import('eslint').Linter.Config} */
 const reactHooks = [
@@ -11,10 +13,8 @@ const reactHooks = [
 	},
 	{
 		name: '@chronoverse-eslint/react-hooks/rules',
-		files: [...javascript, ...typescript],
-		rules: {
-			...eslintReactHooks.configs['recommended-latest'].rules,
-		},
+		files: reactHooksFiles,
+		rules: eslintReactHooks.configs['recommended-latest'].rules,
 	},
 ];
 

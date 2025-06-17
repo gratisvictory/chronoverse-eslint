@@ -126,20 +126,20 @@
   "dependencies": {
     "@chronoverse-shared/utilities": "^4.0.0",
     "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
-    "@eslint/css": "^0.8.1",
+    "@eslint/css": "^0.9.0",
     "@eslint/json": "^0.12.0",
     "@next/eslint-plugin-next": "^15.3.3",
-    "eslint": "^9.28.0",
+    "eslint": "^9.29.0",
     "eslint-config-eslint": "^11.0.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-better-mutation": "^2.1.0",
     "eslint-plugin-depend": "^1.2.0",
-    "eslint-plugin-jsdoc": "^50.7.0",
-    "eslint-plugin-n": "^17.18.0",
-    "eslint-plugin-perfectionist": "^4.13.0",
-    "eslint-plugin-prettier": "^5.4.1",
+    "eslint-plugin-jsdoc": "^51.0.1",
+    "eslint-plugin-n": "^17.20.0",
+    "eslint-plugin-perfectionist": "^4.14.0",
+    "eslint-plugin-prettier": "^5.5.0",
     "eslint-plugin-promise": "^7.2.1",
-    "eslint-plugin-regexp": "^2.7.0",
+    "eslint-plugin-regexp": "^2.9.0",
     "eslint-plugin-security": "^3.0.1",
     "eslint-plugin-unicorn": "^59.0.1"
   },
@@ -148,11 +148,11 @@
     "rimraf": "^6.0.1"
   },
   "peerDependencies": {
-    "eslint": "^9.28.0"
+    "eslint": "^9.29.0"
   },
-  "packageManager": "bun@1.2.14",
+  "packageManager": "bun@1.2.16",
   "engines": {
-    "bun": ">=1.2.14",
+    "bun": ">=1.2.16",
     "node": ">=23.11.0"
   },
   "publishConfig": {

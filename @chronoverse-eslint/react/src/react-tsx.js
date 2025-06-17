@@ -1,11 +1,11 @@
-import { typescript } from '@chronoverse-shared/utilities/files';
+import { typescript as typescriptFiles } from '@chronoverse-shared/utilities/files';
 import eslintReactPlugin from '@eslint-react/eslint-plugin';
 import typescriptEslint from 'typescript-eslint';
 
 /** @type {import('eslint').Linter.Config} */
-const eslintReactTsx = [
+const reactTsx = [
 	{
-		name: '@chronoverse-eslint/eslint-react-tsx/setup',
+		name: '@chronoverse-eslint/react-tsx/setup',
 		languageOptions: {
 			parser: typescriptEslint.parser,
 			parserOptions: {
@@ -16,13 +16,13 @@ const eslintReactTsx = [
 		},
 	},
 	{
-		name: '@chronoverse-eslint/eslint-react-tsx/rules',
+		name: '@chronoverse-eslint/react-tsx/rules',
 		extends: [
 			eslintReactPlugin.configs['recommended-typescript'],
 			eslintReactPlugin.configs['recommended-type-checked'],
 		],
-		files: typescript,
+		files: typescriptFiles,
 	},
 ];
 
-export { eslintReactTsx };
+export { reactTsx };

@@ -8,9 +8,7 @@ const prettierConfig = [
 	{
 		name: '@chronoverse-eslint/prettier-config/rules',
 		files: prettierConfigFiles,
-		rules: {
-			...eslintConfigPrettier.rules,
-		},
+		rules: eslintConfigPrettier.rules,
 	},
 ];
 

@@ -3,7 +3,7 @@
  * @see https://eslint.org/docs/latest/rules/
  * @type {import('eslint').Linter.Config['rules']}
  */
-const errors = {
+const errorsRules = {
 	/** Loops & Control Flow */
 
 	/**
@@ -263,4 +263,4 @@ const errors = {
 	'no-new-native-nonconstructor': 'off',
 };
 
-export { errors };
+export { errorsRules };

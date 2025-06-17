@@ -1,5 +1,7 @@
-import { javascript, typescript } from '@chronoverse-shared/utilities/files';
+import { javascript as javascriptFiles, typescript as typescriptFiles } from '@chronoverse-shared/utilities/files';
 import eslintReactCompiler from 'eslint-plugin-react-compiler';
+
+const reactCompilerFiles = [...javascriptFiles, ...typescriptFiles];
 
 /** @type {import('eslint').Linter.Config} */
 const reactCompiler = [
@@ -11,10 +13,8 @@ const reactCompiler = [
 	},
 	{
 		name: '@chronoverse-eslint/react-compiler/rules',
-		files: [...javascript, ...typescript],
-		rules: {
-			...eslintReactCompiler.configs.recommended.rules,
-		},
+		files: reactCompilerFiles,
+		rules: eslintReactCompiler.configs.recommended.rules,
 	},
 ];
 

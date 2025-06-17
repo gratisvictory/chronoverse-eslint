@@ -1,8 +1,8 @@
 export { javascript } from './javascript-base.js';
-export { bestPractice } from './rules/best-practice.js';
-export { errors } from './rules/errors.js';
-export { es6 } from './rules/es6.js';
-export { node } from './rules/node.js';
-export { strict } from './rules/strict.js';
-export { stylistic } from './rules/stylistic.js';
-export { variables } from './rules/variables.js';
+export { bestPracticeRules } from './rules/best-practice-rules.js';
+export { errorsRules } from './rules/errors-rules.js';
+export { es6Rules } from './rules/es6-rules.js';
+export { nodeRules } from './rules/node-rules.js';
+export { strictRules } from './rules/strict-rules.js';
+export { stylisticRules } from './rules/stylistic-rules.js';
+export { variablesRules } from './rules/variables-rules.js';

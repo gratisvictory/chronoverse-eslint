@@ -5,7 +5,7 @@ import { variablesNoRestrictedGlobals, variablesNoUnusedVariables } from '@chron
  * @see https://eslint.org/docs/latest/rules/
  * @type {import('eslint').Linter.Config['rules']}
  */
-const variables = {
+const variablesRules = {
 	/**
 	 * Enforce or disallow variable initializations at definition.
 	 */
@@ -76,4 +76,4 @@ const variables = {
 	],
 };
 
-export { variables };
+export { variablesRules };

@@ -3,7 +3,7 @@
  * Most of these are turned off due to ESM usage or modern practices.
  * @type {import('eslint').Linter.Config['rules']}
  */
-const node = {
+const nodeRules = {
 	/**
 	 * Enforce return after a callback (e.g., in error-first callbacks).
 	 * Often redundant with modern async/await.
@@ -71,4 +71,4 @@ const node = {
 	'no-sync': 'off',
 };
 
-export { node };
+export { nodeRules };

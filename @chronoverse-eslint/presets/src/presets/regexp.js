@@ -20,9 +20,7 @@ const regexp = [
 	{
 		name: '@chronoverse-eslint/regexp/rules',
 		files: regexpFiles,
-		rules: {
-			...regexpPlugin.configs['flat/recommended'].rules,
-		},
+		rules: regexpPlugin.configs['flat/recommended'].rules,
 	},
 ];
 

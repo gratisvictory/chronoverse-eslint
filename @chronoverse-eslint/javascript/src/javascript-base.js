@@ -2,13 +2,13 @@ import { getRulesByConfigName, javascript as jsFiles, sharedGlobals } from '@chr
 import js from '@eslint/js';
 import eslintConfigBase from 'eslint-config-eslint';
 
-import { bestPractice } from './rules/best-practice.js';
-import { errors } from './rules/errors.js';
-import { es6 } from './rules/es6.js';
-import { node } from './rules/node.js';
-import { strict } from './rules/strict.js';
-import { stylistic } from './rules/stylistic.js';
-import { variables } from './rules/variables.js';
+import { bestPracticeRules } from './rules/best-practice-rules.js';
+import { errorsRules } from './rules/errors-rules.js';
+import { es6Rules } from './rules/es6-rules.js';
+import { nodeRules } from './rules/node-rules.js';
+import { strictRules } from './rules/strict-rules.js';
+import { stylisticRules } from './rules/stylistic-rules.js';
+import { variablesRules } from './rules/variables-rules.js';
 
 /**
  * Chronoverse base JavaScript ESLint config.
@@ -51,13 +51,13 @@ const javascript = [
 			...getRulesByConfigName('eslint-config-eslint/js', eslintConfigBase),
 
 			/** Custom rule sets */
-			...bestPractice,
-			...errors,
-			...es6,
-			...strict,
-			...variables,
-			...stylistic,
-			...node,
+			...bestPracticeRules,
+			...errorsRules,
+			...es6Rules,
+			...strictRules,
+			...variablesRules,
+			...stylisticRules,
+			...nodeRules,
 		},
 	},
 ];

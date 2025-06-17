@@ -3,7 +3,7 @@
  * template literals, destructuring, and more.
  * @type {import('eslint').Linter.Config['rules']}
  */
-const es6 = {
+const es6Rules = {
 	/**
 	 * Disallow unnecessary computed property keys in object literals.
 	 */
@@ -233,4 +233,4 @@ const es6 = {
 	'yield-star-spacing': 'off',
 };
 
-export { es6 };
+export { es6Rules };

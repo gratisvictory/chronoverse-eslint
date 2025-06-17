@@ -20,9 +20,7 @@ const security = [
 	{
 		name: '@chronoverse-eslint/security/rules',
 		files: securityFiles,
-		rules: {
-			...pluginSecurity.configs.recommended.rules,
-		},
+		rules: pluginSecurity.configs.recommended.rules,
 	},
 ];
 

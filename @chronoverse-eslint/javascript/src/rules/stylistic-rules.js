@@ -7,7 +7,7 @@ const MAX_PARAMS = 5;
  * @see https://eslint.org/docs/latest/rules/
  * @type {import('eslint').Linter.Config['rules']}
  */
-const stylistic = {
+const stylisticRules = {
 	/**
 	 * Enforce camelCase naming convention.
 	 */
@@ -103,4 +103,4 @@ const stylistic = {
 	'prefer-object-spread': 'error',
 };
 
-export { stylistic };
+export { stylisticRules };

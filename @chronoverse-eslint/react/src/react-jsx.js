@@ -1,10 +1,10 @@
-import { javascript } from '@chronoverse-shared/utilities/files';
+import { javascript as javascriptFiles } from '@chronoverse-shared/utilities/files';
 import eslintReactPlugin from '@eslint-react/eslint-plugin';
 
 /** @type {import('eslint').Linter.Config} */
-const eslintReactJsx = [
+const reactJsx = [
 	{
-		name: '@chronoverse-eslint/eslint-react-jsx/setup',
+		name: '@chronoverse-eslint/react-jsx/setup',
 		languageOptions: {
 			parserOptions: {
 				ecmaFeatures: {
@@ -14,10 +14,10 @@ const eslintReactJsx = [
 		},
 	},
 	{
-		name: '@chronoverse-eslint/eslint-react-jsx/rules',
+		name: '@chronoverse-eslint/react-jsx/rules',
 		extends: [eslintReactPlugin.configs.recommended],
-		files: javascript,
+		files: javascriptFiles,
 	},
 ];
 
-export { eslintReactJsx };
+export { reactJsx };

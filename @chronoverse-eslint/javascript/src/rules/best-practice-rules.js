@@ -6,7 +6,7 @@ import { bestPracticesNoRestrictedProperties } from '@chronoverse-shared/utiliti
  * @see https://eslint.org/docs/latest/rules/
  * @type {import('eslint').Linter.Config['rules']}
  */
-const bestPractice = {
+const bestPracticeRules = {
 	/**
 	 * Enforce return statements in array method callbacks (e.g., map, filter).
 	 */
@@ -473,4 +473,4 @@ const bestPractice = {
 	yoda: 'error',
 };
 
-export { bestPractice };
+export { bestPracticeRules };

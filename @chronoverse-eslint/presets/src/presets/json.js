@@ -26,9 +26,7 @@ const json = [
 		files: jsonFiles,
 		ignores: lockfiles.slice(0, 1),
 		language: 'json/json',
-		rules: {
-			...eslintJson.configs.recommended.rules,
-		},
+		rules: eslintJson.configs.recommended.rules,
 	},
 	{
 		name: '@chronoverse-eslint/jsonc/rules',
@@ -37,17 +35,13 @@ const json = [
 		languageOptions: {
 			allowTrailingCommas: true,
 		},
-		rules: {
-			...eslintJson.configs.recommended.rules,
-		},
+		rules: eslintJson.configs.recommended.rules,
 	},
 	{
 		name: '@chronoverse-eslint/json5/rules',
 		files: json5Files,
 		language: 'json/json5',
-		rules: {
-			...eslintJson.configs.recommended.rules,
-		},
+		rules: eslintJson.configs.recommended.rules,
 	},
 ];
 

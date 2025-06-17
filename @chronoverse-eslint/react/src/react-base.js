@@ -1,7 +1,9 @@
-import { javascript, typescript } from '@chronoverse-shared/utilities';
+import { javascript as javascriptFiles, typescript as typescriptFiles } from '@chronoverse-shared/utilities/files';
 // eslint-disable-next-line depend/ban-dependencies
 import reactPlugin from 'eslint-plugin-react';
-import { reactRules } from './rules/react.js';
+import { reactRules } from './rules/react-rules.js';
+
+const reactBaseFiles = [...javascriptFiles, ...typescriptFiles];
 
 /** @type {import('eslint').Linter.Config} */
 const reactBase = [
@@ -25,7 +27,7 @@ const reactBase = [
 	},
 	{
 		name: '@chronoverse-eslint/react-base/rules',
-		files: [...javascript, ...typescript],
+		files: reactBaseFiles,
 		rules: {
 			...reactPlugin.configs.flat.recommended.rules,
 			...reactRules,

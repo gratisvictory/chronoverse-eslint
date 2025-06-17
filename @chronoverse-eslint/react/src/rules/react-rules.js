@@ -92,21 +92,12 @@ const reactRules = {
 	/**
 	 * Enforce maximum of props on a single line in JSX
 	 */
-	'react/jsx-max-props-per-line': ['error', { maximum: 1, when: 'multiline' }],
+	'react/jsx-max-props-per-line': 'off',
 
 	/**
 	 * Disallow `.bind()` or arrow functions in JSX props
 	 */
-	'react/jsx-no-bind': [
-		'error',
-		{
-			allowArrowFunctions: true,
-			allowBind: false,
-			allowFunctions: false,
-			ignoreDOMComponents: true,
-			ignoreRefs: true,
-		},
-	],
+	'react/jsx-no-bind': 'off',
 
 	/**
 	 * Disallow duplicate properties in JSX
@@ -186,7 +177,7 @@ const reactRules = {
 	/**
 	 * Disallow usage of dangerous JSX properties
 	 */
-	'react/no-danger': 'warn',
+	'react/no-danger': 'off',
 
 	/**
 	 * Disallow usage of deprecated methods
@@ -236,7 +227,7 @@ const reactRules = {
 	/**
 	 * Disallow usage of unknown DOM property
 	 */
-	'react/no-unknown-property': 'error',
+	'react/no-unknown-property': 'off',
 
 	/**
 	 * Enforce ES5 or ES6 class for React Components
@@ -278,55 +269,7 @@ const reactRules = {
 	/**
 	 * Enforce component methods order
 	 */
-	'react/sort-comp': [
-		'error',
-		{
-			groups: {
-				lifecycle: [
-					'displayName',
-					'propTypes',
-					'contextTypes',
-					'childContextTypes',
-					'mixins',
-					'statics',
-					'defaultProps',
-					'constructor',
-					'getDefaultProps',
-					'getInitialState',
-					'state',
-					'getChildContext',
-					'getDerivedStateFromProps',
-					'componentWillMount',
-					'UNSAFE_componentWillMount',
-					'componentDidMount',
-					'componentWillReceiveProps',
-					'UNSAFE_componentWillReceiveProps',
-					'shouldComponentUpdate',
-					'componentWillUpdate',
-					'UNSAFE_componentWillUpdate',
-					'getSnapshotBeforeUpdate',
-					'componentDidUpdate',
-					'componentDidCatch',
-					'componentWillUnmount',
-				],
-				rendering: ['/^render.+$/', 'render'],
-			},
-			order: [
-				'static-variables',
-				'static-methods',
-				'instance-variables',
-				'lifecycle',
-				'/^handle.+$/',
-				'/^on.+$/',
-				'getters',
-				'setters',
-				'/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/',
-				'instance-methods',
-				'everything-else',
-				'rendering',
-			],
-		},
-	],
+	'react/sort-comp': 'off',
 
 	/**
 	 * Disallow missing parentheses around multiline JSX
@@ -393,7 +336,7 @@ const reactRules = {
 	/**
 	 * Disallow usage of findDOMNode
 	 */
-	'react/no-find-dom-node': 'error',
+	'react/no-find-dom-node': 'off',
 
 	/**
 	 * Disallow certain props on components
@@ -463,12 +406,7 @@ const reactRules = {
 	/**
 	 * Enforce a defaultProps definition for every prop that is not a required prop
 	 */
-	'react/require-default-props': [
-		'error',
-		{
-			forbidDefaultForRequired: true,
-		},
-	],
+	'react/require-default-props': 'off',
 
 	/**
 	 * Disallow using another component's propTypes
@@ -520,12 +458,12 @@ const reactRules = {
 	/**
 	 * Require one JSX element per line
 	 */
-	'react/jsx-one-expression-per-line': ['error', { allow: 'single-child' }],
+	'react/jsx-one-expression-per-line': 'off',
 
 	/**
 	 * Enforce consistent usage of destructuring assignment of props, state, and context
 	 */
-	'react/destructuring-assignment': ['error', 'always'],
+	'react/destructuring-assignment': 'off',
 
 	/**
 	 * Disallow when this.state is accessed within setState
@@ -598,15 +536,7 @@ const reactRules = {
 	/**
 	 * Disallow JSX prop spreading
 	 */
-	'react/jsx-props-no-spreading': [
-		'error',
-		{
-			custom: 'enforce',
-			exceptions: [],
-			explicitSpread: 'ignore',
-			html: 'enforce',
-		},
-	],
+	'react/jsx-props-no-spreading': 'off',
 
 	/**
 	 * Enforce that props are read-only

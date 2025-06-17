@@ -12,7 +12,7 @@ import { tsdocRules } from './rules/tsdoc-rules.js';
 import { typescriptRules } from './rules/typescript-rules.js';
 import { typescriptTypeCheckRules } from './rules/typescript-type-check-rules.js';
 
-/** @type {import('eslint').Linter.Config} */
+/** @type {import('eslint').Linter.Config[]} */
 const typescript = [
 	{
 		name: '@chronoverse-eslint/typescript/setup',

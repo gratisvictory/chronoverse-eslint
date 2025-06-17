@@ -10,6 +10,7 @@
   ],
   "extends": "../../tsconfig.base.json",
   "include": [
-    "src/**/*.js"
+    "src/**/*.js",
+    "eslint.config.stylistic-dev.js"
   ]
 }

@@ -3,7 +3,7 @@
 > Shared utilities and constants for [`@chronoverse-eslint`](https://github.com/gratisvictory/chronoverse-eslint) packages.
 
 [![npm version](https://img.shields.io/npm/v/@chronoverse-shared/utilities.svg)](https://www.npmjs.com/package/@chronoverse-shared/utilities)
-[![ESLint](https://img.shields.io/badge/ESLint-v9.28.0-4B32C3.svg)](https://eslint.org)
+[![ESLint](https://img.shields.io/badge/ESLint-v9.29.0-4B32C3.svg)](https://eslint.org)
 [![License](https://img.shields.io/badge/license-MIT-4B32C3.svg)](LICENSE)
 
 ## Installation
@@ -25,8 +25,8 @@ bun add -D @chronoverse-shared/utilities eslint
 ```javascript
 import eslintConfigBase from 'eslint-config-eslint';
 import { variablesNoUnusedVariables, bestPracticesNoRestrictedProperties, stylisticNoRestrictedSyntax, variablesNoRestrictedGlobals } from '@chronoverse-shared/utilities/rule-options';
-import { disables } from '@chronoverse-shared/utilities/disables';
 import { sharedGlobals } from '@chronoverse-shared/utilities/globals';
+import { disablesPrettierRules } from '@chronoverse-shared/utilities/disables-prettier-rules';
 import { eslintIgnores } from '@chronoverse-shared/utilities/ignores';
 import { getRulesByConfigName } from '@chronoverse-shared/utilities/rules';
 import { javascript, typescript, ... } from '@chronoverse-shared/utilities/files';
@@ -56,7 +56,7 @@ const eslintConfig = defineConfig([
 		},
 	},
 
-	disables,
+	disablesPrettierRules,
 ]);
 
 export default eslintConfig;
@@ -64,8 +64,8 @@ export default eslintConfig;
 
 ### Requirements
 
-- ESLint >=9.28.0
-- Bun >=1.2.14
+- ESLint >=9.29.0
+- Bun >=1.2.16
 - Node.js >=23.11.0
 
 ---

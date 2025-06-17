@@ -15,7 +15,7 @@ const stylistic = [
 	{
 		name: '@chronoverse-eslint/stylistic/rules',
 		files: stylisticFiles,
-		rules: { ...allRules },
+		rules: allRules,
 	},
 ];
 

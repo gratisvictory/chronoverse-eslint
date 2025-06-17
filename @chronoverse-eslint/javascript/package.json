@@ -35,33 +35,33 @@
       "import": "./dist/javascript-base.js",
       "types": "./dist/@types/javascript-base.d.ts"
     },
-    "./best-practice": {
-      "import": "./dist/rules/best-practice.js",
-      "types": "./dist/@types/rules/best-practice.d.ts"
+    "./best-practice-rules": {
+      "import": "./dist/rules/best-practice-rules.js",
+      "types": "./dist/@types/rules/best-practice-rules.d.ts"
     },
-    "./errors": {
-      "import": "./dist/rules/errors.js",
-      "types": "./dist/@types/rules/errors.d.ts"
+    "./errors-rules": {
+      "import": "./dist/rules/errors-rules.js",
+      "types": "./dist/@types/rules/errors-rules.d.ts"
     },
-    "./es6": {
-      "import": "./dist/rules/es6.js",
-      "types": "./dist/@types/rules/es6.d.ts"
+    "./es6-rules": {
+      "import": "./dist/rules/es6-rules.js",
+      "types": "./dist/@types/rules/es6-rules.d.ts"
     },
-    "./node": {
-      "import": "./dist/rules/node.js",
-      "types": "./dist/@types/rules/node.d.ts"
+    "./node-rules": {
+      "import": "./dist/rules/node-rules.js",
+      "types": "./dist/@types/rules/node-rules.d.ts"
     },
-    "./strict": {
-      "import": "./dist/rules/strict.js",
-      "types": "./dist/@types/rules/strict.d.ts"
+    "./strict-rules": {
+      "import": "./dist/rules/strict-rules.js",
+      "types": "./dist/@types/rules/strict-rules.d.ts"
     },
-    "./stylistic": {
-      "import": "./dist/rules/stylistic.js",
-      "types": "./dist/@types/rules/stylistic.d.ts"
+    "./stylistic-rules": {
+      "import": "./dist/rules/stylistic-rules.js",
+      "types": "./dist/@types/rules/stylistic-rules.d.ts"
     },
-    "./variables": {
-      "import": "./dist/rules/variables.js",
-      "types": "./dist/@types/rules/variables.d.ts"
+    "./variables-rules": {
+      "import": "./dist/rules/variables-rules.js",
+      "types": "./dist/@types/rules/variables-rules.d.ts"
     }
   },
   "main": "./dist/index.js",
@@ -72,37 +72,35 @@
   "scripts": {
     "build": "bun run clean:all && bun build.js",
     "build:clean": "rimraf dist",
-    "build:cli": "bun run clean:all && bun run builder -e src/index.js",
     "clean": "rimraf node_modules",
     "clean:all": "rimraf dist node_modules",
     "format:check": "prettier --check --config ../../prettier.config.js \"**/*.{js,json}\"",
     "format:check:cache": "prettier --check --config ../../prettier.config.js \"**/*.{js,json}\" --cache --cache-location=node_modules/.cache/.prettiercache",
     "format:fix": "prettier --write --config ../../prettier.config.js \"**/*.{js,json}\" --log-level=warn",
     "format:fix:cache": "prettier --write --config ../../prettier.config.js \"**/*.{js,json}\" --cache --cache-location=node_modules/.cache/.prettiercache --log-level=warn",
-    "lint:build:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest build --config ./eslint.config.javascript.js --outDir .eslint-javascript && bunx serve .eslint-javascript",
+    "lint:build:inspector": "rimraf .eslint-javascript && bunx @eslint/config-inspector@latest build --config ./eslint.config.javascript.js --outDir .eslint-javascript && bunx serve .eslint-javascript",
     "lint:check": "eslint -c ../../eslint.config.js",
     "lint:check:cache": "eslint -c ../../eslint.config.js --cache --cache-location=node_modules/.cache/.eslintcache",
     "lint:dev:inspector": "bun run lint:inspector:clean && bunx @eslint/config-inspector@latest --config ./eslint.config.javascript.js",
     "lint:fix": "eslint -c ../../eslint.config.js --fix",
-    "lint:fix:cache": "eslint -c ../../eslint.config.js --fix --cache --cache-location=node_modules/.cache/.eslintcache",
-    "lint:inspector:clean": "rimraf .eslint-javascript"
+    "lint:fix:cache": "eslint -c ../../eslint.config.js --fix --cache --cache-location=node_modules/.cache/.eslintcache"
   },
   "dependencies": {
     "@chronoverse-shared/utilities": "^4.0.0",
-    "eslint": "^9.28.0",
+    "eslint": "^9.29.0",
     "eslint-config-eslint": "^11.0.0"
   },
   "devDependencies": {
     "@chronoverse-shared/builder": "workspace:^",
-    "@eslint/js": "^9.28.0",
+    "@eslint/js": "^9.29.0",
     "rimraf": "^6.0.1"
   },
   "peerDependencies": {
-    "eslint": "^9.28.0"
+    "eslint": "^9.29.0"
   },
-  "packageManager": "bun@1.2.14",
+  "packageManager": "bun@1.2.16",
   "engines": {
-    "bun": ">=1.2.14",
+    "bun": ">=1.2.16",
     "node": ">=23.11.0"
   },
   "publishConfig": {

@@ -1,6 +1,8 @@
-import { javascript, typescript } from '@chronoverse-shared/utilities/files';
+import { javascript as javascriptFiles, typescript as typescriptFiles } from '@chronoverse-shared/utilities/files';
 import eslintJsxA11y from 'eslint-plugin-jsx-a11y';
-import { a11y } from './rules/a11y.js';
+import { a11yRules } from './rules/a11y-rules.js';
+
+const jsxA11yFiles = [...javascriptFiles, ...typescriptFiles];
 
 /** @type {import('eslint').Linter.Config} */
 const jsxA11y = [
@@ -12,10 +14,10 @@ const jsxA11y = [
 	},
 	{
 		name: '@chronoverse-eslint/jsx-a11y/rules',
-		files: [...javascript, ...typescript],
+		files: jsxA11yFiles,
 		rules: {
 			...eslintJsxA11y.flatConfigs.recommended.rules,
-			...a11y,
+			...a11yRules,
 		},
 	},
 ];

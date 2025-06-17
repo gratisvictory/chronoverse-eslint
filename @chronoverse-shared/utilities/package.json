@@ -64,7 +64,6 @@
   "scripts": {
     "build": "bun run clean:all && bun build.js",
     "build:clean": "rimraf dist",
-    "build:cli": "bun run clean:all && bun run builder -e src/index.js",
     "clean": "rimraf node_modules",
     "clean:all": "rimraf dist node_modules",
     "format:check": "prettier --check --config ../../prettier.config.js \"**/*.{js,json}\"",
@@ -82,12 +81,12 @@
   },
   "devDependencies": {
     "@chronoverse-shared/builder": "workspace:^",
-    "eslint": "^9.28.0",
+    "eslint": "^9.29.0",
     "rimraf": "^6.0.1"
   },
-  "packageManager": "bun@1.2.14",
+  "packageManager": "bun@1.2.16",
   "engines": {
-    "bun": ">=1.2.14",
+    "bun": ">=1.2.16",
     "node": ">=23.11.0"
   },
   "publishConfig": {
